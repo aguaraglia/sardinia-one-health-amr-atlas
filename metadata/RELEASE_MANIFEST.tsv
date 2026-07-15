@@ -1,6 +1,6 @@
-release_version`t0.1.0
-release_date`t2026-07-15
-path`tsha256`tbytes
+release_version	0.1.0
+release_date	2026-07-15
+path	sha256	bytes
 CITATION.cff	a30a6ae04743ec032b29d2f20b0f9924d7a0cb3fd5460eb0f7520d5d3ab395cd	512
 index.html	1f3ee75ca926f24ca066398a143681ef3b394efa6f2b758e2ef6bf787ad339f2	1330
 app.js	1cb88dfdc71422e7808a94f2af1e23baeb43d1cd9ad8fd398ce5d7479ca0aa89	2040
