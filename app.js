@@ -58,6 +58,7 @@ Promise.all(configs.map(async cfg => {
     style: () => style(cfg),
     onEachFeature: (feature, item) => item.bindPopup(popup(feature, cfg))
   });
+  layer._sourceData = data;
   layers[cfg.key] = layer;
   return layer;
 })).then(loaded => {
@@ -65,11 +66,21 @@ Promise.all(configs.map(async cfg => {
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
   layers.depuratori.addTo(map);
+  const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
+  const categoryLayers = {};
+  categories.forEach(category => {
+    categoryLayers[category] = L.geoJSON(layers.depuratori._sourceData, {
+      filter: feature => feature.properties?.categoria === category,
+      pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 5, color: '#7b3f98', fillColor: '#7b3f98', fillOpacity: 0.75, weight: 1 }),
+      onEachFeature: (feature, item) => item.bindPopup(popup(feature, configs.find(c => c.key === 'depuratori')))
+    });
+  });
   L.control.layers({}, {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
     'Regione': layers.regions,
-    'Depuratori SIRA': layers.depuratori
+    'Depuratori SIRA': layers.depuratori,
+    ...Object.fromEntries(Object.entries(categoryLayers).map(([name, layer]) => [`Depuratori · ${name}`, layer]))
   }, { collapsed: false }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = '3 layer caricati';
