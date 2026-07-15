@@ -2,7 +2,7 @@
 
 ## Stato
 
-La fonte è stata individuata e registrata in `metadata/SOURCES.tsv` come contesto agricolo e zootecnico comunale. Non viene ancora pubblicato alcun valore: il catalogo SDMX non ha risposto entro il timeout di 60 secondi durante il tentativo automatico del 15 luglio 2026.
+La fonte è stata individuata e registrata in `metadata/SOURCES.tsv` come contesto agricolo e zootecnico comunale. La pagina ufficiale risponde correttamente, ma non espone direttamente nel markup i file tabellari; il catalogo SDMX non ha risposto entro il timeout di 60 secondi durante il tentativo automatico del 15 luglio 2026.
 
 ## Procedura ripetibile
 
