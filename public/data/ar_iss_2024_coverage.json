@@ -1,0 +1,14 @@
+{
+  "source_id": "ar_iss",
+  "dataset_version": "RIS-5/2025",
+  "observation_period": "2024",
+  "geography_level": "REGIONE",
+  "geography_id": "SARDEGNA",
+  "measure_type": "coverage",
+  "reported_value": 75.4,
+  "reported_unit": "percentuale_degenze_ospedaliere",
+  "denominator_definition": "giornate di ospedalizzazione SDO degli ospedali partecipanti rispetto al totale delle strutture in Italia",
+  "privacy": "public",
+  "source_url": "https://www.epicentro.iss.it/antibiotico-resistenza/ar-iss/RIS-5_2025.pdf",
+  "notes": "La copertura non è una prevalenza AMR e non autorizza il downscaling comunale."
+}

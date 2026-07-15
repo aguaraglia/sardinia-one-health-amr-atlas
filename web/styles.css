@@ -18,6 +18,7 @@ main { max-width: 1500px; margin: 0 auto; padding: 0 1rem 1rem; }
 .amr-panel label { display: block; margin: 1rem 0 .35rem; font-size: .8rem; font-weight: 600; }
 .amr-panel select { width: 100%; padding: .5rem; border: 1px solid #b8cec3; border-radius: 6px; background: #f8fbf9; }
 .amr-state { margin-top: 1rem; padding: .65rem; border-left: 3px solid #d2763b; background: #fff7ef; font-size: .8rem; }
+.evidence-card { margin-top: .8rem; padding: .7rem; border: 1px solid #c9d8d0; border-radius: 7px; background: #f4f8f5; font-size: .78rem; line-height: 1.4; }
 .source-links { padding-left: 1.1rem; margin: 0; font-size: .85rem; line-height: 1.8; }
 @media (max-width: 900px) { .atlas-grid { grid-template-columns: 1fr; } .amr-panel { order: 2; } #map { order: 1; } }
 footer { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem .25rem; color: #60776e; font-size: .75rem; }

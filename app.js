@@ -18,6 +18,11 @@ targetSelect.addEventListener('change', event => {
   const label = amrTargets.find(([value]) => value === event.target.value)?.[1] || 'classe selezionata';
   document.getElementById('amr-state').textContent = `Nessuna osservazione pubblica caricata per ${label}`;
 });
+fetch('public/data/ar_iss_2024_coverage.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('ariss-card');
+  card.hidden = false;
+  card.innerHTML = `<strong>AR-ISS Sardegna 2024</strong><br>${d.reported_value}% copertura della sorveglianza<br><small>Indicatore di copertura, non prevalenza AMR.</small>`;
+}).catch(() => {});
 const configs = [
   { key: 'municipalities', label: 'Comuni', file: 'public/geography/atlas_municipalities.geojson', color: '#2d7d61', weight: 0.65, fill: false, prop: 'Nome' },
   { key: 'provinces', label: 'Province', file: 'public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
