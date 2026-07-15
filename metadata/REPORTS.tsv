@@ -1,0 +1,5 @@
+report_id	title	scope	public_output	privacy_note
+report_territorial_one_health	Report One Health territoriale	Sardegna	mappa;tabella;PDF	Aggregati e layer contestuali; nessun punto aziendale
+report_amr_by_class	Report AMR per classe	Sardegna	mappa;tabella;PDF	Separare genotipo, fenotipo e consumo
+report_genomic_regional	Report genomico regionale	Sardegna	mappa aggregata;albero esterno;PDF	Punti genomici solo autenticati; pubblico generalizzato
+report_surveillance_benchmark	Report benchmark di sorveglianza	Italia/UE/globale	tabelle;grafici;PDF	Non attribuire benchmark nazionali alla Sardegna
