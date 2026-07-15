@@ -1,0 +1,63 @@
+﻿# Dati riservati o non pubblicabili
+/private/
+/raw/
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.bai
+*.cram
+*.crai
+*.sam
+*.vcf
+*.bcf
+*.sra
+*.fna
+*.fa
+*.fasta
+*.gbk
+*.gff
+*.gff3
+*.sqlite
+*.db
+*.gpkg-wal
+*.gpkg-shm
+
+# Coordinate e dati aziendali
+*coordinate*
+*coordinates*
+*farm*
+*azienda*
+*restricted*
+*private*
+*clinical*
+*patient*
+*assembly*
+*genome*
+*sample_id*
+
+# Segreti
+.env
+*.pem
+*.key
+*.p12
+*.pfx
+*secret*
+*token*
+*password*
+*credential*
+
+# File temporanei
+/scratch/
+/work/
+/tmp/
+/logs/
+*.tmp
+*.bak
+*.swp
+.DS_Store
+.qgis/
+
+# Output locali
+reports/local/
