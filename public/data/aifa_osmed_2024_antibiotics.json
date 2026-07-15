@@ -1,0 +1,25 @@
+{
+  "source_id": "aifa_osmed_antibiotici",
+  "dataset_version": "2024",
+  "observation_period": "2024",
+  "geography_level": "REGIONE",
+  "geography_id": "SARDEGNA",
+  "channel": "assistenza_convenzionata_A-SSN",
+  "measure_unit": "DDD/1000_ab_die",
+  "source_table": "Tabella 8",
+  "privacy": "public",
+  "source_url": "https://www.aifa.gov.it/documents/20142/3610201/Sardegna_Osmed_2024.pdf",
+  "notes": "Consumo di antibiotici; non misura resistenza, prevalenza o denominatori microbiologici.",
+  "records": [
+    {"atc":"J01CR02","active_ingredient":"Amoxicillina/acido clavulanico","spesa_lorda_pro_capite":2.7,"ddd_1000_ab_die":5.6},
+    {"atc":"J01DD08","active_ingredient":"Cefixima","spesa_lorda_pro_capite":1.3,"ddd_1000_ab_die":1.5},
+    {"atc":"J01FA09","active_ingredient":"Claritromicina","spesa_lorda_pro_capite":0.6,"ddd_1000_ab_die":1.9},
+    {"atc":"J01FA10","active_ingredient":"Azitromicina","spesa_lorda_pro_capite":0.6,"ddd_1000_ab_die":1.1},
+    {"atc":"J01DD04","active_ingredient":"Ceftriaxone","spesa_lorda_pro_capite":0.5,"ddd_1000_ab_die":0.1},
+    {"atc":"J01XX01","active_ingredient":"Fosfomicina","spesa_lorda_pro_capite":0.5,"ddd_1000_ab_die":0.3},
+    {"atc":"J01DD16","active_ingredient":"Cefditoren","spesa_lorda_pro_capite":0.5,"ddd_1000_ab_die":0.4},
+    {"atc":"J01MA02","active_ingredient":"Ciprofloxacina","spesa_lorda_pro_capite":0.4,"ddd_1000_ab_die":0.5},
+    {"atc":"J01DD13","active_ingredient":"Cefpodoxima","spesa_lorda_pro_capite":0.4,"ddd_1000_ab_die":0.3},
+    {"atc":"J01MA12","active_ingredient":"Levofloxacina","spesa_lorda_pro_capite":0.2,"ddd_1000_ab_die":0.4}
+  ]
+}
