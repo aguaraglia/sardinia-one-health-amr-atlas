@@ -38,7 +38,8 @@ fetch('public/data/aifa_osmed_2024_antibiotics.json').then(r => r.json()).then(d
 const configs = [
   { key: 'municipalities', label: 'Comuni', file: 'public/geography/atlas_municipalities.geojson', color: '#2d7d61', weight: 0.65, fill: false, prop: 'Nome' },
   { key: 'provinces', label: 'Province', file: 'public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
-  { key: 'regions', label: 'Regione', file: 'public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' }
+  { key: 'regions', label: 'Regione', file: 'public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' },
+  { key: 'depuratori', label: 'Depuratori SIRA', file: 'public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
 function style(cfg) { return { color: cfg.color, weight: cfg.weight, fillColor: cfg.color, fillOpacity: cfg.fill ? 0.12 : 0 }; }
@@ -63,10 +64,12 @@ Promise.all(configs.map(async cfg => {
   layers.regions.addTo(map);
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
+  layers.depuratori.addTo(map);
   L.control.layers({}, {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
-    'Regione': layers.regions
+    'Regione': layers.regions,
+    'Depuratori SIRA': layers.depuratori
   }, { collapsed: false }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = '3 layer caricati';
