@@ -1,8 +1,12 @@
 const map = L.map('map', { zoomControl: true }).setView([40.12, 9.05], 8);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
+const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  maxZoom: 19,
+  attribution: 'Tiles &copy; Esri'
+});
 
 const layers = {};
 const amrTargets = [
@@ -75,7 +79,10 @@ Promise.all(configs.map(async cfg => {
       onEachFeature: (feature, item) => item.bindPopup(popup(feature, configs.find(c => c.key === 'depuratori')))
     });
   });
-  L.control.layers({}, {
+  L.control.layers({
+    'OpenStreetMap': osm,
+    'Satellite Esri': satellite
+  }, {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
     'Regione': layers.regions,
