@@ -20,7 +20,21 @@
     <section class="intro">
       <p>Versione pubblica preliminare. I confini amministrativi sono layer di contesto; non rappresentano prevalenza o rischio AMR.</p>
     </section>
-    <div id="map" aria-label="Mappa amministrativa della Sardegna"></div>
+    <div class="atlas-grid">
+      <aside class="amr-panel" aria-label="Pannello AMR">
+        <h2>AMR</h2>
+        <p class="panel-note">Le osservazioni AMR pubbliche saranno aggiunte dopo la validazione degli aggregati regionali.</p>
+        <label for="amr-target">Classe antimicrobica</label>
+        <select id="amr-target"><option value="AMR_ANY">Tutte le classi</option></select>
+        <div id="amr-state" class="amr-state">Nessuna osservazione pubblica caricata</div>
+        <h3>Fonti regionali</h3>
+        <ul class="source-links">
+          <li><a href="https://www.epicentro.iss.it/antibiotico-resistenza/ar-iss-rapporto" target="_blank" rel="noreferrer">AR-ISS</a></li>
+          <li><a href="https://www.aifa.gov.it/documents/20142/3610201/Sardegna_Osmed_2024.pdf" target="_blank" rel="noreferrer">AIFA/OsMed Sardegna</a></li>
+        </ul>
+      </aside>
+      <div id="map" aria-label="Mappa amministrativa della Sardegna"></div>
+    </div>
     <footer>
       <span>Fonte geografica: Regione Autonoma della Sardegna, DBGT 10K V05.</span>
       <span>Output WGS84 · Mapshaper</span>
@@ -30,5 +44,4 @@
   <script src="app.js"></script>
 </body>
 </html>
-
 
