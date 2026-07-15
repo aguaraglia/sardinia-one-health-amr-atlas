@@ -23,6 +23,12 @@ fetch('public/data/ar_iss_2024_coverage.json').then(r => r.json()).then(d => {
   card.hidden = false;
   card.innerHTML = `<strong>AR-ISS Sardegna 2024</strong><br>${d.reported_value}% copertura della sorveglianza<br><small>Indicatore di copertura, non prevalenza AMR.</small>`;
 }).catch(() => {});
+fetch('public/data/ar_iss_2024_sardinia_resistance.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('ariss-resistance-card');
+  const rows = d.observations.map(x => `<tr><td>${x.phenotype}</td><td>${x.resistance_percent}%</td><td>${x.resistant}/${x.isolates}</td></tr>`).join('');
+  card.hidden = false;
+  card.innerHTML = `<strong>AR-ISS Sardegna 2024 - resistenza</strong><br><small>Copertura ${d.coverage_percent}%</small><table class="evidence-table"><tr><th>Fenotipo</th><th>%</th><th>R/n</th></tr>${rows}</table>`;
+}).catch(() => {});
 fetch('public/data/aifa_osmed_2024_antibiotics.json').then(r => r.json()).then(d => {
   const card = document.getElementById('aifa-card');
   const top = d.records.slice(0, 3).map(x => `${x.active_ingredient} (${x.ddd_1000_ab_die} DDD/1000 ab die)`).join('; ');

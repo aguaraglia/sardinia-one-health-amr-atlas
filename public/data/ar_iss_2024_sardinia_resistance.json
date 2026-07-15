@@ -1,0 +1,19 @@
+{
+  "source_id": "ar_iss",
+  "dataset_version": "RIS-5/2025",
+  "observation_period": "2024",
+  "geography_level": "REGIONE",
+  "geography_id": "SARDEGNA",
+  "privacy": "public",
+  "coverage_percent": 75.4,
+  "source_url": "https://www.epicentro.iss.it/antibiotico-resistenza/ar-iss/RIS-5_2025.pdf",
+  "notes": "Infezioni invasive da emocolture/liquor; valori regionali aggregati. Non sono dati comunali e non rappresentano tutti gli isolati della popolazione sarda.",
+  "observations": [
+    {"target_id":"AMR_MRSA","organism":"Staphylococcus aureus","phenotype":"MRSA","isolates":335,"resistant":63,"resistance_percent":18.8,"ci95":"14.8-23.4"},
+    {"target_id":"AMR_VRE","organism":"Enterococcus faecium","phenotype":"VRE-faecium","isolates":167,"resistant":16,"resistance_percent":9.6,"ci95":"5.6-15.1"},
+    {"target_id":"AMR_3GC_ECOLI","organism":"Escherichia coli","phenotype":"CREC - cefalosporine di terza generazione","isolates":697,"resistant":114,"resistance_percent":16.4,"ci95":"13.7-19.3"},
+    {"target_id":"AMR_CARBAPENEM_KP","organism":"Klebsiella pneumoniae","phenotype":"CRKP - carbapenemi","isolates":427,"resistant":78,"resistance_percent":18.3,"ci95":"14.7-22.3"},
+    {"target_id":"AMR_CARBAPENEM_PA","organism":"Pseudomonas aeruginosa","phenotype":"CRPA - carbapenemi","isolates":201,"resistant":21,"resistance_percent":10.4,"ci95":"6.6-15.5"},
+    {"target_id":"AMR_CARBAPENEM_ACINETO","organism":"Acinetobacter species","phenotype":"CRAS - carbapenemi","isolates":36,"resistant":22,"resistance_percent":61.1,"ci95":"43.5-76.9"}
+  ]
+}
