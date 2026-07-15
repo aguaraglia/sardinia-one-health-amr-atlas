@@ -1,0 +1,12 @@
+target_id	parent_target_id	display_name	target_type	is_filterable	is_reportable
+AMR_ANY	NA	Resistenza antimicrobica	category	S	S
+AMR_BETA_LACTAM	AMR_ANY	Beta-lattamici	category	S	S
+AMR_CARBAPENEM	AMR_BETA_LACTAM	Carbapenemi	class	S	S
+AMR_CEPHALOSPORIN	AMR_BETA_LACTAM	Cefalosporine di terza generazione	class	S	S
+AMR_FLUOROQUINOLONE	AMR_ANY	Fluorochinoloni	class	S	S
+AMR_AMINOGLYCOSIDE	AMR_ANY	Aminoglicosidi	class	S	S
+AMR_TETRACYCLINE	AMR_ANY	Tetracicline	class	S	S
+AMR_MACROLIDE	AMR_ANY	Macrolidi	class	S	S
+AMR_GLYCOPEPTIDE	AMR_ANY	Glicopeptidi	class	S	S
+AMR_COLISTIN	AMR_ANY	Colistina	class	S	S
+AMR_MDR	AMR_ANY	Multiresistenza	derived	S	S
