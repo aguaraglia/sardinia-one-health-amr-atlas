@@ -12,6 +12,13 @@ const datasetFiles = {
   environmental_amr_water_bodies_2024: 'public/data/environmental_amr_water_bodies_2024.json',
   ar_iss_2024_sardinia_resistance: 'public/data/ar_iss_2024_sardinia_resistance.json'
 };
+const datasetTitles = {
+  pig_ecoli_sardinia_2024_amr: 'E. coli nella filiera suina sarda',
+  wild_boar_ecoli_sardinia_2024_amr: 'E. coli nei cinghiali della Sardegna',
+  veterinary_amr_municipal_evidence: 'Evidenze AMR veterinarie comunali',
+  environmental_amr_water_bodies_2024: 'Resistoma ambientale nei corpi idrici sardi',
+  ar_iss_2024_sardinia_resistance: 'AR-ISS Sardegna 2024 · resistenza'
+};
 
 function header(title, subtitle, tags = []) {
   return `<a class="back-link" href="index.html#literature-title">← Torna all’elenco delle evidenze</a>
@@ -30,7 +37,7 @@ function literaturePage(record) {
 }
 
 function datasetPage(data) {
-  let title = data.source_title || data.title || data.source_id;
+  let title = data.source_title || data.title || datasetTitles[data.source_id] || data.source_id;
   let subtitle = `${data.period || data.collection_period || ''} · ${data.geography || data.geography_level || ''}`;
   let summary = data.interpretation_note || data.notes || data.method_note || '';
   let results = '';
