@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sardinia One Health AMR Atlas</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,6 +17,11 @@
     </div>
     <span class="status" id="status">Caricamento layer…</span>
   </header>
+  <nav class="site-nav" aria-label="Navigazione principale">
+    <a class="active" href="index.html">Atlante</a>
+    <a href="evidence.html">Evidenze e fonti</a>
+    <a href="#literature-title">Letteratura curata</a>
+  </nav>
   <main>
     <section class="intro">
       <p>Versione pubblica preliminare. Sono disponibili evidenze comunali veterinarie da catalogo e coorti pubblicate, ma non indicatori comunali di prevalenza o rischio AMR. Ogni layer specifica origine, periodo e livello di rappresentatività.</p>
@@ -85,10 +91,11 @@
               <th>Host</th>
               <th>Organismo</th>
               <th>Titolo</th>
+              <th>Scheda</th>
             </tr>
           </thead>
           <tbody id="literature-table-body">
-            <tr><td colspan="5">Caricamento letteratura…</td></tr>
+            <tr><td colspan="6">Caricamento letteratura…</td></tr>
           </tbody>
         </table>
       </div>
