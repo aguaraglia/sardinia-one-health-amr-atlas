@@ -131,3 +131,14 @@ Per gli ultimi due studi non è stato effettuato alcun downscaling comunale.
 La sede pubblica di una struttura sanitaria può invece essere mostrata come
 punto di struttura, purché il popup dichiari che non rappresenta la residenza
 dei pazienti né una coordinata di campione.
+
+### Priorità IZS/OEVR
+
+La pagina pubblica Bioresource IZSSA dichiara 564 ceppi batterici nel catalogo,
+ma soltanto 25 record espongono il flag `ABG` e un antibiogramma estraibile.
+Questi 25 record sono già stati aggregati per comune nel layer pubblico. Il
+prossimo recupero utile non è quindi un ulteriore scraping della stessa pagina:
+va richiesto all'IZS Sardegna, preferibilmente all'Osservatorio Epidemiologico
+Veterinario Regionale, un export SIGLA o dei piani AMR con anno, ASL/comune,
+specie, matrice, organismo, antimicrobico e conteggi S/I/R. Le località, gli
+identificativi di ceppo e le celle piccole restano nella parte privata.
