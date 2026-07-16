@@ -144,6 +144,15 @@ molecolare 2004-2006 con geni `tet`. Il dato è stato aggiunto al pubblico come
 aggregato della Sardegna settentrionale: non contiene una ripartizione comunale
 pubblicabile e non deve essere usato per stimare prevalenze comunali attuali.
 
+### Filiera suina: *E. coli* e PRJNA1171362
+
+Il lavoro sulla filiera suina sarda (campagne 2020-2022) analizza 96 isolati
+di *E. coli* da sei allevamenti e cinque macelli, con antibiogramma e WGS. Il
+51,0% degli isolati è resistente ad almeno un antimicrobico e il 52,1% porta
+almeno un gene AMR; tetracicline e ampicillina sono i fenotipi più frequenti.
+Il dataset pubblico è mantenuto a livello di studio/filiera: le aziende e i
+macelli sono anonimizzati e non è lecito ricostruire il comune dai BioSample.
+
 ### Priorità IZS/OEVR
 
 La pagina pubblica Bioresource IZSSA dichiara 564 ceppi batterici nel catalogo,

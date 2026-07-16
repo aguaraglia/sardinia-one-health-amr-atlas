@@ -1,0 +1,21 @@
+{
+  "source_id": "pig_ecoli_sardinia_2024_amr",
+  "dataset_version": "atlas-curated-v0.1",
+  "privacy": "public_aggregate",
+  "geography_level": "STUDIO_FILIERA",
+  "geography": "Sardegna",
+  "host": "suini",
+  "matrix": ["campioni da suini", "superfici ambientali di macello"],
+  "period": "2020-2022",
+  "farms_sampled": 6,
+  "slaughterhouses_sampled": 5,
+  "isolates_analyzed": 96,
+  "amr_genotype": {"isolates_with_any_amr_gene": 50,"percent_with_any_amr_gene":52.1,"isolates_with_multiple_amr_genes":41,"percent_with_multiple_amr_genes":42.7,"most_common_gene_groups":[{"group":"tet","isolates":36,"percent":37.5},{"group":"blaTEM","isolates":31,"percent":32.3}]},
+  "amr_phenotype": {"isolates_resistant_to_at_least_one":49,"percent_resistant_to_at_least_one":51.0,"resistance_among_resistant_isolates":{"tetraciclina":70.0,"ampicillina":58.0,"sulfametossazolo-trimetoprim":36.4},"multidrug_patterns":23},
+  "pathotypes": {"pathogenic_isolates":13,"expec":7,"etec":3,"stec_etec_hybrids":2,"upec":1},
+  "source_url": "https://www.preprints.org/manuscript/202410.1339",
+  "published_record_url": "https://www.sciencedirect.com/science/article/pii/S0168160525001011",
+  "bioproject": "PRJNA1171362",
+  "method_note": "AST con diffusione su disco secondo EUCAST; gli intermedi sono stati considerati sensibili. WGS analizzato con AMRFinder/ResFinder.",
+  "interpretation_note": "Evidenza di studio e filiera con aziende e macelli anonimizzati; non è una prevalenza regionale e non consente attribuzione comunale."
+}
