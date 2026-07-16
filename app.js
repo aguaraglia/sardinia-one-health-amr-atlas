@@ -70,7 +70,6 @@ Promise.all(configs.map(async cfg => {
   layers.regions.addTo(map);
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
-  layers.depuratori.addTo(map);
   layers.hydro.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
