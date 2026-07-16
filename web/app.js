@@ -71,7 +71,6 @@ Promise.all(configs.map(async cfg => {
   layers.regions.addTo(map);
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
-  layers.hydro.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
   const categoryColors = { 'Acque reflue urbane': '#2878b5', 'Fosse Imhoff': '#d98c22', 'Industriale': '#b83b5e', 'Acque oleose': '#6a4c93', 'Fanghi/reflui speciali': '#555555' };
