@@ -1,0 +1,789 @@
+id,comune,denominazione,categoria,fiume_vicino,distanza_approssimata_km,nota
+5976593,PORTOSCUSO,IMPIANTO DI TRATTAMENTO ACQUE OLEOSE (DISCOIL),Acque oleose,,,Prossimita geometrica; non conferma recapito autorizzato.
+9647856,PORTOSCUSO,ACQUE REFLUE INDUSTRIALI - IMPIANTO TERMOCHIMIK,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+3692455,CARBONIA,IMPIANTO TRATTAMENTO PERCOLATO,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10309931,ASSEMINI,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7331736,SANLURI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7658735,GIAVE,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7668371,OLBIA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+555406,CASTIADAS,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+509793,LOIRI PORTO SAN PAOLO,ACQUE REFLUE INDUSTRIALI - ACQUE DI PRIMA PIOGGIA,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+509580,AGLIENTU,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8127413,MURAVERA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219778,GHILARZA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7670333,SANTA GIUSTA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220553,MILIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7714922,THIESI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20031684,DESULO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295527,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10299140,PADRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9933769,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9934440,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9706973,CARBONIA,A.P.P. PIAZZALE UFFICI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8830389,SENNARIOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298199,SANTA TERESA GALLURA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321704,ARZACHENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9941768,USELLUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9942093,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10039141,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10039162,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+7669534,ORISTANO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10167690,QUARTU SANT'ELENA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293151,VILLACIDRO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293806,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294266,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294647,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294714,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8216152,SANT'ANNA ARRESI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294381,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10580057,OZIERI,ACQUE REFLUE ASSIMILABILI ALLE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430172,OVODDA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10861200,PERDASDEFOGU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430181,DECIMOMANNU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430209,CHIARAMONTI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219403,BONARCADO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430268,VILLAURBANA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8874244,SASSARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20052527,SASSARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430314,SEDINI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430365,TINNURA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10446557,ABBASANTA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9639836,ASSEMINI,ACQUE DI FALDA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430426,VILLANOVAFRANCA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430453,ONIFERI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430460,SIAMAGGIORE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430461,TRATALIAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430474,MASULLAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430476,POSADA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10463399,VILLACIDRO,IMPIANTO DI TRATTAMENTO ACQUE METEORICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430027,TRINITA' D'AGULTU E VIGNOLA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430034,OSCHIRI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10643913,SINISCOLA,ACQUE METEORICHE DI PRIMA PIOGGIA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10860586,LOCERI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20061212,USSASSAI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20594358,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20650156,MONASTIR,ACQUE METEORICHE DI PRIMA PIOGGIA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20796600,GESICO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20796901,VILLACIDRO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20894867,AGLIENTU,IMHOFF PRIMARIA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7662271,OZIERI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10322015,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9930378,ELINI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8824062,DOMUS DE MARIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10292671,VILLACIDRO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293082,GUSPINI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10858253,CUGLIERI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430059,SAN BASILIO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430064,MARACALAGONIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20033575,ORUNE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430089,GUSPINI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295137,ALGHERO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+1734810347,OLBIA,IMPIANTO DI DEPURAZIONE - SEZIONE I,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+506922,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7669348,MOGORO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+9805056,PORTO TORRES,VASCHE API 3,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20052238,TERGU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+548107,DOLIANOVA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10884742,ORTUERI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9771545,BARATILI SAN PIETRO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8221416,FLUSSIO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10296312,ELMAS,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10296505,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+523346,ALES,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+557885,SESTU,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8228719,TRIEI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430250,SANT'ANTIOCO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430349,AUSTIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430355,GUAMAGGIORE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430356,ORTACESUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430319,OSILO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430101,TERTENIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430112,CARBONIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430113,USSANA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430148,VILLANOVA MONTELEONE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430158,MEANA SARDO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430391,CARBONIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430399,OLBIA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430400,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10319174,ARBUS,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+5975081,PORTOSCUSO,IMPIANTO DI TRATTAMENTO ACQUE VERNICIATURA (TAV),Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7658970,SASSARI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+509782,LOIRI PORTO SAN PAOLO,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+5398665,GONNESA,ACQUE REFLUE INDUSTRIALI - IMPIANTO BAMAR,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+520408,IGLESIAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+557146,MARACALAGONIS,ACQUE REFLUE DOMESTICHE - SERVIZI IGIENICI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+557226,QUARTU SANT'ELENA,ACQUE METEORICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+557242,QUARTU SANT'ELENA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+531947,VILLACIDRO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+552662,PULA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+3807992,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8352311,SASSARI,SPURGHI DESOX,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220027,LACONI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8278193,PORTO TORRES,MODULO DI TRATTAMENTO TAF3,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8229879,OLBIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8228295,TRINITA' D'AGULTU E VIGNOLA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298534,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298884,BADESI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10299360,GOLFO ARANCI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9934100,MONTI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10279297,PORTO TORRES,ACQUA DEMINERALIZZATA DA TAF,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8830459,SUNI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297882,BADESI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298082,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298180,PADRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321711,TEMPIO PAUSANIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9941987,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038629,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038954,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10039003,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10041140,BURCEI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293854,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294199,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294492,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294591,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294776,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294810,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8276608,SINISCOLA,FOSSA IMHOFF1,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10580456,MUROS,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+430200,SARULE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430276,LODINE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430279,OLLOLAI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430291,ANELA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430296,ESPORLATU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430307,AGLIENTU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8430203,VILLANOVA TULO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8893957,SILIGO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9696615,OTTANA,VASCA DI NEUTRALIZZAZIONE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8430231,SADALI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8430722,NURALLAO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10644657,BORORE,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+430417,IGLESIAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430422,ARBUS,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430444,SANTA MARIA COGHINAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430472,ARBOREA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430473,SAN GIOVANNI SUERGIU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430028,PATTADA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430045,SANTADI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20705940,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10676137,IGLESIAS,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10322024,SANTA TERESA GALLURA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9707388,BAULADU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295235,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+430049,OTTANA,ACQUE REFLUE URBANE - LINEA ACQUE CHIMICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10885017,SINISCOLA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430081,OROSEI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10168617,MARACALAGONIS,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7668987,CABRAS,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+522306,VILLA VERDE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7662794,SIMALA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20035520,ARZACHENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20038529,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10901749,TALANA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8304367,GIAVE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7659142,SASSARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7659676,SANTA MARIA COGHINAS,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219872,SEDILO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8231237,TONARA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8217585,ARBOREA,BACINO DI FITODEPURAZIONE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7663338,AGLIENTU,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10643737,BORORE,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430344,GAIRO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430350,BORTIGIADAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430352,ITTIREDDU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430357,PIMENTEL,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430320,BULZI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430102,TERTENIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430106,OSSI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430134,OROTELLI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430135,BORORE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430143,LUOGOSANTO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430145,PALAU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+538574,SESTU,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+430384,SERRI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430395,CARBONIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430406,MONTI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321699,LA MADDALENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+1754679066,MUSEI,ACQUE METEORICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8365944,PORTO TORRES,FOSSE IMHOFF,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+3955062,PORTOSCUSO,IMPIANTO DI POTABILIZZAZIONE ACQUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7819551,SAN GAVINO MONREALE,DEPURATORE INTERNO,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7821658,DOMUSNOVAS,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8287014,PORTO TORRES,VASCA DI PRIMA PIOGGIA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9699846,PORTO TORRES,TRATTAMENTO REFLUI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+3692459,CARBONIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+513376,SORSO,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+532518,SERRAMANNA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7331541,SERRAMANNA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7662170,OLMEDO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7658945,SASSARI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+509831,SASSARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7667339,OLBIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+509063,TELTI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+523353,GONNOSCODINA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+553362,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9707497,SAN SPERATE,DEPURATORE BIOLOGICO AD OSSIGENAZIONE TOTALE 2,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219471,NARBOLIA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8379983,OZIERI,TRATTAMENTO ACQUE DI LAVAGGIO RUOTE AUTOMEZZI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219708,SENEGHE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8218600,SAN VERO MILIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8218854,SAN VERO MILIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9703713,ASSEMINI,DISOLEATORE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8232354,PABILLONIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219273,ASUNI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10173541,SINNAI,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10299165,LURAS,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10299354,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297893,LA MADDALENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298201,PADRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298147,PADRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9942018,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9942079,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10039084,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10039794,SASSARI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10070614,PULA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293400,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293713,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9941286,OLBIA,ACQUE REFLUE DOMESTICHE 2,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293772,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294158,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294343,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294440,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294780,OSILO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294866,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8276606,SINISCOLA,FOSSA IMHOFF2,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8276610,SINISCOLA,FOSSA IMHOFF3,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10427482,MAGOMADAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430167,SINNAI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430187,FLUMINIMAGGIORE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430225,DONORI',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7660335,BOSA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430233,ARBUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430267,TRAMATZA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430280,OLZAI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430289,AGGIUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430293,BOTTIDDA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430303,OSILO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430367,BIRORI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430368,PUTIFIGARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10446301,GOLFO ARANCI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8894059,ALGHERO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8894318,ALGHERO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8429638,SEULO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652532,NUGHEDU SANTA VITTORIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430428,FLUMINIMAGGIORE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430431,CASTIADAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20033926,MONTRESTA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430466,AGLIENTU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430480,BARI SARDO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10462582,SASSARI,IMPIANTO DI TRATTAMENTO ACQUE DI FALDA EMUNTE (TAF),Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10578103,SESTU,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+430026,TRINITA' D'AGULTU E VIGNOLA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10861094,OSINI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20634266,SILIUS,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652277,SANTA GIUSTA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652365,ORISTANO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652584,RUINAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652867,SAN VERO MILIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20795687,CAGLIARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20795886,IGLESIAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20795925,SILIUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20796064,LODE',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20796861,ARBUS,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20800413,GONNESA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20894961,DOLIANOVA,DEPURATORE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+5840278,PORTOSCUSO,IMPIANTO A FANGHI ATTIVI (BIO),Fanghi/reflui speciali,,,Prossimita geometrica; non conferma recapito autorizzato.
+10173335,TEULADA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295417,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219268,ORISTANO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430087,ORUNE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7663036,ZEDDIANI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8130791,SIMAXIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+536359,SILIUS,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+536262,SILIUS,ACQUE REFLUE INDUSTRIALI - ACQUE DI EDUZIONE,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+20031406,BELVI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20034164,PORTOSCUSO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10037934,TISSI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10296320,ELMAS,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7662084,ANELA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+542077,SAN NICOLO' GERREI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219980,ARZACHENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8434541,BARRALI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7661867,CARGEGHE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9805044,PORTO TORRES,VASCHE API 2,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7802406,NARCAO,"ACQUE REFLUE URBANE - FRAZIONI MURTAS, TERRUBIA ED IS AIOS",Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+540702,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+509952,ALGHERO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+556205,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430323,NARBOLIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430328,SANT'ANTONIO DI GALLURA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430093,DORGALI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430110,SAN GIOVANNI SUERGIU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430126,OLBIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430154,ATZARA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10319343,BARUMINI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430401,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430407,MONTI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7670422,SEDILO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7670545,ORISTANO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321585,MONTI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321685,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+7671444,ORISTANO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8348511,SASSARI,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+525162,OROSEI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10422112,MARTIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+527810,LOCERI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+564646,PALMAS ARBOREA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+534986,SARDARA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7662307,URI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8131115,MILIS,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10173783,DOLIANOVA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10265877,PORTO TORRES,MODULO DI TRATTAMENTO TAF4,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297995,TEMPIO PAUSANIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297946,ARZACHENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298033,PALAU,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298313,GOLFO ARANCI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10292498,SAN GAVINO MONREALE,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038765,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10040124,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10040202,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10040668,USINI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7671518,ORISTANO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10168384,SINNAI,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293456,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293628,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9941459,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294220,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294324,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10070147,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430174,ALGHERO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20033951,TRESNURAGHES,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9929533,JERZU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430201,ILBONO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430213,SAN VITO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652135,BARESSA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10882691,SAMUGHEO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10901768,ULASSAI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430302,OSILO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10318689,GESTURI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9704546,BUSACHI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430414,TADASUNI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430418,GONNESA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219954,SIAMANNA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430449,TORPE',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430462,SAN GIOVANNI SUERGIU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430467,TRATALIAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430468,TEMPIO PAUSANIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430475,OLBIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430477,STINTINO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10858080,CURCURIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10644212,ORANI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20625280,NARCAO,ACQUE REFLUE URBANE - FRAZIONE TERRASEO,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652772,VILLAURBANA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652980,ZEDDIANI,IMPIANTO DI TRATTAMENTO ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20706000,PERDASDEFOGU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20798007,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10173044,PULA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295368,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10292867,GONNOSFANADIGA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10292876,GUSPINI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20036108,SAN TEODORO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430065,OLMEDO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10318638,VILLAMAR,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430076,VILLASIMIUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8226661,MAMOIADA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7670104,MOGORO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+9712183,ASSEMINI,ACQUE IMPIANTI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10169330,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7668867,MONTRESTA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10600484,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20035629,LA MADDALENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20052735,PLOAGHE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038432,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+7660416,CASTELSARDO,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10644962,MAMOIADA,ACQUE METEORICHE DI PRIMA PIOGGIA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+552445,PULA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9935235,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10643616,MACOMER,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430338,TETI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10583165,PORTO TORRES,ACQUE DI FALDA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430375,ASUNI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10319334,LAS PLASSAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10318163,PAULI ARBAREI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10319415,TUILI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+563403,OROSEI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+511111,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+555182,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+509799,LOIRI PORTO SAN PAOLO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+548045,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+557162,MARACALAGONIS,ACQUE REFLUE INDUSTRIALI - ACQUE METEORICHE,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+531775,SARDARA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8229256,BORTIGALI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220240,ORISTANO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8278191,PORTO TORRES,MODULO DI TRATTAMENTO TAF2,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9686995,ALGHERO,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298458,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298574,PALAU,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9933688,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9935090,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297801,TELTI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298253,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298284,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10037576,PALMAS ARBOREA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10040152,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10040869,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293468,ALGHERO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9941266,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293930,OSSI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293911,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294107,ERULA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+7821205,PORTOSCUSO,ACQUE REFLUE INDUSTRIALI - IMPIANTO SIRI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10170127,ESTERZILI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294549,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+430091,SERDIANA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10172962,TEULADA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430202,BENETUTTI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10885074,TORPE',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430217,VILLA SAN PIETRO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+3706790,TEMPIO PAUSANIA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430238,GIBA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430259,GHILARZA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430274,LEI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20053050,LAERRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430311,SASSARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430362,ROMANA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10318149,VILLANOVAFORRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10446480,PADRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430416,SCANO DI MONTIFERRO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10858033,TERRALBA,ACQUE REFLUE URBANE - CONSORTILE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430022,DOMUSNOVAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20035601,BERCHIDDA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430046,GIBA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430047,NARCAO,ACQUE REFLUE URBANE - NARCAO E FRAZIONI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20650347,CARBONIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652689,VILLA SANT'ANTONIO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20794885,SARROCH,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20796392,MARACALAGONIS,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+7658800,GIAVE,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295211,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+511265,CALANGIANUS,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+536127,SILIQUA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20031616,BOLOTANA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20033470,NUORO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+20033614,SILANUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10857973,SAGAMA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8221368,PERDAXIUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+564393,GONNOSTRAMATZA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7658828,MORES,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+508962,ALA' DEI SARDI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8436763,SOLEMINIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8335230,SASSARI,TRATTAMENTO IN SITU DEL PERCOLATO,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+523105,CABRAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8383866,PORTO TORRES,LINEA ACQUE CHIMICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8383811,PORTO TORRES,LINEA ACQUE OLEOSE E METEORICHE,Acque oleose,,,Prossimita geometrica; non conferma recapito autorizzato.
+430243,NUXIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430251,SENORBI',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430318,SELEGAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430105,ITTIRI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430151,MACOMER,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+430405,MONTI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321605,ARZACHENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321644,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8231629,SESTU,IMPIANTO DI DEPURAZIONE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+527518,LOTZORAI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+525291,OTTANA,ACQUE METEORICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7319893,ARBUS,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+530007,BUDONI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7661973,NARBOLIA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+521994,POMPU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7669256,QUARTU SANT'ELENA,ACQUE REFLUE METEORICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7669267,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+541410,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+531790,SARDARA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219576,SENIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7671560,ORISTANO,ACQUE REFLUE METEORICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8352307,SASSARI,SPURGHI AMMONIACALI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219618,BIDONI',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220218,SIAMAGGIORE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220505,ARBOREA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8229299,BAUNEI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8278172,PORTO TORRES,MODULO DI TRATTAMENTO TAF1,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219063,OLBIA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298498,LA MADDALENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8903498,SASSARI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8903652,PERFUGAS,FITODEPURAZIONE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297688,GOLFO ARANCI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297823,TELTI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298332,LOIRI PORTO SAN PAOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9942069,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10037766,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10292317,SAN GAVINO MONREALE,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+7668208,ELMAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10167878,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293506,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293646,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293669,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293752,BURGOS,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293838,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294034,SENNORI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10170157,GONNESA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294822,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+430090,SIURGUS DONIGALA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10360787,GAVOI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20031438,ONANI',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430198,ORROLI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220639,MODOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430281,OSIDDA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10861033,VILLAGRANDE STRISAILI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430312,SASSARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9669458,VIDDALBA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8430424,NURAGUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430423,ARBUS,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430434,BONORVA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652654,SODDI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430447,TORPE',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430470,PERDAXIUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295252,OZIERI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+19625552,TORPE',FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20631757,VALLERMOSA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20794822,CAPOTERRA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20800404,QUARTU SANT'ELENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20894901,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+7659700,TORRALBA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10665129,LUOGOSANTO,ACQUE IMPIANTO P&T,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321972,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295194,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295463,CASTELSARDO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10292790,SAN GAVINO MONREALE,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+430053,OTTANA,ACQUE REFLUE URBANE - LINEA ACQUE BIANCHE E METEORICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430060,SINDIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20052157,BONORVA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430070,GAVOI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430072,SASSARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430078,NUORO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430079,ORGOSOLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+535910,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9805033,PORTO TORRES,VASCHE API 1,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9805059,PORTO TORRES,VASCHE AROMATICI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20035836,SANTA TERESA GALLURA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10857915,FORDONGIANUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038528,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+3687808,ISILI,IMPIANTO DI TRATTAMENTO DEI REFLUI ZOOTECNICI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9700356,ASSEMINI,RIFIUTI LIQUIDI,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8369185,GERGEI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220925,RIOLA SARDO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9938435,ARZACHENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+430114,SARDARA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430123,CASTELSARDO,CASTELSARDO - LOC. LA VIGNACCIA -,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430127,ARBUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430128,CALASETTA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430138,GONNOSFANADIGA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430139,VILLAMASSARGIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430147,SORSO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430149,SOLARUSSA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7670463,GENONI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321610,TEMPIO PAUSANIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8232483,SARDARA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7828667,SANT'ANTIOCO,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+546050,CAGLIARI,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+565186,ORISTANO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+3807083,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+523192,MASULLAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7663006,USELLUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+522335,PAU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+532308,SAN GAVINO MONREALE,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+523396,MORGONGIORI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+556237,ISILI,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+553286,SENORBI',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+508986,ARZACHENA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+556246,MONSERRATO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+531116,VILLACIDRO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+548259,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8120935,ASSEMINI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+9707491,SAN SPERATE,DEPURATORE BIOLOGICO AD OSSIGENAZIONE TOTALE 1,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219368,BORONEDDU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220472,OLLASTRA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8226737,BUDONI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9687684,ATZARA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9687653,DUALCHI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10299121,PADRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10318091,SIDDI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9933662,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9934797,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9707062,PAULILATINO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297845,TELTI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298124,PADRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298144,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10321888,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10037858,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038708,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038110,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038821,ERULA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038928,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294879,FLORINAS,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294898,OSSI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10071178,GUASILA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10168342,PULA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293347,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293284,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293539,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293582,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10293856,SORSO,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294001,OSSI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10297617,PORTOSCUSO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430176,CARDEDU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8430936,NURRI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430185,SESTU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10652657,SANT'ANTIOCO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20795477,MURAVERA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430212,VILLAPUTZU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10857952,NURECI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430283,SEUI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430295,ERULA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430297,ILLORAI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430308,AGLIENTU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8304342,SEMESTENE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8430338,MURAVERA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9707208,NEONELI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652698,ULA' TIRSO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430432,CASTIADAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10318865,GESTURI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430463,SAN GIOVANNI SUERGIU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10859022,BORTIGIADAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20706300,TORTOLI',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430032,MORES,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20053094,NULVI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20280468,ALA' DEI SARDI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20706135,GAIRO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20706183,VILLAGRANDE STRISAILI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9809975,IGLESIAS,IMPIANTO DI TRATTAMENTO DEL PERCOLATO,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+535356,CASTIADAS,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9934041,ALGHERO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10173237,MANDAS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295469,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8380580,OZIERI,VASCA DI SEDIMENTAZIONE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8281618,TULA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+430058,GUASILA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8432731,SETTIMO SAN PIETRO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430071,MONASTIR,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8289791,OSSI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10168443,SAN SPERATE,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10168452,SAN SPERATE,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10169853,NURRI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7669114,ALES,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9824098,TRINITA' D'AGULTU E VIGNOLA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20052260,SASSARI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10884884,POSADA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+9771588,GENONI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7664246,GOLFO ARANCI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+508903,AGLIENTU,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7667300,OLBIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10649755,SINISCOLA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7662567,LODE',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+521429,ARITZO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10292110,VILLACIDRO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+516366,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430247,SAN GIOVANNI SUERGIU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8877785,ARDARA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430359,SUELLI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430360,SANT'ANDREA FRIUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430316,STINTINO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430326,ZERFALIU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430094,SANT'ANNA ARRESI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10600325,SAN SPERATE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430119,ARZACHENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430121,OSILO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430124,CASTELSARDO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430131,BORTIGALI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430159,MEANA SARDO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430393,CALASETTA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7670454,ORISTANO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7830016,SORGONO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+1754679065,MUSEI,ORIGINE DOMESTICA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7660131,OLMEDO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7658920,SORSO,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+554968,PULA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7669274,QUARTU SANT'ELENA,ACQUE REFLUE DI LAVAGGIO,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+556222,MONSERRATO,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7811869,QUARTU SANT'ELENA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+549442,ASSEMINI,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+7338880,IGLESIAS,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+535170,SESTU,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8379945,OZIERI,VASCA DI PRIMA PIOGGIA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8232093,CAPOTERRA,ACQUE REFLUE URBANE ED INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220064,NORBELLO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8222973,CARBONIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8230075,MONTI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8219233,AIDOMAGGIORE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10172168,ESCALAPLANO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298418,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10299271,TEMPIO PAUSANIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9933677,ARZACHENA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9934324,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9934541,OLBIA,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+9706976,CARBONIA,A.P.P. PISTA DI ACCESSO,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10298036,PADRU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10037397,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038847,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10071005,PULA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294398,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+10294536,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+430168,SARROCH,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430173,ALGHERO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430175,ALGHERO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430211,DOLIANOVA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430240,GUSPINI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430271,GADONI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430286,TONARA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430300,MONTELEONE ROCCA DORIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430363,GIAVE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430364,COSSOINE,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8430183,VILLANOVA TULO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430373,VILLA SANT'ANTONIO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8429525,GONI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430429,GONNESA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8301693,ERULA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430023,SANT'ANNA ARRESI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430030,BADESI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430031,VALLEDORIA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+19625547,OROTELLI,ACQUE METEORICHE DI PRIMA PIOGGIA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10866942,BUDDUSO',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20179380,ARZANA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20631173,SERRAMANNA,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+20652411,LACONI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20794862,CAPOTERRA,TRATTAMENTO ACQUE 1^ PIOGGIA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20796019,URZULEI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20895318,USELLUS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10295151,CODRONGIANOS,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+8096821,OLBIA,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430054,OTTANA,ACQUE REFLUE URBANE - LINEA ACQUE SANITARIE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430077,OLIENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430088,SENORBI',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10168559,SARROCH,ACQUE REFLUE INDUSTRIALI,Industriale,,,Prossimita geometrica; non conferma recapito autorizzato.
+535969,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+535984,CAGLIARI,ACQUE REFLUE URBANE - TERZIARIO,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7669367,MARRUBIU,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20034810,PULA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+20052649,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+20052808,ILLORAI,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+10038331,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+8216312,SANT'ANTIOCO,ACQUE REFLUE DOMESTICHE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7660930,GONNOSNO',ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220826,NURACHI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8220774,CARBONIA,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+540166,QUARTU SANT'ELENA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+555842,VILLA SAN PIETRO,ACQUE REFLUE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8383894,PORTO TORRES,LINEA ACQUE DI ZAVORRA,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430244,NUXIS,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430255,ARBOREA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430353,TULA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430327,VILLANOVA TRUSCHEDU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430329,SANT'ANTONIO DI GALLURA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430122,CASTELSARDO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430130,BONO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430137,MURAVERA,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+7659695,SASSARI,FOSSA IMHOFF,Fosse Imhoff,,,Prossimita geometrica; non conferma recapito autorizzato.
+518061,PORTO TORRES,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430386,VILLASALTO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430389,BALLAO,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+430398,MUSEI,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
+8129034,VILLAPUTZU,ACQUE REFLUE URBANE,Acque reflue urbane,,,Prossimita geometrica; non conferma recapito autorizzato.
