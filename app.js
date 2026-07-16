@@ -47,7 +47,7 @@ const configs = [
   { key: 'depuratori', label: 'Depuratori SIRA', file: 'public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
-function style(cfg) { return { color: cfg.color, weight: cfg.weight, fillColor: cfg.color, fillOpacity: cfg.fill ? 0.12 : 0 }; }
+function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 2 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.85 : 1, fillColor: cfg.color, fillOpacity: cfg.fill ? 0.12 : 0 }; }
 function popup(feature, cfg) {
   const props = feature.properties || {};
   const title = props[cfg.prop] || cfg.label;
@@ -61,6 +61,7 @@ Promise.all(configs.map(async cfg => {
   const data = await response.json();
   const layer = L.geoJSON(data, {
     style: () => style(cfg),
+    pointToLayer: (feature, latlng) => cfg.key === 'depuratori' ? L.circleMarker(latlng, { radius: 3.5, color: '#555', fillColor: '#555', fillOpacity: 0.7, weight: 1 }) : undefined,
     onEachFeature: (feature, item) => item.bindPopup(popup(feature, cfg))
   });
   layer._sourceData = data;
@@ -90,7 +91,7 @@ Promise.all(configs.map(async cfg => {
     'Regione': layers.regions,
     'Corsi d’acqua principali': layers.hydro,
     'Depuratori SIRA': layers.depuratori,
-    ...Object.fromEntries(Object.entries(categoryLayers).map(([name, layer]) => [`Depuratori · ${name}`, layer]))
+    ...Object.fromEntries(Object.entries(categoryLayers).map(([name, layer]) => [`Depuratori › ${name}`, layer]))
   }, { collapsed: false }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = '3 layer caricati';
