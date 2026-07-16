@@ -30,15 +30,16 @@
       "type": "Feature",
       "properties": {
         "site_name": "Osp. Giovanni Paolo II",
-        "municipality": "Sassari",
+        "municipality": "Olbia",
         "province": "Sassari",
         "region": "Sardegna",
         "source_role": "laboratorio/ospedale partecipante AR-ISS",
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
-        "source_line": "C. R. Casalloni, Osp. Giovanni Paolo II, Sassari"
+        "source_line": "C. R. Casalloni, Osp. Giovanni Paolo II, Sassari",
+        "location_note": "Il rapporto AR-ISS riporta Sassari; la sede ospedaliera Giovanni Paolo II e' stata rettificata a Olbia su fonte ASL Gallura/Sardegna Salute."
       },
-      "geometry": {"type": "Point", "coordinates": [8.5555, 40.7259]}
+      "geometry": {"type": "Point", "coordinates": [9.4980, 40.9236]}
     },
     {
       "type": "Feature",
