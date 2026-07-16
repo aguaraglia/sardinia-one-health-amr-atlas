@@ -1,0 +1,46 @@
+{
+  "source_id": "izs_sa07_02_north_sardinia_amr",
+  "dataset_version": "atlas-curated-v0.1",
+  "privacy": "public_aggregate",
+  "geography_level": "AREA_REGIONALE",
+  "geography": "Sardegna settentrionale",
+  "host": "ovini",
+  "matrix": "latte mastitico",
+  "period": "1995-2004",
+  "isolate_total": 2763,
+  "organism_counts": {
+    "Staphylococcus aureus": 1284,
+    "stafilococchi coagulasi-negativi": 900,
+    "Streptococcus uberis": 382,
+    "Escherichia coli": 197
+  },
+  "antimicrobial_resistance": [
+    {"organism":"Staphylococcus aureus","antimicrobial":"penicillina","resistant":52,"tested":1252,"resistance_percent":4.1},
+    {"organism":"stafilococchi coagulasi-negativi","antimicrobial":"penicillina","resistant":130,"tested":848,"resistance_percent":15.3},
+    {"organism":"Streptococcus uberis","antimicrobial":"ampicillina","resistant":11,"tested":311,"resistance_percent":3.5},
+    {"organism":"Escherichia coli","antimicrobial":"ampicillina","resistant":73,"tested":197,"resistance_percent":37.1},
+    {"organism":"Staphylococcus aureus","antimicrobial":"oxitetraciclina","resistant":96,"tested":1270,"resistance_percent":7.6},
+    {"organism":"stafilococchi coagulasi-negativi","antimicrobial":"oxitetraciclina","resistant":151,"tested":900,"resistance_percent":16.8},
+    {"organism":"Streptococcus uberis","antimicrobial":"oxitetraciclina","resistant":58,"tested":382,"resistance_percent":15.2},
+    {"organism":"Escherichia coli","antimicrobial":"oxitetraciclina","resistant":48,"tested":190,"resistance_percent":25.3},
+    {"organism":"Staphylococcus aureus","antimicrobial":"kanamicina","resistant":187,"tested":1284,"resistance_percent":14.6},
+    {"organism":"stafilococchi coagulasi-negativi","antimicrobial":"kanamicina","resistant":24,"tested":874,"resistance_percent":2.7},
+    {"organism":"Streptococcus uberis","antimicrobial":"kanamicina","resistant":322,"tested":381,"resistance_percent":84.5},
+    {"organism":"Escherichia coli","antimicrobial":"kanamicina","resistant":15,"tested":155,"resistance_percent":9.7},
+    {"organism":"Staphylococcus aureus","antimicrobial":"streptomicina","resistant":554,"tested":875,"resistance_percent":63.3},
+    {"organism":"stafilococchi coagulasi-negativi","antimicrobial":"streptomicina","resistant":116,"tested":738,"resistance_percent":15.7},
+    {"organism":"Streptococcus uberis","antimicrobial":"streptomicina","resistant":285,"tested":308,"resistance_percent":92.5},
+    {"organism":"Escherichia coli","antimicrobial":"streptomicina","resistant":68,"tested":131,"resistance_percent":51.9}
+  ],
+  "molecular_subset": {
+    "period": "2004-03/2006-03",
+    "tested_for_tetracyclines": {"stafilococchi":765,"Streptococcus uberis":158,"Escherichia coli":40,"Enterococcus faecalis":50},
+    "tetracycline_resistance_percent": {"stafilococchi":13.0,"Streptococcus uberis":12.0,"Escherichia coli":22.5,"Enterococcus faecalis":22.0},
+    "resistance_genes": ["tetK","tetM","tetL","tetO","tetA","tetB","tetC"],
+    "notes": "Nel sottocampione genotipizzato la resistenza alle tetracicline è stata associata a geni tet; il rapporto descrive anche tetM su trasposoni Tn916-Tn1545 e prove di coniugazione negli enterococchi."
+  },
+  "source_url": "https://www.izs-sardegna.it/ricerche/izssa07-02.pdf",
+  "source_title": "Comparazione di profili di antibiotico-resistenza fra ceppi batterici isolati da uomo, animali e alimenti di origine animale",
+  "method_note": "Antibiogrammi storici da latte mastitico; CLSI M31-A2 e diffusione in agar. I dati sono aggregati per area di studio e non sono attribuibili ai singoli comuni.",
+  "interpretation_note": "Coorte veterinaria storica, non prevalenza attuale degli allevamenti e non indicatore comunale. Non sommare con le coorti comunali pubblicate."
+}

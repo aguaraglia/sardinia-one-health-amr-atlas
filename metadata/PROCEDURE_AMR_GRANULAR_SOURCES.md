@@ -132,6 +132,18 @@ La sede pubblica di una struttura sanitaria può invece essere mostrata come
 punto di struttura, purché il popup dichiari che non rappresenta la residenza
 dei pazienti né una coordinata di campione.
 
+### Rapporto IZS SA 07/02: coorte storica del Nord Sardegna
+
+Il rapporto finale ufficiale IZS SA 07/02 pubblica una coorte retrospettiva di
+2763 isolati da latte mastitico raccolti nel periodo 1995-2004: 1284
+*Staphylococcus aureus*, 900 stafilococchi coagulasi-negativi, 382
+*Streptococcus uberis* e 197 *Escherichia coli*. Le tabelle riportano conteggi
+e percentuali di resistenza per penicillina, ampicillina, oxitetraciclina,
+kanamicina e streptomicina; il rapporto include anche un sottocampione
+molecolare 2004-2006 con geni `tet`. Il dato è stato aggiunto al pubblico come
+aggregato della Sardegna settentrionale: non contiene una ripartizione comunale
+pubblicabile e non deve essere usato per stimare prevalenze comunali attuali.
+
 ### Priorità IZS/OEVR
 
 La pagina pubblica Bioresource IZSSA dichiara 564 ceppi batterici nel catalogo,
