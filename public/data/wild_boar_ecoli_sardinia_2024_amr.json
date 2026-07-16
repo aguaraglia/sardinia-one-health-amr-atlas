@@ -1,0 +1,22 @@
+{
+  "source_id": "wild_boar_ecoli_sardinia_2024_amr",
+  "dataset_version": "atlas-curated-v0.1",
+  "privacy": "public_aggregate",
+  "geography_level": "AREA_REGIONALE",
+  "geography": "Sardegna settentrionale e centrale (province di Sassari e Nuoro)",
+  "host": "cinghiali selvatici",
+  "matrix": ["linfonodi mesenterici", "contenuto intestinale", "superficie carcassa"],
+  "period": "2020-2022",
+  "wild_boars_sampled": 66,
+  "samples_tested": 181,
+  "hunting_houses": 5,
+  "isolates_with_ast_and_wgs": 61,
+  "pathotypes_percent": {"UPEC":13.0,"ExPEC-UPEC":5.6,"ETEC":3.7},
+  "amr_gene_positive_isolates": 3,
+  "amr_genes_detected": ["sul2","tet(B)","aph(6)-Id","aph(3'')-Ib","fosA7"],
+  "gene_positive_note": "Un isolato non patogeno portava sul2, tet(B), aph(6)-Id e aph(3'')-Ib; due isolati non patogeni portavano fosA7.",
+  "source_url": "https://pubmed.ncbi.nlm.nih.gov/38878707/",
+  "doi": "10.1016/j.ijfoodmicro.2024.110790",
+  "method_note": "Studio di cinghiali abbattuti; 61 isolati selezionati sottoposti a sequenziamento e test di sensibilità.",
+  "interpretation_note": "Evidenza wildlife e filiera venatoria, non prevalenza regionale e senza attribuzione comunale pubblica."
+}
