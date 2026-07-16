@@ -1,0 +1,45 @@
+{
+  "source_id": "berchidda_pecorino_starter_cultures_amr",
+  "dataset_version": "atlas-curated-v0.1",
+  "privacy": "public_aggregate",
+  "municipality": "BERCHIDDA",
+  "province": "Sassari",
+  "public_geography_level": "COMUNE_DI_ORIGINE_DELLE_COLTURE",
+  "geography_note": "Berchidda identifica il comune dei due caseifici di origine. Gli stabilimenti sono indicati soltanto come A e B e non sono localizzati puntualmente.",
+  "collection_period": "fine anni 1960",
+  "publication_year": 2021,
+  "matrix": "colture naturali in scotta per Pecorino Romano DOP",
+  "cultures": [
+    {
+      "culture_id": "SR30",
+      "anonymous_plant": "A",
+      "phenotypic_growth_above_cutoff": ["clindamicina", "eritromicina"],
+      "resistance_genes_detected": []
+    },
+    {
+      "culture_id": "SR56",
+      "anonymous_plant": "B",
+      "phenotypic_growth_above_cutoff": ["clindamicina", "eritromicina", "gentamicina", "tetraciclina"],
+      "resistance_genes_detected": ["tetM"]
+    },
+    {
+      "culture_id": "SR63",
+      "anonymous_plant": "B",
+      "phenotypic_growth_above_cutoff": ["gentamicina"],
+      "resistance_genes_detected": []
+    }
+  ],
+  "organisms_detected": [
+    "Streptococcus thermophilus",
+    "Enterococcus faecium",
+    "Lactobacillus delbrueckii subsp. lactis",
+    "Lactobacillus reuteri"
+  ],
+  "interpretation_note": "Evidenza storica su tre colture conservate e riattivate. Documenta un resistoma della filiera alimentare nel comune di origine, non la prevalenza AMR attuale di Berchidda.",
+  "source": {
+    "pmid": "34201694",
+    "pmcid": "PMC8305336",
+    "doi": "10.3390/microorganisms9071363",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34201694/"
+  }
+}

@@ -105,6 +105,15 @@ fetch('public/data/veterinary_amr_municipal_evidence.json').then(r => r.json()).
     `${izs.resistant_test_results}/${izs.total_test_results} esiti resistenti (${izs.period}).<br>` +
     `<small>Coorti o collezioni selettive con pannelli differenti: identificazioni comunali, non prevalenza o rischio del comune; i conteggi delle due fonti non vanno sommati.</small>`;
 }).catch(() => {});
+fetch('public/data/food_chain_amr_berchidda.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('food-chain-amr-card');
+  const culture = d.cultures.find(item => item.culture_id === 'SR56');
+  card.hidden = false;
+  card.innerHTML = `<strong>AMR filiera alimentare · Berchidda</strong><br>` +
+    `${d.cultures.length} colture storiche da due caseifici anonimi; nella SR56 crescita sopra i cut-off per ` +
+    `${culture.phenotypic_growth_above_cutoff.join(', ')} e gene <code>${culture.resistance_genes_detected.join(', ')}</code>.<br>` +
+    `<small>${d.interpretation_note}</small>`;
+}).catch(() => {});
 fetch('public/data/environmental_amr_water_bodies_2024.json').then(r => r.json()).then(d => {
   const card = document.getElementById('environmental-amr-card');
   const bidighinzu = d.water_bodies.find(item => item.water_body_id === 'lake_bidighinzu');
@@ -162,6 +171,8 @@ const configs = [
   { key: 'provinces', label: 'Province', file: 'public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
   { key: 'regions', label: 'Regione', file: 'public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' },
   { key: 'veterinaryMunicipal', label: 'Evidenze AMR veterinarie comunali', file: 'public/data/veterinary_amr_municipal_evidence.geojson', color: '#c16f24', weight: 1.4, fill: true, prop: 'municipality' },
+  { key: 'humanFacilityEvidence', label: 'Evidenze AMR umane di struttura', file: 'public/data/human_amr_facility_evidence.geojson', color: '#9e2744', weight: 1.2, fill: true, prop: 'facility' },
+  { key: 'foodChainMunicipal', label: 'AMR filiera alimentare · Berchidda', file: 'public/data/food_chain_amr_berchidda.geojson', color: '#6f8428', weight: 2, fill: true, prop: 'municipality' },
   { key: 'hydro', label: 'Corsi d’acqua principali', file: 'public/data/dbgt_corsi_principali.geojson', color: '#2f78b7', weight: 1.2, fill: false, prop: 'Nome' },
   { key: 'arissSites', label: 'Laboratori partecipanti AR-ISS 2024', file: 'public/data/ar_iss_2024_sardinia_sites.geojson', color: '#c73e55', weight: 1, fill: true, prop: 'site_name' },
   { key: 'depuratori', label: 'Depuratori SIRA', file: 'public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
@@ -193,6 +204,21 @@ function popup(feature, cfg) {
     return `<strong>${escapeHtml(props.municipality)} · evidenza AMR veterinaria</strong><br>` +
       `${blocks.join('<hr>')}<br><small>Fonti selettive: identificazione nel comune di origine del campione, non prevalenza o rischio comunale. I conteggi delle fonti non vanno sommati.</small>`;
   }
+  if (cfg.key === 'humanFacilityEvidence') {
+    const organisms = (props.organisms || []).map(escapeHtml).join(', ');
+    return `<strong>${escapeHtml(props.facility)}</strong><br>` +
+      `${escapeHtml(props.headline)}<br>${escapeHtml(props.detail)}<br>` +
+      `<small>${escapeHtml(props.period)} · ${organisms}. ${escapeHtml(props.geography_note)}</small>`;
+  }
+  if (cfg.key === 'foodChainMunicipal') {
+    const cultures = (props.cultures || []).map(culture => {
+      const phenotype = (culture.phenotypic_growth_above_cutoff || []).map(escapeHtml).join(', ') || 'nessuna';
+      const genes = (culture.resistance_genes_detected || []).map(escapeHtml).join(', ');
+      return `<b>${escapeHtml(culture.culture_id)}</b>: crescita sopra cut-off per ${phenotype}${genes ? `; gene ${genes}` : ''}`;
+    }).join('<br>');
+    return `<strong>Berchidda · AMR nella filiera alimentare</strong><br>${cultures}<br>` +
+      `<small>${escapeHtml(props.period)}. ${escapeHtml(props.interpretation_note)} I caseifici A e B non sono localizzati.</small>`;
+  }
   if (cfg.key === 'arissSites') {
     const note = props.location_note ? `<br><small>${props.location_note}</small>` : '';
     return `<strong>${props.site_name}</strong><br>${props.municipality} (${props.province})<br><small>Laboratorio partecipante alla rete AR-ISS 2024. Il punto indica la sede del laboratorio. Copertura regionale ${props.coverage_percent_region}%; non e' prevalenza comunale o provinciale.</small>${note}`;
@@ -211,6 +237,7 @@ Promise.all(configs.map(async cfg => {
     pointToLayer: (feature, latlng) => {
       if (cfg.key === 'depuratori') return L.circleMarker(latlng, { radius: 3.5, color: '#555', fillColor: '#555', fillOpacity: 0.7, weight: 1 });
       if (cfg.key === 'arissSites') return L.circleMarker(latlng, { radius: 6, color: '#8e2237', fillColor: '#c73e55', fillOpacity: 0.82, weight: 1.2 });
+      if (cfg.key === 'humanFacilityEvidence') return L.circleMarker(latlng, { radius: 6, color: '#762034', fillColor: '#9e2744', fillOpacity: 0.88, weight: 1.2 });
       return undefined;
     },
     onEachFeature: (feature, item) => item.bindPopup(popup(feature, cfg))
@@ -223,7 +250,7 @@ Promise.all(configs.map(async cfg => {
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
   layers.veterinaryMunicipal.addTo(map);
-  layers.arissSites.addTo(map);
+  layers.humanFacilityEvidence.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
   const categoryColors = { 'Acque reflue urbane': '#2878b5', 'Fosse Imhoff': '#d98c22', 'Industriale': '#b83b5e', 'Acque oleose': '#6a4c93', 'Fanghi/reflui speciali': '#555555' };
@@ -249,6 +276,8 @@ Promise.all(configs.map(async cfg => {
     'Province': layers.provinces,
     'Regione': layers.regions,
     '<span class="layer-swatch" style="background:#c16f24"></span>AMR veterinaria · evidenze comunali': layers.veterinaryMunicipal,
+    '<span class="layer-swatch" style="background:#9e2744"></span>AMR umana · evidenze di struttura': layers.humanFacilityEvidence,
+    '<span class="layer-swatch" style="background:#6f8428"></span>AMR filiera alimentare · Berchidda': layers.foodChainMunicipal,
     ...waterAndPlantLayers,
     '<span class="layer-swatch" style="background:#c73e55"></span>AMR umana · laboratori AR-ISS 2024': layers.arissSites
   }, { collapsed: false }).addTo(map);

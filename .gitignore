@@ -58,6 +58,8 @@
 *.swp
 .DS_Store
 .qgis/
+__pycache__/
+*.pyc
 
 # Output locali
 reports/local/
