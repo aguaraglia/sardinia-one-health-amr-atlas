@@ -105,6 +105,18 @@ fetch('public/data/veterinary_amr_municipal_evidence.json').then(r => r.json()).
     `${izs.resistant_test_results}/${izs.total_test_results} esiti resistenti (${izs.period}).<br>` +
     `<small>Coorti o collezioni selettive con pannelli differenti: identificazioni comunali, non prevalenza o rischio del comune; i conteggi delle due fonti non vanno sommati.</small>`;
 }).catch(() => {});
+fetch('public/data/izs_sa07_02_north_sardinia_amr.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('izs-area-amr-card');
+  const oxytetra = d.antimicrobial_resistance.filter(x => x.antimicrobial === 'oxitetraciclina');
+  const sUberis = oxytetra.find(x => x.organism === 'Streptococcus uberis');
+  const ecoli = oxytetra.find(x => x.organism === 'Escherichia coli');
+  card.hidden = false;
+  card.innerHTML = `<strong>AMR veterinaria · Sardegna settentrionale</strong><br>` +
+    `${d.isolate_total.toLocaleString('it-IT')} isolati da latte mastitico (${d.period}); ` +
+    `oxitetraciclina: <i>S. uberis</i> ${sUberis.resistant}/${sUberis.tested} (${sUberis.resistance_percent}%), ` +
+    `<i>E. coli</i> ${ecoli.resistant}/${ecoli.tested} (${ecoli.resistance_percent}%).<br>` +
+    `<small>Rapporto IZS SA 07/02: antibiogrammi storici e sottocampione molecolare. Area di studio, non prevalenza comunale.</small>`;
+}).catch(() => {});
 fetch('public/data/food_chain_amr_berchidda.json').then(r => r.json()).then(d => {
   const card = document.getElementById('food-chain-amr-card');
   const culture = d.cultures.find(item => item.culture_id === 'SR56');
