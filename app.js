@@ -117,6 +117,16 @@ fetch('public/data/izs_sa07_02_north_sardinia_amr.json').then(r => r.json()).the
     `<i>E. coli</i> ${ecoli.resistant}/${ecoli.tested} (${ecoli.resistance_percent}%).<br>` +
     `<small>Rapporto IZS SA 07/02: antibiogrammi storici e sottocampione molecolare. Area di studio, non prevalenza comunale.</small>`;
 }).catch(() => {});
+fetch('public/data/pig_ecoli_sardinia_2024_amr.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('pig-amr-card');
+  card.hidden = false;
+  card.innerHTML = `<strong>AMR filiera suina · Sardegna</strong><br>` +
+    `${d.isolates_analyzed} isolati E. coli da ${d.farms_sampled} allevamenti e ${d.slaughterhouses_sampled} macelli: ` +
+    `${d.amr_phenotype.isolates_resistant_to_at_least_one}/${d.isolates_analyzed} resistenti ad almeno un antimicrobico; ` +
+    `${d.amr_genotype.isolates_with_any_amr_gene}/${d.isolates_analyzed} con almeno un gene AMR. ` +
+    `Più frequenti: tetracicline (${d.amr_phenotype.resistance_among_resistant_isolates.tetraciclina}%) e ampicillina (${d.amr_phenotype.resistance_among_resistant_isolates.ampicillina}%).<br>` +
+    `<small>Studio 2020-2022; aziende e macelli anonimizzati, nessuna attribuzione comunale.</small>`;
+}).catch(() => {});
 fetch('public/data/food_chain_amr_berchidda.json').then(r => r.json()).then(d => {
   const card = document.getElementById('food-chain-amr-card');
   const culture = d.cultures.find(item => item.culture_id === 'SR56');
