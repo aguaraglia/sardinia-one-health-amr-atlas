@@ -140,15 +140,13 @@ Promise.all(configs.map(async cfg => {
       onEachFeature: (feature, item) => item.bindPopup(popup(feature, configs.find(c => c.key === 'depuratori')))
     });
   });
-  const plantMenu = L.control({ position: 'topright' });
-  plantMenu.onAdd = () => {
-    const el = L.DomUtil.create('div', 'leaflet-control plant-menu');
-    el.innerHTML = `<details><summary>Depuratori SIRA</summary><label><input type="checkbox" data-plant-all> Tutti</label>${categories.map(c => `<label><input type="checkbox" data-plant-cat="${c}"> ${c}</label>`).join('')}</details>`;
-    L.DomEvent.disableClickPropagation(el);
-    el.querySelector('[data-plant-all]').addEventListener('change', e => categories.forEach(c => { const cb=el.querySelector(`[data-plant-cat="${c}"]`); cb.checked=e.target.checked; (e.target.checked ? categoryLayers[c].addTo(map) : map.removeLayer(categoryLayers[c])); }));
-    el.querySelectorAll('[data-plant-cat]').forEach(cb => cb.addEventListener('change', e => e.target.checked ? categoryLayers[e.target.dataset.plantCat].addTo(map) : map.removeLayer(categoryLayers[e.target.dataset.plantCat])));
-    return el;
-  }; plantMenu.addTo(map);
+  const waterAndPlantLayers = {
+    '<span class="layer-group-label">Corsi d’acqua principali</span>': layers.hydro
+  };
+  categories.forEach(category => {
+    const color = categoryColors[category] || '#555555';
+    waterAndPlantLayers[`<span class="layer-swatch" style="background:${color}"></span>Depuratori SIRA · ${escapeHtml(category)}`] = categoryLayers[category];
+  });
   L.control.layers({
     'OpenStreetMap': osm,
     'Satellite Esri': satellite
@@ -156,7 +154,7 @@ Promise.all(configs.map(async cfg => {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
     'Regione': layers.regions,
-    'Corsi d’acqua principali': layers.hydro,
+    ...waterAndPlantLayers,
     'AR-ISS sedi comunali 2024': layers.arissSites
   }, { collapsed: false }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
