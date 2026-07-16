@@ -61,12 +61,16 @@ const configs = [
   { key: 'provinces', label: 'Province', file: '../public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
   { key: 'regions', label: 'Regione', file: '../public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' },
   { key: 'hydro', label: 'Corsi d’acqua principali', file: '../public/data/dbgt_corsi_principali.geojson', color: '#2f78b7', weight: 1.2, fill: false, prop: 'Nome' },
+  { key: 'arissSites', label: 'AR-ISS sedi comunali 2024', file: '../public/data/ar_iss_2024_sardinia_sites.geojson', color: '#c73e55', weight: 1, fill: true, prop: 'site_name' },
   { key: 'depuratori', label: 'Depuratori SIRA', file: '../public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
 function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 2 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.85 : 1, fillColor: cfg.color, fillOpacity: cfg.fill ? 0.12 : 0 }; }
 function popup(feature, cfg) {
   const props = feature.properties || {};
+  if (cfg.key === 'arissSites') {
+    return `<strong>${props.site_name}</strong><br>${props.municipality} (${props.province})<br><small>Sede comunale della rete AR-ISS 2024. Copertura regionale ${props.coverage_percent_region}%; non e' prevalenza comunale o provinciale.</small>`;
+  }
   const title = props[cfg.prop] || cfg.label;
   const code = props.CIstat || props.CBelfiore || '';
   return `<strong>${title}</strong>${code ? `<br><small>Codice: ${code}</small>` : ''}`;
@@ -78,7 +82,11 @@ Promise.all(configs.map(async cfg => {
   const data = await response.json();
   const layer = L.geoJSON(data, {
     style: () => style(cfg),
-    pointToLayer: (feature, latlng) => cfg.key === 'depuratori' ? L.circleMarker(latlng, { radius: 3.5, color: '#555', fillColor: '#555', fillOpacity: 0.7, weight: 1 }) : undefined,
+    pointToLayer: (feature, latlng) => {
+      if (cfg.key === 'depuratori') return L.circleMarker(latlng, { radius: 3.5, color: '#555', fillColor: '#555', fillOpacity: 0.7, weight: 1 });
+      if (cfg.key === 'arissSites') return L.circleMarker(latlng, { radius: 6, color: '#8e2237', fillColor: '#c73e55', fillOpacity: 0.82, weight: 1.2 });
+      return undefined;
+    },
     onEachFeature: (feature, item) => item.bindPopup(popup(feature, cfg))
   });
   layer._sourceData = data;
@@ -88,6 +96,7 @@ Promise.all(configs.map(async cfg => {
   layers.regions.addTo(map);
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
+  layers.arissSites.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
   const categoryColors = { 'Acque reflue urbane': '#2878b5', 'Fosse Imhoff': '#d98c22', 'Industriale': '#b83b5e', 'Acque oleose': '#6a4c93', 'Fanghi/reflui speciali': '#555555' };
@@ -114,10 +123,11 @@ Promise.all(configs.map(async cfg => {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
     'Regione': layers.regions,
-    'Corsi d’acqua principali': layers.hydro
+    'Corsi d’acqua principali': layers.hydro,
+    'AR-ISS sedi comunali 2024': layers.arissSites
   }, { collapsed: false }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
-  document.getElementById('status').textContent = '3 layer caricati';
+  document.getElementById('status').textContent = 'Layer caricati';
 }).catch(error => {
   document.getElementById('status').textContent = 'Errore di caricamento';
   console.error(error);

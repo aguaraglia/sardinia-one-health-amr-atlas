@@ -9,6 +9,7 @@ sira_scarichi_raw	sira_scarichi_raw	PUNTO	Nessuna pubblica	report_territorial_on
 sira_scarichi_edits	sira_scarichi_edits	PUNTO	Nessuna pubblica	report_territorial_one_health	restricted	Editing locale con evidenza e revisione
 sira_scarichi_public	sira_scarichi_public	PUNTO	Da verificare	report_territorial_one_health	conditional	Pubblicare solo dopo verifica licenza e copertura
 ar_iss	human_amr_regional	REGIONE/PATOGENO_ANTIBIOTICO	Sardegna	report_amr_by_class;report_surveillance_benchmark	public	Dati regionali aggregati; copertura sempre esplicita
+ar_iss	human_amr_surveillance_sites	COMUNE_SEDE_LABORATORIO	Sardegna	report_surveillance_benchmark	public	Punti su centroide comunale delle sedi AR-ISS; non prevalenza comunale/provinciale
 aifa_osmed_antibiotici	human_antimicrobial_use	REGIONE	Sardegna	report_territorial_one_health;report_amr_by_class	public	Separare consumo territoriale e ospedaliero
 ears_net	human_amr_benchmark	STATO/PATOGENO_ANTIBIOTICO	Italia/UE	report_surveillance_benchmark	public	Benchmark; mai downscaling alla Sardegna
 who_glass_amr	global_amr_benchmark	STATO/PATOGENO_ANTIBIOTICO	Italia/globale	report_surveillance_benchmark	public	Benchmark; distinguere osservato e stimato

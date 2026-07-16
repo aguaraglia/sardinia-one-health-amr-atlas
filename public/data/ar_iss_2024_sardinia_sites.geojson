@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "name": "ar_iss_2024_sardinia_sites",
+  "metadata": {
+    "source_id": "ar_iss",
+    "dataset_version": "RIS-5/2025",
+    "observation_period": "2024",
+    "geography_level": "COMUNE",
+    "geometry_method": "municipality_centroid_public_display",
+    "source_url": "https://www.epicentro.iss.it/antibiotico-resistenza/ar-iss/RIS-5_2025.pdf",
+    "source_page": 41,
+    "notes": "Punti pubblici per comune sede dei laboratori/ospedali AR-ISS citati nel gruppo di lavoro. Non sono coordinate di pazienti, aziende o campioni; non rappresentano prevalenza comunale o provinciale."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "Osp. SS Trinita",
+        "municipality": "Cagliari",
+        "province": "Citta Metropolitana di Cagliari",
+        "region": "Sardegna",
+        "source_role": "laboratorio/ospedale partecipante AR-ISS",
+        "public_geometry": "centroide comunale",
+        "coverage_percent_region": 75.4,
+        "source_line": "A. Aste, Osp. SS Trinita, Cagliari"
+      },
+      "geometry": {"type": "Point", "coordinates": [9.1217, 39.2238]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "Osp. Giovanni Paolo II",
+        "municipality": "Sassari",
+        "province": "Sassari",
+        "region": "Sardegna",
+        "source_role": "laboratorio/ospedale partecipante AR-ISS",
+        "public_geometry": "centroide comunale",
+        "coverage_percent_region": 75.4,
+        "source_line": "C. R. Casalloni, Osp. Giovanni Paolo II, Sassari"
+      },
+      "geometry": {"type": "Point", "coordinates": [8.5555, 40.7259]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "Osp. G. Brotzu",
+        "municipality": "Cagliari",
+        "province": "Citta Metropolitana di Cagliari",
+        "region": "Sardegna",
+        "source_role": "laboratorio/ospedale partecipante AR-ISS",
+        "public_geometry": "centroide comunale",
+        "coverage_percent_region": 75.4,
+        "source_line": "M. Di Rosa, Osp. G. Brotzu, Cagliari"
+      },
+      "geometry": {"type": "Point", "coordinates": [9.1217, 39.2238]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "Osp. San Francesco",
+        "municipality": "Nuoro",
+        "province": "Nuoro",
+        "region": "Sardegna",
+        "source_role": "laboratorio/ospedale partecipante AR-ISS",
+        "public_geometry": "centroide comunale",
+        "coverage_percent_region": 75.4,
+        "source_line": "M. Fiamma, Osp. San Francesco, Nuoro"
+      },
+      "geometry": {"type": "Point", "coordinates": [9.3264, 40.3202]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "Osp. San Gavino",
+        "municipality": "San Gavino Monreale",
+        "province": "Sud Sardegna",
+        "region": "Sardegna",
+        "source_role": "laboratorio/ospedale partecipante AR-ISS",
+        "public_geometry": "centroide comunale",
+        "coverage_percent_region": 75.4,
+        "source_line": "L. Masala, Osp. San Gavino, Sud Sardegna"
+      },
+      "geometry": {"type": "Point", "coordinates": [8.7929, 39.5507]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "Osp. San Martino",
+        "municipality": "Oristano",
+        "province": "Oristano",
+        "region": "Sardegna",
+        "source_role": "laboratorio/ospedale partecipante AR-ISS",
+        "public_geometry": "centroide comunale",
+        "coverage_percent_region": 75.4,
+        "source_line": "A. M. Mura, Osp. San Martino, Oristano"
+      },
+      "geometry": {"type": "Point", "coordinates": [8.5884, 39.9062]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "AOU di Cagliari - PO Duilio Casula",
+        "municipality": "Cagliari",
+        "province": "Citta Metropolitana di Cagliari",
+        "region": "Sardegna",
+        "source_role": "laboratorio/ospedale partecipante AR-ISS",
+        "public_geometry": "centroide comunale",
+        "coverage_percent_region": 75.4,
+        "source_line": "E. Poma, AOU di Cagliari - PO Duilio Casula, Cagliari"
+      },
+      "geometry": {"type": "Point", "coordinates": [9.1217, 39.2238]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "AOU di Sassari - Presidio Ospedaliero",
+        "municipality": "Sassari",
+        "province": "Sassari",
+        "region": "Sardegna",
+        "source_role": "laboratorio/ospedale partecipante AR-ISS",
+        "public_geometry": "centroide comunale",
+        "coverage_percent_region": 75.4,
+        "source_line": "S. Rubino, AOU di Sassari - Presidio Ospedaliero, Sassari"
+      },
+      "geometry": {"type": "Point", "coordinates": [8.5555, 40.7259]}
+    }
+  ]
+}
