@@ -51,6 +51,11 @@ fetch('public/data/bdn_bovini_sardegna_2025.json').then(r => r.json()).then(d =>
   card.hidden = false;
   card.innerHTML = `<strong>BDN Sardegna – bovini e bufalini</strong><br>31/12/2025: ${values.BOVINI} bovini; ${values.BUFALINI} bufalini.<br><small>Aggregato regionale di contesto, non indicatore AMR.</small>`;
 }).catch(() => {});
+fetch('public/data/bdn_suini_sardegna_2025.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('bdn-suini-card');
+  card.hidden = false;
+  card.innerHTML = `<strong>BDN Sardegna – suini</strong><br>31/12/2025: ${d.records[0].heads.toLocaleString('it-IT')} capi.<br><small>Aggregato regionale di contesto, non indicatore AMR.</small>`;
+}).catch(() => {});
 const configs = [
   { key: 'municipalities', label: 'Comuni', file: 'public/geography/atlas_municipalities.geojson', color: '#2d7d61', weight: 0.65, fill: false, prop: 'Nome' },
   { key: 'provinces', label: 'Province', file: 'public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },

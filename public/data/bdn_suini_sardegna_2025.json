@@ -1,0 +1,13 @@
+{
+  "title": "BDN – consistenza suini, Sardegna",
+  "source": "Ministero della Salute, Sistema Informativo Veterinario – Statistiche BDN",
+  "source_url": "https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/31",
+  "observation_date": "2025-12-31",
+  "geographic_level": "REGIONE",
+  "unit": "capi registrati",
+  "method_note": "Aggregato regionale estratto dal report pubblico BDN Allevamenti suini, sommando il campo NUMERO CAPI alla data di riferimento. Non contiene coordinate o identificativi aziendali; non è un indicatore AMR.",
+  "citation": "Dati forniti dalla BDN dell'Anagrafe Zootecnica istituita dal Ministero della Salute presso il CSN dell'Istituto G. Caporale di Teramo.",
+  "records": [
+    { "region": "SARDEGNA", "species": "SUINI", "heads": 159859 }
+  ]
+}
