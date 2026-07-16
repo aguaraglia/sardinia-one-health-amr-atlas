@@ -9,6 +9,9 @@ const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/servi
 });
 
 const layers = {};
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+}
 const amrTargets = [
   ['AMR_ANY', 'Tutte le classi'], ['AMR_BETA_LACTAM', 'Beta-lattamici'],
   ['AMR_CARBAPENEM', 'Carbapenemi'], ['AMR_CEPHALOSPORIN', 'Cefalosporine di terza generazione'],
@@ -48,6 +51,14 @@ fetch('public/data/ar_iss_2024_sardinia_resistance.json').then(r => r.json()).th
 }).catch(() => {});
 fetch('public/data/literature_curated_sardinia.json').then(r => r.json()).then(d => {
   const card = document.getElementById('literature-card');
+  const body = document.getElementById('literature-table-body');
+  if (body) {
+    body.innerHTML = d.records
+      .slice()
+      .sort((a, b) => b.year - a.year)
+      .map(record => `<tr><td>${record.year}</td><td><a href="${record.source_url}" target="_blank" rel="noreferrer">${record.pmid}</a></td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${escapeHtml(record.title)}</td></tr>`)
+      .join('');
+  }
   return fetch('public/data/literature_curated_summary.json').then(r => r.json()).then(summary => {
     const hosts = summary.hosts.slice(0, 4).map(x => `${x.host} (${x.study_count})`).join(', ');
     card.hidden = false;
