@@ -48,9 +48,11 @@ fetch('public/data/ar_iss_2024_sardinia_resistance.json').then(r => r.json()).th
 }).catch(() => {});
 fetch('public/data/literature_curated_sardinia.json').then(r => r.json()).then(d => {
   const card = document.getElementById('literature-card');
-  const hosts = [...new Set(d.records.flatMap(x => x.hosts))].join(', ');
-  card.hidden = false;
-  card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati; host: ${hosts}.<br><small>Registro di evidenze eterogenee: non prevalenza regionale unica.</small>`;
+  return fetch('public/data/literature_curated_summary.json').then(r => r.json()).then(summary => {
+    const hosts = summary.hosts.slice(0, 4).map(x => `${x.host} (${x.study_count})`).join(', ');
+    card.hidden = false;
+    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}).<br>Host principali: ${hosts}.<br><small>Registro di evidenze eterogenee: non prevalenza regionale unica.</small>`;
+  });
 }).catch(() => {});
 fetch('public/data/aifa_osmed_2024_antibiotics.json').then(r => r.json()).then(d => {
   const card = document.getElementById('aifa-card');

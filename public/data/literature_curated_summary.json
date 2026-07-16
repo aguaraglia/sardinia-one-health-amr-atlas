@@ -1,0 +1,25 @@
+{
+  "source_id": "letteratura_curata",
+  "dataset_version": "atlas-curated-v0.2",
+  "record_count": 12,
+  "year_min": 2010,
+  "year_max": 2026,
+  "public_geography": "Sardegna",
+  "privacy": "public",
+  "hosts": [
+    {"host": "pig", "study_count": 4},
+    {"host": "human", "study_count": 3},
+    {"host": "sheep", "study_count": 3},
+    {"host": "wild boar", "study_count": 2},
+    {"host": "poultry", "study_count": 1},
+    {"host": "goat", "study_count": 1}
+  ],
+  "organism_groups": [
+    {"organism": "Staphylococcus spp.", "study_count": 3},
+    {"organism": "Salmonella/Yersinia", "study_count": 5},
+    {"organism": "Escherichia spp.", "study_count": 2},
+    {"organism": "Klebsiella pneumoniae", "study_count": 1},
+    {"organism": "Enterococcus faecalis", "study_count": 1}
+  ],
+  "notes": "Sintesi descrittiva del registro bibliografico. Gli studi sono eterogenei e non sono sommati come prevalenza regionale."
+}
