@@ -19,9 +19,22 @@ const amrTargets = [
 const targetSelect = document.getElementById('amr-target');
 amrTargets.slice(1).forEach(([value, label]) => targetSelect.add(new Option(label, value)));
 targetSelect.addEventListener('change', event => {
-  const label = amrTargets.find(([value]) => value === event.target.value)?.[1] || 'classe selezionata';
+  const label = event.target.selectedOptions[0]?.textContent || 'target selezionato';
   document.getElementById('amr-state').textContent = `Nessuna osservazione pubblica caricata per ${label}`;
 });
+fetch('public/data/pncar_env_panel.json').then(r => r.json()).then(d => {
+  const group = document.createElement('optgroup');
+  group.label = 'Pannello PNCAR';
+  d.targets.forEach(target => {
+    if (target.target_type !== 'biomass_normalizer') group.appendChild(new Option(target.display_name, target.target_id));
+  });
+  targetSelect.appendChild(group);
+  const card = document.getElementById('pncar-panel-card');
+  const argList = d.targets.filter(x => x.target_type === 'ARG').map(x => x.display_name).join(', ');
+  const markerList = d.targets.filter(x => x.target_type !== 'ARG').map(x => x.display_name).join(', ');
+  card.hidden = false;
+  card.innerHTML = `<strong>${d.panel_name}</strong><br>ARG: ${argList}<br><small>Marker/controllo: ${markerList}. ${d.reporting_note}</small>`;
+}).catch(() => {});
 fetch('public/data/ar_iss_2024_coverage.json').then(r => r.json()).then(d => {
   const card = document.getElementById('ariss-card');
   card.hidden = false;

@@ -1,0 +1,7 @@
+target_id	display_name	target_type	antimicrobial_class	is_arg	is_normalizer	is_reportable	notes
+PNCAR_BLA_CTX_M	blaCTX-M	ARG	Beta-lattamici; cefalosporine	S	N	S	Target del pannello ambientale PNCAR; rappresenta famiglia CTX-M, non uno specifico allele come blaCTX-M-15.
+PNCAR_BLA_KPC	blaKPC	ARG	Beta-lattamici; carbapenemi	S	N	S	Target del pannello ambientale PNCAR; rappresenta famiglia KPC.
+PNCAR_VANA	vanA	ARG	Glicopeptidi	S	N	S	Target del pannello ambientale PNCAR; determinante associato a resistenza ai glicopeptidi.
+PNCAR_QNRS	qnrS	ARG	Fluorochinoloni	S	N	S	Target del pannello ambientale PNCAR; determinante plasmidico associato a chinoloni/fluorochinoloni.
+PNCAR_INTI1	intI1	mobility_marker	NA	N	N	S	Integrone classe 1; marker di mobilita/pressione antropica, non classe AMR.
+PNCAR_RRS_16S	rrs_16S	biomass_normalizer	NA	N	S	N	Normalizzatore biomassa batterica/16S; non ARG e non reportabile come AMR.

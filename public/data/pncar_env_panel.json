@@ -1,0 +1,51 @@
+{
+  "source_id": "pncar_env_panel",
+  "source_status": "user_provided_official_protocol_imported_context",
+  "panel_name": "Pannello ambientale PNCAR",
+  "scope_note": "Pannello mirato per sorveglianza ambientale. L'Atlas mantiene comunque la ricerca estesa di tutti i determinanti AMR disponibili nei dataset genomici e metagenomici.",
+  "reporting_note": "intI1 e rrs_16S non sono conteggiati come classi AMR; rrs_16S e' un normalizzatore.",
+  "targets": [
+    {
+      "target_id": "PNCAR_BLA_CTX_M",
+      "display_name": "blaCTX-M",
+      "target_type": "ARG",
+      "antimicrobial_class": "Beta-lattamici; cefalosporine",
+      "is_reportable": true
+    },
+    {
+      "target_id": "PNCAR_BLA_KPC",
+      "display_name": "blaKPC",
+      "target_type": "ARG",
+      "antimicrobial_class": "Beta-lattamici; carbapenemi",
+      "is_reportable": true
+    },
+    {
+      "target_id": "PNCAR_VANA",
+      "display_name": "vanA",
+      "target_type": "ARG",
+      "antimicrobial_class": "Glicopeptidi",
+      "is_reportable": true
+    },
+    {
+      "target_id": "PNCAR_QNRS",
+      "display_name": "qnrS",
+      "target_type": "ARG",
+      "antimicrobial_class": "Fluorochinoloni",
+      "is_reportable": true
+    },
+    {
+      "target_id": "PNCAR_INTI1",
+      "display_name": "intI1",
+      "target_type": "mobility_marker",
+      "antimicrobial_class": "NA",
+      "is_reportable": true
+    },
+    {
+      "target_id": "PNCAR_RRS_16S",
+      "display_name": "rrs_16S",
+      "target_type": "biomass_normalizer",
+      "antimicrobial_class": "NA",
+      "is_reportable": false
+    }
+  ]
+}
