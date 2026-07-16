@@ -72,10 +72,11 @@ Promise.all(configs.map(async cfg => {
   layers.depuratori.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
+  const categoryColors = { 'Acque reflue urbane': '#2878b5', 'Fosse Imhoff': '#d98c22', 'Industriale': '#b83b5e', 'Acque oleose': '#6a4c93', 'Fanghi/reflui speciali': '#555555' };
   categories.forEach(category => {
     categoryLayers[category] = L.geoJSON(layers.depuratori._sourceData, {
       filter: feature => feature.properties?.categoria === category,
-      pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 5, color: '#7b3f98', fillColor: '#7b3f98', fillOpacity: 0.75, weight: 1 }),
+      pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 3.5, color: categoryColors[category] || '#555555', fillColor: categoryColors[category] || '#555555', fillOpacity: 0.8, weight: 1 }),
       onEachFeature: (feature, item) => item.bindPopup(popup(feature, configs.find(c => c.key === 'depuratori')))
     });
   });
