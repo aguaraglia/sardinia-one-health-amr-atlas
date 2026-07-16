@@ -38,6 +38,12 @@ const amrKeywords = {
   AMR_MDR: ['multidrug','multiresist','mdr','xdr','resistenti ad almeno']
 };
 const filterableKeys = new Set(['veterinaryMunicipal','humanFacilityEvidence','foodChainMunicipal','arissSites']);
+const filterLabels = {
+  veterinaryMunicipal: ['AMR veterinaria comunale', 'veterinary_amr_municipal_evidence'],
+  humanFacilityEvidence: ['AMR umana di struttura', 'human_amr_facility_sassari_studies'],
+  foodChainMunicipal: ['AMR filiera alimentare', 'food_chain_amr_berchidda'],
+  arissSites: ['Laboratorio AR-ISS', 'ar_iss_2024_sardinia_resistance']
+};
 function featureMatchesAmr(feature, value) {
   if (value === 'AMR_ANY') return true;
   const haystack = JSON.stringify(feature?.properties || {}).toLowerCase();
@@ -47,21 +53,48 @@ function featureMatchesAmr(feature, value) {
 function applyAmrFilter(value) {
   const label = targetSelect.selectedOptions[0]?.textContent || 'target selezionato';
   let visible = 0;
+  let compatibleSources = 0;
+  const matches = [];
   filterableKeys.forEach(key => {
     const layer = layers[key];
     if (!layer) return;
     layer.eachLayer(item => {
       const show = featureMatchesAmr(item.feature, value);
-      if (show) visible += 1;
+      if (show) {
+        visible += 1;
+        matches.push({ key, feature: item.feature });
+      }
       if (item.setStyle) item.setStyle({ opacity: show ? 1 : 0, fillOpacity: show ? (key === 'veterinaryMunicipal' ? 0.26 : 0.12) : 0 });
       if (item._path) item._path.style.pointerEvents = show ? 'auto' : 'none';
       if (item._icon) item._icon.style.display = show ? '' : 'none';
     });
+    if (layer.getLayers().some(item => featureMatchesAmr(item.feature, value))) compatibleSources += 1;
   });
   document.getElementById('amr-state').textContent = value === 'AMR_ANY'
     ? 'Tutte le evidenze AMR pubbliche sono visibili.'
     : `${label}: ${visible} elementi compatibili visibili sulla mappa. Le fonti senza questo target restano nascoste.`;
+  document.getElementById('filter-status').textContent = `Filtro: ${label}`;
+  document.getElementById('metric-visible').textContent = visible.toLocaleString('it-IT');
+  document.getElementById('metric-sources').textContent = compatibleSources.toLocaleString('it-IT');
+  document.getElementById('filtered-count').textContent = `${visible} risultati`;
+  const list = document.getElementById('filtered-evidence-list');
+  if (!list) return;
+  if (!matches.length) {
+    list.innerHTML = '<p class="empty-filter">Nessuna evidenza pubblica compatibile con questo target.</p>';
+    return;
+  }
+  list.innerHTML = matches.slice(0, 12).map(({ key, feature }) => {
+    const props = feature?.properties || {};
+    const labelValue = props.municipality || props.facility || props.site_name || props.site || props.source_id || 'Evidenza pubblica';
+    const detail = props.headline || props.detail || props.geography_note || filterLabels[key][0];
+    const [sourceLabel, sourceId] = filterLabels[key];
+    return `<a class="filtered-row" href="evidence.html?id=${encodeURIComponent(sourceId)}"><span><strong>${escapeHtml(labelValue)}</strong><small>${escapeHtml(detail)}</small></span><em>${escapeHtml(sourceLabel)} ↗</em></a>`;
+  }).join('') + (matches.length > 12 ? `<p class="more-filter">+ ${matches.length - 12} elementi non mostrati nell’elenco</p>` : '');
 }
+document.getElementById('reset-amr-filter').addEventListener('click', () => {
+  targetSelect.value = 'AMR_ANY';
+  applyAmrFilter('AMR_ANY');
+});
 fetch('public/data/pncar_env_panel.json').then(r => r.json()).then(d => {
   const group = document.createElement('optgroup');
   group.label = 'Pannello PNCAR';
