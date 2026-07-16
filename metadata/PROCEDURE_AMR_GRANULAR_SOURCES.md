@@ -153,6 +153,14 @@ almeno un gene AMR; tetracicline e ampicillina sono i fenotipi più frequenti.
 Il dataset pubblico è mantenuto a livello di studio/filiera: le aziende e i
 macelli sono anonimizzati e non è lecito ricostruire il comune dai BioSample.
 
+### Wildlife: *E. coli* nei cinghiali
+
+Una fonte 2024 dell'Università di Sassari analizza 66 cinghiali abbattuti in
+Sardegna (181 campioni; province di Sassari e Nuoro), con 61 isolati sottoposti
+a AST e WGS. Tre isolati non patogeni portavano geni AMR (`sul2`, `tet(B)`,
+`aph(6)-Id`, `aph(3'')-Ib` o `fosA7`). Le cinque hunting houses restano anonime:
+il pubblico deve fermarsi all'area/province dello studio.
+
 ### Priorità IZS/OEVR
 
 La pagina pubblica Bioresource IZSSA dichiara 564 ceppi batterici nel catalogo,

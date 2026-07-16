@@ -127,6 +127,15 @@ fetch('public/data/pig_ecoli_sardinia_2024_amr.json').then(r => r.json()).then(d
     `Più frequenti: tetracicline (${d.amr_phenotype.resistance_among_resistant_isolates.tetraciclina}%) e ampicillina (${d.amr_phenotype.resistance_among_resistant_isolates.ampicillina}%).<br>` +
     `<small>Studio 2020-2022; aziende e macelli anonimizzati, nessuna attribuzione comunale.</small>`;
 }).catch(() => {});
+fetch('public/data/wild_boar_ecoli_sardinia_2024_amr.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('wild-boar-amr-card');
+  card.hidden = false;
+  card.innerHTML = `<strong>AMR wildlife · cinghiali sardi</strong><br>` +
+    `${d.wild_boars_sampled} cinghiali, ${d.samples_tested} campioni e ${d.isolates_with_ast_and_wgs} isolati sottoposti a WGS/AST; ` +
+    `${d.amr_gene_positive_isolates} isolati non patogeni con geni AMR (` +
+    `${d.amr_genes_detected.join(', ')}).<br>` +
+    `<small>Province di Sassari e Nuoro, 2020-2022; dato wildlife aggregato, non comunale.</small>`;
+}).catch(() => {});
 fetch('public/data/food_chain_amr_berchidda.json').then(r => r.json()).then(d => {
   const card = document.getElementById('food-chain-amr-card');
   const culture = d.cultures.find(item => item.culture_id === 'SR56');
