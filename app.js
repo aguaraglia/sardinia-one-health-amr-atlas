@@ -20,10 +20,10 @@ const amrTargets = [
   ['AMR_GLYCOPEPTIDE', 'Glicopeptidi'], ['AMR_COLISTIN', 'Colistina'], ['AMR_MDR', 'Multiresistenza']
 ];
 const targetSelect = document.getElementById('amr-target');
+const periodSelect = document.getElementById('amr-period');
 amrTargets.slice(1).forEach(([value, label]) => targetSelect.add(new Option(label, value)));
-targetSelect.addEventListener('change', event => {
-  applyAmrFilter(event.target.value);
-});
+targetSelect.addEventListener('change', () => applyDashboardFilters());
+periodSelect.addEventListener('change', () => applyDashboardFilters());
 
 const amrKeywords = {
   AMR_BETA_LACTAM: ['penicillin','penicillina','ampicillin','ampicillina','amoxicillin','amoxicillina','beta-lactam','bla','kpc','oxa','ndm','carbapenem','cephalosporin','cefazolin','cefotaxime','ceftazidime','ceftriaxone'],
@@ -50,8 +50,40 @@ function featureMatchesAmr(feature, value) {
   const keywords = amrKeywords[value] || value.toLowerCase().replace(/^amr[_-]?/, '').split(/[_-]+/).filter(Boolean);
   return keywords.some(keyword => haystack.includes(keyword));
 }
-function applyAmrFilter(value) {
+function featureYears(feature) {
+  const text = JSON.stringify(feature?.properties || {});
+  return [...text.matchAll(/\b(19\d{2}|20\d{2})\b/g)].map(match => Number(match[1]));
+}
+function featureMatchesPeriod(feature, value) {
+  if (value === 'ALL_PERIODS') return true;
+  const [start, end] = value.split('_').map(Number);
+  const years = featureYears(feature);
+  return years.some(year => year >= start && year <= end);
+}
+function timeBucket(feature) {
+  const years = featureYears(feature);
+  if (years.some(year => year >= 1995 && year <= 2009)) return '1995–2009';
+  if (years.some(year => year >= 2010 && year <= 2019)) return '2010–2019';
+  if (years.some(year => year >= 2020 && year <= 2026)) return '2020–2026';
+  return 'Periodo non pubblicato';
+}
+function renderTimeDistribution(matches) {
+  const container = document.getElementById('time-distribution');
+  if (!container) return;
+  const buckets = ['1995–2009', '2010–2019', '2020–2026'];
+  const counts = Object.fromEntries(buckets.map(bucket => [bucket, 0]));
+  matches.forEach(({ feature }) => {
+    const bucket = timeBucket(feature);
+    if (bucket in counts) counts[bucket] += 1;
+  });
+  const max = Math.max(1, ...Object.values(counts));
+  container.innerHTML = buckets.map(bucket => `<div class="time-row"><span>${bucket}</span><i><b style="width:${Math.round((counts[bucket] / max) * 100)}%"></b></i><strong>${counts[bucket]}</strong></div>`).join('');
+}
+function applyDashboardFilters() {
+  const value = targetSelect.value;
+  const periodValue = periodSelect.value;
   const label = targetSelect.selectedOptions[0]?.textContent || 'target selezionato';
+  const periodLabel = periodSelect.selectedOptions[0]?.textContent || 'periodo selezionato';
   let visible = 0;
   let compatibleSources = 0;
   const matches = [];
@@ -59,7 +91,7 @@ function applyAmrFilter(value) {
     const layer = layers[key];
     if (!layer) return;
     layer.eachLayer(item => {
-      const show = featureMatchesAmr(item.feature, value);
+      const show = featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue);
       if (show) {
         visible += 1;
         matches.push({ key, feature: item.feature });
@@ -68,32 +100,50 @@ function applyAmrFilter(value) {
       if (item._path) item._path.style.pointerEvents = show ? 'auto' : 'none';
       if (item._icon) item._icon.style.display = show ? '' : 'none';
     });
-    if (layer.getLayers().some(item => featureMatchesAmr(item.feature, value))) compatibleSources += 1;
+    if (layer.getLayers().some(item => featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue))) compatibleSources += 1;
   });
-  document.getElementById('amr-state').textContent = value === 'AMR_ANY'
-    ? 'Tutte le evidenze AMR pubbliche sono visibili.'
-    : `${label}: ${visible} elementi compatibili visibili sulla mappa. Le fonti senza questo target restano nascoste.`;
-  document.getElementById('filter-status').textContent = `Filtro: ${label}`;
+  document.getElementById('amr-state').textContent = `${label} · ${periodLabel}: ${visible} elementi compatibili visibili sulla mappa.`;
+  document.getElementById('filter-status').textContent = `${label} · ${periodLabel}`;
   document.getElementById('metric-visible').textContent = visible.toLocaleString('it-IT');
   document.getElementById('metric-sources').textContent = compatibleSources.toLocaleString('it-IT');
   document.getElementById('filtered-count').textContent = `${visible} risultati`;
   const list = document.getElementById('filtered-evidence-list');
   if (!list) return;
+  renderTimeDistribution(matches);
   if (!matches.length) {
     list.innerHTML = '<p class="empty-filter">Nessuna evidenza pubblica compatibile con questo target.</p>';
     return;
   }
-  list.innerHTML = matches.slice(0, 12).map(({ key, feature }) => {
+  list.innerHTML = matches.slice(0, 12).map(({ key, feature }, index) => {
     const props = feature?.properties || {};
     const labelValue = props.municipality || props.facility || props.site_name || props.site || props.source_id || 'Evidenza pubblica';
     const detail = props.headline || props.detail || props.geography_note || filterLabels[key][0];
     const [sourceLabel, sourceId] = filterLabels[key];
-    return `<a class="filtered-row" href="evidence.html?id=${encodeURIComponent(sourceId)}"><span><strong>${escapeHtml(labelValue)}</strong><small>${escapeHtml(detail)}</small></span><em>${escapeHtml(sourceLabel)} ↗</em></a>`;
+    return `<button class="filtered-row" type="button" data-match="${index}"><span><strong>${escapeHtml(labelValue)}</strong><small>${escapeHtml(detail)}</small></span><em>${escapeHtml(sourceLabel)} ›</em></button>`;
   }).join('') + (matches.length > 12 ? `<p class="more-filter">+ ${matches.length - 12} elementi non mostrati nell’elenco</p>` : '');
+  list.querySelectorAll('[data-match]').forEach(button => button.addEventListener('click', () => {
+    const match = matches[Number(button.dataset.match)];
+    const item = [...layers[match.key].getLayers()].find(layer => layer.feature === match.feature);
+    if (item) {
+      if (item.getBounds && item.getBounds().isValid()) map.fitBounds(item.getBounds(), { maxZoom: 9, padding: [40, 40] });
+      else if (item.getLatLng) map.setView(item.getLatLng(), 9);
+      item.openPopup();
+      showSelectedEvidence(match.feature, match.key);
+    }
+  }));
+}
+function showSelectedEvidence(feature, key) {
+  const props = feature?.properties || {};
+  const title = props.municipality || props.facility || props.site_name || props.site || 'Evidenza pubblica';
+  const detail = props.headline || props.detail || props.geography_note || filterLabels[key]?.[0] || '';
+  const years = featureYears(feature);
+  const period = props.period || props.uberis_period || props.izs_period || (years.length ? `${Math.min(...years)}–${Math.max(...years)}` : 'Periodo non pubblicato');
+  document.getElementById('selected-evidence').innerHTML = `<h3>${escapeHtml(title)}</h3><p>${escapeHtml(detail)}</p><dl><div><dt>Fonte</dt><dd>${escapeHtml(filterLabels[key]?.[0] || 'Evidenza AMR')}</dd></div><div><dt>Periodo</dt><dd>${escapeHtml(period)}</dd></div></dl>`;
 }
 document.getElementById('reset-amr-filter').addEventListener('click', () => {
   targetSelect.value = 'AMR_ANY';
-  applyAmrFilter('AMR_ANY');
+  periodSelect.value = 'ALL_PERIODS';
+  applyDashboardFilters();
 });
 fetch('public/data/pncar_env_panel.json').then(r => r.json()).then(d => {
   const group = document.createElement('optgroup');
@@ -333,6 +383,9 @@ Promise.all(configs.map(async cfg => {
   const response = await fetch(cfg.file);
   if (!response.ok) throw new Error(`${cfg.label}: HTTP ${response.status}`);
   const data = await response.json();
+  if (cfg.key === 'arissSites') {
+    (data.features || []).forEach(feature => { feature.properties = { ...(feature.properties || {}), period: '2024' }; });
+  }
   const layer = L.geoJSON(data, {
     style: () => style(cfg),
     pointToLayer: (feature, latlng) => {
@@ -341,7 +394,10 @@ Promise.all(configs.map(async cfg => {
       if (cfg.key === 'humanFacilityEvidence') return L.circleMarker(latlng, { radius: 6, color: '#762034', fillColor: '#9e2744', fillOpacity: 0.88, weight: 1.2 });
       return undefined;
     },
-    onEachFeature: (feature, item) => item.bindPopup(popup(feature, cfg))
+    onEachFeature: (feature, item) => {
+      item.bindPopup(popup(feature, cfg));
+      if (filterableKeys.has(cfg.key)) item.on('click', () => showSelectedEvidence(feature, cfg.key));
+    }
   });
   layer._sourceData = data;
   layers[cfg.key] = layer;
@@ -381,10 +437,10 @@ Promise.all(configs.map(async cfg => {
     '<span class="layer-swatch" style="background:#6f8428"></span>AMR filiera alimentare · Berchidda': layers.foodChainMunicipal,
     ...waterAndPlantLayers,
     '<span class="layer-swatch" style="background:#c73e55"></span>AMR umana · laboratori AR-ISS 2024': layers.arissSites
-  }, { collapsed: false }).addTo(map);
+  }, { collapsed: true }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = 'Layer caricati';
-  applyAmrFilter(targetSelect.value);
+  applyDashboardFilters();
 }).catch(error => {
   document.getElementById('status').textContent = 'Errore di caricamento';
   console.error(error);
