@@ -1,0 +1,4370 @@
+{
+  "source_id": "pmid_35799261_s_uberis_wgs",
+  "dataset_version": "atlas-curated-v0.1",
+  "geography_level": "COMUNE_ORIGINE_CAMPIONE",
+  "record_count": 46,
+  "municipality_count": 36,
+  "sample_period": {
+    "start": "2011",
+    "end": "2016"
+  },
+  "public_scope": "Aggregati comunali; aziende, coordinate, date esatte, Biosample e identificativi dei singoli isolati esclusi.",
+  "interpretation_note": "Coorte genomica selettiva di isolati con profili RFLP unici, uno per azienda, scelti tra comuni con più focolai. Non è una stima di prevalenza comunale.",
+  "source": {
+    "title": "Genomic surveillance reveals antibiotic resistance gene transmission via phage recombinases within sheep mastitis-associated Streptococcus uberis",
+    "pmid": "35799261",
+    "pmcid": "PMC9261030",
+    "doi": "10.1186/s12917-022-03341-1",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35799261/",
+    "supplement_metadata_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12917-022-03341-1/MediaObjects/12917_2022_3341_MOESM2_ESM.xlsx",
+    "supplement_amr_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12917-022-03341-1/MediaObjects/12917_2022_3341_MOESM3_ESM.xlsx"
+  },
+  "municipalities": [
+    {
+      "municipality": "ALGHERO",
+      "province": "SASSARI",
+      "study_isolates": 2,
+      "isolates_with_any_resistance": 2,
+      "sample_year_start": 2015,
+      "sample_year_end": 2016,
+      "resistant_test_results": 8,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 18,
+      "total_test_results": 28,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Novobiocin",
+        "Streptomycin",
+        "Tetracycline"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "tet(O)",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 2,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 2,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 2,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 1,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        }
+      ]
+    },
+    {
+      "municipality": "BANARI",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2014,
+      "sample_year_end": 2014,
+      "resistant_test_results": 2,
+      "intermediate_test_results": 0,
+      "susceptible_test_results": 12,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "lnu(C)",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SASSARI",
+      "study_isolates": 2,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2014,
+      "sample_year_end": 2016,
+      "resistant_test_results": 2,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 25,
+      "total_test_results": 28,
+      "resistant_antimicrobials": [
+        "Streptomycin",
+        "Pirlimycin"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "ant(6)-Ia",
+          "isolates": 1
+        },
+        {
+          "gene": "lnu(B)",
+          "isolates": 1
+        },
+        {
+          "gene": "lsa(E)",
+          "isolates": 1
+        },
+        {
+          "gene": "spw",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 2
+        }
+      ]
+    },
+    {
+      "municipality": "BERCHIDDA",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2015,
+      "sample_year_end": 2015,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 10,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Kanamycin",
+        "Streptomycin",
+        "Pirlimycin"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "ant(6)-Ia",
+          "isolates": 1
+        },
+        {
+          "gene": "lnu(B)",
+          "isolates": 1
+        },
+        {
+          "gene": "lsa(E)",
+          "isolates": 1
+        },
+        {
+          "gene": "spw",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "BOLOTANA",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 5,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 7,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Novobiocin",
+        "Streptomycin",
+        "Tetracycline"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "BORORE",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2012,
+      "sample_year_end": 2012,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 10,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "BUDDUSO",
+      "province": "SASSARI",
+      "study_isolates": 2,
+      "isolates_with_any_resistance": 2,
+      "sample_year_start": 2012,
+      "sample_year_end": 2016,
+      "resistant_test_results": 5,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 22,
+      "total_test_results": 28,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 2,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 1,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 2,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        }
+      ]
+    },
+    {
+      "municipality": "CALANGIANUS",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2011,
+      "sample_year_end": 2011,
+      "resistant_test_results": 2,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 11,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "COSSOINE",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 5,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 7,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Ampicillin",
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin",
+        "Tetracycline"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "DORGALI",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 1,
+      "intermediate_test_results": 3,
+      "susceptible_test_results": 10,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "FLORINAS",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2014,
+      "sample_year_end": 2014,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 0,
+      "susceptible_test_results": 11,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "FORDONGIANUS",
+      "province": "ORISTANO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 10,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "lnu(C)",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "GAVOI",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 9,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "lnu(C)",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "GONNOSTRAMATZA",
+      "province": "ORISTANO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 10,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "tet(O)",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "GUSPINI",
+      "province": "CAGLIARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 2,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 10,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "ITTIREDDU",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 10,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "ITTIRI",
+      "province": "SASSARI",
+      "study_isolates": 3,
+      "isolates_with_any_resistance": 3,
+      "sample_year_start": 2013,
+      "sample_year_end": 2016,
+      "resistant_test_results": 8,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 32,
+      "total_test_results": 42,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Novobiocin",
+        "Streptomycin",
+        "Tetracycline"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "blaTEM",
+          "isolates": 1
+        },
+        {
+          "gene": "catA1",
+          "isolates": 1
+        },
+        {
+          "gene": "tet(O)",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 2,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 2,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 3,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 1,
+          "intermediate": 1,
+          "susceptible": 1,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        }
+      ]
+    },
+    {
+      "municipality": "MACOMER",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 4,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 9,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Novobiocin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "MORES",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2015,
+      "sample_year_end": 2015,
+      "resistant_test_results": 1,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 12,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "MUSEI",
+      "province": "CAGLIARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2015,
+      "sample_year_end": 2015,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 0,
+      "susceptible_test_results": 11,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "NARBOLIA",
+      "province": "ORISTANO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2015,
+      "sample_year_end": 2015,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 10,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "NULE",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2011,
+      "sample_year_end": 2011,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 0,
+      "susceptible_test_results": 11,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "NULVI",
+      "province": "SASSARI",
+      "study_isolates": 3,
+      "isolates_with_any_resistance": 3,
+      "sample_year_start": 2015,
+      "sample_year_end": 2016,
+      "resistant_test_results": 6,
+      "intermediate_test_results": 3,
+      "susceptible_test_results": 33,
+      "total_test_results": 42,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 1,
+          "susceptible": 1,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 2,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 2,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 3,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        }
+      ]
+    },
+    {
+      "municipality": "OLZAI",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2015,
+      "sample_year_end": 2015,
+      "resistant_test_results": 2,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 11,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "ONIFAI",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 5,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 8,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Cephalothin",
+        "Gentamicin",
+        "Kanamycin",
+        "Novobiocin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 4,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 9,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin",
+        "Tetracycline"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "OZIERI",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 2,
+      "intermediate_test_results": 3,
+      "susceptible_test_results": 9,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Novobiocin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "PATTADA",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 9,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "PERFUGAS",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 4,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 9,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Novobiocin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "PORTO TORRES",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 6,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 6,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Ampicillin",
+        "Gentamicin",
+        "Kanamycin",
+        "Novobiocin",
+        "Penicillin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "POZZOMAGGIORE",
+      "province": "SASSARI",
+      "study_isolates": 2,
+      "isolates_with_any_resistance": 2,
+      "sample_year_start": 2014,
+      "sample_year_end": 2015,
+      "resistant_test_results": 5,
+      "intermediate_test_results": 3,
+      "susceptible_test_results": 20,
+      "total_test_results": 28,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 2,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 1,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 2,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 1,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 2
+        }
+      ]
+    },
+    {
+      "municipality": "PUTIFIGARI",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2014,
+      "sample_year_end": 2014,
+      "resistant_test_results": 1,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 12,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SASSARI",
+      "study_isolates": 3,
+      "isolates_with_any_resistance": 3,
+      "sample_year_start": 2015,
+      "sample_year_end": 2016,
+      "resistant_test_results": 12,
+      "intermediate_test_results": 4,
+      "susceptible_test_results": 26,
+      "total_test_results": 42,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Penicillin",
+        "Streptomycin",
+        "Tetracycline",
+        "Pirlimycin"
+      ],
+      "resistance_genes": [
+        {
+          "gene": "ant(6)-Ia",
+          "isolates": 1
+        },
+        {
+          "gene": "lnu(B)",
+          "isolates": 1
+        },
+        {
+          "gene": "lsa(E)",
+          "isolates": 1
+        },
+        {
+          "gene": "spw",
+          "isolates": 1
+        }
+      ],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 2,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 3,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 3,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 2,
+          "susceptible": 1,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 3,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 1,
+          "intermediate": 1,
+          "susceptible": 1,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 3,
+          "tested": 3
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 2,
+          "tested": 3
+        }
+      ]
+    },
+    {
+      "municipality": "SILANUS",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 2,
+      "susceptible_test_results": 9,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "SINDIA",
+      "province": "NUORO",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2016,
+      "sample_year_end": 2016,
+      "resistant_test_results": 5,
+      "intermediate_test_results": 1,
+      "susceptible_test_results": 8,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Novobiocin",
+        "Penicillin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 1,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SASSARI",
+      "study_isolates": 1,
+      "isolates_with_any_resistance": 1,
+      "sample_year_start": 2013,
+      "sample_year_end": 2013,
+      "resistant_test_results": 3,
+      "intermediate_test_results": 0,
+      "susceptible_test_results": 11,
+      "total_test_results": 14,
+      "resistant_antimicrobials": [
+        "Gentamicin",
+        "Kanamycin",
+        "Streptomycin"
+      ],
+      "resistance_genes": [],
+      "antimicrobial_results": [
+        {
+          "antimicrobial": "Ampicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Cephalothin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Erythromycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Gentamicin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Kanamycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Novobiocin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Penicillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Streptomycin",
+          "resistant": 1,
+          "intermediate": 0,
+          "susceptible": 0,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Tetracycline",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Amoxicillin+ clavulanic acid",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Oxacillin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Trimethoprim Sulphamethoxazole",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Ceftiofur",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        },
+        {
+          "antimicrobial": "Pirlimycin",
+          "resistant": 0,
+          "intermediate": 0,
+          "susceptible": 1,
+          "tested": 1
+        }
+      ]
+    }
+  ]
+}

@@ -68,3 +68,46 @@ metadati WGS e scrive il dettaglio sotto `private/`. Non scarica i FASTQ. Il
 file pubblico `public/data/environmental_amr_water_bodies_2024.json` contiene
 solo risultati esplicitamente riportati dalla pubblicazione e aggregati per
 corpo idrico.
+
+## Evidenza comunale veterinaria recuperata
+
+Lo studio su *Streptococcus uberis* associato a mastite ovina (PMID
+`35799261`, DOI `10.1186/s12917-022-03341-1`) pubblica nei supplementi il
+comune, l'anno, l'antibiogramma verso 14 antimicrobici e i geni di resistenza
+per 46 isolati raccolti nel 2011-2016. Gli isolati coprono 36 comuni sardi.
+Complessivamente risultano 136 esiti resistenti, 51 intermedi e 457 sensibili
+su 644 test; 45 isolati su 46 sono resistenti ad almeno un antimicrobico.
+
+La selezione comprende un isolato per azienda con profilo RFLP distinto e
+privilegia i comuni con più focolai. Il risultato è quindi un'evidenza
+territoriale documentata, ma non una stima di prevalenza comunale. Lo script
+`scripts/fetch_streptococcus_uberis_amr.py` conserva i fogli sorgente e il
+dettaglio dell'isolato sotto `private/`, quindi genera soltanto aggregati per
+comune nel pubblico. Unendo questa coorte al catalogo storico IZS si ottengono
+40 comuni unici con almeno un'evidenza veterinaria AMR; sei comuni compaiono
+in entrambe le fonti.
+
+## Piano regionale 2026 e accesso SINVSA/CRAB
+
+La scheda regionale 2026 del monitoraggio armonizzato AMR zoonotica prevede
+16 campioni in Sardegna: otto carni di pollo e otto carni di tacchino. Il piano
+pubblico ripartisce i campioni tra le otto ASL, ma non contiene risultati di
+resistenza. I metadati di campionamento sono registrati in SINVSA; gli esiti di
+sensibilità sono registrati in CRAB e richiedono credenziali istituzionali.
+
+La richiesta dati deve specificare:
+
+1. anno e ASL;
+2. comune, solo se rilasciabile in forma aggregata;
+3. specie, matrice e luogo di campionamento;
+4. organismo e antimicrobico;
+5. conteggi S, I e R con denominatore;
+6. deduplicazione degli isolati secondo il protocollo del piano;
+7. soppressione delle celle piccole;
+8. esclusione dal pubblico di indirizzi, coordinate, punti vendita, macelli,
+   aziende, identificativi di campione e accessioni.
+
+Il prodotto pubblico ammesso è un aggregato per ASL o comune autorizzato. Il
+dettaglio di campione, struttura o azienda rimane nella parte privata. La
+semplice allocazione dei campioni del piano non deve mai essere rappresentata
+come presenza o prevalenza di AMR.

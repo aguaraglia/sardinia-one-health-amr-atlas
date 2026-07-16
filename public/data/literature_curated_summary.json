@@ -1,7 +1,7 @@
 {
   "source_id": "letteratura_curata",
-  "dataset_version": "atlas-curated-v0.5",
-  "record_count": 22,
+  "dataset_version": "atlas-curated-v0.6",
+  "record_count": 28,
   "year_min": 2010,
   "year_max": 2026,
   "public_geography": "Sardegna",
@@ -9,23 +9,27 @@
   "hosts": [
     {"host": "pig", "study_count": 4},
     {"host": "human", "study_count": 12},
-    {"host": "sheep", "study_count": 3},
+    {"host": "sheep", "study_count": 6},
     {"host": "wild boar", "study_count": 2},
     {"host": "poultry", "study_count": 1},
     {"host": "goat", "study_count": 1},
     {"host": "environment", "study_count": 1},
-    {"host": "hospital environment", "study_count": 2}
+    {"host": "hospital environment", "study_count": 2},
+    {"host": "dairy chain", "study_count": 1},
+    {"host": "sheep food chain", "study_count": 2}
   ],
   "organism_groups": [
-    {"organism": "Staphylococcus spp.", "study_count": 3},
-    {"organism": "Salmonella/Yersinia", "study_count": 5},
+    {"organism": "Staphylococcus spp.", "study_count": 5},
+    {"organism": "Streptococcus uberis", "study_count": 2},
+    {"organism": "Salmonella/Yersinia", "study_count": 6},
     {"organism": "Escherichia spp.", "study_count": 2},
     {"organism": "Klebsiella pneumoniae", "study_count": 5},
     {"organism": "Enterococcus spp.", "study_count": 2},
     {"organism": "Acinetobacter baumannii", "study_count": 2},
     {"organism": "Mycobacterium spp.", "study_count": 1},
     {"organism": "Respiratory mixed pathogens", "study_count": 1},
-    {"organism": "Environmental microbiome", "study_count": 1}
+    {"organism": "Environmental microbiome", "study_count": 1},
+    {"organism": "Lactic acid bacteria", "study_count": 1}
   ],
   "notes": "Sintesi descrittiva del registro bibliografico. Gli studi sono eterogenei e non sono sommati come prevalenza regionale."
 }

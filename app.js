@@ -91,16 +91,19 @@ fetch('public/data/human_amr_local_studies_sardinia.json').then(r => r.json()).t
     `Nord Sardegna: ${mycobacteria.mtb_resistant_to_at_least_one_first_line_drug}/${mycobacteria.mycobacterium_tuberculosis_positive} MTB resistenti ad almeno un farmaco di prima linea (${mycobacteria.collection_period}).<br>` +
     `<small>Dati di struttura, rete o area vasta con periodi differenti; nessuna prevalenza comunale della popolazione.</small>`;
 }).catch(() => {});
-fetch('public/data/izs_bioresource_amr_municipal.json').then(r => r.json()).then(d => {
+fetch('public/data/veterinary_amr_municipal_evidence.json').then(r => r.json()).then(d => {
   const card = document.getElementById('izs-municipal-amr-card');
-  const resistantResults = d.municipalities.reduce((sum, item) => sum + item.resistant_test_results, 0);
-  const totalResults = d.municipalities.reduce((sum, item) => sum + item.total_test_results, 0);
-  const places = d.municipalities.map(item => item.municipality[0] + item.municipality.slice(1).toLowerCase()).join(', ');
+  const izs = d.sources.find(item => item.source_id === 'izs_sardegna_bioresource');
+  const uberis = d.sources.find(item => item.source_id === 'pmid_35799261_s_uberis_wgs');
   card.hidden = false;
-  card.innerHTML = `<strong>AMR veterinaria · evidenze comunali IZS</strong><br>` +
-    `${d.record_count} ceppi ovini con antibiogramma in ${d.municipality_count} comuni; ` +
-    `${resistantResults}/${totalResults} esiti isolato–antibiotico resistenti (${d.test_period.start.slice(0, 4)}–${d.test_period.end.slice(0, 4)}).<br>` +
-    `<small>${places}. Collezione selettiva: identificazioni comunali documentate, non prevalenza o rischio del comune.</small>`;
+  card.innerHTML = `<strong>AMR veterinaria · evidenze comunali</strong><br>` +
+    `${d.municipality_count_unique} comuni documentati da due fonti.<br>` +
+    `<i>S. uberis</i>: ${uberis.isolate_count} isolati da mastite ovina in ${uberis.municipality_count} comuni; ` +
+    `${uberis.isolates_with_any_resistance}/${uberis.isolate_count} resistenti ad almeno un antimicrobico e ` +
+    `${uberis.resistant_test_results}/${uberis.total_test_results} esiti resistenti (${uberis.period}).<br>` +
+    `Bioresource IZS: ${izs.isolate_count} ceppi ovini in ${izs.municipality_count} comuni; ` +
+    `${izs.resistant_test_results}/${izs.total_test_results} esiti resistenti (${izs.period}).<br>` +
+    `<small>Coorti o collezioni selettive con pannelli differenti: identificazioni comunali, non prevalenza o rischio del comune; i conteggi delle due fonti non vanno sommati.</small>`;
 }).catch(() => {});
 fetch('public/data/environmental_amr_water_bodies_2024.json').then(r => r.json()).then(d => {
   const card = document.getElementById('environmental-amr-card');
@@ -158,22 +161,37 @@ const configs = [
   { key: 'municipalities', label: 'Comuni', file: 'public/geography/atlas_municipalities.geojson', color: '#2d7d61', weight: 0.65, fill: false, prop: 'Nome' },
   { key: 'provinces', label: 'Province', file: 'public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
   { key: 'regions', label: 'Regione', file: 'public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' },
-  { key: 'izsMunicipal', label: 'Evidenze comunali IZS', file: 'public/data/izs_bioresource_amr_municipal.geojson', color: '#c16f24', weight: 1.4, fill: true, prop: 'municipality' },
+  { key: 'veterinaryMunicipal', label: 'Evidenze AMR veterinarie comunali', file: 'public/data/veterinary_amr_municipal_evidence.geojson', color: '#c16f24', weight: 1.4, fill: true, prop: 'municipality' },
   { key: 'hydro', label: 'Corsi d’acqua principali', file: 'public/data/dbgt_corsi_principali.geojson', color: '#2f78b7', weight: 1.2, fill: false, prop: 'Nome' },
   { key: 'arissSites', label: 'Laboratori partecipanti AR-ISS 2024', file: 'public/data/ar_iss_2024_sardinia_sites.geojson', color: '#c73e55', weight: 1, fill: true, prop: 'site_name' },
   { key: 'depuratori', label: 'Depuratori SIRA', file: 'public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
-function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 1.1 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.55 : 1, fillColor: cfg.color, fillOpacity: cfg.key === 'izsMunicipal' ? 0.26 : (cfg.fill ? 0.12 : 0) }; }
+function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 1.1 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.55 : 1, fillColor: cfg.color, fillOpacity: cfg.key === 'veterinaryMunicipal' ? 0.26 : (cfg.fill ? 0.12 : 0) }; }
 function popup(feature, cfg) {
   const props = feature.properties || {};
-  if (cfg.key === 'izsMunicipal') {
-    const organisms = (props.organisms || []).map(escapeHtml).join(', ');
-    const antibiotics = (props.resistant_antibiotics || []).map(escapeHtml).join(', ');
+  if (cfg.key === 'veterinaryMunicipal') {
+    const blocks = [];
+    if (props.has_uberis_wgs) {
+      const antibiotics = (props.uberis_resistant_antimicrobials || []).map(escapeHtml).join(', ');
+      const genes = (props.uberis_resistance_genes || []).map(escapeHtml).join(', ');
+      blocks.push(`<b><i>Streptococcus uberis</i> · ${escapeHtml(props.uberis_period)}</b><br>` +
+        `${props.uberis_study_isolates} isolati da mastite ovina; ` +
+        `${props.uberis_isolates_with_any_resistance}/${props.uberis_study_isolates} resistenti ad almeno un antimicrobico; ` +
+        `${props.uberis_resistant_test_results}/${props.uberis_total_test_results} esiti resistenti. ` +
+        `Antimicrobici con resistenza: ${antibiotics || 'nessuno'}.` +
+        `${genes ? ` Geni rilevati: ${genes}.` : ''}`);
+    }
+    if (props.has_izs_catalogue) {
+      const organisms = (props.izs_organisms || []).map(escapeHtml).join(', ');
+      const antibiotics = (props.izs_resistant_antibiotics || []).map(escapeHtml).join(', ');
+      blocks.push(`<b>Bioresource IZS · ${escapeHtml(props.izs_period)}</b><br>` +
+        `${props.izs_catalogue_isolates} ceppi ovini di catalogo; ` +
+        `${props.izs_resistant_test_results}/${props.izs_total_test_results} esiti resistenti. ` +
+        `Organismi: ${organisms || 'non specificati'}. Antimicrobici con resistenza: ${antibiotics || 'nessuno'}.`);
+    }
     return `<strong>${escapeHtml(props.municipality)} · evidenza AMR veterinaria</strong><br>` +
-      `${props.catalogue_isolates} ceppi ovini di catalogo; ${props.resistant_test_results}/${props.total_test_results} esiti isolato–antibiotico resistenti.<br>` +
-      `<small>Organismi: ${organisms || 'non specificati'}. Antimicrobici con almeno un esito resistente: ${antibiotics || 'nessuno nel catalogo'}. ` +
-      `Dati IZS 2004–2006: identificazione nel comune di origine del campione, non prevalenza comunale.</small>`;
+      `${blocks.join('<hr>')}<br><small>Fonti selettive: identificazione nel comune di origine del campione, non prevalenza o rischio comunale. I conteggi delle fonti non vanno sommati.</small>`;
   }
   if (cfg.key === 'arissSites') {
     const note = props.location_note ? `<br><small>${props.location_note}</small>` : '';
@@ -204,7 +222,7 @@ Promise.all(configs.map(async cfg => {
   layers.regions.addTo(map);
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
-  layers.izsMunicipal.addTo(map);
+  layers.veterinaryMunicipal.addTo(map);
   layers.arissSites.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
@@ -230,7 +248,7 @@ Promise.all(configs.map(async cfg => {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
     'Regione': layers.regions,
-    '<span class="layer-swatch" style="background:#c16f24"></span>AMR veterinaria · comuni IZS': layers.izsMunicipal,
+    '<span class="layer-swatch" style="background:#c16f24"></span>AMR veterinaria · evidenze comunali': layers.veterinaryMunicipal,
     ...waterAndPlantLayers,
     '<span class="layer-swatch" style="background:#c73e55"></span>AMR umana · laboratori AR-ISS 2024': layers.arissSites
   }, { collapsed: false }).addTo(map);

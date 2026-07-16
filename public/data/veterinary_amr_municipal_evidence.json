@@ -1,0 +1,322 @@
+{
+  "source_id": "veterinary_amr_municipal_evidence",
+  "dataset_version": "atlas-curated-v0.1",
+  "geography_level": "COMUNE_ORIGINE_CAMPIONE",
+  "municipality_count_unique": 40,
+  "public_scope": "Aggregati comunali; aziende, localita, coordinate, date esatte e identificativi dei singoli isolati esclusi.",
+  "interpretation_note": "Le fonti sono collezioni o coorti selettive con pannelli e periodi differenti. Documentano identificazioni comunali, non prevalenza o rischio comunale.",
+  "sources": [
+    {
+      "source_id": "izs_sardegna_bioresource",
+      "title": "Bioresource IZSSA - ceppi ovini con antibiogramma",
+      "period": "2004-2006",
+      "municipality_count": 10,
+      "isolate_count": 25,
+      "resistant_test_results": 47,
+      "total_test_results": 254,
+      "source_url": "https://www.izs-sardegna.it/oldsite/cpt_index.cfm"
+    },
+    {
+      "source_id": "pmid_35799261_s_uberis_wgs",
+      "title": "Streptococcus uberis da mastite ovina - coorte WGS",
+      "period": "2011-2016",
+      "municipality_count": 36,
+      "isolate_count": 46,
+      "isolates_with_any_resistance": 45,
+      "resistant_test_results": 136,
+      "intermediate_test_results": 51,
+      "total_test_results": 644,
+      "pmid": "35799261",
+      "doi": "10.1186/s12917-022-03341-1",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/35799261/"
+    }
+  ],
+  "municipalities": [
+    {
+      "municipality": "ALGHERO",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "BANARI",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource",
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "BERCHIDDA",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "BOLOTANA",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "BORORE",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "BUDDUSO",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "CALANGIANUS",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "COSSOINE",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "DORGALI",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "FLORINAS",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "FORDONGIANUS",
+      "province": "ORISTANO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "GAVOI",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "GONNOSTRAMATZA",
+      "province": "ORISTANO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "GUSPINI",
+      "province": "CAGLIARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "ITTIREDDU",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "ITTIRI",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "MACOMER",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "MORES",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource",
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "MUSEI",
+      "province": "CAGLIARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "NARBOLIA",
+      "province": "ORISTANO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource",
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "NULVI",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "OLZAI",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "ONIFAI",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource",
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "OZIERI",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "PATTADA",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "PERFUGAS",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "PORTO TORRES",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "POZZOMAGGIORE",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "PUTIFIGARI",
+      "province": "SASSARI",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource",
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "SEMESTENE",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource"
+      ]
+    },
+    {
+      "municipality": "SILANUS",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "SINDIA",
+      "province": "NUORO",
+      "sources": [
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource"
+      ]
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource",
+        "pmid_35799261_s_uberis_wgs"
+      ]
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource"
+      ]
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "sources": [
+        "izs_sardegna_bioresource"
+      ]
+    }
+  ]
+}
