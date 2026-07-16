@@ -1,0 +1,153 @@
+{
+  "source_id": "sardinia_published_local_human_amr_studies",
+  "dataset_version": "atlas-curated-v0.1",
+  "privacy": "public_aggregate",
+  "records": [
+    {
+      "study_id": "binaghi_cagliari_efaecalis_2010",
+      "facility": "Ospedale Binaghi, ASL 8",
+      "municipality": "Cagliari",
+      "public_geography_level": "STRUTTURA_OSPEDALIERA",
+      "geography_note": "Cagliari identifica la sede della struttura, non la residenza dei pazienti.",
+      "collection_period": "non riportato nell'articolo",
+      "publication_year": 2010,
+      "organism": "Enterococcus faecalis",
+      "patients_and_isolates": 91,
+      "specimen_groups": [
+        {"specimen_group": "urine", "isolates": 55},
+        {"specimen_group": "respiratory tract", "isolates": 20},
+        {"specimen_group": "faeces", "isolates": 16}
+      ],
+      "phenotypic_resistance_total": [
+        {"antibiotic": "ampicillin", "resistant": 0, "tested": 91, "percent": 0.0},
+        {"antibiotic": "penicillin G", "resistant": 7, "tested": 91, "percent": 7.7},
+        {"antibiotic": "piperacillin", "resistant": 1, "tested": 91, "percent": 1.1},
+        {"antibiotic": "imipenem", "resistant": 1, "tested": 91, "percent": 1.1},
+        {"antibiotic": "high-level gentamicin", "resistant": 37, "tested": 91, "percent": 41.0},
+        {"antibiotic": "high-level streptomycin", "resistant": 33, "tested": 91, "percent": 36.0},
+        {"antibiotic": "ciprofloxacin", "resistant": 37, "tested": 91, "percent": 41.0},
+        {"antibiotic": "norfloxacin", "resistant": 37, "tested": 91, "percent": 41.0},
+        {"antibiotic": "vancomycin", "resistant": 3, "tested": 91, "percent": 3.2},
+        {"antibiotic": "teicoplanin", "resistant": 0, "tested": 91, "percent": 0.0},
+        {"antibiotic": "tetracycline", "resistant": 81, "tested": 91, "percent": 89.0},
+        {"antibiotic": "fosfomycin", "resistant": 87, "tested": 91, "percent": 95.6},
+        {"antibiotic": "nitrofurantoin", "resistant": 0, "tested": 91, "percent": 0.0}
+      ],
+      "multidrug_resistance": {
+        "definition_in_source": "resistenza a due o più farmaci",
+        "percent": 89.0,
+        "note": "La definizione usata nel 2010 non coincide necessariamente con le definizioni MDR contemporanee."
+      },
+      "source": {
+        "pmid": "20853674",
+        "article_url": "https://www.jpmh.org/index.php/jpmh/article/download/200/183/",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/20853674/"
+      }
+    },
+    {
+      "study_id": "sardinia_three_hospital_nas_2017",
+      "facilities": [
+        {"facility": "Azienda Ospedaliero-Universitaria di Sassari", "municipality": "Sassari"},
+        {"facility": "Ospedale San Francesco", "municipality": "Nuoro"},
+        {"facility": "Ospedale A. Segni", "municipality": "Ozieri"}
+      ],
+      "public_geography_level": "RETE_MULTISTRUTTURA",
+      "geography_note": "Lo studio identifica le tre strutture, ma non pubblica denominatori separati per ospedale. Nessun valore è attribuito a un singolo comune.",
+      "collection_period": "2017-04/2017-12",
+      "publication_year": 2021,
+      "organism": "non-aureus Staphylococcus spp.",
+      "human_cohort": {
+        "isolates": 70,
+        "resistant_to_at_least_one": 59,
+        "resistant_to_at_least_one_percent": 84.3,
+        "multidrug_resistant": 41,
+        "multidrug_resistant_percent": 58.6,
+        "penicillin_resistant": 52,
+        "penicillin_resistant_percent": 74.3,
+        "mec_positive": 33,
+        "mec_positive_percent": 47.1,
+        "erythromycin_resistant_percent": 57.1,
+        "tetracycline_resistant": 23,
+        "tetracycline_resistant_percent": 32.8,
+        "qacA_or_qacB_positive": 27,
+        "smr_positive": 18
+      },
+      "ovine_comparator": {
+        "isolates": 125,
+        "resistant_to_at_least_one": 46,
+        "resistant_to_at_least_one_percent": 36.8,
+        "multidrug_resistant": 2,
+        "tetracycline_resistant": 26,
+        "penicillin_resistant": 19,
+        "geography": "diverse province della Sardegna"
+      },
+      "source": {
+        "pmid": "33509310",
+        "pmcid": "PMC8060810",
+        "doi": "10.1017/S0950268821000212",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33509310/"
+      }
+    },
+    {
+      "study_id": "nuoro_san_francesco_mdr_abaumannii_outbreak_2012",
+      "facility": "Ospedale San Francesco, ASL 3 Nuoro",
+      "municipality": "Nuoro",
+      "public_geography_level": "STRUTTURA_OSPEDALIERA",
+      "geography_note": "Nuoro identifica la sede della struttura e del focolaio ospedaliero, non la residenza dei pazienti.",
+      "collection_period": "2012-06",
+      "publication_year": 2014,
+      "organism": "Acinetobacter baumannii",
+      "clinical_positive_patients": 10,
+      "environmental_positive_bed_headboards": 2,
+      "typed_isolates_total": 12,
+      "phenotype": {
+        "resistant_antimicrobial_groups": ["aminoglycosides", "carbapenems", "fluoroquinolones", "tetracyclines", "penicillins", "cephalosporins"],
+        "susceptible_antimicrobials": ["colistin"]
+      },
+      "genes_detected": ["blaOXA-51-like", "blaOXA-23-like"],
+      "sequence_type": "ST31",
+      "source": {
+        "pmid": "24858645",
+        "article_url": "https://newmicrobiologica.org/PUB/allegati_pdf/2014/2/185.pdf",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/24858645/"
+      }
+    },
+    {
+      "study_id": "north_sardinia_mycobacteria_amr_2020_2023",
+      "laboratory": "Laboratorio di Micobatteriologia BSL-3, AOU Sassari",
+      "catchment": "sistema sanitario della Sardegna settentrionale",
+      "public_geography_level": "AREA_VASTA_NON_COMUNALE",
+      "geography_note": "I campioni provengono dal sistema sanitario del Nord Sardegna, ma la fonte non pubblica una ripartizione per comune o struttura di invio.",
+      "collection_period": "2020-01/2023-04",
+      "publication_year": 2023,
+      "suspected_individuals": 1836,
+      "mycobacterium_tuberculosis_positive": 89,
+      "nontuberculous_mycobacteria_positive": 42,
+      "mtb_resistant_to_at_least_one_first_line_drug": 64,
+      "mtb_first_line_resistance": [
+        {"antibiotic": "isoniazid", "resistant": 25, "tested": 89, "percent": 28.09},
+        {"antibiotic": "streptomycin", "resistant": 24, "tested": 89, "percent": 26.97},
+        {"antibiotic": "ethambutol", "resistant": 15, "tested": 89, "percent": 16.85},
+        {"antibiotic": "pyrazinamide", "resistant": 8, "tested": 89, "percent": 8.99},
+        {"antibiotic": "rifampicin", "resistant": 5, "tested": 89, "percent": 5.62}
+      ],
+      "mtb_multidrug_pattern": {
+        "resistant_to_two_first_line_drugs": 10,
+        "resistant_to_three_first_line_drugs": 8,
+        "resistant_to_all_five_first_line_drugs": 1
+      },
+      "ntm_ast": {
+        "clinically_significant_tested": 24,
+        "resistant_to_at_least_one": 20,
+        "note": "Sedici NTM a crescita lenta e otto a crescita rapida; i denominatori per singolo antibiotico non sono uniformi."
+      },
+      "source": {
+        "pmid": "38059624",
+        "pmcid": "PMC10783066",
+        "doi": "10.1128/spectrum.03179-23",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38059624/"
+      }
+    }
+  ],
+  "reporting_note": "Studi storici con disegni, periodi, matrici e definizioni differenti. Non sommare i denominatori e non interpretare i valori come prevalenza comunale, regionale o corrente."
+}

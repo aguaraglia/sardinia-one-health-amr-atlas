@@ -105,7 +105,167 @@
         "doi": "10.3390/healthcare11182592",
         "url": "https://pubmed.ncbi.nlm.nih.gov/37761789/"
       }
+    },
+    {
+      "study_id": "aou_sassari_vanb2_efaecium_2013_2018",
+      "period": "2013-2018",
+      "study_design": "caratterizzazione fenotipica e genotipica monocentrica con MLST e WGS su un sottoinsieme",
+      "organism": "Enterococcus faecium",
+      "cohort": "isolati clinici della collezione microbiologica AOU Sassari",
+      "isolates_or_cases": 39,
+      "phenotypic_resistance_percent": [
+        {"antibiotic": "ampicillin", "percent": 92.0},
+        {"antibiotic": "high-level streptomycin", "percent": 92.0},
+        {"antibiotic": "high-level gentamicin", "percent": 80.0},
+        {"antibiotic": "imipenem", "percent": 92.0},
+        {"antibiotic": "ciprofloxacin", "percent": 100.0},
+        {"antibiotic": "erythromycin", "percent": 100.0},
+        {"antibiotic": "linezolid", "percent": 0.0},
+        {"antibiotic": "tigecycline", "percent": 0.0}
+      ],
+      "vanB2_positive_isolates": 3,
+      "vancomycin_resistant_by_initial_vitek2": 2,
+      "occult_vanB2_isolates_missed_by_initial_vitek2": 1,
+      "wgs_isolates": 10,
+      "sequence_types": [
+        {"sequence_type": "ST117", "isolates": 18},
+        {"sequence_type": "ST78", "isolates": 12},
+        {"sequence_type": "other", "isolates": 9}
+      ],
+      "source": {
+        "pmid": "36978343",
+        "pmcid": "PMC10044008",
+        "doi": "10.3390/antibiotics12030476",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36978343/"
+      }
+    },
+    {
+      "study_id": "aou_sassari_crkp_genotype_phenotype_2018_2022",
+      "period": "2018-2022",
+      "study_design": "studio osservazionale monocentrico",
+      "organism": "Klebsiella pneumoniae",
+      "cohort": "ceppi resistenti ad almeno un carbapeneme da campioni clinici; un campione per paziente",
+      "isolates_or_cases": 109,
+      "specimens": {
+        "rectal_swab": 48,
+        "blood_culture": 38,
+        "bronchoalveolar_lavage": 23
+      },
+      "resistance_gene_groups": [
+        {"group": "no carbapenemase detected", "isolates": 12},
+        {"group": "KPC", "isolates": 32},
+        {"group": "KPC/CTX-M", "isolates": 31},
+        {"group": "KPC/OXA-48", "isolates": 34}
+      ],
+      "phenotypic_resistance": [
+        {"antibiotic": "amoxicillin/clavulanic acid", "resistant": 102, "tested": 109},
+        {"antibiotic": "piperacillin/tazobactam", "resistant": 99, "tested": 109},
+        {"antibiotic": "cefepime", "resistant": 98, "tested": 109},
+        {"antibiotic": "cefotaxime", "resistant": 99, "tested": 109},
+        {"antibiotic": "ceftazidime", "resistant": 97, "tested": 109},
+        {"antibiotic": "ceftolozane/tazobactam", "resistant": 97, "tested": 109},
+        {"antibiotic": "meropenem", "resistant": 95, "tested": 109},
+        {"antibiotic": "imipenem", "resistant": 93, "tested": 109},
+        {"antibiotic": "amikacin", "resistant": 66, "tested": 109},
+        {"antibiotic": "gentamicin", "resistant": 68, "tested": 109},
+        {"antibiotic": "tobramycin", "resistant": 90, "tested": 109},
+        {"antibiotic": "ciprofloxacin", "resistant": 92, "tested": 109},
+        {"antibiotic": "trimethoprim/sulfamethoxazole", "resistant": 85, "tested": 109},
+        {"antibiotic": "ceftazidime/avibactam", "resistant": 18, "tested": 109},
+        {"antibiotic": "imipenem/relebactam", "resistant": 28, "tested": 109},
+        {"antibiotic": "meropenem/vaborbactam", "resistant": 25, "tested": 109}
+      ],
+      "antimicrobial_resistance_index": {
+        "median": 0.8,
+        "interquartile_range": "0.7-0.9",
+        "highest_group_median": {"group": "KPC/OXA-48", "value": 0.94}
+      },
+      "overlap_note": "Il periodo include coorti KPC/OXA-48 descritte in altri studi AOU Sassari. Non sommare i denominatori tra pubblicazioni.",
+      "source": {
+        "pmid": "37850773",
+        "pmcid": "PMC10644917",
+        "doi": "10.23750/abm.v94i5.14412",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37850773/"
+      }
+    },
+    {
+      "study_id": "aou_sassari_kpc_oxa48_surveillance_2019_2020",
+      "period": "2019-09/2020-12",
+      "study_design": "sorveglianza retrospettiva monocentrica",
+      "organism": "Klebsiella pneumoniae",
+      "cohort": "pazienti con isolati co-produttori KPC e OXA-48",
+      "isolates_or_cases": 127,
+      "invasive_infections": 31,
+      "colonization_or_non_invasive_detection": 96,
+      "antimicrobial_susceptibility_subset_note": "L'antibiogramma era disponibile su sottoinsiemi differenti secondo l'antibiotico.",
+      "phenotypic_resistance": [
+        {"antibiotic": "amikacin", "resistant": 69, "tested": 69},
+        {"antibiotic": "amoxicillin/clavulanic acid", "resistant": 67, "tested": 67},
+        {"antibiotic": "cefepime", "resistant": 38, "tested": 38},
+        {"antibiotic": "cefotaxime", "resistant": 69, "tested": 69},
+        {"antibiotic": "ceftazidime", "resistant": 69, "tested": 69},
+        {"antibiotic": "ciprofloxacin", "resistant": 69, "tested": 69},
+        {"antibiotic": "ertapenem", "resistant": 48, "tested": 48},
+        {"antibiotic": "fosfomycin", "resistant": 36, "tested": 36},
+        {"antibiotic": "gentamicin", "resistant": 65, "tested": 69},
+        {"antibiotic": "imipenem", "resistant": 25, "tested": 25},
+        {"antibiotic": "meropenem", "resistant": 68, "tested": 69, "intermediate": 1},
+        {"antibiotic": "piperacillin/tazobactam", "resistant": 67, "tested": 67},
+        {"antibiotic": "tigecycline", "resistant": 28, "tested": 32, "intermediate": 4},
+        {"antibiotic": "trimethoprim/sulfamethoxazole", "resistant": 67, "tested": 67},
+        {"antibiotic": "ceftazidime/avibactam", "resistant": 6, "tested": 21},
+        {"antibiotic": "ceftolozane/tazobactam", "resistant": 21, "tested": 21},
+        {"antibiotic": "tobramycin", "resistant": 23, "tested": 23}
+      ],
+      "molecular_typing": {
+        "pfge_isolates": 44,
+        "sequence_type": "ST512",
+        "carbapenemases": ["KPC", "OXA-48"]
+      },
+      "overlap_note": "Possibile sovrapposizione con coorti AOU Sassari 2018-2022 e con successivi sottoinsiemi WGS. Non sommare i denominatori.",
+      "source": {
+        "pmid": "35270321",
+        "pmcid": "PMC8909938",
+        "doi": "10.3390/ijerph19052623",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35270321/"
+      }
+    },
+    {
+      "study_id": "aou_sassari_xdr_abaumannii_icu_2015",
+      "period": "non riportato nell'abstract e nel metadato aperto consultato",
+      "study_design": "studio epidemiologico retrospettivo longitudinale in terapia intensiva",
+      "organism": "Acinetobacter baumannii",
+      "cohort": "isolati umani e ambientali XDR tipizzati nell'ICU AOU Sassari",
+      "typed_isolates": 16,
+      "denominator_basis": "somma dei tre cluster PFGE riportati: 11 + 4 + 1",
+      "phenotype": "Tutti gli isolati erano resistenti ai principali antibiotici, con la sola eccezione della colistina.",
+      "sequence_type": "ST2",
+      "genes_detected_in_all_typed_isolates": ["blaOXA-23", "blaOXA-51-like", "blaVIM-like", "blaIMP-like", "ISAba1"],
+      "genes_not_detected": ["blaOXA-24-like", "blaOXA-58-like", "blaNDM-like"],
+      "source": {
+        "pmid": "26499430",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26499430/"
+      }
+    },
+    {
+      "study_id": "aou_sassari_covid_respiratory_coinfection_2021_2022",
+      "period": "2021-05-01/2022-02-28",
+      "study_design": "studio prospettico diagnostico monocentrico",
+      "organisms": ["respiratory bacterial and fungal pathogens", "Staphylococcus aureus", "Klebsiella pneumoniae"],
+      "cohort": "pazienti COVID-19 ricoverati con campioni respiratori",
+      "patients": 70,
+      "secondary_infection_detected_percent": {
+        "multiplex_pcr": 60.0,
+        "culture": 73.0
+      },
+      "amr_findings": ["oxacillin-resistant Staphylococcus aureus", "carbapenem-resistant Klebsiella pneumoniae"],
+      "reporting_note": "La fonte pubblica consultata non fornisce conteggi separati affidabili per ciascun fenotipo AMR; non sono stati inferiti.",
+      "source": {
+        "pmid": "39116653",
+        "doi": "10.1016/j.diagmicrobio.2024.116479",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39116653/"
+      }
     }
   ],
-  "reporting_note": "Coorti pubblicate e selezionate, con periodi e criteri differenti. Non sommare i denominatori e non interpretare i risultati come prevalenza ospedaliera corrente, comunale o regionale."
+  "reporting_note": "Otto coorti o studi pubblicati e selezionati, con periodi, matrici e criteri differenti. Alcune pubblicazioni includono coorti potenzialmente sovrapposte: non sommare i denominatori e non interpretare i risultati come prevalenza ospedaliera corrente, comunale o regionale."
 }

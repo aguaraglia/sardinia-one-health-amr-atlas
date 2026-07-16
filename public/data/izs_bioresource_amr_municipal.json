@@ -1,0 +1,2420 @@
+{
+  "source_id": "izs_sardegna_bioresource",
+  "dataset_version": "atlas-curated-v0.1",
+  "retrieved_at": "2026-07-16",
+  "geography_level": "COMUNE_ORIGINE_CAMPIONE",
+  "record_count": 25,
+  "municipality_count": 10,
+  "test_period": {
+    "start": "2004-08-10",
+    "end": "2006-03-29"
+  },
+  "public_scope": "Aggregati comunali; localita e identificativi dei singoli ceppi esclusi.",
+  "interpretation_note": "Collezione selettiva di ceppi con antibiogramma, non campione di sorveglianza. I conteggi documentano identificazioni comunali presenti nel catalogo e non stimano prevalenza, incidenza o rischio della popolazione comunale.",
+  "source": {
+    "organization": "Istituto Zooprofilattico Sperimentale della Sardegna",
+    "title": "Bioresource IZSSA - Bacteria",
+    "index_url": "https://www.izs-sardegna.it/oldsite/cpt_index.cfm"
+  },
+  "municipalities": [
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "catalogue_isolates": 1,
+      "organisms": [
+        "Staphylococcus aureus"
+      ],
+      "resistant_test_results": 1,
+      "total_test_results": 8
+    },
+    {
+      "municipality": "MORES",
+      "province": "SS",
+      "catalogue_isolates": 1,
+      "organisms": [
+        "Streptococcus uberis"
+      ],
+      "resistant_test_results": 2,
+      "total_test_results": 5
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "catalogue_isolates": 2,
+      "organisms": [
+        "Enterococcus faecalis",
+        "Streptococcus uberis"
+      ],
+      "resistant_test_results": 9,
+      "total_test_results": 16
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "catalogue_isolates": 2,
+      "organisms": [
+        "Staphylococcus spp.",
+        "Streptococcus uberis"
+      ],
+      "resistant_test_results": 23,
+      "total_test_results": 88
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "catalogue_isolates": 13,
+      "organisms": [
+        "Staphylococcus aureus",
+        "Staphylococcus epidermidis",
+        "Staphylococcus hyicus",
+        "Staphylococcus simulans",
+        "Staphylococcus xylosus",
+        "Streptococcus bovis",
+        "Streptococcus uberis"
+      ],
+      "resistant_test_results": 6,
+      "total_test_results": 99
+    },
+    {
+      "municipality": "SEMESTENE",
+      "province": "SS",
+      "catalogue_isolates": 1,
+      "organisms": [
+        "Streptococcus uberis"
+      ],
+      "resistant_test_results": 1,
+      "total_test_results": 5
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "catalogue_isolates": 1,
+      "organisms": [
+        "Staphylococcus aureus"
+      ],
+      "resistant_test_results": 1,
+      "total_test_results": 8
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "catalogue_isolates": 1,
+      "organisms": [
+        "Staphylococcus aureus"
+      ],
+      "resistant_test_results": 1,
+      "total_test_results": 8
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "catalogue_isolates": 1,
+      "organisms": [
+        "Streptococcus uberis"
+      ],
+      "resistant_test_results": 1,
+      "total_test_results": 7
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "catalogue_isolates": 2,
+      "organisms": [
+        "Staphylococcus aureus",
+        "Staphylococcus chromogenes"
+      ],
+      "resistant_test_results": 2,
+      "total_test_results": 10
+    }
+  ],
+  "antibiograms": [
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S ) ( S )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "18/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "GENTAMICINA ( GM ) ( S )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "18/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ERITROMICINA ( E ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "18/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 1,
+      "susceptible": 0,
+      "test_dates": [
+        "18/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "18/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "18/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus bovis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 1,
+      "susceptible": 0,
+      "test_dates": [
+        "28/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus bovis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "SULFAMETOX + TRIMETOPRIM ( SXT ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus bovis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S ) ( S )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "28/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus bovis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "GENTAMICINA ( GM ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus bovis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ERITROMICINA ( E ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus bovis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 1,
+      "susceptible": 0,
+      "test_dates": [
+        "28/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus bovis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Streptococcus bovis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus xylosus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus xylosus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus xylosus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SEMESTENE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TILMICOSINA ( TILM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus xylosus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus xylosus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus xylosus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus xylosus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus xylosus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus simulans",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SEMESTENE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SEMESTENE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SEMESTENE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 1,
+      "susceptible": 0,
+      "test_dates": [],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "29/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "29/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ERITROMICINA ( E ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "29/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "GENTAMICINA ( GM ) ( S )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "29/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "SULFAMETOX + TRIMETOPRIM ( SXT ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "29/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "29/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TORRALBA",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "29/03/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "17/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "17/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "17/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "17/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus chromogenes",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "16/02/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus chromogenes",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "16/02/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus chromogenes",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "16/02/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "17/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus hyicus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "24/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "19/01/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "19/01/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SEMESTENE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR ) ( S )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LIQUIDO-ESSUD",
+      "antibiotic": "AMOXICILLINA ( AMX )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "02/02/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LIQUIDO-ESSUD",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "02/02/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LIQUIDO-ESSUD",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "02/02/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LIQUIDO-ESSUD",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "02/02/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LIQUIDO-ESSUD",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "02/02/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "19/01/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LIQUIDO-ESSUD",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "02/02/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LIQUIDO-ESSUD",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 1,
+      "susceptible": 0,
+      "test_dates": [
+        "02/02/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "19/01/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "19/01/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "19/01/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "19/01/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "THIESI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "19/01/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SORSO",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LIQUIDO-ESSUD",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "02/02/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus chromogenes",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P ) ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "16/02/2006"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus hyicus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "24/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus hyicus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "24/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Staphylococcus spp.",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Staphylococcus spp.",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Staphylococcus spp.",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "30/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "30/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "30/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "SULFAMETOX + TRIMETOPRIM ( SXT )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 1,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 1,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFOPERAZONE ( CFP )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Staphylococcus spp.",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "BENETUTTI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "MORES",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "16/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "MORES",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "16/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "MORES",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "16/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "MORES",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "16/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMOXICILLINA + AC. CLAVULANICO ( AMCL )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "NULE",
+      "province": "SS",
+      "organism": "Enterococcus faecalis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "07/04/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "MORES",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "16/12/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Staphylococcus spp.",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Staphylococcus spp.",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Staphylococcus spp.",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TILMICOSINA ( TILM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 4,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 3,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "30/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "30/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "30/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "30/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "30/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 3,
+      "resistant": 1,
+      "intermediate": 1,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004",
+        "24/08/2004",
+        "28/08/2004"
+      ],
+      "source_record_count": 3
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 3,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 3,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004"
+      ],
+      "source_record_count": 3
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 3,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 3,
+      "test_dates": [
+        "10/08/2004",
+        "24/08/2004",
+        "30/08/2004"
+      ],
+      "source_record_count": 3
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TILMICOSINA ( TILM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "10/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus hyicus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "24/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus hyicus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "24/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus hyicus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "24/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus hyicus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "24/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus epidermidis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 3,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 2,
+      "test_dates": [
+        "10/08/2004",
+        "24/08/2004",
+        "30/08/2004"
+      ],
+      "source_record_count": 3
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus hyicus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 1,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 1,
+      "test_dates": [
+        "24/08/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 3,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 3,
+      "test_dates": [
+        "10/08/2004",
+        "24/08/2004",
+        "28/08/2004"
+      ],
+      "source_record_count": 3
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 3,
+      "resistant": 0,
+      "intermediate": 1,
+      "susceptible": 2,
+      "test_dates": [
+        "10/08/2004",
+        "24/08/2004",
+        "28/08/2004"
+      ],
+      "source_record_count": 3
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Staphylococcus spp.",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "28/12/2004"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 9,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 9,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 9,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 9,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 9,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 9,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 9,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 9,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "KANAMICINA ( K )",
+      "tested": 9,
+      "resistant": 9,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "OXITETRACICLINA ( T )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "28/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "PENICILLINA ( P )",
+      "tested": 9,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 9,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR )",
+      "tested": 9,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 8,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TILMICOSINA ( TILM )",
+      "tested": 8,
+      "resistant": 0,
+      "intermediate": 8,
+      "susceptible": 0,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "AMPICILLINA ( AM )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "28/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CEFALOTINA ( CEFA )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "28/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "CLOXACILLINA ( CX )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "28/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "SASSARI",
+      "province": "SS",
+      "organism": "Staphylococcus aureus",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "ENROFLOXACINA ( ENR )",
+      "tested": 4,
+      "resistant": 0,
+      "intermediate": 0,
+      "susceptible": 4,
+      "test_dates": [
+        "10/08/2004",
+        "14/09/2004",
+        "24/08/2004",
+        "28/08/2004"
+      ],
+      "source_record_count": 4
+    },
+    {
+      "municipality": "OSCHIRI",
+      "province": "SS",
+      "organism": "Streptococcus uberis",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "STREPTOMICINA ( S )",
+      "tested": 9,
+      "resistant": 9,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "03/05/2005"
+      ],
+      "source_record_count": 1
+    },
+    {
+      "municipality": "TULA",
+      "province": "SS",
+      "organism": "Staphylococcus chromogenes",
+      "host": "OVINO",
+      "material": "LATTE",
+      "antibiotic": "TETRACICLINA ( TETR ) ( S )",
+      "tested": 1,
+      "resistant": 1,
+      "intermediate": 0,
+      "susceptible": 0,
+      "test_dates": [
+        "16/02/2006"
+      ],
+      "source_record_count": 1
+    }
+  ]
+}

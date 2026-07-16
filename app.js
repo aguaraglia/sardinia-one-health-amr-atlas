@@ -54,15 +54,53 @@ fetch('public/data/human_amr_facility_sassari_studies.json').then(r => r.json())
   const historical = d.records.find(item => item.study_id === 'aou_sassari_kpc_kp_2015_2017');
   const wgs = d.records.find(item => item.study_id === 'aou_sassari_kpc_oxa_wgs_2020_2021');
   const ndm = d.records.find(item => item.study_id === 'aou_sassari_ndm_kp_2021_2022');
+  const vre = d.records.find(item => item.study_id === 'aou_sassari_vanb2_efaecium_2013_2018');
+  const crkp = d.records.find(item => item.study_id === 'aou_sassari_crkp_genotype_phenotype_2018_2022');
+  const kpcOxa = d.records.find(item => item.study_id === 'aou_sassari_kpc_oxa48_surveillance_2019_2020');
+  const acinetobacter = d.records.find(item => item.study_id === 'aou_sassari_xdr_abaumannii_icu_2015');
+  const covid = d.records.find(item => item.study_id === 'aou_sassari_covid_respiratory_coinfection_2021_2022');
   const kpc31 = wgs.key_resistance_genes.find(item => item.gene === 'blaKPC-31');
   card.hidden = false;
   card.innerHTML = `<strong>AMR umana · AOU Sassari</strong><br>` +
-    `Tre coorti pubblicate: ${historical.isolates_or_cases} KPC-Kp invasive (${historical.period}); ` +
-    `${wgs.isolates_or_cases} isolati ST512 analizzati con WGS (${wgs.period}); ` +
-    `${ndm.isolates_or_cases} casi NDM indipendenti (${ndm.period}).<br>` +
-    `<small><code>blaKPC-31</code> in ${kpc31.positive}/${kpc31.tested} isolati WGS; ` +
-    `${ndm.contact_screening_swabs} tamponi di contatto senza ulteriori casi NDM. ` +
-    `Dati di struttura e coorte: non prevalenza del Comune di Sassari.</small>`;
+    `${d.records.length} studi o coorti pubblicati. <i>K. pneumoniae</i>: ${crkp.isolates_or_cases} CR-Kp (${crkp.period}); ` +
+    `${kpcOxa.isolates_or_cases} KPC/OXA-48 (${kpcOxa.period}); ${historical.isolates_or_cases} KPC-Kp invasive; ` +
+    `${wgs.isolates_or_cases} isolati ST512 con WGS; ${ndm.isolates_or_cases} casi NDM. ` +
+    `<i>E. faecium</i>: ${vre.isolates_or_cases} isolati, ${vre.vanB2_positive_isolates} <code>vanB2</code>, di cui ` +
+    `${vre.occult_vanB2_isolates_missed_by_initial_vitek2} occulto. <i>A. baumannii</i>: ${acinetobacter.typed_isolates} isolati XDR ST2. ` +
+    `Studio COVID: ${covid.patients} pazienti.<br>` +
+    `<small>Le pubblicazioni KPC/OXA includono coorti potenzialmente sovrapposte e non vanno sommate. ` +
+    `<code>blaKPC-31</code> in ${kpc31.positive}/${kpc31.tested} isolati WGS. Dati di struttura, non prevalenza del Comune di Sassari.</small>`;
+}).catch(() => {});
+fetch('public/data/human_amr_local_studies_sardinia.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('human-local-amr-card');
+  const cagliari = d.records.find(item => item.study_id === 'binaghi_cagliari_efaecalis_2010');
+  const network = d.records.find(item => item.study_id === 'sardinia_three_hospital_nas_2017');
+  const nuoro = d.records.find(item => item.study_id === 'nuoro_san_francesco_mdr_abaumannii_outbreak_2012');
+  const mycobacteria = d.records.find(item => item.study_id === 'north_sardinia_mycobacteria_amr_2020_2023');
+  const fosfomycin = cagliari.phenotypic_resistance_total.find(item => item.antibiotic === 'fosfomycin');
+  const tetracycline = cagliari.phenotypic_resistance_total.find(item => item.antibiotic === 'tetracycline');
+  const gentamicin = cagliari.phenotypic_resistance_total.find(item => item.antibiotic === 'high-level gentamicin');
+  card.hidden = false;
+  card.innerHTML = `<strong>AMR umana · Cagliari e rete ospedaliera</strong><br>` +
+    `Binaghi Cagliari: ${cagliari.patients_and_isolates} isolati di <i>E. faecalis</i>; ` +
+    `fosfomicina ${fosfomycin.resistant}/${fosfomycin.tested}, tetraciclina ${tetracycline.resistant}/${tetracycline.tested}, ` +
+    `gentamicina ad alto livello ${gentamicin.resistant}/${gentamicin.tested}.<br>` +
+    `Rete Sassari–Nuoro–Ozieri: ${network.human_cohort.resistant_to_at_least_one}/${network.human_cohort.isolates} NAS umani resistenti ad almeno un antimicrobico; ` +
+    `${network.human_cohort.multidrug_resistant}/${network.human_cohort.isolates} MDR. ` +
+    `San Francesco Nuoro: focolaio con ${nuoro.clinical_positive_patients} pazienti e ${nuoro.environmental_positive_bed_headboards} superfici positive (${nuoro.collection_period}). ` +
+    `Nord Sardegna: ${mycobacteria.mtb_resistant_to_at_least_one_first_line_drug}/${mycobacteria.mycobacterium_tuberculosis_positive} MTB resistenti ad almeno un farmaco di prima linea (${mycobacteria.collection_period}).<br>` +
+    `<small>Dati di struttura, rete o area vasta con periodi differenti; nessuna prevalenza comunale della popolazione.</small>`;
+}).catch(() => {});
+fetch('public/data/izs_bioresource_amr_municipal.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('izs-municipal-amr-card');
+  const resistantResults = d.municipalities.reduce((sum, item) => sum + item.resistant_test_results, 0);
+  const totalResults = d.municipalities.reduce((sum, item) => sum + item.total_test_results, 0);
+  const places = d.municipalities.map(item => item.municipality[0] + item.municipality.slice(1).toLowerCase()).join(', ');
+  card.hidden = false;
+  card.innerHTML = `<strong>AMR veterinaria · evidenze comunali IZS</strong><br>` +
+    `${d.record_count} ceppi ovini con antibiogramma in ${d.municipality_count} comuni; ` +
+    `${resistantResults}/${totalResults} esiti isolato–antibiotico resistenti (${d.test_period.start.slice(0, 4)}–${d.test_period.end.slice(0, 4)}).<br>` +
+    `<small>${places}. Collezione selettiva: identificazioni comunali documentate, non prevalenza o rischio del comune.</small>`;
 }).catch(() => {});
 fetch('public/data/environmental_amr_water_bodies_2024.json').then(r => r.json()).then(d => {
   const card = document.getElementById('environmental-amr-card');
@@ -120,14 +158,23 @@ const configs = [
   { key: 'municipalities', label: 'Comuni', file: 'public/geography/atlas_municipalities.geojson', color: '#2d7d61', weight: 0.65, fill: false, prop: 'Nome' },
   { key: 'provinces', label: 'Province', file: 'public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
   { key: 'regions', label: 'Regione', file: 'public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' },
+  { key: 'izsMunicipal', label: 'Evidenze comunali IZS', file: 'public/data/izs_bioresource_amr_municipal.geojson', color: '#c16f24', weight: 1.4, fill: true, prop: 'municipality' },
   { key: 'hydro', label: 'Corsi d’acqua principali', file: 'public/data/dbgt_corsi_principali.geojson', color: '#2f78b7', weight: 1.2, fill: false, prop: 'Nome' },
   { key: 'arissSites', label: 'Laboratori partecipanti AR-ISS 2024', file: 'public/data/ar_iss_2024_sardinia_sites.geojson', color: '#c73e55', weight: 1, fill: true, prop: 'site_name' },
   { key: 'depuratori', label: 'Depuratori SIRA', file: 'public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
-function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 1.1 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.55 : 1, fillColor: cfg.color, fillOpacity: cfg.fill ? 0.12 : 0 }; }
+function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 1.1 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.55 : 1, fillColor: cfg.color, fillOpacity: cfg.key === 'izsMunicipal' ? 0.26 : (cfg.fill ? 0.12 : 0) }; }
 function popup(feature, cfg) {
   const props = feature.properties || {};
+  if (cfg.key === 'izsMunicipal') {
+    const organisms = (props.organisms || []).map(escapeHtml).join(', ');
+    const antibiotics = (props.resistant_antibiotics || []).map(escapeHtml).join(', ');
+    return `<strong>${escapeHtml(props.municipality)} · evidenza AMR veterinaria</strong><br>` +
+      `${props.catalogue_isolates} ceppi ovini di catalogo; ${props.resistant_test_results}/${props.total_test_results} esiti isolato–antibiotico resistenti.<br>` +
+      `<small>Organismi: ${organisms || 'non specificati'}. Antimicrobici con almeno un esito resistente: ${antibiotics || 'nessuno nel catalogo'}. ` +
+      `Dati IZS 2004–2006: identificazione nel comune di origine del campione, non prevalenza comunale.</small>`;
+  }
   if (cfg.key === 'arissSites') {
     const note = props.location_note ? `<br><small>${props.location_note}</small>` : '';
     return `<strong>${props.site_name}</strong><br>${props.municipality} (${props.province})<br><small>Laboratorio partecipante alla rete AR-ISS 2024. Il punto indica la sede del laboratorio. Copertura regionale ${props.coverage_percent_region}%; non e' prevalenza comunale o provinciale.</small>${note}`;
@@ -157,6 +204,7 @@ Promise.all(configs.map(async cfg => {
   layers.regions.addTo(map);
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
+  layers.izsMunicipal.addTo(map);
   layers.arissSites.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
@@ -182,8 +230,9 @@ Promise.all(configs.map(async cfg => {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
     'Regione': layers.regions,
+    '<span class="layer-swatch" style="background:#c16f24"></span>AMR veterinaria · comuni IZS': layers.izsMunicipal,
     ...waterAndPlantLayers,
-    'Laboratori partecipanti AR-ISS 2024': layers.arissSites
+    '<span class="layer-swatch" style="background:#c73e55"></span>AMR umana · laboratori AR-ISS 2024': layers.arissSites
   }, { collapsed: false }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = 'Layer caricati';

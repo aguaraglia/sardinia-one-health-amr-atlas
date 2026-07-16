@@ -16,9 +16,9 @@
       "matrix": ["ovine samples", "human samples"],
       "organisms": ["non-aureus Staphylococcus spp."],
       "amr_evidence": ["phenotype", "genotype"],
-      "public_geography": "Sardegna",
+      "public_geography": "Rete di tre ospedali: Sassari, Nuoro e Ozieri; campioni ovini regionali",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/33509310/",
-      "notes": "195 NAS isolates: 125 ovine and 70 human. Study-level evidence only."
+      "notes": "195 NAS isolates: 125 ovine and 70 human. The three hospitals are identified, but human denominators are not separable by facility; no municipal prevalence."
     },
     {
       "study_id": "lit_saureus_ovine_mastitis_sardinia_2017",
@@ -133,6 +133,20 @@
       "notes": "Facility-level clinical genomic evidence. Sassari is the hospital location, not the patients' municipality of origin and not municipal prevalence."
     },
     {
+      "study_id": "lit_efaecium_vanb2_sassari_2023",
+      "pmid": "36978343",
+      "doi": "10.3390/antibiotics12030476",
+      "year": 2023,
+      "title": "Occult Vancomycin-Resistant Enterococcus faecium ST117 Displaying a Highly Mutated vanB2 Operon",
+      "hosts": ["human"],
+      "matrix": ["clinical isolates"],
+      "organisms": ["Enterococcus faecium"],
+      "amr_evidence": ["phenotype", "genotype", "WGS"],
+      "public_geography": "AOU Sassari (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36978343/",
+      "notes": "Facility-level cohort of 39 E. faecium isolates collected in 2013-2018; three vanB2-positive isolates, including one occult isolate missed by the initial Vitek2 result. Not municipal prevalence."
+    },
+    {
       "study_id": "lit_kpneumoniae_kpc_invasive_sassari_2018",
       "pmid": "29621600",
       "doi": "10.1016/j.jhin.2018.03.033",
@@ -212,9 +226,93 @@
       "matrix": ["clinical isolates"],
       "organisms": ["Enterococcus faecalis"],
       "amr_evidence": ["phenotype", "genotype"],
-      "public_geography": "Sardegna",
+      "public_geography": "Ospedale Binaghi, Cagliari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/20853674/",
-      "notes": "Study-level clinical evidence; DOI not present in PubMed esummary."
+      "notes": "Facility-level cohort of 91 clinical isolates from 91 patients at Binaghi Hospital. Cagliari is the facility location, not patient residence; DOI not present in PubMed."
+    },
+    {
+      "study_id": "lit_kpneumoniae_crkp_genotype_sassari_2023",
+      "pmid": "37850773",
+      "doi": "10.23750/abm.v94i5.14412",
+      "year": 2023,
+      "title": "Comparison of genotypic and phenotypic antimicrobial profile in carbapenemases producing Klebsiella pneumoniae",
+      "hosts": ["human"],
+      "matrix": ["clinical isolates", "rectal swabs", "blood cultures", "bronchoalveolar lavage"],
+      "organisms": ["Klebsiella pneumoniae"],
+      "amr_evidence": ["phenotype", "genotype", "antimicrobial resistance index"],
+      "public_geography": "AOU Sassari (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/37850773/",
+      "notes": "Facility-level cohort of 109 carbapenem-resistant isolates collected in 2018-2022. It may overlap with other AOU Sassari KPC/OXA-48 publications and must not be added to them as a prevalence denominator."
+    },
+    {
+      "study_id": "lit_kpneumoniae_kpc_oxa48_sassari_2022",
+      "pmid": "35270321",
+      "doi": "10.3390/ijerph19052623",
+      "year": 2022,
+      "title": "High-Risk Clone of Klebsiella pneumoniae Co-Harbouring Class A and D Carbapenemases in Italy",
+      "hosts": ["human"],
+      "matrix": ["screening and clinical isolates"],
+      "organisms": ["Klebsiella pneumoniae"],
+      "amr_evidence": ["phenotype", "genotype", "PFGE", "MLST"],
+      "public_geography": "AOU Sassari (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/35270321/",
+      "notes": "Facility surveillance cohort of 127 KPC/OXA-48-positive patients in 2019-2020; 31 invasive infections. Potential overlap with other AOU Sassari cohorts; not municipal prevalence."
+    },
+    {
+      "study_id": "lit_abaumannii_xdr_sassari_2015",
+      "pmid": "26499430",
+      "doi": null,
+      "year": 2015,
+      "title": "Molecular typing of XDR Acinetobacter baumannii strains in an Italian ICU",
+      "hosts": ["human", "hospital environment"],
+      "matrix": ["clinical and environmental isolates"],
+      "organisms": ["Acinetobacter baumannii"],
+      "amr_evidence": ["phenotype", "genotype", "PFGE", "MLST"],
+      "public_geography": "ICU AOU Sassari (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/26499430/",
+      "notes": "Sixteen typed XDR isolates inferred from the three reported PFGE clusters; all resistant to major antibiotics except colistin and all ST2. Collection period was not available in the open abstract."
+    },
+    {
+      "study_id": "lit_abaumannii_outbreak_nuoro_2014",
+      "pmid": "24858645",
+      "doi": null,
+      "year": 2014,
+      "title": "Outbreak of multidrug-resistant Acinetobacter baumannii in an intensive care unit",
+      "hosts": ["human", "hospital environment"],
+      "matrix": ["clinical isolates", "environmental swabs"],
+      "organisms": ["Acinetobacter baumannii"],
+      "amr_evidence": ["phenotype", "genotype", "PFGE", "MLST"],
+      "public_geography": "Ospedale San Francesco, Nuoro (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/24858645/",
+      "notes": "June 2012 ICU outbreak with ten positive patients and two positive bed headboards; 12 ST31 isolates carried blaOXA-51-like and blaOXA-23-like. Nuoro is the hospital location, not patient residence."
+    },
+    {
+      "study_id": "lit_covid_respiratory_amr_sassari_2024",
+      "pmid": "39116653",
+      "doi": "10.1016/j.diagmicrobio.2024.116479",
+      "year": 2024,
+      "title": "Comparison of microbiological and molecular diagnosis for identification of respiratory secondary infections in COVID-19 patients and their antimicrobial resistance patterns",
+      "hosts": ["human"],
+      "matrix": ["respiratory samples"],
+      "organisms": ["respiratory pathogens", "Staphylococcus aureus", "Klebsiella pneumoniae"],
+      "amr_evidence": ["phenotype", "multiplex PCR"],
+      "public_geography": "AOU Sassari (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/39116653/",
+      "notes": "Prospective cohort of 70 COVID-19 patients in 2021-2022; oxacillin-resistant S. aureus and carbapenem-resistant K. pneumoniae were detected, but public source counts were not inferred."
+    },
+    {
+      "study_id": "lit_mycobacteria_north_sardinia_2023",
+      "pmid": "38059624",
+      "doi": "10.1128/spectrum.03179-23",
+      "year": 2023,
+      "title": "Evaluation of mycobacteria infection prevalence and optimization of the identification process in North Sardinia, Italy",
+      "hosts": ["human"],
+      "matrix": ["suspected mycobacterial infection specimens"],
+      "organisms": ["Mycobacterium tuberculosis", "nontuberculous mycobacteria"],
+      "amr_evidence": ["phenotype", "resistance-associated mutation testing"],
+      "public_geography": "Sistema sanitario del Nord Sardegna; laboratorio AOU Sassari",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38059624/",
+      "notes": "Area-wide cohort of 1,836 suspected individuals in 2020-2023; 89 MTB-positive, of whom 64 had resistance to at least one first-line drug. No municipal split is published."
     }
   ]
 }
