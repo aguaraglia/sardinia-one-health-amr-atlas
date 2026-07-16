@@ -1,0 +1,18 @@
+{
+  "source_id": "istat_censimento_agricoltura_2020",
+  "reference_year": 2020,
+  "territory": "Sardegna",
+  "unit": "regione",
+  "values": {
+    "aziende_agricole": 47077,
+    "sau_ettari": 1235000,
+    "variazione_aziende_vs_2010_percent": -22.6,
+    "variazione_sau_vs_2010_percent": 7.0
+  },
+  "notes": [
+    "Dato regionale di contesto agricolo e zootecnico; non è un denominatore epidemiologico AMR.",
+    "La localizzazione censuaria è riferita al centro aziendale o alla sede legale secondo la tavola Istat.",
+    "Non contiene coordinate puntuali di aziende agricole."
+  ],
+  "source_url": "https://www.istat.it/notizia/censimento-agricoltura-2020-online-i-principali-dati/"
+}
