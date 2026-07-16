@@ -22,9 +22,46 @@ const amrTargets = [
 const targetSelect = document.getElementById('amr-target');
 amrTargets.slice(1).forEach(([value, label]) => targetSelect.add(new Option(label, value)));
 targetSelect.addEventListener('change', event => {
-  const label = event.target.selectedOptions[0]?.textContent || 'target selezionato';
-  document.getElementById('amr-state').textContent = `Filtro selezionato: ${label}. Le card mostrano solo evidenze pubbliche aggregate o target dichiarati.`;
+  applyAmrFilter(event.target.value);
 });
+
+const amrKeywords = {
+  AMR_BETA_LACTAM: ['penicillin','penicillina','ampicillin','ampicillina','amoxicillin','amoxicillina','beta-lactam','bla','kpc','oxa','ndm','carbapenem','cephalosporin','cefazolin','cefotaxime','ceftazidime','ceftriaxone'],
+  AMR_CARBAPENEM: ['carbapenem','kpc','oxa-48','oxa48','ndm','imipenem','meropenem','crkp','crec','crpa','cras'],
+  AMR_CEPHALOSPORIN: ['cephalosporin','cefazolin','cefotaxime','ceftazidime','ceftriaxone','cefoxitin'],
+  AMR_FLUOROQUINOLONE: ['fluoroquinolone','ciprofloxacin','levofloxacin','nalidixic','qnr'],
+  AMR_AMINOGLYCOSIDE: ['aminoglycoside','amikacin','gentamicin','kanamycin','streptomycin','tobramycin','aac(','aad','aph('],
+  AMR_TETRACYCLINE: ['tetracycline','tetraciclina','oxytetracycline','oxitetraciclina','doxycycline','minocycline','tet'],
+  AMR_MACROLIDE: ['macrolide','azithromycin','clarithromycin','erythromycin','macrolidi','mph','mef'],
+  AMR_GLYCOPEPTIDE: ['glycopeptide','vancomycin','vanb','vanc','vre'],
+  AMR_COLISTIN: ['colistin','colistina','mcr'],
+  AMR_MDR: ['multidrug','multiresist','mdr','xdr','resistenti ad almeno']
+};
+const filterableKeys = new Set(['veterinaryMunicipal','humanFacilityEvidence','foodChainMunicipal','arissSites']);
+function featureMatchesAmr(feature, value) {
+  if (value === 'AMR_ANY') return true;
+  const haystack = JSON.stringify(feature?.properties || {}).toLowerCase();
+  const keywords = amrKeywords[value] || value.toLowerCase().replace(/^amr[_-]?/, '').split(/[_-]+/).filter(Boolean);
+  return keywords.some(keyword => haystack.includes(keyword));
+}
+function applyAmrFilter(value) {
+  const label = targetSelect.selectedOptions[0]?.textContent || 'target selezionato';
+  let visible = 0;
+  filterableKeys.forEach(key => {
+    const layer = layers[key];
+    if (!layer) return;
+    layer.eachLayer(item => {
+      const show = featureMatchesAmr(item.feature, value);
+      if (show) visible += 1;
+      if (item.setStyle) item.setStyle({ opacity: show ? 1 : 0, fillOpacity: show ? (key === 'veterinaryMunicipal' ? 0.26 : 0.12) : 0 });
+      if (item._path) item._path.style.pointerEvents = show ? 'auto' : 'none';
+      if (item._icon) item._icon.style.display = show ? '' : 'none';
+    });
+  });
+  document.getElementById('amr-state').textContent = value === 'AMR_ANY'
+    ? 'Tutte le evidenze AMR pubbliche sono visibili.'
+    : `${label}: ${visible} elementi compatibili visibili sulla mappa. Le fonti senza questo target restano nascoste.`;
+}
 fetch('public/data/pncar_env_panel.json').then(r => r.json()).then(d => {
   const group = document.createElement('optgroup');
   group.label = 'Pannello PNCAR';
@@ -165,13 +202,13 @@ fetch('public/data/literature_curated_sardinia.json').then(r => r.json()).then(d
     body.innerHTML = d.records
       .slice()
       .sort((a, b) => b.year - a.year)
-      .map(record => `<tr><td>${record.year}</td><td><a href="${record.source_url}" target="_blank" rel="noreferrer">${record.pmid}</a></td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${escapeHtml(record.title)}</td></tr>`)
+      .map(record => `<tr><td>${record.year}</td><td><a href="${record.source_url}" target="_blank" rel="noreferrer">${record.pmid}</a></td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${escapeHtml(record.title)}</td><td><a class="table-action" href="evidence.html?id=${encodeURIComponent(record.study_id)}">Apri scheda</a></td></tr>`)
       .join('');
   }
   return fetch('public/data/literature_curated_summary.json').then(r => r.json()).then(summary => {
     const hosts = summary.hosts.slice(0, 4).map(x => `${x.host} (${x.study_count})`).join(', ');
     card.hidden = false;
-    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}).<br>Host principali: ${hosts}.<br><small>Registro di evidenze eterogenee: non prevalenza regionale unica.</small>`;
+    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}). Host principali: ${hosts}.<br><a class="inline-action" href="evidence.html">Apri l’elenco completo delle evidenze →</a>`;
   });
 }).catch(() => {});
 fetch('public/data/aifa_osmed_2024_antibiotics.json').then(r => r.json()).then(d => {
@@ -314,6 +351,7 @@ Promise.all(configs.map(async cfg => {
   }, { collapsed: false }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = 'Layer caricati';
+  applyAmrFilter(targetSelect.value);
 }).catch(error => {
   document.getElementById('status').textContent = 'Errore di caricamento';
   console.error(error);
