@@ -43,6 +43,7 @@ const configs = [
   { key: 'municipalities', label: 'Comuni', file: '../public/geography/atlas_municipalities.geojson', color: '#2d7d61', weight: 0.65, fill: false, prop: 'Nome' },
   { key: 'provinces', label: 'Province', file: '../public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
   { key: 'regions', label: 'Regione', file: '../public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' },
+  { key: 'hydro', label: 'Corsi d’acqua principali', file: '../public/data/dbgt_corsi_principali.geojson', color: '#2f78b7', weight: 1.2, fill: false, prop: 'Nome' },
   { key: 'depuratori', label: 'Depuratori SIRA', file: '../public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
@@ -70,6 +71,7 @@ Promise.all(configs.map(async cfg => {
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
   layers.depuratori.addTo(map);
+  layers.hydro.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
   const categoryColors = { 'Acque reflue urbane': '#2878b5', 'Fosse Imhoff': '#d98c22', 'Industriale': '#b83b5e', 'Acque oleose': '#6a4c93', 'Fanghi/reflui speciali': '#555555' };
@@ -87,6 +89,7 @@ Promise.all(configs.map(async cfg => {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
     'Regione': layers.regions,
+    'Corsi d’acqua principali': layers.hydro,
     'Depuratori SIRA': layers.depuratori,
     ...Object.fromEntries(Object.entries(categoryLayers).map(([name, layer]) => [`Depuratori · ${name}`, layer]))
   }, { collapsed: false }).addTo(map);
