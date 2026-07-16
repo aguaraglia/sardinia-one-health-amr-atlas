@@ -111,3 +111,23 @@ Il prodotto pubblico ammesso è un aggregato per ASL o comune autorizzato. Il
 dettaglio di campione, struttura o azienda rimane nella parte privata. La
 semplice allocazione dei campioni del piano non deve mai essere rappresentata
 come presenza o prevalenza di AMR.
+
+## Nuove evidenze granulari verificate
+
+Tre studi aggiuntivi sono stati controllati contro articolo, supplementi e,
+quando disponibile, archivio genomico:
+
+- le tre colture naturali SR30, SR56 e SR63 provengono da due caseifici
+  anonimi di Berchidda. La SR56 mostra crescita sopra i cut-off per quattro
+  antimicrobici e contiene `tetM`. È pubblicabile come poligono del comune,
+  senza localizzare i caseifici, ed è un'evidenza storica della filiera;
+- i 17 isolati sardi di *Streptococcus ruminantium* sono resistenti alla
+  kanamicina, ma l'articolo indica solo la Sardegna orientale e BioProject
+  `PRJNA1009676` non contiene il comune;
+- il focolaio da *Enterococcus faecalis* comprende 48 isolati, 45 MDR, ma la
+  fonte pubblica indica soltanto un'azienda anonima del Nord Sardegna.
+
+Per gli ultimi due studi non è stato effettuato alcun downscaling comunale.
+La sede pubblica di una struttura sanitaria può invece essere mostrata come
+punto di struttura, purché il popup dichiari che non rappresenta la residenza
+dei pazienti né una coordinata di campione.

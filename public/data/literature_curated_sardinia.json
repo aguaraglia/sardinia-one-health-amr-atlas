@@ -60,7 +60,7 @@
       "amr_evidence": ["genotype", "phenotype"],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41409980/",
-      "notes": "Study-level small-ruminant mastitis evidence; not regional prevalence."
+      "notes": "32 isolati da 25 allevamenti in sei province della Sardegna. L'articolo e BioProject PRJEB89476 non pubblicano il comune; nessun downscaling comunale."
     },
     {
       "study_id": "lit_ecoli_pigs_sardinia_2025",
@@ -397,6 +397,48 @@
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41594055/",
       "notes": "50 isolati, 25 da salsiccia ovina e 25 da formaggio Casizolu; nessun comune pubblicato."
+    },
+    {
+      "study_id": "lit_sruminantium_mastitis_sardinia_2023",
+      "pmid": "38087338",
+      "doi": "10.1186/s13567-023-01248-9",
+      "year": 2023,
+      "title": "Streptococcus ruminantium-associated sheep mastitis outbreak detected in Italy is distinct from bovine isolates",
+      "hosts": ["sheep"],
+      "matrix": ["ovine mastitis milk"],
+      "organisms": ["Streptococcus ruminantium"],
+      "amr_evidence": ["phenotype", "genotype", "WGS"],
+      "public_geography": "Sardegna orientale; azienda anonima",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38087338/",
+      "notes": "17 isolati sardi: tutti resistenti alla kanamicina e sensibili alle altre classi testate; nessun gene AMR rilevato con AMRFinderPlus. BioProject PRJNA1009676 riporta Sardinia ma non il comune."
+    },
+    {
+      "study_id": "lit_efaecalis_mastitis_outbreak_sardinia_2013",
+      "pmid": "22595402",
+      "doi": "10.1017/S0950268812000647",
+      "year": 2013,
+      "title": "Outbreak of mastitis in sheep caused by multi-drug resistant Enterococcus faecalis in Sardinia, Italy",
+      "hosts": ["sheep"],
+      "matrix": ["ovine mastitis milk"],
+      "organisms": ["Enterococcus faecalis"],
+      "amr_evidence": ["phenotype", "clonality"],
+      "public_geography": "Nord Sardegna; azienda anonima",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/22595402/",
+      "notes": "699 campioni, 48 isolati E. faecalis e 45 MDR clonali. La fonte indica soltanto un'azienda intensiva anonima del Nord Sardegna; nessuna attribuzione comunale."
+    },
+    {
+      "study_id": "lit_pecorino_starter_berchidda_2021",
+      "pmid": "34201694",
+      "doi": "10.3390/microorganisms9071363",
+      "year": 2021,
+      "title": "Biodiversity and Safety Assessment of Half-Century Preserved Natural Starter Cultures for Pecorino Romano PDO Cheese",
+      "hosts": ["dairy chain"],
+      "matrix": ["natural scotta starter cultures"],
+      "organisms": ["Lactic acid bacteria", "Enterococcus faecium"],
+      "amr_evidence": ["phenotype", "genotype"],
+      "public_geography": "Berchidda; due caseifici anonimi",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34201694/",
+      "notes": "Tre colture storiche SR30, SR56 e SR63; SR56 sopra i cut-off per clindamicina, eritromicina, gentamicina e tetraciclina, con tetM. Evidenza storica di filiera, non prevalenza comunale attuale."
     }
   ]
 }
