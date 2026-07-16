@@ -1,0 +1,111 @@
+{
+  "source_id": "aou_sassari_published_amr_studies",
+  "dataset_version": "atlas-curated-v0.1",
+  "facility": {
+    "facility_name": "Azienda Ospedaliero-Universitaria di Sassari",
+    "municipality": "Sassari",
+    "public_geography_level": "STRUTTURA_OSPEDALIERA",
+    "geography_note": "Sassari identifica la sede della struttura. I dati non rappresentano la prevalenza AMR della popolazione residente nel comune."
+  },
+  "privacy": "public_aggregate",
+  "records": [
+    {
+      "study_id": "aou_sassari_kpc_kp_2015_2017",
+      "period": "2015-2017",
+      "study_design": "studio prospettico osservazionale monocentrico",
+      "organism": "Klebsiella pneumoniae",
+      "cohort": "infezioni invasive con batteriemia da KPC-Kp",
+      "isolates_or_cases": 46,
+      "amr_summary": "Tutti gli isolati mostravano un profilo multiresistente comprendente carbapenemi, fluorochinoloni e cefalosporine di terza e quarta generazione.",
+      "genes_or_variants_reported": ["KPC-2", "KPC-3"],
+      "sequence_types_percent": {
+        "ST512": 91.3,
+        "ST101": 8.7
+      },
+      "source": {
+        "pmid": "29621600",
+        "doi": "10.1016/j.jhin.2018.03.033",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29621600/"
+      }
+    },
+    {
+      "study_id": "aou_sassari_kpc_oxa_wgs_2020_2021",
+      "period": "2020-12/2021-12",
+      "study_design": "studio osservazionale monocentrico con WGS",
+      "organism": "Klebsiella pneumoniae",
+      "cohort": "infezioni correlate all'assistenza da ceppi co-produttori KPC e OXA-48-like",
+      "isolates_or_cases": 17,
+      "specimens": {
+        "blood_culture": 10,
+        "bronchial_lavage": 6,
+        "rectal_swab_with_concurrent_infection": 1
+      },
+      "phenotypic_resistance": [
+        {"antibiotic": "amoxicillin/clavulanic acid", "resistant": 17, "tested": 17},
+        {"antibiotic": "piperacillin/tazobactam", "resistant": 17, "tested": 17},
+        {"antibiotic": "cefepime", "resistant": 17, "tested": 17},
+        {"antibiotic": "cefotaxime", "resistant": 17, "tested": 17},
+        {"antibiotic": "ceftazidime", "resistant": 17, "tested": 17},
+        {"antibiotic": "ceftolozane/tazobactam", "resistant": 17, "tested": 17},
+        {"antibiotic": "meropenem", "resistant": 17, "tested": 17},
+        {"antibiotic": "imipenem", "resistant": 16, "tested": 17},
+        {"antibiotic": "amikacin", "resistant": 17, "tested": 17},
+        {"antibiotic": "gentamicin", "resistant": 17, "tested": 17},
+        {"antibiotic": "tobramycin", "resistant": 17, "tested": 17},
+        {"antibiotic": "ciprofloxacin", "resistant": 17, "tested": 17},
+        {"antibiotic": "trimethoprim/sulfamethoxazole", "resistant": 17, "tested": 17},
+        {"antibiotic": "ceftazidime/avibactam", "resistant": 17, "tested": 17},
+        {"antibiotic": "imipenem/relebactam", "resistant": 17, "tested": 17},
+        {"antibiotic": "meropenem/vaborbactam", "resistant": 17, "tested": 17}
+      ],
+      "key_resistance_genes": [
+        {"gene": "blaKPC-31", "positive": 15, "tested": 17},
+        {"gene": "blaKPC-3", "positive": 2, "tested": 17},
+        {"gene": "blaOXA-181", "positive": 17, "tested": 17},
+        {"gene": "qnrS1", "positive": 17, "tested": 17},
+        {"gene": "sul1", "positive": 17, "tested": 17},
+        {"gene": "sul2", "positive": 17, "tested": 17},
+        {"gene": "tet(A)", "positive": 17, "tested": 17}
+      ],
+      "sequence_type": "ST512",
+      "source": {
+        "pmid": "37764198",
+        "pmcid": "PMC10535212",
+        "doi": "10.3390/microorganisms11092354",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37764198/"
+      }
+    },
+    {
+      "study_id": "aou_sassari_ndm_kp_2021_2022",
+      "period": "2021-2022",
+      "study_design": "case report con screening dei contatti",
+      "organism": "Klebsiella pneumoniae",
+      "cohort": "due colonizzazioni indipendenti da ceppi produttori di NDM",
+      "isolates_or_cases": 2,
+      "common_resistant_antibiotics": [
+        "cefepime",
+        "cefotaxime",
+        "ceftazidime",
+        "ceftolozane/tazobactam",
+        "meropenem",
+        "imipenem",
+        "amoxicillin/clavulanic acid",
+        "piperacillin/tazobactam",
+        "tobramycin",
+        "ciprofloxacin",
+        "trimethoprim/sulfamethoxazole",
+        "ceftazidime/avibactam"
+      ],
+      "contact_screening_swabs": 115,
+      "additional_ndm_cases_detected": 0,
+      "facility_surveillance_context": "Circa 1000 tamponi rettali al mese; positività media CPE/CRE descritta come poco inferiore al 2%. Il valore è contesto della struttura, non una stima comunale.",
+      "source": {
+        "pmid": "37761789",
+        "pmcid": "PMC10530878",
+        "doi": "10.3390/healthcare11182592",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37761789/"
+      }
+    }
+  ],
+  "reporting_note": "Coorti pubblicate e selezionate, con periodi e criteri differenti. Non sommare i denominatori e non interpretare i risultati come prevalenza ospedaliera corrente, comunale o regionale."
+}

@@ -128,9 +128,37 @@
       "matrix": ["clinical isolates"],
       "organisms": ["Klebsiella pneumoniae"],
       "amr_evidence": ["genotype"],
-      "public_geography": "Sardegna",
+      "public_geography": "AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/37764198/",
-      "notes": "Study-level clinical genomic evidence; public geography remains regional."
+      "notes": "Facility-level clinical genomic evidence. Sassari is the hospital location, not the patients' municipality of origin and not municipal prevalence."
+    },
+    {
+      "study_id": "lit_kpneumoniae_kpc_invasive_sassari_2018",
+      "pmid": "29621600",
+      "doi": "10.1016/j.jhin.2018.03.033",
+      "year": 2018,
+      "title": "Nosocomial transmission of carbapenem-resistant Klebsiella pneumoniae in an Italian university hospital: a molecular epidemiological study",
+      "hosts": ["human"],
+      "matrix": ["bloodstream infection isolates"],
+      "organisms": ["Klebsiella pneumoniae"],
+      "amr_evidence": ["phenotype", "genotype"],
+      "public_geography": "AOU Sassari (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/29621600/",
+      "notes": "Facility-level cohort of 46 invasive KPC-Kp infections observed in 2015-2017. It is not municipal or regional prevalence."
+    },
+    {
+      "study_id": "lit_kpneumoniae_ndm_sassari_2023",
+      "pmid": "37761789",
+      "doi": "10.3390/healthcare11182592",
+      "year": 2023,
+      "title": "Infection Prevention Control Strategies of New Delhi Metallo-beta-lactamase Producing Klebsiella pneumoniae",
+      "hosts": ["human"],
+      "matrix": ["rectal screening isolates"],
+      "organisms": ["Klebsiella pneumoniae"],
+      "amr_evidence": ["phenotype", "genotype"],
+      "public_geography": "AOU Sassari (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/37761789/",
+      "notes": "Facility-level case report of two independent NDM-producing K. pneumoniae colonizations in 2021-2022; not municipal prevalence."
     },
     {
       "study_id": "lit_yersinia_pigs_sardinia_2018",
@@ -159,6 +187,20 @@
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/28226178/",
       "notes": "Study-level swine slaughter evidence; not regional prevalence."
+    },
+    {
+      "study_id": "lit_environmental_resistome_bidighinzu_cabras_2026",
+      "pmid": "42019335",
+      "doi": "10.1016/j.jenvman.2026.129718",
+      "year": 2026,
+      "title": "Lakes and lagoons used for drinking water supply and fisheries as sources of potentially pathogenic bacteria and antimicrobial resistance",
+      "hosts": ["environment"],
+      "matrix": ["freshwater", "brackish lagoon water"],
+      "organisms": ["environmental microbiome", "potentially pathogenic bacteria"],
+      "amr_evidence": ["metagenomic resistome"],
+      "public_geography": "Lago Bidighinzu; Laguna di Cabras",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42019335/",
+      "notes": "Site-level environmental evidence from a 2024 seasonal campaign. The public atlas uses water-body aggregates and excludes exact sample coordinates."
     },
     {
       "study_id": "lit_enterococcus_clinical_sardinia_2010",

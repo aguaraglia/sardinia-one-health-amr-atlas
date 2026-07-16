@@ -1,0 +1,136 @@
+{
+  "source_id": "ena_prjna1411669_environmental_resistome",
+  "dataset_version": "2026-07-16",
+  "study_accession": "PRJNA1411669",
+  "publication": {
+    "pmid": "42019335",
+    "doi": "10.1016/j.jenvman.2026.129718",
+    "title": "Lakes and lagoons used for drinking water supply and fisheries as sources of potentially pathogenic bacteria and antimicrobial resistance",
+    "year": 2026,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42019335/",
+    "full_text_url": "https://iris.unito.it/bitstream/2318/2138390/19/Journal_of_Environmental_Management_Sabatino%20et%20al.pdf",
+    "license": "CC BY 4.0"
+  },
+  "geography_level": "CORPO_IDRICO",
+  "privacy": "public_aggregate",
+  "observation_period": "2024-02/2024-11",
+  "methods": [
+    "16S rRNA amplicon sequencing",
+    "shotgun metagenomics",
+    "Trimmomatic 0.39",
+    "RGI 6.0.4 bwt and main modes",
+    "CARD 4.0.0",
+    "WildCARD 4.0.2",
+    "GTDB R226 with GTDB-Tk 2.5.1",
+    "resistome and pathobiome analysis"
+  ],
+  "archive_snapshot": {
+    "ena_sample_records_in_project": 106,
+    "ena_read_runs": 229,
+    "amplicon_runs": 171,
+    "shotgun_wgs_runs": 58,
+    "field_shotgun_wgs_runs": 10,
+    "experimental_shotgun_wgs_runs_not_mapped": 48,
+    "raw_shotgun_fastq_bytes": 477898473629,
+    "checked_at": "2026-07-16"
+  },
+  "resistome_summary": {
+    "arg_detected_in_all_samples": true,
+    "annotated_arg_count": 287,
+    "drug_resistance_class_count": 41,
+    "most_abundant_resistance_classes": [
+      "multidrug resistance",
+      "fluoroquinolones",
+      "beta-lactams"
+    ],
+    "most_abundant_args_overall": [
+      "Klebsiella pneumoniae kpnH",
+      "emrB",
+      "aac(6')-Ib-cr6"
+    ],
+    "abundance_normalization": "ARG gene copy number per 16S rRNA gene copy number",
+    "arg_positive_contigs_total": 422,
+    "high_quality_mags_total": 122,
+    "arg_positive_mags_total": 75,
+    "frequent_contig_args": ["EF-Tu mutants", "qacG", "van genes"],
+    "mge_associated_args": ["adeF", "van genes"],
+    "interpretation": "Resistome richness and total abundance were similar between the two water bodies; Cabras peaked in May, while Bidighinzu showed a decrease in May and a slight richness increase in July."
+  },
+  "water_bodies": [
+    {
+      "water_body_id": "lake_bidighinzu",
+      "name": "Lago Bidighinzu",
+      "water_type": "freshwater reservoir",
+      "main_use": "drinking water supply",
+      "field_shotgun_wgs_runs": 5,
+      "sampling_dates": ["2024-02-22", "2024-05-22", "2024-07-01", "2024-11-13"],
+      "most_abundant_args": ["emrB", "Klebsiella pneumoniae kpnH", "aac(6')-Ib-cr6"],
+      "arg_positive_contigs": 176,
+      "arg_mge_positive_contigs": 32,
+      "arg_mge_positive_contigs_percent": 18.18,
+      "high_quality_mags": 37,
+      "arg_positive_mags": 20,
+      "evidence": [
+        {
+          "indicator": "high_risk_arg_emrB",
+          "result": "prevalent_in_study",
+          "value_type": "qualitative_publication_result"
+        },
+        {
+          "indicator": "arg_mge_cooccurrence",
+          "result": "32_of_176_arg_positive_contigs",
+          "value": 32,
+          "denominator": 176,
+          "unit": "contigs",
+          "value_type": "publication_aggregate"
+        },
+        {
+          "indicator": "potential_pathogens_including_eskape",
+          "result": "more_abundant_than_cabras_lagoon",
+          "value_type": "qualitative_publication_result"
+        }
+      ]
+    },
+    {
+      "water_body_id": "cabras_lagoon",
+      "name": "Laguna di Cabras",
+      "water_type": "coastal brackish lagoon",
+      "main_use": "fisheries",
+      "field_shotgun_wgs_runs": 5,
+      "sampling_dates": ["2024-02-19", "2024-05-27", "2024-07-23", "2024-11-11"],
+      "most_abundant_args": ["Klebsiella pneumoniae kpnH", "emrB", "EC-8"],
+      "arg_positive_contigs": 246,
+      "arg_mge_positive_contigs": 11,
+      "arg_mge_positive_contigs_percent": 4.47,
+      "high_quality_mags": 85,
+      "arg_positive_mags": 55,
+      "evidence": [
+        {
+          "indicator": "high_risk_arg_emrB",
+          "result": "prevalent_in_study",
+          "value_type": "qualitative_publication_result"
+        },
+        {
+          "indicator": "arg_mge_cooccurrence",
+          "result": "11_of_246_arg_positive_contigs",
+          "value": 11,
+          "denominator": 246,
+          "unit": "contigs",
+          "value_type": "publication_aggregate"
+        },
+        {
+          "indicator": "community_and_pathobiome_richness_gt20um_fraction",
+          "result": "generally_higher_than_other_trophic_fractions",
+          "value_type": "qualitative_publication_result"
+        }
+      ]
+    }
+  ],
+  "comparative_result": "The publication reports an overall resistome that was similar across the two water bodies.",
+  "limitations": [
+    "The public dataset contains publication-level aggregate counts and qualitative results, not the per-sample gene abundance table.",
+    "Run counts are archive metadata and are not epidemiological denominators.",
+    "Exact sampling coordinates and sample identifiers are excluded from the public artifact.",
+    "The 48 experimental WGS runs labelled Sardinia, Sassari are retained for private analysis but are not mapped as field observations."
+  ]
+}

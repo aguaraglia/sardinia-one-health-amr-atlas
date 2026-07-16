@@ -49,6 +49,34 @@ fetch('public/data/ar_iss_2024_sardinia_resistance.json').then(r => r.json()).th
   card.hidden = false;
   card.innerHTML = `<strong>AR-ISS Sardegna 2024 - resistenza</strong><br><small>Copertura ${d.coverage_percent}%</small><table class="evidence-table"><tr><th>Fenotipo</th><th>%</th><th>R/n</th></tr>${rows}</table>`;
 }).catch(() => {});
+fetch('public/data/human_amr_facility_sassari_studies.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('human-facility-amr-card');
+  const historical = d.records.find(item => item.study_id === 'aou_sassari_kpc_kp_2015_2017');
+  const wgs = d.records.find(item => item.study_id === 'aou_sassari_kpc_oxa_wgs_2020_2021');
+  const ndm = d.records.find(item => item.study_id === 'aou_sassari_ndm_kp_2021_2022');
+  const kpc31 = wgs.key_resistance_genes.find(item => item.gene === 'blaKPC-31');
+  card.hidden = false;
+  card.innerHTML = `<strong>AMR umana · AOU Sassari</strong><br>` +
+    `Tre coorti pubblicate: ${historical.isolates_or_cases} KPC-Kp invasive (${historical.period}); ` +
+    `${wgs.isolates_or_cases} isolati ST512 analizzati con WGS (${wgs.period}); ` +
+    `${ndm.isolates_or_cases} casi NDM indipendenti (${ndm.period}).<br>` +
+    `<small><code>blaKPC-31</code> in ${kpc31.positive}/${kpc31.tested} isolati WGS; ` +
+    `${ndm.contact_screening_swabs} tamponi di contatto senza ulteriori casi NDM. ` +
+    `Dati di struttura e coorte: non prevalenza del Comune di Sassari.</small>`;
+}).catch(() => {});
+fetch('public/data/environmental_amr_water_bodies_2024.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('environmental-amr-card');
+  const bidighinzu = d.water_bodies.find(item => item.water_body_id === 'lake_bidighinzu');
+  const cabras = d.water_bodies.find(item => item.water_body_id === 'cabras_lagoon');
+  card.hidden = false;
+  card.innerHTML = `<strong>AMR ambientale 2024 · due corpi idrici</strong><br>` +
+    `${d.resistome_summary.annotated_arg_count} ARG in ${d.resistome_summary.drug_resistance_class_count} classi; <code>emrB</code> tra i più abbondanti.<br>` +
+    `<small>${d.archive_snapshot.field_shotgun_wgs_runs} run shotgun di campo, quattro campagne stagionali. ARG + elementi mobili: ` +
+    `${bidighinzu.arg_mge_positive_contigs}/${bidighinzu.arg_positive_contigs} contig nel Bidighinzu; ` +
+    `${cabras.arg_mge_positive_contigs}/${cabras.arg_positive_contigs} a Cabras. ` +
+    `Patogeni potenziali, inclusi ESKAPE, più abbondanti nel Bidighinzu. ` +
+    `Risultati aggregati, non prevalenza clinica.</small>`;
+}).catch(() => {});
 fetch('public/data/literature_curated_sardinia.json').then(r => r.json()).then(d => {
   const card = document.getElementById('literature-card');
   const body = document.getElementById('literature-table-body');
@@ -93,7 +121,7 @@ const configs = [
   { key: 'provinces', label: 'Province', file: 'public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
   { key: 'regions', label: 'Regione', file: 'public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' },
   { key: 'hydro', label: 'Corsi d’acqua principali', file: 'public/data/dbgt_corsi_principali.geojson', color: '#2f78b7', weight: 1.2, fill: false, prop: 'Nome' },
-  { key: 'arissSites', label: 'AR-ISS sedi comunali 2024', file: 'public/data/ar_iss_2024_sardinia_sites.geojson', color: '#c73e55', weight: 1, fill: true, prop: 'site_name' },
+  { key: 'arissSites', label: 'Laboratori partecipanti AR-ISS 2024', file: 'public/data/ar_iss_2024_sardinia_sites.geojson', color: '#c73e55', weight: 1, fill: true, prop: 'site_name' },
   { key: 'depuratori', label: 'Depuratori SIRA', file: 'public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
@@ -102,7 +130,7 @@ function popup(feature, cfg) {
   const props = feature.properties || {};
   if (cfg.key === 'arissSites') {
     const note = props.location_note ? `<br><small>${props.location_note}</small>` : '';
-    return `<strong>${props.site_name}</strong><br>${props.municipality} (${props.province})<br><small>Sede comunale della rete AR-ISS 2024. Copertura regionale ${props.coverage_percent_region}%; non e' prevalenza comunale o provinciale.</small>${note}`;
+    return `<strong>${props.site_name}</strong><br>${props.municipality} (${props.province})<br><small>Laboratorio partecipante alla rete AR-ISS 2024. Il punto indica la sede del laboratorio. Copertura regionale ${props.coverage_percent_region}%; non e' prevalenza comunale o provinciale.</small>${note}`;
   }
   const title = props[cfg.prop] || cfg.label;
   const code = props.CIstat || props.CBelfiore || '';
@@ -155,7 +183,7 @@ Promise.all(configs.map(async cfg => {
     'Province': layers.provinces,
     'Regione': layers.regions,
     ...waterAndPlantLayers,
-    'AR-ISS sedi comunali 2024': layers.arissSites
+    'Laboratori partecipanti AR-ISS 2024': layers.arissSites
   }, { collapsed: false }).addTo(map);
   map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = 'Layer caricati';
