@@ -23,20 +23,25 @@
     <div class="atlas-grid">
       <aside class="amr-panel" aria-label="Pannello AMR">
         <h2>AMR</h2>
-        <p class="panel-note">Le osservazioni AMR pubbliche saranno aggiunte dopo la validazione degli aggregati regionali.</p>
-        <label for="amr-target">Classe di antibiotico</label>
+        <p class="panel-note">Vista pubblica: evidenze aggregate, target di ricerca e layer di contesto restano separati.</p>
+        <label for="amr-target">Classe o target AMR</label>
         <select id="amr-target"><option value="AMR_ANY">Tutte le classi</option></select>
-        <div id="amr-state" class="amr-state">Nessuna osservazione pubblica caricata</div>
+        <div id="amr-state" class="amr-state">Seleziona un target per filtrare le evidenze pubbliche disponibili.</div>
+        <h3>Dati osservati</h3>
+        <div id="ariss-resistance-card" class="evidence-card"><strong>AR-ISS Sardegna 2024 - resistenza</strong><br><small>Copertura 75,4%</small><table class="evidence-table"><tr><th>Fenotipo</th><th>%</th><th>R/n</th></tr><tr><td>MRSA</td><td>18,8%</td><td>63/335</td></tr><tr><td>VRE-faecium</td><td>9,6%</td><td>16/167</td></tr><tr><td>CREC</td><td>16,4%</td><td>114/697</td></tr><tr><td>CRKP</td><td>18,3%</td><td>78/427</td></tr><tr><td>CRPA</td><td>10,4%</td><td>21/201</td></tr><tr><td>CRAS</td><td>61,1%</td><td>22/36</td></tr></table></div>
+        <div id="literature-card" class="evidence-card" hidden></div>
+        <h3>Target e metodi</h3>
         <div id="pncar-panel-card" class="evidence-card" hidden></div>
         <div id="ariss-card" class="evidence-card" hidden></div>
+        <h3>Contesto</h3>
         <div id="aifa-card" class="evidence-card" hidden></div>
         <div id="bdn-card" class="evidence-card" hidden></div>
         <div id="bdn-bov-card" class="evidence-card" hidden></div>
         <div id="bdn-suini-card" class="evidence-card" hidden></div>
-        <div id="ariss-resistance-card" class="evidence-card"><strong>AR-ISS Sardegna 2024 - resistenza</strong><br><small>Copertura 75,4%</small><table class="evidence-table"><tr><th>Fenotipo</th><th>%</th><th>R/n</th></tr><tr><td>MRSA</td><td>18,8%</td><td>63/335</td></tr><tr><td>VRE-faecium</td><td>9,6%</td><td>16/167</td></tr><tr><td>CREC</td><td>16,4%</td><td>114/697</td></tr><tr><td>CRKP</td><td>18,3%</td><td>78/427</td></tr><tr><td>CRPA</td><td>10,4%</td><td>21/201</td></tr><tr><td>CRAS</td><td>61,1%</td><td>22/36</td></tr></table></div>
         <h3>Fonti regionali</h3>
         <ul class="source-links">
           <li><a href="https://www.epicentro.iss.it/antibiotico-resistenza/ar-iss-rapporto" target="_blank" rel="noreferrer">AR-ISS</a></li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/33509310/" target="_blank" rel="noreferrer">Letteratura NAS Sardegna</a></li>
           <li><a href="https://www.aifa.gov.it/documents/20142/3610201/Sardegna_Osmed_2024.pdf" target="_blank" rel="noreferrer">AIFA/OsMed Sardegna</a></li>
           <li><a href="https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/89" target="_blank" rel="noreferrer">BDN – ovicaprini</a></li>
           <li><a href="https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/11" target="_blank" rel="noreferrer">BDN – bovini e bufalini</a></li>

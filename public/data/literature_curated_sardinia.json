@@ -1,0 +1,38 @@
+{
+  "source_id": "letteratura_curata",
+  "dataset_version": "atlas-curated-v0.1",
+  "geography_level": "REGIONE",
+  "geography_id": "SARDEGNA",
+  "privacy": "public",
+  "notes": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Gli studi sono eterogenei e non sono sommati come prevalenza regionale.",
+  "records": [
+    {
+      "study_id": "lit_nas_sardinia_2021",
+      "pmid": "33509310",
+      "doi": "10.1017/S0950268821000212",
+      "year": 2021,
+      "title": "Comparative characterisation of human and ovine non-aureus staphylococci isolated in Sardinia (Italy) for antimicrobial susceptibility profiles and resistance genes",
+      "hosts": ["sheep", "human"],
+      "matrix": ["ovine samples", "human samples"],
+      "organisms": ["non-aureus Staphylococcus spp."],
+      "amr_evidence": ["phenotype", "genotype"],
+      "public_geography": "Sardegna",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33509310/",
+      "notes": "195 NAS isolates: 125 ovine and 70 human. Study-level evidence only."
+    },
+    {
+      "study_id": "lit_saureus_ovine_mastitis_sardinia_2017",
+      "pmid": "28622861",
+      "doi": "10.1016/j.vetmic.2017.05.006",
+      "year": 2017,
+      "title": "Antimicrobial susceptibility and genotyping of Staphylococcus aureus isolates collected between 1986 and 2015 from ovine mastitis",
+      "hosts": ["sheep"],
+      "matrix": ["ovine mastitis milk"],
+      "organisms": ["Staphylococcus aureus"],
+      "amr_evidence": ["phenotype", "genotype"],
+      "public_geography": "Sardegna",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/28622861/",
+      "notes": "PubMed record reports ovine mastitis isolates collected between 1986 and 2015. Study-level evidence only."
+    }
+  ]
+}

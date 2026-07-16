@@ -9,16 +9,16 @@ h1 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1; }
 main { max-width: 1500px; margin: 0 auto; padding: 0 1rem 1rem; }
 .intro { padding: .8rem .25rem; color: #46665c; font-size: .9rem; }
 .intro p { margin: 0; }
-.atlas-grid { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: .8rem; }
+.atlas-grid { display: grid; grid-template-columns: 285px minmax(0, 1fr); gap: .8rem; }
 #map { height: min(76vh, 780px); min-height: 520px; border: 1px solid #c9d8d0; border-radius: 12px; box-shadow: 0 8px 28px #17352c14; }
-.amr-panel { padding: 1rem; border: 1px solid #c9d8d0; border-radius: 12px; background: #fff; }
+.amr-panel { max-height: min(76vh, 780px); overflow: auto; padding: 1rem; border: 1px solid #c9d8d0; border-radius: 12px; background: #fff; }
 .amr-panel h2 { margin: 0; color: #123b35; }
 .amr-panel h3 { margin: 1.4rem 0 .5rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: #60776e; }
 .panel-note { color: #60776e; font-size: .82rem; line-height: 1.4; }
 .amr-panel label { display: block; margin: 1rem 0 .35rem; font-size: .8rem; font-weight: 600; }
 .amr-panel select { width: 100%; padding: .5rem; border: 1px solid #b8cec3; border-radius: 6px; background: #f8fbf9; }
 .amr-state { margin-top: 1rem; padding: .65rem; border-left: 3px solid #d2763b; background: #fff7ef; font-size: .8rem; }
-.evidence-card { margin-top: .8rem; padding: .7rem; border: 1px solid #c9d8d0; border-radius: 7px; background: #f4f8f5; font-size: .78rem; line-height: 1.4; }
+.evidence-card { margin-top: .55rem; padding: .65rem; border: 1px solid #c9d8d0; border-radius: 7px; background: #f4f8f5; font-size: .78rem; line-height: 1.4; }
 .evidence-table { width: 100%; margin-top: .45rem; border-collapse: collapse; font-size: .7rem; }
 .evidence-table th, .evidence-table td { padding: .18rem; text-align: left; border-bottom: 1px solid #dbe7df; }
 .source-links { padding-left: 1.1rem; margin: 0; font-size: .85rem; line-height: 1.8; }

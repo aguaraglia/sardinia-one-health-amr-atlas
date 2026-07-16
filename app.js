@@ -20,7 +20,7 @@ const targetSelect = document.getElementById('amr-target');
 amrTargets.slice(1).forEach(([value, label]) => targetSelect.add(new Option(label, value)));
 targetSelect.addEventListener('change', event => {
   const label = event.target.selectedOptions[0]?.textContent || 'target selezionato';
-  document.getElementById('amr-state').textContent = `Nessuna osservazione pubblica caricata per ${label}`;
+  document.getElementById('amr-state').textContent = `Filtro selezionato: ${label}. Le card mostrano solo evidenze pubbliche aggregate o target dichiarati.`;
 });
 fetch('public/data/pncar_env_panel.json').then(r => r.json()).then(d => {
   const group = document.createElement('optgroup');
@@ -45,6 +45,12 @@ fetch('public/data/ar_iss_2024_sardinia_resistance.json').then(r => r.json()).th
   const rows = d.observations.map(x => `<tr><td>${x.phenotype}</td><td>${x.resistance_percent}%</td><td>${x.resistant}/${x.isolates}</td></tr>`).join('');
   card.hidden = false;
   card.innerHTML = `<strong>AR-ISS Sardegna 2024 - resistenza</strong><br><small>Copertura ${d.coverage_percent}%</small><table class="evidence-table"><tr><th>Fenotipo</th><th>%</th><th>R/n</th></tr>${rows}</table>`;
+}).catch(() => {});
+fetch('public/data/literature_curated_sardinia.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('literature-card');
+  const hosts = [...new Set(d.records.flatMap(x => x.hosts))].join(', ');
+  card.hidden = false;
+  card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati; host: ${hosts}.<br><small>Registro di evidenze eterogenee: non prevalenza regionale unica.</small>`;
 }).catch(() => {});
 fetch('public/data/aifa_osmed_2024_antibiotics.json').then(r => r.json()).then(d => {
   const card = document.getElementById('aifa-card');
@@ -78,11 +84,12 @@ const configs = [
   { key: 'depuratori', label: 'Depuratori SIRA', file: 'public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
-function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 2 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.85 : 1, fillColor: cfg.color, fillOpacity: cfg.fill ? 0.12 : 0 }; }
+function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 1.1 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.55 : 1, fillColor: cfg.color, fillOpacity: cfg.fill ? 0.12 : 0 }; }
 function popup(feature, cfg) {
   const props = feature.properties || {};
   if (cfg.key === 'arissSites') {
-    return `<strong>${props.site_name}</strong><br>${props.municipality} (${props.province})<br><small>Sede comunale della rete AR-ISS 2024. Copertura regionale ${props.coverage_percent_region}%; non e' prevalenza comunale o provinciale.</small>`;
+    const note = props.location_note ? `<br><small>${props.location_note}</small>` : '';
+    return `<strong>${props.site_name}</strong><br>${props.municipality} (${props.province})<br><small>Sede comunale della rete AR-ISS 2024. Copertura regionale ${props.coverage_percent_region}%; non e' prevalenza comunale o provinciale.</small>${note}`;
   }
   const title = props[cfg.prop] || cfg.label;
   const code = props.CIstat || props.CBelfiore || '';

@@ -1,0 +1,2 @@
+observation_id	source_id	snapshot_id	sample_id_public	observation_period	matrix	target_id	target_type	reported_value	reported_unit	normalization_target_id	normalized_value	normalized_unit	method_version	geography_level	geography_id	privacy	notes
+EXAMPLE_DO_NOT_USE	pncar_environmental_surveillance	NA	NA	YYYY-MM	wastewater	PNCAR_BLA_CTX_M	ARG	NA	copies_per_reaction	PNCAR_RRS_16S	NA	copies_per_16s	NA	REGIONE	SARDEGNA	restricted	Schema/template only; no measured value is present.

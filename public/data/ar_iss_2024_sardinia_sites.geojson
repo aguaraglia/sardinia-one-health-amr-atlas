@@ -22,7 +22,8 @@
         "source_role": "laboratorio/ospedale partecipante AR-ISS",
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
-        "source_line": "A. Aste, Osp. SS Trinita, Cagliari"
+        "source_line": "A. Aste, Osp. SS Trinita, Cagliari",
+        "location_source_url": "https://old.aslcagliari.it/documenti/8_342_20151204144500.pdf"
       },
       "geometry": {"type": "Point", "coordinates": [9.1217, 39.2238]}
     },
@@ -37,6 +38,7 @@
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
         "source_line": "C. R. Casalloni, Osp. Giovanni Paolo II, Sassari",
+        "location_source_url": "https://www.aslgallura.it/?ospedali=ospedale-giovanni-paolo-olbia",
         "location_note": "Il rapporto AR-ISS riporta Sassari; la sede ospedaliera Giovanni Paolo II e' stata rettificata a Olbia su fonte ASL Gallura/Sardegna Salute."
       },
       "geometry": {"type": "Point", "coordinates": [9.4980, 40.9236]}
@@ -51,7 +53,8 @@
         "source_role": "laboratorio/ospedale partecipante AR-ISS",
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
-        "source_line": "M. Di Rosa, Osp. G. Brotzu, Cagliari"
+        "source_line": "M. Di Rosa, Osp. G. Brotzu, Cagliari",
+        "location_source_url": "https://www.aobrotzu.it/"
       },
       "geometry": {"type": "Point", "coordinates": [9.1217, 39.2238]}
     },
@@ -65,7 +68,8 @@
         "source_role": "laboratorio/ospedale partecipante AR-ISS",
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
-        "source_line": "M. Fiamma, Osp. San Francesco, Nuoro"
+        "source_line": "M. Fiamma, Osp. San Francesco, Nuoro",
+        "location_source_url": "https://www.asl3nuoro.it/servizi/ospedali/ospedale-san-francesco-nuoro/"
       },
       "geometry": {"type": "Point", "coordinates": [9.3264, 40.3202]}
     },
@@ -79,7 +83,8 @@
         "source_role": "laboratorio/ospedale partecipante AR-ISS",
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
-        "source_line": "L. Masala, Osp. San Gavino, Sud Sardegna"
+        "source_line": "L. Masala, Osp. San Gavino, Sud Sardegna",
+        "location_source_url": "https://www.aslmediocampidano.it/strutture/laboratorio-analisi-san-gavino/"
       },
       "geometry": {"type": "Point", "coordinates": [8.7929, 39.5507]}
     },
@@ -93,7 +98,8 @@
         "source_role": "laboratorio/ospedale partecipante AR-ISS",
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
-        "source_line": "A. M. Mura, Osp. San Martino, Oristano"
+        "source_line": "A. M. Mura, Osp. San Martino, Oristano",
+        "location_source_url": "https://old.asloristano.it/index.php?c=531&c2=640&cref=151&n=10&na=1&s=5&v=9&xsl=42"
       },
       "geometry": {"type": "Point", "coordinates": [8.5884, 39.9062]}
     },
@@ -101,15 +107,17 @@
       "type": "Feature",
       "properties": {
         "site_name": "AOU di Cagliari - PO Duilio Casula",
-        "municipality": "Cagliari",
+        "municipality": "Monserrato",
         "province": "Citta Metropolitana di Cagliari",
         "region": "Sardegna",
         "source_role": "laboratorio/ospedale partecipante AR-ISS",
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
-        "source_line": "E. Poma, AOU di Cagliari - PO Duilio Casula, Cagliari"
+        "source_line": "E. Poma, AOU di Cagliari - PO Duilio Casula, Cagliari",
+        "location_source_url": "https://www.aoucagliari.it/home/page/it/policlinico_duilio_casula?contentId=LGO2595",
+        "location_note": "Il rapporto AR-ISS riporta Cagliari come AOU; il presidio Duilio Casula e' a Monserrato."
       },
-      "geometry": {"type": "Point", "coordinates": [9.1217, 39.2238]}
+      "geometry": {"type": "Point", "coordinates": [9.1396, 39.2568]}
     },
     {
       "type": "Feature",
@@ -121,7 +129,8 @@
         "source_role": "laboratorio/ospedale partecipante AR-ISS",
         "public_geometry": "centroide comunale",
         "coverage_percent_region": 75.4,
-        "source_line": "S. Rubino, AOU di Sassari - Presidio Ospedaliero, Sassari"
+        "source_line": "S. Rubino, AOU di Sassari - Presidio Ospedaliero, Sassari",
+        "location_source_url": "https://www.aousassari.it/"
       },
       "geometry": {"type": "Point", "coordinates": [8.5555, 40.7259]}
     }

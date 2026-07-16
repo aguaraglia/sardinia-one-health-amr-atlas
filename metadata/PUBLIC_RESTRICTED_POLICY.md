@@ -25,3 +25,12 @@ Prima di ogni pubblicazione verificare che i file tracciati non contengano
 nomi o percorsi riconducibili a coordinate, aziende, campioni, genomi o dati
 clinici. Le esclusioni Git sono una cintura di sicurezza, non sostituiscono
 la revisione del contenuto.
+
+## Campioni ambientali PNCAR
+
+I risultati ambientali possono essere pubblici solo come aggregati o geometrie
+generalizzate. I punti di campionamento, gli identificativi operativi e le
+coordinate precise restano `restricted` fino a revisione esplicita.
+
+`intI1` e `rrs_16S` non sono classi AMR: `intI1` e' un marker di mobilita,
+mentre `rrs_16S` e' un normalizzatore.
