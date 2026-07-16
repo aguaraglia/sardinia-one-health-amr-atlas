@@ -39,6 +39,12 @@ fetch('../public/data/aifa_osmed_2024_antibiotics.json').then(r => r.json()).the
   card.hidden = false;
   card.innerHTML = `<strong>AIFA/OsMed Sardegna 2024</strong><br>Principali antibiotici convenzionati: ${top}<br><small>Consumo, non resistenza.</small>`;
 }).catch(() => {});
+fetch('../public/data/bdn_ovicaprini_sardegna_2025.json').then(r => r.json()).then(d => {
+  const card = document.getElementById('bdn-card');
+  const values = Object.fromEntries(d.records.map(x => [x.species, x.heads.toLocaleString('it-IT')]));
+  card.hidden = false;
+  card.innerHTML = `<strong>BDN Sardegna – patrimonio ovicaprino</strong><br>31/12/2025: ${values.OVINI} ovini; ${values.CAPRINI} caprini.<br><small>Aggregato regionale di contesto, non indicatore AMR.</small>`;
+}).catch(() => {});
 const configs = [
   { key: 'municipalities', label: 'Comuni', file: '../public/geography/atlas_municipalities.geojson', color: '#2d7d61', weight: 0.65, fill: false, prop: 'Nome' },
   { key: 'provinces', label: 'Province', file: '../public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },

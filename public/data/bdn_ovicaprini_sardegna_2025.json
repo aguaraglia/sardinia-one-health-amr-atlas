@@ -1,0 +1,15 @@
+{
+  "title": "BDN – consistenza ovicaprini, Sardegna",
+  "source": "Ministero della Salute, Sistema Informativo Veterinario – Statistiche BDN",
+  "source_url": "https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/89",
+  "observation_date": "2025-12-31",
+  "geographic_level": "REGIONE",
+  "activity_type": "ALLEVAMENTO",
+  "unit": "capi registrati",
+  "method_note": "Aggregato regionale estratto dal report pubblico BDN. Non contiene coordinate, identificativi di aziende o singoli operatori. I capi ovini del report sono identificati singolarmente; il valore non è un indicatore AMR.",
+  "citation": "Dati forniti dalla BDN dell'Anagrafe Zootecnica istituita dal Ministero della Salute presso il CSN dell'Istituto G. Caporale di Teramo.",
+  "records": [
+    { "region": "SARDEGNA", "species": "OVINI", "heads": 2631332 },
+    { "region": "SARDEGNA", "species": "CAPRINI", "heads": 241428 }
+  ]
+}
