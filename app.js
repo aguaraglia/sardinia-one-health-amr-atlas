@@ -28,14 +28,21 @@ periodSelect.addEventListener('change', () => applyDashboardFilters());
 const amrKeywords = {
   AMR_BETA_LACTAM: ['penicillin','penicillina','ampicillin','ampicillina','amoxicillin','amoxicillina','beta-lactam','bla','kpc','oxa','ndm','carbapenem','cephalosporin','cefazolin','cefotaxime','ceftazidime','ceftriaxone'],
   AMR_CARBAPENEM: ['carbapenem','kpc','oxa-48','oxa48','ndm','imipenem','meropenem','crkp','crec','crpa','cras'],
-  AMR_CEPHALOSPORIN: ['cephalosporin','cefazolin','cefotaxime','ceftazidime','ceftriaxone','cefoxitin'],
-  AMR_FLUOROQUINOLONE: ['fluoroquinolone','ciprofloxacin','levofloxacin','nalidixic','qnr'],
-  AMR_AMINOGLYCOSIDE: ['aminoglycoside','amikacin','gentamicin','kanamycin','streptomycin','tobramycin','aac(','aad','aph('],
+  AMR_CEPHALOSPORIN: ['cephalosporin','cefalospor','cefazolin','cefalotina','cefotaxime','ceftazidime','ceftriaxone','cefoxitin'],
+  AMR_FLUOROQUINOLONE: ['fluoroquinolone','fluorochinolon','ciprofloxacin','ciprofloxacina','levofloxacin','levofloxacina','nalidixic','nalidixico','qnr'],
+  AMR_AMINOGLYCOSIDE: ['aminoglycoside','aminoglicosid','amikacin','amikacina','gentamicin','gentamicina','kanamycin','kanamicina','streptomycin','streptomicina','tobramycin','tobramicina','aac(','aad','aph('],
   AMR_TETRACYCLINE: ['tetracycline','tetraciclina','oxytetracycline','oxitetraciclina','doxycycline','minocycline','tet'],
   AMR_MACROLIDE: ['macrolide','azithromycin','clarithromycin','erythromycin','macrolidi','mph','mef'],
   AMR_GLYCOPEPTIDE: ['glycopeptide','vancomycin','vanb','vanc','vre'],
   AMR_COLISTIN: ['colistin','colistina','mcr'],
   AMR_MDR: ['multidrug','multiresist','mdr','xdr','resistenti ad almeno']
+};
+const targetAliases = {
+  bla: 'AMR_BETA_LACTAM',
+  ndm: 'AMR_CARBAPENEM',
+  ctx: 'AMR_CEPHALOSPORIN',
+  sul1: 'AMR_MDR',
+  qnr: 'AMR_FLUOROQUINOLONE'
 };
 const filterableKeys = new Set(['veterinaryMunicipal','humanFacilityEvidence','foodChainMunicipal','arissSites']);
 const filterLabels = {
@@ -46,6 +53,7 @@ const filterLabels = {
 };
 function featureMatchesAmr(feature, value) {
   if (value === 'AMR_ANY') return true;
+  if (targetAliases[value]) return featureMatchesAmr(feature, targetAliases[value]);
   const haystack = JSON.stringify(feature?.properties || {}).toLowerCase();
   const keywords = amrKeywords[value] || value.toLowerCase().replace(/^amr[_-]?/, '').split(/[_-]+/).filter(Boolean);
   return keywords.some(keyword => haystack.includes(keyword));
@@ -90,9 +98,10 @@ function applyDashboardFilters() {
   filterableKeys.forEach(key => {
     const layer = layers[key];
     if (!layer) return;
+    const layerIsActive = map.hasLayer(layer);
     layer.eachLayer(item => {
       const show = featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue);
-      if (show) {
+      if (show && layerIsActive) {
         visible += 1;
         matches.push({ key, feature: item.feature });
       }
@@ -100,7 +109,7 @@ function applyDashboardFilters() {
       if (item._path) item._path.style.pointerEvents = show ? 'auto' : 'none';
       if (item._icon) item._icon.style.display = show ? '' : 'none';
     });
-    if (layer.getLayers().some(item => featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue))) compatibleSources += 1;
+    if (layerIsActive && layer.getLayers().some(item => featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue))) compatibleSources += 1;
   });
   document.getElementById('amr-state').textContent = `${label} · ${periodLabel}: ${visible} elementi compatibili visibili sulla mappa.`;
   document.getElementById('filter-status').textContent = `${label} · ${periodLabel}`;
@@ -111,7 +120,7 @@ function applyDashboardFilters() {
   if (!list) return;
   renderTimeDistribution(matches);
   if (!matches.length) {
-    list.innerHTML = '<p class="empty-filter">Nessuna evidenza pubblica compatibile con questo target.</p>';
+    list.innerHTML = '<p class="empty-filter">Nessuna evidenza compatibile nei layer attivi. Accendi altri layer dalla mappa per includerli nel filtro.</p>';
     return;
   }
   list.innerHTML = matches.slice(0, 12).map(({ key, feature }, index) => {
@@ -320,7 +329,6 @@ fetch('public/data/bdn_suini_sardegna_2025.json').then(r => r.json()).then(d => 
 const configs = [
   { key: 'municipalities', label: 'Comuni', file: 'public/geography/atlas_municipalities.geojson', color: '#2d7d61', weight: 0.65, fill: false, prop: 'Nome' },
   { key: 'provinces', label: 'Province', file: 'public/geography/atlas_provinces.geojson', color: '#d2763b', weight: 2, fill: false, prop: 'NOME' },
-  { key: 'regions', label: 'Regione', file: 'public/geography/atlas_regions.geojson', color: '#173f59', weight: 3, fill: false, prop: 'Nome' },
   { key: 'veterinaryMunicipal', label: 'Evidenze AMR veterinarie comunali', file: 'public/data/veterinary_amr_municipal_evidence.geojson', color: '#c16f24', weight: 1.4, fill: true, prop: 'municipality' },
   { key: 'humanFacilityEvidence', label: 'Evidenze AMR umane di struttura', file: 'public/data/human_amr_facility_evidence.geojson', color: '#9e2744', weight: 1.2, fill: true, prop: 'facility' },
   { key: 'foodChainMunicipal', label: 'AMR filiera alimentare · Berchidda', file: 'public/data/food_chain_amr_berchidda.geojson', color: '#6f8428', weight: 2, fill: true, prop: 'municipality' },
@@ -403,11 +411,9 @@ Promise.all(configs.map(async cfg => {
   layers[cfg.key] = layer;
   return layer;
 })).then(loaded => {
-  layers.regions.addTo(map);
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
   layers.veterinaryMunicipal.addTo(map);
-  layers.humanFacilityEvidence.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
   const categoryColors = { 'Acque reflue urbane': '#2878b5', 'Fosse Imhoff': '#d98c22', 'Industriale': '#b83b5e', 'Acque oleose': '#6a4c93', 'Fanghi/reflui speciali': '#555555' };
@@ -431,14 +437,14 @@ Promise.all(configs.map(async cfg => {
   }, {
     'Comuni': layers.municipalities,
     'Province': layers.provinces,
-    'Regione': layers.regions,
     '<span class="layer-swatch" style="background:#c16f24"></span>AMR veterinaria · evidenze comunali': layers.veterinaryMunicipal,
     '<span class="layer-swatch" style="background:#9e2744"></span>AMR umana · evidenze di struttura': layers.humanFacilityEvidence,
     '<span class="layer-swatch" style="background:#6f8428"></span>AMR filiera alimentare · Berchidda': layers.foodChainMunicipal,
     ...waterAndPlantLayers,
     '<span class="layer-swatch" style="background:#c73e55"></span>AMR umana · laboratori AR-ISS 2024': layers.arissSites
   }, { collapsed: true }).addTo(map);
-  map.fitBounds(layers.regions.getBounds(), { padding: [20, 20] });
+  map.on('overlayadd overlayremove', () => applyDashboardFilters());
+  map.fitBounds(layers.municipalities.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = 'Layer caricati';
   applyDashboardFilters();
 }).catch(error => {
