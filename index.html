@@ -8,30 +8,25 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
-    <div>
-      <p class="eyebrow">Sardegna · One Health</p>
-      <h1>AMR Atlas</h1>
-      <p class="subtitle">Atlante georeferenziato delle resistenze antimicrobiche</p>
-    </div>
-    <span class="status" id="status">Caricamento layer…</span>
-  </header>
-  <nav class="site-nav" aria-label="Navigazione principale">
-    <a class="active" href="index.html">Atlante</a>
-    <a href="evidence.html">Evidenze e fonti</a>
-    <a href="#literature-title">Letteratura curata</a>
-  </nav>
-  <main>
-    <section class="intro">
-      <p>Versione pubblica preliminare. Sono disponibili evidenze comunali veterinarie da catalogo e coorti pubblicate, ma non indicatori comunali di prevalenza o rischio AMR. Ogni layer specifica origine, periodo e livello di rappresentatività.</p>
-    </section>
-    <div class="atlas-grid">
-      <aside class="amr-panel" aria-label="Pannello AMR">
-        <h2>AMR</h2>
-        <p class="panel-note">Vista pubblica: evidenze aggregate, target di ricerca e layer di contesto restano separati.</p>
+<body class="atlas-dashboard">
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" aria-label="Filtri dell'atlante">
+      <a class="atlas-brand" href="index.html" aria-label="Sardinia One Health AMR Atlas">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span><strong>Sardinia<br>One Health</strong><small>AMR Atlas</small></span>
+      </a>
+      <div class="sidebar-scroll">
+        <p class="sidebar-kicker">Filtri</p>
+        <p class="panel-note">Evidenze pubbliche aggregate: i target, i periodi e i layer di contesto restano distinti.</p>
         <label for="amr-target">Classe o target AMR</label>
         <select id="amr-target"><option value="AMR_ANY">Tutte le classi</option></select>
+        <label for="amr-period">Periodo dell'evidenza</label>
+        <select id="amr-period">
+          <option value="ALL_PERIODS">Tutti i periodi pubblicati</option>
+          <option value="1995_2009">1995–2009</option>
+          <option value="2010_2019">2010–2019</option>
+          <option value="2020_2026">2020–2026</option>
+        </select>
         <div id="amr-state" class="amr-state">Seleziona un target per filtrare le evidenze pubbliche disponibili.</div>
         <div class="dashboard-tools">
           <button id="reset-amr-filter" type="button">Azzera filtro</button>
@@ -41,6 +36,10 @@
           <div><strong id="metric-visible">—</strong><span>elementi visibili</span></div>
           <div><strong id="metric-sources">—</strong><span>fonti compatibili</span></div>
         </div>
+        <section class="time-profile" aria-labelledby="time-profile-title">
+          <div class="filtered-heading"><h3 id="time-profile-title">Profilo temporale</h3><span>elementi</span></div>
+          <div id="time-distribution" class="time-distribution" aria-live="polite"></div>
+        </section>
         <section class="filtered-evidence" aria-labelledby="filtered-evidence-title">
           <div class="filtered-heading"><h3 id="filtered-evidence-title">Risultati del filtro</h3><span id="filtered-count">—</span></div>
           <div id="filtered-evidence-list"><p class="empty-filter">Caricamento dati…</p></div>
@@ -86,10 +85,36 @@
           <li><a href="https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/11" target="_blank" rel="noreferrer">BDN – bovini e bufalini</a></li>
           <li><a href="https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/31" target="_blank" rel="noreferrer">BDN – suini</a></li>
         </ul>
-      </aside>
-      <div id="map" aria-label="Mappa amministrativa della Sardegna"></div>
-    </div>
-    <section class="literature-section" aria-labelledby="literature-title">
+      </div>
+    </aside>
+    <div class="dashboard-workspace">
+      <header class="workspace-topbar">
+        <nav class="workspace-nav" aria-label="Navigazione principale">
+          <a class="active" href="index.html">Panoramica</a>
+          <a href="evidence.html">Evidenze</a>
+          <a href="#literature-title">Letteratura</a>
+        </nav>
+        <span class="status" id="status">Caricamento layer…</span>
+      </header>
+      <main class="workspace-main">
+        <section class="intro">
+          <div><p class="section-kicker">CRUSCOTTO PUBBLICO</p><h1>Evidenze AMR in Sardegna</h1></div>
+          <p>Filtra insieme classe antimicrobica e periodo. La mappa mostra evidenze localizzate; i conteggi sono elementi documentati, non una prevalenza regionale.</p>
+        </section>
+        <div class="atlas-grid">
+          <section class="map-stage" aria-label="Mappa amministrativa della Sardegna"><div id="map"></div></section>
+          <aside class="results-rail" aria-labelledby="selected-evidence-title">
+            <p class="rail-kicker">DETTAGLIO</p>
+            <h2 id="selected-evidence-title">Evidenza selezionata</h2>
+            <div id="selected-evidence" class="selected-evidence"><p>Seleziona un elemento dalla mappa o dall’elenco dei risultati per leggerne contesto, periodo e limiti di interpretazione.</p></div>
+            <a class="rail-link" href="evidence.html">Apri evidenze e fonti <span aria-hidden="true">→</span></a>
+          </aside>
+        </div>
+        <section class="temporal-strip" aria-labelledby="temporal-strip-title">
+          <div><p class="section-kicker">LETTURA NEL TEMPO</p><h2 id="temporal-strip-title">Distribuzione delle evidenze per periodo</h2></div>
+          <p>Il profilo riassume solo gli elementi con periodo pubblicato e si aggiorna con entrambi i filtri.</p>
+        </section>
+        <section class="literature-section" aria-labelledby="literature-title">
       <div>
         <h2 id="literature-title">Letteratura AMR curata</h2>
         <p>Studi riferiti alla Sardegna. Ogni riga è evidenza bibliografica eterogenea: non viene sommata come prevalenza regionale.</p>
@@ -111,12 +136,14 @@
           </tbody>
         </table>
       </div>
-    </section>
-    <footer>
+        </section>
+        <footer>
       <span>Fonte geografica: Regione Autonoma della Sardegna, DBGT 10K V05.</span>
       <span>Output WGS84 · Mapshaper</span>
-    </footer>
-  </main>
+        </footer>
+      </main>
+    </div>
+  </div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="app.js"></script>
 </body>
