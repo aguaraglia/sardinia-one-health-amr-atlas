@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metodo e limiti · Sardinia One Health AMR Atlas</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="evidence-page">
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Sardegna · One Health</p>
+      <h1>Metodo e limiti</h1>
+      <p class="subtitle">Come leggere evidenze, layer e filtri AMR pubblici</p>
+    </div>
+    <a class="header-back" href="index.html">← Torna all’atlante</a>
+  </header>
+  <nav class="site-nav" aria-label="Navigazione principale">
+    <a href="index.html">Atlante</a>
+    <a href="evidence.html">Evidenze e fonti</a>
+    <a href="index.html#literature-title">Letteratura curata</a>
+    <a class="active" href="methodology.html">Metodo</a>
+  </nav>
+  <main class="evidence-shell method-shell">
+    <section class="evidence-heading">
+      <div>
+        <p class="section-kicker">LETTURA DEL CRUSCOTTO</p>
+        <h2>Il dato mappato è un’evidenza documentata, non automaticamente una prevalenza.</h2>
+        <p class="evidence-subtitle">L’atlante pubblico separa dati comunali, strutture sanitarie, sorveglianza regionale, evidenze ambientali e letteratura curata.</p>
+      </div>
+      <div class="tag-list">
+        <span>Pubblico</span>
+        <span>Aggregato</span>
+        <span>One Health</span>
+      </div>
+    </section>
+
+    <section class="method-grid" aria-label="Regole principali">
+      <article>
+        <h3>Geografia</h3>
+        <p>I poligoni comunali indicano evidenze con un riferimento comunale pubblicabile. I punti ospedalieri indicano la sede della struttura, non la residenza dei pazienti. I laboratori AR-ISS indicano sedi partecipanti alla rete, non prevalenze locali.</p>
+      </article>
+      <article>
+        <h3>Filtri AMR</h3>
+        <p>Classi antimicrobiche e target PNCAR filtrano solo proprietà esplicitamente presenti nei dataset pubblici. Se un risultato è in un layer spento, il cruscotto lo segnala e permette di attivare il layer pertinente.</p>
+      </article>
+      <article>
+        <h3>Periodo</h3>
+        <p>Il filtro temporale usa anni presenti nelle proprietà pubbliche: periodo di campionamento, studio o sorveglianza quando disponibili. Non ricostruisce serie temporali non pubblicate.</p>
+      </article>
+      <article>
+        <h3>Privacy</h3>
+        <p>Coordinate di campione, aziende, allevamenti, macelli identificabili e dati puntuali sensibili restano fuori dalla parte pubblica. La pubblicazione usa solo aggregati o localizzazioni istituzionali già compatibili con il rilascio pubblico.</p>
+      </article>
+    </section>
+
+    <section class="method-section">
+      <h3>Tipi di evidenza</h3>
+      <div class="method-table-wrap">
+        <table class="result-table">
+          <thead>
+            <tr><th>Tipo</th><th>Cosa significa</th><th>Cosa non significa</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Comune</td><td>Campioni o studi con riferimento comunale pubblicabile.</td><td>Non misura il rischio o la prevalenza del comune.</td></tr>
+            <tr><td>Struttura sanitaria</td><td>Evidenza pubblicata riferita alla sede della struttura.</td><td>Non attribuisce i casi ai residenti del comune.</td></tr>
+            <tr><td>Sorveglianza regionale</td><td>Indicatori aggregati come AR-ISS o AIFA/OsMed.</td><td>Non è downscalabile a province o comuni.</td></tr>
+            <tr><td>Ambiente</td><td>Corpi idrici, resistoma o pannelli target documentati.</td><td>Non è equivalente a rischio clinico diretto.</td></tr>
+            <tr><td>Letteratura</td><td>Registro curato di studi riferiti alla Sardegna.</td><td>Non va sommato come denominatore unico.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="method-section two-col">
+      <div>
+        <h3>Regola sui target PNCAR</h3>
+        <p><code>blaCTX-M</code>, <code>blaKPC</code>, <code>vanA</code> e <code>qnrS</code> sono trattati come target di ricerca. Compaiono sulla mappa solo quando un dataset pubblico contiene un’informazione compatibile e localizzabile al livello pubblicabile.</p>
+      </div>
+      <div>
+        <h3>Prossimi rafforzamenti</h3>
+        <p>Il cruscotto è predisposto per serie temporali, nuove estrazioni istituzionali e dati privati separati. I dati puntuali sensibili restano nella parte privata e non entrano in GitHub Pages.</p>
+      </div>
+    </section>
+  </main>
+  <footer><span>Sardinia One Health AMR Atlas</span><span>Metodo pubblico · dati aggregati</span></footer>
+</body>
+</html>

@@ -56,6 +56,12 @@ const filterLabels = {
   foodChainMunicipal: ['AMR filiera alimentare', 'food_chain_amr_berchidda'],
   arissSites: ['Laboratorio AR-ISS', 'ar_iss_2024_sardinia_resistance']
 };
+const filterLayerControlLabels = {
+  veterinaryMunicipal: 'AMR veterinaria',
+  humanFacilityEvidence: 'AMR umana di struttura',
+  foodChainMunicipal: 'AMR filiera alimentare',
+  arissSites: 'Laboratori AR-ISS'
+};
 function featureMatchesAmr(feature, value) {
   if (value === 'AMR_ANY') return true;
   if (targetAliases[value]) return featureMatchesAmr(feature, targetAliases[value]);
@@ -100,6 +106,7 @@ function applyDashboardFilters() {
   let visible = 0;
   let compatibleSources = 0;
   const matches = [];
+  const inactiveMatches = new Map();
   filterableKeys.forEach(key => {
     const layer = layers[key];
     if (!layer) return;
@@ -109,6 +116,8 @@ function applyDashboardFilters() {
       if (show && layerIsActive) {
         visible += 1;
         matches.push({ key, feature: item.feature });
+      } else if (show && !layerIsActive) {
+        inactiveMatches.set(key, (inactiveMatches.get(key) || 0) + 1);
       }
       if (item.setStyle) item.setStyle({ opacity: show ? 1 : 0, fillOpacity: show ? (key === 'veterinaryMunicipal' ? 0.26 : 0.12) : 0 });
       if (item._path) item._path.style.pointerEvents = show ? 'auto' : 'none';
@@ -116,7 +125,9 @@ function applyDashboardFilters() {
     });
     if (layerIsActive && layer.getLayers().some(item => featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue))) compatibleSources += 1;
   });
-  document.getElementById('amr-state').textContent = `${label} · ${periodLabel}: ${visible} elementi compatibili visibili sulla mappa.`;
+  const inactiveTotal = [...inactiveMatches.values()].reduce((sum, count) => sum + count, 0);
+  const inactiveSummary = inactiveTotal ? ` ${inactiveTotal} ${inactiveTotal === 1 ? 'evidenza compatibile è' : 'evidenze compatibili sono'} in layer non attivi.` : '';
+  document.getElementById('amr-state').textContent = `${label} · ${periodLabel}: ${visible} elementi compatibili visibili sulla mappa.${inactiveSummary}`;
   document.getElementById('filter-status').textContent = `${label} · ${periodLabel}`;
   document.getElementById('metric-visible').textContent = visible.toLocaleString('it-IT');
   document.getElementById('metric-sources').textContent = compatibleSources.toLocaleString('it-IT');
@@ -125,7 +136,16 @@ function applyDashboardFilters() {
   if (!list) return;
   renderTimeDistribution(matches);
   if (!matches.length) {
-    list.innerHTML = '<p class="empty-filter">Nessuna evidenza compatibile nei layer attivi. Accendi altri layer dalla mappa per includerli nel filtro.</p>';
+    if (inactiveMatches.size) {
+      list.innerHTML = `<div class="empty-filter layer-hint"><p>Nessuna evidenza compatibile nei layer attivi, ma ci sono risultati disponibili in layer spenti.</p>${[...inactiveMatches.entries()].map(([key, count]) => `<button type="button" data-enable-layer="${key}">Attiva ${escapeHtml(filterLayerControlLabels[key] || filterLabels[key][0])} (${count})</button>`).join('')}</div>`;
+      list.querySelectorAll('[data-enable-layer]').forEach(button => button.addEventListener('click', () => {
+        const layer = layers[button.dataset.enableLayer];
+        if (layer) map.addLayer(layer);
+        applyDashboardFilters();
+      }));
+      return;
+    }
+    list.innerHTML = '<p class="empty-filter">Nessuna evidenza pubblica compatibile con questo filtro. Il dataset pubblico non contiene valori mappabili per questa combinazione.</p>';
     return;
   }
   list.innerHTML = matches.slice(0, 12).map(({ key, feature }, index) => {
@@ -134,7 +154,13 @@ function applyDashboardFilters() {
     const detail = props.headline || props.detail || props.geography_note || filterLabels[key][0];
     const [sourceLabel, sourceId] = filterLabels[key];
     return `<button class="filtered-row" type="button" data-match="${index}"><span><strong>${escapeHtml(labelValue)}</strong><small>${escapeHtml(detail)}</small></span><em>${escapeHtml(sourceLabel)} ›</em></button>`;
-  }).join('') + (matches.length > 12 ? `<p class="more-filter">+ ${matches.length - 12} elementi non mostrati nell’elenco</p>` : '');
+  }).join('') + (matches.length > 12 ? `<p class="more-filter">+ ${matches.length - 12} elementi non mostrati nell’elenco</p>` : '') +
+    (inactiveMatches.size ? `<div class="layer-hint compact">${[...inactiveMatches.entries()].map(([key, count]) => `<button type="button" data-enable-layer="${key}">+ ${count} in ${escapeHtml(filterLayerControlLabels[key] || filterLabels[key][0])}</button>`).join('')}</div>` : '');
+  list.querySelectorAll('[data-enable-layer]').forEach(button => button.addEventListener('click', () => {
+    const layer = layers[button.dataset.enableLayer];
+    if (layer) map.addLayer(layer);
+    applyDashboardFilters();
+  }));
   list.querySelectorAll('[data-match]').forEach(button => button.addEventListener('click', () => {
     const match = matches[Number(button.dataset.match)];
     const item = [...layers[match.key].getLayers()].find(layer => layer.feature === match.feature);
@@ -145,6 +171,15 @@ function applyDashboardFilters() {
       showSelectedEvidence(match.feature, match.key);
     }
   }));
+}
+function updateOverviewMetrics() {
+  if (!layers.veterinaryMunicipal) return;
+  const count = key => layers[key]?.getLayers().length || 0;
+  const totalMapped = count('veterinaryMunicipal') + count('humanFacilityEvidence') + count('foodChainMunicipal') + count('arissSites');
+  document.getElementById('overview-localized').textContent = totalMapped.toLocaleString('it-IT');
+  document.getElementById('overview-veterinary').textContent = count('veterinaryMunicipal').toLocaleString('it-IT');
+  document.getElementById('overview-human').textContent = count('humanFacilityEvidence').toLocaleString('it-IT');
+  document.getElementById('overview-ariss').textContent = count('arissSites').toLocaleString('it-IT');
 }
 function showSelectedEvidence(feature, key) {
   const props = feature?.properties || {};
@@ -295,6 +330,8 @@ fetch('public/data/environmental_amr_water_bodies_2024.json').then(r => r.json()
 fetch('public/data/literature_curated_sardinia.json').then(r => r.json()).then(d => {
   const card = document.getElementById('literature-card');
   const body = document.getElementById('literature-table-body');
+  const overviewLiterature = document.getElementById('overview-literature');
+  if (overviewLiterature) overviewLiterature.textContent = d.records.length.toLocaleString('it-IT');
   if (body) {
     body.innerHTML = d.records
       .slice()
@@ -451,6 +488,7 @@ Promise.all(configs.map(async cfg => {
   map.on('overlayadd overlayremove', () => applyDashboardFilters());
   map.fitBounds(layers.municipalities.getBounds(), { padding: [20, 20] });
   document.getElementById('status').textContent = 'Layer caricati';
+  updateOverviewMetrics();
   applyDashboardFilters();
 }).catch(error => {
   document.getElementById('status').textContent = 'Errore di caricamento';
