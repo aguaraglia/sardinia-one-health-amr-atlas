@@ -35,7 +35,12 @@ const amrKeywords = {
   AMR_MACROLIDE: ['macrolide','azithromycin','clarithromycin','erythromycin','macrolidi','mph','mef'],
   AMR_GLYCOPEPTIDE: ['glycopeptide','vancomycin','vanb','vanc','vre'],
   AMR_COLISTIN: ['colistin','colistina','mcr'],
-  AMR_MDR: ['multidrug','multiresist','mdr','xdr','resistenti ad almeno']
+  AMR_MDR: ['multidrug','multiresist','mdr','xdr','resistenti ad almeno'],
+  PNCAR_BLA_CTX_M: ['blactx','bla ctx','ctx-m','ctxm','ctx_m','cefotaxime','ceftriaxone','ceftazidime','cefalosporine di terza generazione','third-generation cephalosporin'],
+  PNCAR_BLA_KPC: ['blakpc','bla kpc','kpc'],
+  PNCAR_VANA: ['vana','van a','vancomycin','vancomicina','vre'],
+  PNCAR_QNRS: ['qnrs','qnr s','qnr','fluoroquinolone','fluorochinolon'],
+  PNCAR_INTI1: ['inti1','intI1','integrase','integrone']
 };
 const targetAliases = {
   bla: 'AMR_BETA_LACTAM',
