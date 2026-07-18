@@ -49,3 +49,12 @@ Non inviare richieste separate a tutti gli enti in parallelo: partire da SIRA/De
 ## Regola di importazione
 
 Un record può essere classificato `documented_current` solo se contiene una fonte istituzionale identificabile e una validità esplicita o verificabile. Un rapporto storico di controllo, un articolo, una descrizione tecnica o un percorso GIS possono essere conservati come evidenza di contesto, ma non promossi a recapito corrente.
+## Allegato privato già predisposto
+
+Per evitare una richiesta generica, rigenerare prima l’elenco minimale degli impianti urbani attivi:
+
+```text
+python scripts/build_authorisation_request_scope.py
+```
+
+Il file risultante `private/hydrology/desac_authorisation_request_scope_active_urban.tsv` contiene 560 ID SIRA, Comune, Provincia, denominazione e campi vuoti da restituire o completare dall’ente. Non contiene coordinate, gestori, reti fognarie, punti di scarico né recapiti dedotti; ogni riga è inizialmente `private_only` e `pending_source_response`. Può essere allegato alla richiesta a SIRA/DeSAC o usato come registro di avanzamento interno.
