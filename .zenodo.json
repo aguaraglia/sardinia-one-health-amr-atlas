@@ -1,0 +1,32 @@
+{
+  "title": "Sardinia One Health AMR Atlas",
+  "description": "A privacy-aware public atlas that documents curated evidence on antimicrobial resistance in Sardinia across human, animal, food-chain and environmental One Health domains. The release records sources, geographic scale and interpretation limits; it does not publish restricted point-level data.",
+  "creators": [
+    {
+      "name": "Codex Vitae ETS",
+      "affiliation": "Sardinia One Health AMR Atlas"
+    }
+  ],
+  "keywords": [
+    "antimicrobial resistance",
+    "One Health",
+    "Sardinia",
+    "geospatial atlas",
+    "public health"
+  ],
+  "license": "CC-BY-4.0",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/aguaraglia/sardinia-one-health-amr-atlas",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://aguaraglia.github.io/sardinia-one-health-amr-atlas/",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    }
+  ]
+}

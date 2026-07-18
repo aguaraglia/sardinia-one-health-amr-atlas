@@ -1,0 +1,7 @@
+pmid	decision	decision_date	reason
+35456809	excluded	2026-07-18	In-vitro evaluation of antimicrobial and antivirulent potential of a Sardinian plant essential oil; it does not report AMR surveillance or resistance evidence from Sardinian organisms, people, animals or environment.
+32636291	excluded	2026-07-18	Primary-care antibiotic-use study protocol only; no collected outcome data or AMR observation is reported.
+30676066	excluded	2026-07-18	Tests antifungal activity of plant oil macerates against clinical Candida isolates; it is not a Sardinian AMR surveillance or susceptibility dataset.
+30036673	excluded	2026-07-18	Southern Sardinia invasive meningococcal outbreak report; antimicrobial susceptibility testing was a method, but no interpretable AMR outcome is reported for the public AMR atlas.
+28512556	excluded	2026-07-18	Northern Sardinia paediatric tuberculosis clinical-characteristics study; the available abstract does not report an AMR outcome usable in the atlas.
+19712640	excluded	2026-07-18	Italian Streptococcus suis genetic-diversity study with one Sardinian human isolate; it does not report an AMR result and cannot support a Sardinian AMR evidence record.

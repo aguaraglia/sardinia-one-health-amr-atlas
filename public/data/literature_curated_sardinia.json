@@ -1,6 +1,6 @@
 {
   "source_id": "letteratura_curata",
-  "dataset_version": "atlas-curated-v0.1",
+  "dataset_version": "atlas-curated-v0.7",
   "geography_level": "REGIONE",
   "geography_id": "SARDEGNA",
   "privacy": "public",
@@ -12,13 +12,24 @@
       "doi": "10.1017/S0950268821000212",
       "year": 2021,
       "title": "Comparative characterisation of human and ovine non-aureus staphylococci isolated in Sardinia (Italy) for antimicrobial susceptibility profiles and resistance genes",
-      "hosts": ["sheep", "human"],
-      "matrix": ["ovine samples", "human samples"],
-      "organisms": ["non-aureus Staphylococcus spp."],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "sheep",
+        "human"
+      ],
+      "matrix": [
+        "ovine samples",
+        "human samples"
+      ],
+      "organisms": [
+        "non-aureus Staphylococcus spp."
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Rete di tre ospedali: Sassari, Nuoro e Ozieri; campioni ovini regionali",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/33509310/",
-      "notes": "195 NAS isolates: 125 ovine and 70 human. The three hospitals are identified, but human denominators are not separable by facility; no municipal prevalence."
+      "notes": "195 NAS isolates: 125 ovine and 70 human; hospitals identified but human denominators not separable by facility; no municipal prevalence."
     },
     {
       "study_id": "lit_saureus_ovine_mastitis_sardinia_2017",
@@ -26,13 +37,22 @@
       "doi": "10.1016/j.vetmic.2017.05.006",
       "year": 2017,
       "title": "Antimicrobial susceptibility and genotyping of Staphylococcus aureus isolates collected between 1986 and 2015 from ovine mastitis",
-      "hosts": ["sheep"],
-      "matrix": ["ovine mastitis milk"],
-      "organisms": ["Staphylococcus aureus"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "sheep"
+      ],
+      "matrix": [
+        "ovine mastitis milk"
+      ],
+      "organisms": [
+        "Staphylococcus aureus"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/28622861/",
-      "notes": "PubMed record reports ovine mastitis isolates collected between 1986 and 2015. Study-level evidence only."
+      "notes": "PubMed record reports ovine mastitis isolates collected between 1986 and 2015; curated as study-level evidence, not regional prevalence."
     },
     {
       "study_id": "lit_salmonella_poultry_sardinia_2026",
@@ -40,10 +60,18 @@
       "doi": "10.4081/ijfs.2026.14584",
       "year": 2026,
       "title": "The poultry chain in Sardinia (Italy): monitoring of Salmonella contamination and antibiotic resistance profiles",
-      "hosts": ["poultry"],
-      "matrix": ["poultry chain"],
-      "organisms": ["Salmonella spp."],
-      "amr_evidence": ["phenotype"],
+      "hosts": [
+        "poultry"
+      ],
+      "matrix": [
+        "poultry chain"
+      ],
+      "organisms": [
+        "Salmonella spp."
+      ],
+      "amr_evidence": [
+        "phenotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41914365/",
       "notes": "Study-level food-chain evidence; not regional prevalence."
@@ -54,13 +82,23 @@
       "doi": "10.3389/fmicb.2025.1661122",
       "year": 2025,
       "title": "Genomic characterization of Staphylococcus aureus isolated from mastitis in small ruminants in Sardinia, Italy",
-      "hosts": ["sheep", "goat"],
-      "matrix": ["mastitis samples"],
-      "organisms": ["Staphylococcus aureus"],
-      "amr_evidence": ["genotype", "phenotype"],
+      "hosts": [
+        "sheep",
+        "goat"
+      ],
+      "matrix": [
+        "mastitis samples"
+      ],
+      "organisms": [
+        "Staphylococcus aureus"
+      ],
+      "amr_evidence": [
+        "genotype",
+        "phenotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41409980/",
-      "notes": "32 isolati da 25 allevamenti in sei province della Sardegna. L'articolo e BioProject PRJEB89476 non pubblicano il comune; nessun downscaling comunale."
+      "notes": "Study-level small-ruminant mastitis evidence; not regional prevalence."
     },
     {
       "study_id": "lit_ecoli_pigs_sardinia_2025",
@@ -68,10 +106,19 @@
       "doi": "10.1016/j.ijfoodmicro.2025.111156",
       "year": 2025,
       "title": "Characterization and antimicrobial resistance of commensal and pathogenic Escherichia coli from pigs in Sardinia (Italy)",
-      "hosts": ["pig"],
-      "matrix": ["pig samples"],
-      "organisms": ["Escherichia coli"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "pig"
+      ],
+      "matrix": [
+        "pig samples"
+      ],
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/40139103/",
       "notes": "Study-level swine evidence; not regional prevalence."
@@ -82,10 +129,20 @@
       "doi": "10.4081/ijfs.2024.13199",
       "year": 2024,
       "title": "Salmonella and Yersinia enterocolitica through the pig meat chain in Sardinia: occurrence, antimicrobial resistance and genetic insight",
-      "hosts": ["pig"],
-      "matrix": ["pig meat chain"],
-      "organisms": ["Salmonella spp.", "Yersinia enterocolitica"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "pig"
+      ],
+      "matrix": [
+        "pig meat chain"
+      ],
+      "organisms": [
+        "Salmonella spp.",
+        "Yersinia enterocolitica"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/39883021/",
       "notes": "Study-level food-chain evidence; not regional prevalence."
@@ -96,10 +153,21 @@
       "doi": "10.1016/j.ijfoodmicro.2024.110790",
       "year": 2024,
       "title": "Pathogenic profile and antimicrobial resistance of Escherichia coli, Escherichia marmotae and Escherichia ruysiae detected from hunted wild boars in Sardinia (Italy)",
-      "hosts": ["wild boar"],
-      "matrix": ["hunted wild boar samples"],
-      "organisms": ["Escherichia coli", "Escherichia marmotae", "Escherichia ruysiae"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "wild boar"
+      ],
+      "matrix": [
+        "hunted wild boar samples"
+      ],
+      "organisms": [
+        "Escherichia coli",
+        "Escherichia marmotae",
+        "Escherichia ruysiae"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/38878707/",
       "notes": "Study-level wildlife/food-chain evidence; not regional prevalence."
@@ -110,10 +178,20 @@
       "doi": "10.3390/foods13010065",
       "year": 2023,
       "title": "Hunted Wild Boars in Sardinia: Prevalence, Antimicrobial Resistance and Genomic Analysis of Salmonella and Yersinia enterocolitica",
-      "hosts": ["wild boar"],
-      "matrix": ["hunted wild boar samples"],
-      "organisms": ["Salmonella spp.", "Yersinia enterocolitica"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "wild boar"
+      ],
+      "matrix": [
+        "hunted wild boar samples"
+      ],
+      "organisms": [
+        "Salmonella spp.",
+        "Yersinia enterocolitica"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/38201093/",
       "notes": "Study-level wildlife evidence; do not generalize prevalence beyond study design."
@@ -124,13 +202,21 @@
       "doi": "10.3390/microorganisms11092354",
       "year": 2023,
       "title": "A Whole-Genome Sequencing-Based Approach for the Characterization of Klebsiella pneumoniae Co-Producing KPC and OXA-48-like Carbapenemases Circulating in Sardinia, Italy",
-      "hosts": ["human"],
-      "matrix": ["clinical isolates"],
-      "organisms": ["Klebsiella pneumoniae"],
-      "amr_evidence": ["genotype"],
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "clinical isolates"
+      ],
+      "organisms": [
+        "Klebsiella pneumoniae"
+      ],
+      "amr_evidence": [
+        "genotype"
+      ],
       "public_geography": "AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/37764198/",
-      "notes": "Facility-level clinical genomic evidence. Sassari is the hospital location, not the patients' municipality of origin and not municipal prevalence."
+      "notes": "Facility-level clinical genomic evidence; Sassari is the hospital location, not patient origin or municipal prevalence."
     },
     {
       "study_id": "lit_efaecium_vanb2_sassari_2023",
@@ -138,13 +224,23 @@
       "doi": "10.3390/antibiotics12030476",
       "year": 2023,
       "title": "Occult Vancomycin-Resistant Enterococcus faecium ST117 Displaying a Highly Mutated vanB2 Operon",
-      "hosts": ["human"],
-      "matrix": ["clinical isolates"],
-      "organisms": ["Enterococcus faecium"],
-      "amr_evidence": ["phenotype", "genotype", "WGS"],
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "clinical isolates"
+      ],
+      "organisms": [
+        "Enterococcus faecium"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype",
+        "WGS"
+      ],
       "public_geography": "AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/36978343/",
-      "notes": "Facility-level cohort of 39 E. faecium isolates collected in 2013-2018; three vanB2-positive isolates, including one occult isolate missed by the initial Vitek2 result. Not municipal prevalence."
+      "notes": "Facility-level cohort of 39 isolates collected in 2013-2018; three vanB2-positive, including one occult isolate missed by the initial Vitek2 result; not municipal prevalence."
     },
     {
       "study_id": "lit_kpneumoniae_kpc_invasive_sassari_2018",
@@ -152,13 +248,22 @@
       "doi": "10.1016/j.jhin.2018.03.033",
       "year": 2018,
       "title": "Nosocomial transmission of carbapenem-resistant Klebsiella pneumoniae in an Italian university hospital: a molecular epidemiological study",
-      "hosts": ["human"],
-      "matrix": ["bloodstream infection isolates"],
-      "organisms": ["Klebsiella pneumoniae"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "bloodstream infection isolates"
+      ],
+      "organisms": [
+        "Klebsiella pneumoniae"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/29621600/",
-      "notes": "Facility-level cohort of 46 invasive KPC-Kp infections observed in 2015-2017. It is not municipal or regional prevalence."
+      "notes": "Facility-level cohort of 46 invasive KPC-Kp infections observed in 2015-2017; not municipal or regional prevalence."
     },
     {
       "study_id": "lit_kpneumoniae_ndm_sassari_2023",
@@ -166,10 +271,19 @@
       "doi": "10.3390/healthcare11182592",
       "year": 2023,
       "title": "Infection Prevention Control Strategies of New Delhi Metallo-beta-lactamase Producing Klebsiella pneumoniae",
-      "hosts": ["human"],
-      "matrix": ["rectal screening isolates"],
-      "organisms": ["Klebsiella pneumoniae"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "rectal screening isolates"
+      ],
+      "organisms": [
+        "Klebsiella pneumoniae"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/37761789/",
       "notes": "Facility-level case report of two independent NDM-producing K. pneumoniae colonizations in 2021-2022; not municipal prevalence."
@@ -180,10 +294,18 @@
       "doi": "10.1016/j.ijfoodmicro.2018.06.010",
       "year": 2018,
       "title": "Prevalence, bioserotyping and antibiotic resistance of pathogenic Yersinia enterocolitica detected in pigs at slaughter in Sardinia",
-      "hosts": ["pig"],
-      "matrix": ["slaughter samples"],
-      "organisms": ["Yersinia enterocolitica"],
-      "amr_evidence": ["phenotype"],
+      "hosts": [
+        "pig"
+      ],
+      "matrix": [
+        "slaughter samples"
+      ],
+      "organisms": [
+        "Yersinia enterocolitica"
+      ],
+      "amr_evidence": [
+        "phenotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/29929063/",
       "notes": "Study-level swine slaughter evidence; do not generalize prevalence beyond study design."
@@ -194,13 +316,44 @@
       "doi": "10.1111/1750-3841.13657",
       "year": 2017,
       "title": "Occurrence, Characterization, and Antimicrobial Susceptibility of Salmonella enterica in Slaughtered Pigs in Sardinia",
-      "hosts": ["pig"],
-      "matrix": ["slaughter samples"],
-      "organisms": ["Salmonella enterica"],
-      "amr_evidence": ["phenotype"],
+      "hosts": [
+        "pig"
+      ],
+      "matrix": [
+        "slaughter samples"
+      ],
+      "organisms": [
+        "Salmonella enterica"
+      ],
+      "amr_evidence": [
+        "phenotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/28226178/",
       "notes": "Study-level swine slaughter evidence; not regional prevalence."
+    },
+    {
+      "study_id": "lit_enterococcus_clinical_sardinia_2010",
+      "pmid": "20853674",
+      "doi": "unknown",
+      "year": 2010,
+      "title": "Molecular detection of virulence factors and antibiotic resistance pattern in clinical Enterococcus faecalis strains in Sardinia",
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "clinical isolates"
+      ],
+      "organisms": [
+        "Enterococcus faecalis"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
+      "public_geography": "Ospedale Binaghi, Cagliari (sede della struttura)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/20853674/",
+      "notes": "Facility-level cohort of 91 clinical isolates from 91 patients; Cagliari is facility location, not patient residence; DOI not present in PubMed."
     },
     {
       "study_id": "lit_environmental_resistome_bidighinzu_cabras_2026",
@@ -208,27 +361,23 @@
       "doi": "10.1016/j.jenvman.2026.129718",
       "year": 2026,
       "title": "Lakes and lagoons used for drinking water supply and fisheries as sources of potentially pathogenic bacteria and antimicrobial resistance",
-      "hosts": ["environment"],
-      "matrix": ["freshwater", "brackish lagoon water"],
-      "organisms": ["environmental microbiome", "potentially pathogenic bacteria"],
-      "amr_evidence": ["metagenomic resistome"],
-      "public_geography": "Lago Bidighinzu; Laguna di Cabras",
+      "hosts": [
+        "environment"
+      ],
+      "matrix": [
+        "freshwater",
+        "brackish lagoon water"
+      ],
+      "organisms": [
+        "environmental microbiome",
+        "potentially pathogenic bacteria"
+      ],
+      "amr_evidence": [
+        "metagenomic resistome"
+      ],
+      "public_geography": "Lago Bidighinzu;Laguna di Cabras",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42019335/",
-      "notes": "Site-level environmental evidence from a 2024 seasonal campaign. The public atlas uses water-body aggregates and excludes exact sample coordinates."
-    },
-    {
-      "study_id": "lit_enterococcus_clinical_sardinia_2010",
-      "pmid": "20853674",
-      "doi": null,
-      "year": 2010,
-      "title": "Molecular detection of virulence factors and antibiotic resistance pattern in clinical Enterococcus faecalis strains in Sardinia",
-      "hosts": ["human"],
-      "matrix": ["clinical isolates"],
-      "organisms": ["Enterococcus faecalis"],
-      "amr_evidence": ["phenotype", "genotype"],
-      "public_geography": "Ospedale Binaghi, Cagliari (sede della struttura)",
-      "source_url": "https://pubmed.ncbi.nlm.nih.gov/20853674/",
-      "notes": "Facility-level cohort of 91 clinical isolates from 91 patients at Binaghi Hospital. Cagliari is the facility location, not patient residence; DOI not present in PubMed."
+      "notes": "Site-level 2024 environmental evidence; exact sample coordinates excluded from public outputs."
     },
     {
       "study_id": "lit_kpneumoniae_crkp_genotype_sassari_2023",
@@ -236,13 +385,26 @@
       "doi": "10.23750/abm.v94i5.14412",
       "year": 2023,
       "title": "Comparison of genotypic and phenotypic antimicrobial profile in carbapenemases producing Klebsiella pneumoniae",
-      "hosts": ["human"],
-      "matrix": ["clinical isolates", "rectal swabs", "blood cultures", "bronchoalveolar lavage"],
-      "organisms": ["Klebsiella pneumoniae"],
-      "amr_evidence": ["phenotype", "genotype", "antimicrobial resistance index"],
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "clinical isolates",
+        "rectal swabs",
+        "blood cultures",
+        "bronchoalveolar lavage"
+      ],
+      "organisms": [
+        "Klebsiella pneumoniae"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype",
+        "antimicrobial resistance index"
+      ],
       "public_geography": "AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/37850773/",
-      "notes": "Facility-level cohort of 109 carbapenem-resistant isolates collected in 2018-2022. It may overlap with other AOU Sassari KPC/OXA-48 publications and must not be added to them as a prevalence denominator."
+      "notes": "Facility cohort of 109 CR-Kp in 2018-2022; possible overlap with other AOU Sassari KPC/OXA-48 studies; do not sum denominators."
     },
     {
       "study_id": "lit_kpneumoniae_kpc_oxa48_sassari_2022",
@@ -250,41 +412,77 @@
       "doi": "10.3390/ijerph19052623",
       "year": 2022,
       "title": "High-Risk Clone of Klebsiella pneumoniae Co-Harbouring Class A and D Carbapenemases in Italy",
-      "hosts": ["human"],
-      "matrix": ["screening and clinical isolates"],
-      "organisms": ["Klebsiella pneumoniae"],
-      "amr_evidence": ["phenotype", "genotype", "PFGE", "MLST"],
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "screening and clinical isolates"
+      ],
+      "organisms": [
+        "Klebsiella pneumoniae"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype",
+        "PFGE",
+        "MLST"
+      ],
       "public_geography": "AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/35270321/",
-      "notes": "Facility surveillance cohort of 127 KPC/OXA-48-positive patients in 2019-2020; 31 invasive infections. Potential overlap with other AOU Sassari cohorts; not municipal prevalence."
+      "notes": "Facility cohort of 127 KPC/OXA-48-positive patients in 2019-2020; 31 invasive infections; possible overlap with other AOU cohorts."
     },
     {
       "study_id": "lit_abaumannii_xdr_sassari_2015",
       "pmid": "26499430",
-      "doi": null,
+      "doi": "unknown",
       "year": 2015,
       "title": "Molecular typing of XDR Acinetobacter baumannii strains in an Italian ICU",
-      "hosts": ["human", "hospital environment"],
-      "matrix": ["clinical and environmental isolates"],
-      "organisms": ["Acinetobacter baumannii"],
-      "amr_evidence": ["phenotype", "genotype", "PFGE", "MLST"],
+      "hosts": [
+        "human",
+        "hospital environment"
+      ],
+      "matrix": [
+        "clinical and environmental isolates"
+      ],
+      "organisms": [
+        "Acinetobacter baumannii"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype",
+        "PFGE",
+        "MLST"
+      ],
       "public_geography": "ICU AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/26499430/",
-      "notes": "Sixteen typed XDR isolates inferred from the three reported PFGE clusters; all resistant to major antibiotics except colistin and all ST2. Collection period was not available in the open abstract."
+      "notes": "Sixteen typed XDR isolates inferred from reported PFGE clusters; all resistant to major antibiotics except colistin; collection period unavailable in open abstract."
     },
     {
       "study_id": "lit_abaumannii_outbreak_nuoro_2014",
       "pmid": "24858645",
-      "doi": null,
+      "doi": "unknown",
       "year": 2014,
       "title": "Outbreak of multidrug-resistant Acinetobacter baumannii in an intensive care unit",
-      "hosts": ["human", "hospital environment"],
-      "matrix": ["clinical isolates", "environmental swabs"],
-      "organisms": ["Acinetobacter baumannii"],
-      "amr_evidence": ["phenotype", "genotype", "PFGE", "MLST"],
+      "hosts": [
+        "human",
+        "hospital environment"
+      ],
+      "matrix": [
+        "clinical isolates",
+        "environmental swabs"
+      ],
+      "organisms": [
+        "Acinetobacter baumannii"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype",
+        "PFGE",
+        "MLST"
+      ],
       "public_geography": "Ospedale San Francesco, Nuoro (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/24858645/",
-      "notes": "June 2012 ICU outbreak with ten positive patients and two positive bed headboards; 12 ST31 isolates carried blaOXA-51-like and blaOXA-23-like. Nuoro is the hospital location, not patient residence."
+      "notes": "June 2012 outbreak: ten positive patients and two positive bed headboards; 12 ST31 isolates with blaOXA-51-like and blaOXA-23-like."
     },
     {
       "study_id": "lit_covid_respiratory_amr_sassari_2024",
@@ -292,13 +490,24 @@
       "doi": "10.1016/j.diagmicrobio.2024.116479",
       "year": 2024,
       "title": "Comparison of microbiological and molecular diagnosis for identification of respiratory secondary infections in COVID-19 patients and their antimicrobial resistance patterns",
-      "hosts": ["human"],
-      "matrix": ["respiratory samples"],
-      "organisms": ["respiratory pathogens", "Staphylococcus aureus", "Klebsiella pneumoniae"],
-      "amr_evidence": ["phenotype", "multiplex PCR"],
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "respiratory samples"
+      ],
+      "organisms": [
+        "respiratory pathogens",
+        "Staphylococcus aureus",
+        "Klebsiella pneumoniae"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "multiplex PCR"
+      ],
       "public_geography": "AOU Sassari (sede della struttura)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/39116653/",
-      "notes": "Prospective cohort of 70 COVID-19 patients in 2021-2022; oxacillin-resistant S. aureus and carbapenem-resistant K. pneumoniae were detected, but public source counts were not inferred."
+      "notes": "Prospective cohort of 70 COVID-19 patients in 2021-2022; oxacillin-resistant S. aureus and carbapenem-resistant K. pneumoniae detected; counts not inferred."
     },
     {
       "study_id": "lit_mycobacteria_north_sardinia_2023",
@@ -306,13 +515,23 @@
       "doi": "10.1128/spectrum.03179-23",
       "year": 2023,
       "title": "Evaluation of mycobacteria infection prevalence and optimization of the identification process in North Sardinia, Italy",
-      "hosts": ["human"],
-      "matrix": ["suspected mycobacterial infection specimens"],
-      "organisms": ["Mycobacterium tuberculosis", "nontuberculous mycobacteria"],
-      "amr_evidence": ["phenotype", "resistance-associated mutation testing"],
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "suspected mycobacterial infection specimens"
+      ],
+      "organisms": [
+        "Mycobacterium tuberculosis",
+        "nontuberculous mycobacteria"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "resistance-associated mutation testing"
+      ],
       "public_geography": "Sistema sanitario del Nord Sardegna; laboratorio AOU Sassari",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/38059624/",
-      "notes": "Area-wide cohort of 1,836 suspected individuals in 2020-2023; 89 MTB-positive, of whom 64 had resistance to at least one first-line drug. No municipal split is published."
+      "notes": "Area-wide cohort of 1836 suspected individuals in 2020-2023; 89 MTB-positive and 64 resistant to at least one first-line drug; no municipal split."
     },
     {
       "study_id": "lit_streptococcus_uberis_wgs_sardinia_2022",
@@ -320,11 +539,21 @@
       "doi": "10.1186/s12917-022-03341-1",
       "year": 2022,
       "title": "Genomic surveillance reveals antibiotic resistance gene transmission via phage recombinases within sheep mastitis-associated Streptococcus uberis",
-      "hosts": ["sheep"],
-      "matrix": ["ovine mastitis milk"],
-      "organisms": ["Streptococcus uberis"],
-      "amr_evidence": ["phenotype", "genotype", "WGS"],
-      "public_geography": "36 comuni della Sardegna esplicitamente indicati nel supplemento; pubblico solo aggregato comunale",
+      "hosts": [
+        "sheep"
+      ],
+      "matrix": [
+        "ovine mastitis milk"
+      ],
+      "organisms": [
+        "Streptococcus uberis"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype",
+        "WGS"
+      ],
+      "public_geography": "36 comuni esplicitamente indicati nel supplemento; pubblico solo aggregato comunale",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/35799261/",
       "notes": "46 isolati selezionati, uno per azienda e profilo RFLP; 45/46 resistenti ad almeno un antibiotico e 136/644 esiti R. Coorte selezionata, non prevalenza comunale."
     },
@@ -334,13 +563,22 @@
       "doi": "10.3390/pathogens10111489",
       "year": 2021,
       "title": "Molecular Typing and Antimicrobial Susceptibility Profiles of Streptococcus uberis Isolated from Sheep Milk",
-      "hosts": ["sheep"],
-      "matrix": ["ovine mastitis milk"],
-      "organisms": ["Streptococcus uberis"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "sheep"
+      ],
+      "matrix": [
+        "ovine mastitis milk"
+      ],
+      "organisms": [
+        "Streptococcus uberis"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/34832644/",
-      "notes": "124 isolati; 96.8% resistenti ad almeno un antimicrobico e 17 MDR. Il supplemento non consente una ripartizione comunale."
+      "notes": "124 isolati; 96.8% resistenti ad almeno un antimicrobico e 17 MDR. Il supplemento non consente una ripartizione geografica comunale."
     },
     {
       "study_id": "lit_staphylococcus_epidermidis_ovine_sardinia_2011",
@@ -348,13 +586,22 @@
       "doi": "10.1016/j.vetmic.2010.07.024",
       "year": 2011,
       "title": "Antimicrobial susceptibilities and population structure of Staphylococcus epidermidis associated with ovine mastitis",
-      "hosts": ["sheep"],
-      "matrix": ["ovine milk"],
-      "organisms": ["Staphylococcus epidermidis"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "sheep"
+      ],
+      "matrix": [
+        "ovine milk"
+      ],
+      "organisms": [
+        "Staphylococcus epidermidis"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/20817422/",
-      "notes": "131 isolati da 2,201 pecore in 14 greggi; 50 resistenti alla penicillina, 10 alla tetraciclina e 3 a entrambe. Nessun comune pubblicato."
+      "notes": "131 isolati da 2201 pecore in 14 greggi; 50 resistenti alla penicillina, 10 alla tetraciclina, 3 a entrambe. Nessun comune pubblicato."
     },
     {
       "study_id": "lit_yersinia_cheese_plants_sardinia_2023",
@@ -362,11 +609,20 @@
       "doi": "10.1016/j.ijfoodmicro.2023.110225",
       "year": 2023,
       "title": "Traceability, virulence and antimicrobial resistance of Yersinia enterocolitica in two industrial cheese-making plants",
-      "hosts": ["dairy chain"],
-      "matrix": ["dairy plant samples"],
-      "organisms": ["Yersinia enterocolitica"],
-      "amr_evidence": ["phenotype", "genotype"],
-      "public_geography": "Sardegna; due stabilimenti anonimi",
+      "hosts": [
+        "dairy chain"
+      ],
+      "matrix": [
+        "dairy plant samples"
+      ],
+      "organisms": [
+        "Yersinia enterocolitica"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
+      "public_geography": "Sardegna; stabilimenti anonimi",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/37126899/",
       "notes": "309 campioni raccolti nel 2018-2019; 7.4% positivi. Gli stabilimenti non sono identificati e non sono mappabili puntualmente."
     },
@@ -376,13 +632,21 @@
       "doi": "10.3390/foods13040633",
       "year": 2024,
       "title": "Technological and Safety Characterization of Coagulase-Negative Staphylococci Isolated from Sardinian Fermented Sausage Made by Ovine Meat",
-      "hosts": ["sheep food chain"],
-      "matrix": ["ovine sausages"],
-      "organisms": ["coagulase-negative Staphylococcus spp."],
-      "amr_evidence": ["phenotype"],
+      "hosts": [
+        "sheep food chain"
+      ],
+      "matrix": [
+        "ovine sausages"
+      ],
+      "organisms": [
+        "coagulase-negative Staphylococcus spp."
+      ],
+      "amr_evidence": [
+        "phenotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/38397610/",
-      "notes": "70 colture CoNS; antibiogrammi su colture selezionate. Nessun comune pubblicato; non sono riportati conteggi dettagliati a causa di un'incongruenza testuale nell'articolo."
+      "notes": "70 colture CoNS; antibiogrammi su colture selezionate. Nessun comune pubblicato; evitare conteggi dettagliati finche non si risolve l'incongruenza testuale nell'articolo."
     },
     {
       "study_id": "lit_lab_fermented_food_sardinia_2025",
@@ -390,10 +654,21 @@
       "doi": "10.3390/antibiotics15010018",
       "year": 2025,
       "title": "Occurrence of Antibiotic Resistance in Lacticaseibacillus paracasei and Lactiplantibacillus plantarum Strains Isolated from Traditional Sardinian Fermented Food",
-      "hosts": ["sheep food chain"],
-      "matrix": ["ovine sausage", "Casizolu cheese"],
-      "organisms": ["Lactiplantibacillus plantarum", "Lacticaseibacillus paracasei"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "sheep food chain"
+      ],
+      "matrix": [
+        "ovine sausage",
+        "Casizolu cheese"
+      ],
+      "organisms": [
+        "Lactiplantibacillus plantarum",
+        "Lacticaseibacillus paracasei"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Sardegna",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41594055/",
       "notes": "50 isolati, 25 da salsiccia ovina e 25 da formaggio Casizolu; nessun comune pubblicato."
@@ -404,13 +679,23 @@
       "doi": "10.1186/s13567-023-01248-9",
       "year": 2023,
       "title": "Streptococcus ruminantium-associated sheep mastitis outbreak detected in Italy is distinct from bovine isolates",
-      "hosts": ["sheep"],
-      "matrix": ["ovine mastitis milk"],
-      "organisms": ["Streptococcus ruminantium"],
-      "amr_evidence": ["phenotype", "genotype", "WGS"],
+      "hosts": [
+        "sheep"
+      ],
+      "matrix": [
+        "ovine mastitis milk"
+      ],
+      "organisms": [
+        "Streptococcus ruminantium"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype",
+        "WGS"
+      ],
       "public_geography": "Sardegna orientale; azienda anonima",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/38087338/",
-      "notes": "17 isolati sardi: tutti resistenti alla kanamicina e sensibili alle altre classi testate; nessun gene AMR rilevato con AMRFinderPlus. BioProject PRJNA1009676 riporta Sardinia ma non il comune."
+      "notes": "17 Sardinian isolates: all kanamycin-resistant and susceptible to the other tested classes; no AMR gene detected with AMRFinderPlus. BioProject reports Sardinia but no municipality."
     },
     {
       "study_id": "lit_efaecalis_mastitis_outbreak_sardinia_2013",
@@ -418,13 +703,22 @@
       "doi": "10.1017/S0950268812000647",
       "year": 2013,
       "title": "Outbreak of mastitis in sheep caused by multi-drug resistant Enterococcus faecalis in Sardinia, Italy",
-      "hosts": ["sheep"],
-      "matrix": ["ovine mastitis milk"],
-      "organisms": ["Enterococcus faecalis"],
-      "amr_evidence": ["phenotype", "clonality"],
+      "hosts": [
+        "sheep"
+      ],
+      "matrix": [
+        "ovine mastitis milk"
+      ],
+      "organisms": [
+        "Enterococcus faecalis"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "clonality"
+      ],
       "public_geography": "Nord Sardegna; azienda anonima",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/22595402/",
-      "notes": "699 campioni, 48 isolati E. faecalis e 45 MDR clonali. La fonte indica soltanto un'azienda intensiva anonima del Nord Sardegna; nessuna attribuzione comunale."
+      "notes": "699 samples, 48 E. faecalis isolates and 45 clonal MDR isolates. The source identifies only an anonymous intensive farm; no municipality is assigned."
     },
     {
       "study_id": "lit_pecorino_starter_berchidda_2021",
@@ -432,13 +726,141 @@
       "doi": "10.3390/microorganisms9071363",
       "year": 2021,
       "title": "Biodiversity and Safety Assessment of Half-Century Preserved Natural Starter Cultures for Pecorino Romano PDO Cheese",
-      "hosts": ["dairy chain"],
-      "matrix": ["natural scotta starter cultures"],
-      "organisms": ["Lactic acid bacteria", "Enterococcus faecium"],
-      "amr_evidence": ["phenotype", "genotype"],
+      "hosts": [
+        "dairy chain"
+      ],
+      "matrix": [
+        "natural scotta starter cultures"
+      ],
+      "organisms": [
+        "Lactic acid bacteria",
+        "Enterococcus faecium"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
       "public_geography": "Berchidda; due caseifici anonimi",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/34201694/",
-      "notes": "Tre colture storiche SR30, SR56 e SR63; SR56 sopra i cut-off per clindamicina, eritromicina, gentamicina e tetraciclina, con tetM. Evidenza storica di filiera, non prevalenza comunale attuale."
+      "notes": "Historical cultures SR30, SR56 and SR63; SR56 above cut-offs for clindamycin, erythromycin, gentamicin and tetracycline, with tetM. Historical food-chain evidence, not current municipal prevalence."
+    },
+    {
+      "study_id": "lit_leptospira_livestock_sardinia_2018",
+      "pmid": "29305960",
+      "doi": "10.1016/j.ijantimicag.2017.12.024",
+      "year": 2018,
+      "title": "Antibiotic susceptibilities of livestock isolates of leptospira",
+      "hosts": [
+        "cattle",
+        "swine"
+      ],
+      "matrix": [
+        "livestock Leptospira isolates"
+      ],
+      "organisms": [
+        "Leptospira spp."
+      ],
+      "amr_evidence": [
+        "phenotype"
+      ],
+      "public_geography": "Sardegna; campione veterinario non comunale",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/29305960/",
+      "notes": "Eight recent livestock isolates from Sardinia had significantly higher cycline MICs than comparison isolates; the study does not support a regional prevalence estimate or farm-level publication."
+    },
+    {
+      "study_id": "lit_enterococcus_dairy_sardinia_2003",
+      "pmid": "14597001",
+      "doi": "10.1016/S0168-1605(03)00191-0",
+      "year": 2003,
+      "title": "Comparison of the incidence of virulence determinants and antibiotic resistance between Enterococcus faecium strains of dairy, animal and clinical origin",
+      "hosts": [
+        "dairy chain",
+        "animal",
+        "human"
+      ],
+      "matrix": [
+        "raw milk cheese",
+        "animal",
+        "clinical isolates"
+      ],
+      "organisms": [
+        "Enterococcus faecium"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
+      "public_geography": "Sardegna; fonti lattiero-casearie e cliniche aggregate",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/14597001/",
+      "notes": "Comparative source from Sardinian dairy, animal and clinical isolates. It is study-level evidence and does not identify a public municipality or an attributable source population."
+    },
+    {
+      "study_id": "lit_h_pylori_north_sardinia_2013",
+      "pmid": "23489645",
+      "doi": "10.1111/hel.12048",
+      "year": 2013,
+      "title": "Miocamycin-containing triple therapy for H. pylori infection",
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "gastric biopsy clinical cohort"
+      ],
+      "organisms": [
+        "Helicobacter pylori"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "clinical outcome"
+      ],
+      "public_geography": "Nord Sardegna; coorte clinica aggregata",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/23489645/",
+      "notes": "The paper reports poor standard-therapy cure rates attributed to high local antimicrobial resistance and evaluates a miocamycin regimen. It is not a municipal prevalence estimate."
+    },
+    {
+      "study_id": "lit_h_pylori_north_sardinia_2002",
+      "pmid": "12003419",
+      "doi": "10.1111/j.1572-0241.2002.05600.x",
+      "year": 2002,
+      "title": "Colloidal bismuth subcitrate-based twice-a-day quadruple therapy as primary or salvage therapy for Helicobacter pylori infection",
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "gastric biopsy clinical cohort"
+      ],
+      "organisms": [
+        "Helicobacter pylori"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "clinical outcome"
+      ],
+      "public_geography": "Nord Sardegna; coorte clinica aggregata",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/12003419/",
+      "notes": "The paper documents treatment context where standard triple therapies had cure rates below 60% largely because of antibiotic resistance. It does not quantify municipal resistance prevalence."
+    },
+    {
+      "study_id": "lit_salmonella_typhi_sardinia_2000",
+      "pmid": "10722125",
+      "doi": "10.1017/S0950268899003301",
+      "year": 2000,
+      "title": "The antibiotic resistance patterns of Salmonella Typhi isolates in Italy, 1980-96",
+      "hosts": [
+        "human"
+      ],
+      "matrix": [
+        "Italian surveillance isolates"
+      ],
+      "organisms": [
+        "Salmonella Typhi"
+      ],
+      "amr_evidence": [
+        "phenotype"
+      ],
+      "public_geography": "Sardegna; un isolato di sorveglianza nazionale",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/10722125/",
+      "notes": "National surveillance reported one Sardinian isolate with intermediate chloramphenicol resistance. This is a historical, single-isolate regional stratum and not a Sardinian prevalence estimate."
     }
   ]
 }

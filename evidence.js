@@ -1,3 +1,4 @@
+const assetRoot = document.documentElement.lang === 'en' ? '../' : '';
 const root = document.getElementById('evidence-root');
 const id = new URLSearchParams(location.search).get('id');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -54,7 +55,7 @@ function datasetPage(data) {
     `<div class="evidence-layout"><article class="evidence-article"><section><h3>Descrizione</h3><p>${esc(data.method_note || 'Dataset curato a partire dalla fonte originale.')}</p><p class="callout">${esc(summary)}</p></section><section>${results}</section><section><h3>Regola di pubblicazione</h3><p>Il livello geografico è quello esplicitamente documentato dalla fonte. Aziende, coordinate di campione e identificativi puntuali non vengono esposti in questa scheda.</p></section></article><aside class="evidence-rail"><div class="source-box"><h3>Metadati</h3><dl class="fact-list"><div><dt>Periodo</dt><dd>${esc(data.period || 'non riportato')}</dd></div><div><dt>Geografia</dt><dd>${esc(data.geography || data.geography_level || '')}</dd></div><div><dt>Fonte</dt><dd>${esc(data.source_id)}</dd></div></dl>${link(data.source_url)}</div><div class="source-box"><h3>Esplora</h3><a class="button-link" href="index.html">Torna alla mappa</a></div></aside></div>`;
 }
 
-Promise.all([fetch('public/data/literature_curated_sardinia.json').then(r => r.json()), ...Object.values(datasetFiles).map(file => fetch(file).then(r => r.json()))])
+Promise.all([fetch(`${assetRoot}public/data/literature_curated_sardinia.json`).then(r => r.json()), ...Object.values(datasetFiles).map(file => fetch(`${assetRoot}${file}`).then(r => r.json()))])
   .then(all => {
     const literature = all[0].records || [];
     if (!id) {

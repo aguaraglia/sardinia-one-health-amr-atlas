@@ -1,3 +1,4 @@
+const assetRoot = document.documentElement.lang === 'en' ? '../' : '';
 const map = L.map('map', { zoomControl: true }).setView([40.12, 9.05], 8);
 const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 18,
@@ -104,7 +105,7 @@ function applyDashboardFilters() {
   const label = targetSelect.selectedOptions[0]?.textContent || 'target selezionato';
   const periodLabel = periodSelect.selectedOptions[0]?.textContent || 'periodo selezionato';
   let visible = 0;
-  let compatibleSources = 0;
+  let compatibleLayers = 0;
   const matches = [];
   const inactiveMatches = new Map();
   filterableKeys.forEach(key => {
@@ -123,14 +124,14 @@ function applyDashboardFilters() {
       if (item._path) item._path.style.pointerEvents = show ? 'auto' : 'none';
       if (item._icon) item._icon.style.display = show ? '' : 'none';
     });
-    if (layerIsActive && layer.getLayers().some(item => featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue))) compatibleSources += 1;
+    if (layerIsActive && layer.getLayers().some(item => featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue))) compatibleLayers += 1;
   });
   const inactiveTotal = [...inactiveMatches.values()].reduce((sum, count) => sum + count, 0);
   const inactiveSummary = inactiveTotal ? ` ${inactiveTotal} ${inactiveTotal === 1 ? 'evidenza compatibile è' : 'evidenze compatibili sono'} in layer non attivi.` : '';
   document.getElementById('amr-state').textContent = `${label} · ${periodLabel}: ${visible} elementi compatibili visibili sulla mappa.${inactiveSummary}`;
   document.getElementById('filter-status').textContent = `${label} · ${periodLabel}`;
   document.getElementById('metric-visible').textContent = visible.toLocaleString('it-IT');
-  document.getElementById('metric-sources').textContent = compatibleSources.toLocaleString('it-IT');
+  document.getElementById('metric-sources').textContent = compatibleLayers.toLocaleString('it-IT');
   document.getElementById('filtered-count').textContent = `${visible} risultati`;
   const list = document.getElementById('filtered-evidence-list');
   if (!list) return;
@@ -194,7 +195,7 @@ document.getElementById('reset-amr-filter').addEventListener('click', () => {
   periodSelect.value = 'ALL_PERIODS';
   applyDashboardFilters();
 });
-fetch('public/data/pncar_env_panel.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/pncar_env_panel.json`).then(r => r.json()).then(d => {
   const group = document.createElement('optgroup');
   group.label = 'Pannello PNCAR';
   d.targets.forEach(target => {
@@ -207,18 +208,18 @@ fetch('public/data/pncar_env_panel.json').then(r => r.json()).then(d => {
   card.hidden = false;
   card.innerHTML = `<strong>${d.panel_name}</strong><br>ARG: ${argList}<br><small>Marker/controllo: ${markerList}. ${d.reporting_note}</small>`;
 }).catch(() => {});
-fetch('public/data/ar_iss_2024_coverage.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/ar_iss_2024_coverage.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('ariss-card');
   card.hidden = false;
   card.innerHTML = `<strong>AR-ISS Sardegna 2024</strong><br>${d.reported_value}% copertura della sorveglianza<br><small>Indicatore di copertura, non prevalenza AMR.</small>`;
 }).catch(() => {});
-fetch('public/data/ar_iss_2024_sardinia_resistance.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/ar_iss_2024_sardinia_resistance.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('ariss-resistance-card');
   const rows = d.observations.map(x => `<tr><td>${x.phenotype}</td><td>${x.resistance_percent}%</td><td>${x.resistant}/${x.isolates}</td></tr>`).join('');
   card.hidden = false;
   card.innerHTML = `<strong>AR-ISS Sardegna 2024 - resistenza</strong><br><small>Copertura ${d.coverage_percent}%</small><table class="evidence-table"><tr><th>Fenotipo</th><th>%</th><th>R/n</th></tr>${rows}</table>`;
 }).catch(() => {});
-fetch('public/data/human_amr_facility_sassari_studies.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/human_amr_facility_sassari_studies.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('human-facility-amr-card');
   const historical = d.records.find(item => item.study_id === 'aou_sassari_kpc_kp_2015_2017');
   const wgs = d.records.find(item => item.study_id === 'aou_sassari_kpc_oxa_wgs_2020_2021');
@@ -240,7 +241,7 @@ fetch('public/data/human_amr_facility_sassari_studies.json').then(r => r.json())
     `<small>Le pubblicazioni KPC/OXA includono coorti potenzialmente sovrapposte e non vanno sommate. ` +
     `<code>blaKPC-31</code> in ${kpc31.positive}/${kpc31.tested} isolati WGS. Dati di struttura, non prevalenza del Comune di Sassari.</small>`;
 }).catch(() => {});
-fetch('public/data/human_amr_local_studies_sardinia.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/human_amr_local_studies_sardinia.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('human-local-amr-card');
   const cagliari = d.records.find(item => item.study_id === 'binaghi_cagliari_efaecalis_2010');
   const network = d.records.find(item => item.study_id === 'sardinia_three_hospital_nas_2017');
@@ -260,7 +261,7 @@ fetch('public/data/human_amr_local_studies_sardinia.json').then(r => r.json()).t
     `Nord Sardegna: ${mycobacteria.mtb_resistant_to_at_least_one_first_line_drug}/${mycobacteria.mycobacterium_tuberculosis_positive} MTB resistenti ad almeno un farmaco di prima linea (${mycobacteria.collection_period}).<br>` +
     `<small>Dati di struttura, rete o area vasta con periodi differenti; nessuna prevalenza comunale della popolazione.</small>`;
 }).catch(() => {});
-fetch('public/data/veterinary_amr_municipal_evidence.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/veterinary_amr_municipal_evidence.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('izs-municipal-amr-card');
   const izs = d.sources.find(item => item.source_id === 'izs_sardegna_bioresource');
   const uberis = d.sources.find(item => item.source_id === 'pmid_35799261_s_uberis_wgs');
@@ -274,7 +275,7 @@ fetch('public/data/veterinary_amr_municipal_evidence.json').then(r => r.json()).
     `${izs.resistant_test_results}/${izs.total_test_results} esiti resistenti (${izs.period}).<br>` +
     `<small>Coorti o collezioni selettive con pannelli differenti: identificazioni comunali, non prevalenza o rischio del comune; i conteggi delle due fonti non vanno sommati.</small>`;
 }).catch(() => {});
-fetch('public/data/izs_sa07_02_north_sardinia_amr.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/izs_sa07_02_north_sardinia_amr.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('izs-area-amr-card');
   const oxytetra = d.antimicrobial_resistance.filter(x => x.antimicrobial === 'oxitetraciclina');
   const sUberis = oxytetra.find(x => x.organism === 'Streptococcus uberis');
@@ -286,7 +287,7 @@ fetch('public/data/izs_sa07_02_north_sardinia_amr.json').then(r => r.json()).the
     `<i>E. coli</i> ${ecoli.resistant}/${ecoli.tested} (${ecoli.resistance_percent}%).<br>` +
     `<small>Rapporto IZS SA 07/02: antibiogrammi storici e sottocampione molecolare. Area di studio, non prevalenza comunale.</small>`;
 }).catch(() => {});
-fetch('public/data/pig_ecoli_sardinia_2024_amr.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/pig_ecoli_sardinia_2024_amr.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('pig-amr-card');
   card.hidden = false;
   card.innerHTML = `<strong>AMR filiera suina · Sardegna</strong><br>` +
@@ -296,7 +297,7 @@ fetch('public/data/pig_ecoli_sardinia_2024_amr.json').then(r => r.json()).then(d
     `Più frequenti: tetracicline (${d.amr_phenotype.resistance_among_resistant_isolates.tetraciclina}%) e ampicillina (${d.amr_phenotype.resistance_among_resistant_isolates.ampicillina}%).<br>` +
     `<small>Studio 2020-2022; aziende e macelli anonimizzati, nessuna attribuzione comunale.</small>`;
 }).catch(() => {});
-fetch('public/data/wild_boar_ecoli_sardinia_2024_amr.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/wild_boar_ecoli_sardinia_2024_amr.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('wild-boar-amr-card');
   card.hidden = false;
   card.innerHTML = `<strong>AMR wildlife · cinghiali sardi</strong><br>` +
@@ -305,7 +306,7 @@ fetch('public/data/wild_boar_ecoli_sardinia_2024_amr.json').then(r => r.json()).
     `${d.amr_genes_detected.join(', ')}).<br>` +
     `<small>Province di Sassari e Nuoro, 2020-2022; dato wildlife aggregato, non comunale.</small>`;
 }).catch(() => {});
-fetch('public/data/food_chain_amr_berchidda.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/food_chain_amr_berchidda.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('food-chain-amr-card');
   const culture = d.cultures.find(item => item.culture_id === 'SR56');
   card.hidden = false;
@@ -314,7 +315,7 @@ fetch('public/data/food_chain_amr_berchidda.json').then(r => r.json()).then(d =>
     `${culture.phenotypic_growth_above_cutoff.join(', ')} e gene <code>${culture.resistance_genes_detected.join(', ')}</code>.<br>` +
     `<small>${d.interpretation_note}</small>`;
 }).catch(() => {});
-fetch('public/data/environmental_amr_water_bodies_2024.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/environmental_amr_water_bodies_2024.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('environmental-amr-card');
   const bidighinzu = d.water_bodies.find(item => item.water_body_id === 'lake_bidighinzu');
   const cabras = d.water_bodies.find(item => item.water_body_id === 'cabras_lagoon');
@@ -327,7 +328,7 @@ fetch('public/data/environmental_amr_water_bodies_2024.json').then(r => r.json()
     `Patogeni potenziali, inclusi ESKAPE, più abbondanti nel Bidighinzu. ` +
     `Risultati aggregati, non prevalenza clinica.</small>`;
 }).catch(() => {});
-fetch('public/data/literature_curated_sardinia.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/literature_curated_sardinia.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('literature-card');
   const body = document.getElementById('literature-table-body');
   const overviewLiterature = document.getElementById('overview-literature');
@@ -339,31 +340,31 @@ fetch('public/data/literature_curated_sardinia.json').then(r => r.json()).then(d
       .map(record => `<tr><td>${record.year}</td><td><a href="${record.source_url}" target="_blank" rel="noreferrer">${record.pmid}</a></td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${escapeHtml(record.title)}</td><td><a class="table-action" href="evidence.html?id=${encodeURIComponent(record.study_id)}">Apri scheda</a></td></tr>`)
       .join('');
   }
-  return fetch('public/data/literature_curated_summary.json').then(r => r.json()).then(summary => {
+  return fetch(`${assetRoot}public/data/literature_curated_summary.json`).then(r => r.json()).then(summary => {
     const hosts = summary.hosts.slice(0, 4).map(x => `${x.host} (${x.study_count})`).join(', ');
     card.hidden = false;
     card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}). Host principali: ${hosts}.<br><a class="inline-action" href="evidence.html">Apri l’elenco completo delle evidenze →</a>`;
   });
 }).catch(() => {});
-fetch('public/data/aifa_osmed_2024_antibiotics.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/aifa_osmed_2024_antibiotics.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('aifa-card');
   const top = d.records.slice(0, 3).map(x => `${x.active_ingredient} (${x.ddd_1000_ab_die} DDD/1000 ab die)`).join('; ');
   card.hidden = false;
   card.innerHTML = `<strong>AIFA/OsMed Sardegna 2024</strong><br>Principali antibiotici convenzionati: ${top}<br><small>Consumo, non resistenza.</small>`;
 }).catch(() => {});
-fetch('public/data/bdn_ovicaprini_sardegna_2025.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/bdn_ovicaprini_sardegna_2025.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('bdn-card');
   const values = Object.fromEntries(d.records.map(x => [x.species, x.heads.toLocaleString('it-IT')]));
   card.hidden = false;
   card.innerHTML = `<strong>BDN Sardegna – patrimonio ovicaprino</strong><br>31/12/2025: ${values.OVINI} ovini; ${values.CAPRINI} caprini.<br><small>Aggregato regionale di contesto, non indicatore AMR.</small>`;
 }).catch(() => {});
-fetch('public/data/bdn_bovini_sardegna_2025.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/bdn_bovini_sardegna_2025.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('bdn-bov-card');
   const values = Object.fromEntries(d.records.map(x => [x.species, x.heads.toLocaleString('it-IT')]));
   card.hidden = false;
   card.innerHTML = `<strong>BDN Sardegna – bovini e bufalini</strong><br>31/12/2025: ${values.BOVINI} bovini; ${values.BUFALINI} bufalini.<br><small>Aggregato regionale di contesto, non indicatore AMR.</small>`;
 }).catch(() => {});
-fetch('public/data/bdn_suini_sardegna_2025.json').then(r => r.json()).then(d => {
+fetch(`${assetRoot}public/data/bdn_suini_sardegna_2025.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('bdn-suini-card');
   card.hidden = false;
   card.innerHTML = `<strong>BDN Sardegna – suini</strong><br>31/12/2025: ${d.records[0].heads.toLocaleString('it-IT')} capi.<br><small>Aggregato regionale di contesto, non indicatore AMR.</small>`;
@@ -430,7 +431,7 @@ function popup(feature, cfg) {
 }
 
 Promise.all(configs.map(async cfg => {
-  const response = await fetch(cfg.file);
+  const response = await fetch(`${assetRoot}${cfg.file}`);
   if (!response.ok) throw new Error(`${cfg.label}: HTTP ${response.status}`);
   const data = await response.json();
   if (cfg.key === 'arissSites') {

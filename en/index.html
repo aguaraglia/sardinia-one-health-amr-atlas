@@ -1,83 +1,83 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sardinia One Health AMR Atlas</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="atlas-dashboard">
   <div class="dashboard-shell">
-    <aside class="dashboard-sidebar" aria-label="Filtri dell'atlante">
+    <aside class="dashboard-sidebar" aria-label="Filters dell'atlante">
       <a class="atlas-brand" href="index.html" aria-label="Sardinia One Health AMR Atlas">
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
         <span><strong>Sardinia<br>One Health</strong><small>AMR Atlas</small></span>
       </a>
       <div class="sidebar-scroll">
-        <p class="sidebar-kicker">Filtri</p>
-        <p class="panel-note">Evidenze pubbliche aggregate: i target, i periodi e i layer di contesto restano distinti.</p>
-        <label for="amr-target">Classe o target AMR</label>
-        <select id="amr-target"><option value="AMR_ANY">Tutte le classi</option></select>
-        <label for="amr-period">Periodo dell'evidenza</label>
+        <p class="sidebar-kicker">Filters</p>
+        <p class="panel-note">Evidence pubbliche aggregate: i target, i periodi e i layer di contesto restano distinti.</p>
+        <label for="amr-target">AMR class or target</label>
+        <select id="amr-target"><option value="AMR_ANY">All classes</option></select>
+        <label for="amr-period">Evidence period</label>
         <select id="amr-period">
-          <option value="ALL_PERIODS">Tutti i periodi pubblicati</option>
+          <option value="ALL_PERIODS">All published periods</option>
           <option value="1995_2009">1995–2009</option>
           <option value="2010_2019">2010–2019</option>
           <option value="2020_2026">2020–2026</option>
         </select>
         <div id="amr-state" class="amr-state">Seleziona un target per filtrare le evidenze pubbliche disponibili.</div>
         <div class="dashboard-tools">
-          <button id="reset-amr-filter" type="button">Azzera filtro</button>
+          <button id="reset-amr-filter" type="button">Reset filters</button>
           <span id="filter-status" aria-live="polite">Filtro: tutte le evidenze</span>
         </div>
         <div class="dashboard-metrics" aria-label="Riepilogo dinamico">
-          <div><strong id="metric-visible">—</strong><span>elementi visibili</span></div>
-          <div><strong id="metric-sources">—</strong><span>layer compatibili</span></div>
+          <div><strong id="metric-visible">—</strong><span>visible items</span></div>
+          <div><strong id="metric-sources">—</strong><span>matching layers</span></div>
         </div>
         <section class="time-profile" aria-labelledby="time-profile-title">
-          <div class="filtered-heading"><h3 id="time-profile-title">Profilo temporale</h3><span>elementi</span></div>
+          <div class="filtered-heading"><h3 id="time-profile-title">Time profile</h3><span>elementi</span></div>
           <div id="time-distribution" class="time-distribution" aria-live="polite"></div>
         </section>
         <section class="filtered-evidence" aria-labelledby="filtered-evidence-title">
           <div class="filtered-heading"><h3 id="filtered-evidence-title">Risultati del filtro</h3><span id="filtered-count">—</span></div>
-          <div id="filtered-evidence-list"><p class="empty-filter">Caricamento dati…</p></div>
+          <div id="filtered-evidence-list"><p class="empty-filter">Loading data…</p></div>
         </section>
       </div>
     </aside>
     <div class="dashboard-workspace">
       <header class="workspace-topbar">
         <nav class="workspace-nav" aria-label="Navigazione principale">
-          <a class="active" href="index.html">Panoramica</a>
-          <a href="evidence.html">Evidenze</a>
-          <a href="#literature-title">Letteratura</a>
-          <a href="methodology.html">Metodo</a>
-          <a href="about.html">Chi siamo</a>
-          <a href="dissemination.html">Divulgazione</a>
-          <a href="en/index.html" lang="en">EN</a>
+          <a class="active" href="index.html">Overview</a>
+          <a href="evidence.html">Evidence</a>
+          <a href="#literature-title">Literature</a>
+          <a href="methodology.html">Method</a>
+          <a href="about.html">About</a>
+          <a href="dissemination.html">Outreach</a>
+          <a href="../index.html" lang="it">IT</a>
         </nav>
         <span class="status" id="status">Caricamento layer…</span>
       </header>
       <main class="workspace-main">
         <section class="intro">
-          <div><p class="section-kicker">CRUSCOTTO PUBBLICO</p><h1>Evidenze AMR in Sardegna</h1></div>
+          <div><p class="section-kicker">PUBLIC DASHBOARD</p><h1>AMR evidence in Sardinia</h1></div>
           <p>Filtra insieme classe antimicrobica e periodo. La mappa mostra evidenze localizzate; i conteggi sono elementi documentati, non una prevalenza regionale.</p>
         </section>
         <section class="overview-strip" aria-label="Copertura pubblica dell'atlante">
-          <div><strong id="overview-localized">—</strong><span>evidenze mappate</span></div>
-          <div><strong id="overview-veterinary">—</strong><span>comuni veterinari</span></div>
-          <div><strong id="overview-human">—</strong><span>strutture umane</span></div>
+          <div><strong id="overview-localized">—</strong><span>mapped evidence</span></div>
+          <div><strong id="overview-veterinary">—</strong><span>veterinary municipalities</span></div>
+          <div><strong id="overview-human">—</strong><span>human facilities</span></div>
           <div><strong id="overview-ariss">—</strong><span>laboratori AR-ISS</span></div>
-          <div><strong id="overview-literature">—</strong><span>studi curati</span></div>
+          <div><strong id="overview-literature">—</strong><span>curated studies</span></div>
         </section>
         <div class="atlas-grid">
           <section class="map-stage" aria-label="Mappa amministrativa della Sardegna"><div id="map"></div></section>
           <aside class="results-rail" aria-labelledby="selected-evidence-title">
             <p class="rail-kicker">DETTAGLIO</p>
-            <h2 id="selected-evidence-title">Evidenza selezionata</h2>
-            <div id="selected-evidence" class="selected-evidence"><p>Seleziona un elemento dalla mappa o dall’elenco dei risultati per leggerne contesto, periodo e limiti di interpretazione.</p></div>
-            <a class="rail-link" href="evidence.html">Apri evidenze e fonti <span aria-hidden="true">→</span></a>
+            <h2 id="selected-evidence-title">Selected evidence</h2>
+            <div id="selected-evidence" class="selected-evidence"><p>Seleziona un elemento dalla mappa o dall’elenco dei results per leggerne contesto, periodo e limiti di interpretazione.</p></div>
+            <a class="rail-link" href="evidence.html">Open evidence and sources <span aria-hidden="true">→</span></a>
           </aside>
         </div>
         <section class="temporal-strip" aria-labelledby="temporal-strip-title">
@@ -88,13 +88,13 @@
           <div class="data-digest-heading">
             <div>
               <p class="section-kicker">QUADRO DATI</p>
-              <h2 id="data-digest-title">Fonti e indicatori pubblici</h2>
+              <h2 id="data-digest-title">Public sources and indicators</h2>
             </div>
-            <a href="evidence.html">Apri tutte le schede</a>
+            <a href="evidence.html">Open all records</a>
           </div>
           <div class="digest-grid">
             <section class="digest-group" aria-labelledby="digest-observed-title">
-              <h3 id="digest-observed-title">Dati osservati</h3>
+              <h3 id="digest-observed-title">Observed data</h3>
               <div id="ariss-resistance-card" class="evidence-card"><strong>AR-ISS Sardegna 2024 - resistenza</strong><br><small>Copertura 75,4%</small><table class="evidence-table"><tr><th>Fenotipo</th><th>%</th><th>R/n</th></tr><tr><td>MRSA</td><td>18,8%</td><td>63/335</td></tr><tr><td>VRE-faecium</td><td>9,6%</td><td>16/167</td></tr><tr><td>CREC</td><td>16,4%</td><td>114/697</td></tr><tr><td>CRKP</td><td>18,3%</td><td>78/427</td></tr><tr><td>CRPA</td><td>10,4%</td><td>21/201</td></tr><tr><td>CRAS</td><td>61,1%</td><td>22/36</td></tr></table></div>
               <div id="human-facility-amr-card" class="evidence-card" hidden></div>
               <div id="human-local-amr-card" class="evidence-card" hidden></div>
@@ -117,7 +117,7 @@
             </section>
           </div>
           <details class="source-panel">
-            <summary>Fonti regionali</summary>
+            <summary>Regional sources</summary>
             <ul class="source-links">
               <li><a href="https://www.epicentro.iss.it/antibiotico-resistenza/ar-iss-rapporto" target="_blank" rel="noreferrer">AR-ISS</a></li>
               <li><a href="https://pubmed.ncbi.nlm.nih.gov/29621600/" target="_blank" rel="noreferrer">AOU Sassari · KPC-Kp 2015-2017</a></li>
@@ -152,7 +152,7 @@
         </section>
         <section class="literature-section" aria-labelledby="literature-title">
       <div>
-        <h2 id="literature-title">Letteratura AMR curata</h2>
+        <h2 id="literature-title">Literature AMR curata</h2>
         <p>Studi riferiti alla Sardegna. Ogni riga è evidenza bibliografica eterogenea: non viene sommata come prevalenza regionale.</p>
       </div>
       <div class="table-wrap">
@@ -168,7 +168,7 @@
             </tr>
           </thead>
           <tbody id="literature-table-body">
-            <tr><td colspan="6">Caricamento letteratura…</td></tr>
+            <tr><td colspan="6">Loading literature…</td></tr>
           </tbody>
         </table>
       </div>
@@ -181,6 +181,6 @@
     </div>
   </div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="app.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>

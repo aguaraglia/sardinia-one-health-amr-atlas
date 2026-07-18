@@ -1,36 +1,174 @@
 {
   "source_id": "letteratura_curata",
-  "dataset_version": "atlas-curated-v0.6",
-  "record_count": 31,
-  "year_min": 2010,
+  "dataset_version": "atlas-curated-v0.7",
+  "record_count": 36,
+  "year_min": 2000,
   "year_max": 2026,
   "public_geography": "Sardegna",
   "privacy": "public",
   "hosts": [
-    {"host": "pig", "study_count": 4},
-    {"host": "human", "study_count": 12},
-    {"host": "sheep", "study_count": 8},
-    {"host": "wild boar", "study_count": 2},
-    {"host": "poultry", "study_count": 1},
-    {"host": "goat", "study_count": 1},
-    {"host": "environment", "study_count": 1},
-    {"host": "hospital environment", "study_count": 2},
-    {"host": "dairy chain", "study_count": 2},
-    {"host": "sheep food chain", "study_count": 2}
+    {
+      "host": "human",
+      "study_count": 16
+    },
+    {
+      "host": "sheep",
+      "study_count": 8
+    },
+    {
+      "host": "pig",
+      "study_count": 4
+    },
+    {
+      "host": "dairy chain",
+      "study_count": 3
+    },
+    {
+      "host": "hospital environment",
+      "study_count": 2
+    },
+    {
+      "host": "sheep food chain",
+      "study_count": 2
+    },
+    {
+      "host": "wild boar",
+      "study_count": 2
+    },
+    {
+      "host": "animal",
+      "study_count": 1
+    },
+    {
+      "host": "cattle",
+      "study_count": 1
+    },
+    {
+      "host": "environment",
+      "study_count": 1
+    },
+    {
+      "host": "goat",
+      "study_count": 1
+    },
+    {
+      "host": "poultry",
+      "study_count": 1
+    },
+    {
+      "host": "swine",
+      "study_count": 1
+    }
   ],
   "organism_groups": [
-    {"organism": "Staphylococcus spp.", "study_count": 5},
-    {"organism": "Streptococcus uberis", "study_count": 2},
-    {"organism": "Salmonella/Yersinia", "study_count": 6},
-    {"organism": "Escherichia spp.", "study_count": 2},
-    {"organism": "Klebsiella pneumoniae", "study_count": 5},
-    {"organism": "Enterococcus spp.", "study_count": 4},
-    {"organism": "Acinetobacter baumannii", "study_count": 2},
-    {"organism": "Mycobacterium spp.", "study_count": 1},
-    {"organism": "Respiratory mixed pathogens", "study_count": 1},
-    {"organism": "Environmental microbiome", "study_count": 1},
-    {"organism": "Lactic acid bacteria", "study_count": 2},
-    {"organism": "Streptococcus ruminantium", "study_count": 1}
+    {
+      "organism": "Klebsiella pneumoniae",
+      "study_count": 6
+    },
+    {
+      "organism": "Yersinia enterocolitica",
+      "study_count": 4
+    },
+    {
+      "organism": "Enterococcus faecium",
+      "study_count": 3
+    },
+    {
+      "organism": "Salmonella spp.",
+      "study_count": 3
+    },
+    {
+      "organism": "Staphylococcus aureus",
+      "study_count": 3
+    },
+    {
+      "organism": "Acinetobacter baumannii",
+      "study_count": 2
+    },
+    {
+      "organism": "Enterococcus faecalis",
+      "study_count": 2
+    },
+    {
+      "organism": "Escherichia coli",
+      "study_count": 2
+    },
+    {
+      "organism": "Helicobacter pylori",
+      "study_count": 2
+    },
+    {
+      "organism": "Streptococcus uberis",
+      "study_count": 2
+    },
+    {
+      "organism": "coagulase-negative Staphylococcus spp.",
+      "study_count": 1
+    },
+    {
+      "organism": "environmental microbiome",
+      "study_count": 1
+    },
+    {
+      "organism": "Escherichia marmotae",
+      "study_count": 1
+    },
+    {
+      "organism": "Escherichia ruysiae",
+      "study_count": 1
+    },
+    {
+      "organism": "Lactic acid bacteria",
+      "study_count": 1
+    },
+    {
+      "organism": "Lacticaseibacillus paracasei",
+      "study_count": 1
+    },
+    {
+      "organism": "Lactiplantibacillus plantarum",
+      "study_count": 1
+    },
+    {
+      "organism": "Leptospira spp.",
+      "study_count": 1
+    },
+    {
+      "organism": "Mycobacterium tuberculosis",
+      "study_count": 1
+    },
+    {
+      "organism": "non-aureus Staphylococcus spp.",
+      "study_count": 1
+    },
+    {
+      "organism": "nontuberculous mycobacteria",
+      "study_count": 1
+    },
+    {
+      "organism": "potentially pathogenic bacteria",
+      "study_count": 1
+    },
+    {
+      "organism": "respiratory pathogens",
+      "study_count": 1
+    },
+    {
+      "organism": "Salmonella enterica",
+      "study_count": 1
+    },
+    {
+      "organism": "Salmonella Typhi",
+      "study_count": 1
+    },
+    {
+      "organism": "Staphylococcus epidermidis",
+      "study_count": 1
+    },
+    {
+      "organism": "Streptococcus ruminantium",
+      "study_count": 1
+    }
   ],
   "notes": "Sintesi descrittiva del registro bibliografico. Gli studi sono eterogenei e non sono sommati come prevalenza regionale."
 }
