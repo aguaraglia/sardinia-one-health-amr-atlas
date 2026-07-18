@@ -1,8 +1,9 @@
 """Create a transparent screening prototype for wastewater-plant hydrology.
 
 This script deliberately does not infer an authorised discharge point or a
-downstream route. The current regional hydrography has no topology or flow
-direction fields, so it can only support a proximity screening.
+downstream route. The legacy public hydrography bundled with the atlas has no topology or flow
+direction fields, so it can only support a proximity screening. A newer official WFS network is
+handled separately in a private validation workflow.
 """
 from __future__ import annotations
 

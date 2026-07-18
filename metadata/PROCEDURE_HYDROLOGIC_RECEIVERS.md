@@ -2,7 +2,7 @@
 
 ## Stato attuale: solo screening di prossimità
 
-Il layer DBGT dei corsi d'acqua disponibile nel repository contiene geometrie e nomi, ma non una rete topologica completa, una direzione di deflusso o un recapito autorizzato. Per questo motivo la distanza geometrica da un corso d'acqua **non prova** che un impianto scarichi in quel corso, né consente di affermare dove l'effluente finisca.
+Il layer DBGT storico disponibile nel repository contiene geometrie e nomi, ma non una rete topologica completa, una direzione di deflusso o un recapito autorizzato. Per questo motivo la distanza geometrica da un corso d'acqua **non prova** che un impianto scarichi in quel corso, né consente di affermare dove l'effluente finisca.
 
 `scripts/build_hydrologic_receiver_prototype.py` crea un campione iniziale di 20 impianti urbani attivi, ordinati per distanza dal corso nominato più vicino. Il campo sorgente `ABITANTI_SERVITI` non viene usato per la priorità: nel GeoJSON SIRA contiene in molti record valori binari non interpretabili (ad esempio numeri dell'ordine di `1e-320`) e non può sostenere un'inferenza pubblica. L'output `reports/hydrologic_receiver_prototype_20.tsv` usa volutamente i campi `authorised_receiver = not_assessed` e `downstream_path = not_assessed`.
 
@@ -19,6 +19,7 @@ Per ogni impianto del prototipo servono, in ordine:
 ## Pubblicazione e privacy
 
 La mappa pubblica può mostrare solo il recettore documentato o modellato, il bacino a valle, il metodo e la confidenza. Non deve esporre coordinate private di scarico, aziende conferenti, allacciamenti o inferenze su singoli soggetti. L'attribuzione di Comuni o aziende a un depuratore richiede una fonte amministrativa esplicita, non una deduzione geografica.
+
 ## Fonte altimetrica candidata, verificata il 2026-07-18
 
 Il Geoportale della Regione Sardegna rende disponibile il DTM 10 m regionale tramite WMS. Il servizio verificato è:
@@ -28,13 +29,29 @@ https://webgis.regione.sardegna.it/geoserverraster/wms?service=WMS&request=GetCa
 ```
 
 Nel documento GetCapabilities è presente il layer `raster:DTM_10M_ALTIMETRIA_REV01`. Prima di usare valori di quota in un modello, il team deve scaricare o ottenere un raster analizzabile con licenza e sistema di riferimento documentati: un WMS di visualizzazione non sostituisce un DTM locale per calcoli riproducibili. La Regione indica che il DTM 10 m copre l'intero territorio regionale; i DTM 1 m sono invece disponibili soltanto in aree specifiche.
+
 ## Orientamento locale del prototipo
 
 `scripts/enrich_hydrologic_prototype_with_dtm.py` abbina ciascuno dei 20 impianti del campione al segmento DBGT geometricamente più vicino e usa il coverage WCS `raster__DTM_10M_ALTIMETRIA_REV01` per campionare quota agli estremi del segmento. L’output può indicare soltanto un orientamento locale del segmento (`nearest_segment_start_to_end`, `nearest_segment_end_to_start` o `uncertain_flat_or_below_dtm_resolution`).
 
 Questo passaggio **non** stabilisce un recapito autorizzato, una connessione idrologica tra segmenti o il corpo idrico finale. Per una traccia a valle restano indispensabili topologia, snapping controllato, gestione di confluenze e validazione amministrativa.
+
 ## Disponibilità WCS e limite operativo verificato il 2026-07-18
 
 Il coverage WCS ufficiale è stato interrogato con successo su piccoli riquadri (campionamento agli estremi dei segmenti del prototipo). I tentativi di ottenere l'intera Sardegna, anche a risoluzione degradata, non sono invece riproducibili: il server ha restituito timeout e, per una richiesta parziale, `java.io.IOException: No space left on device`. È un limite del servizio remoto, non un risultato idrologico.
 
 Finché non sarà disponibile un download regionale stabile o una rete idrografica topologica ufficiale, l'atlante non deve mostrare predizioni di recapito a valle. Il prototipo rimane un controllo tecnico locale, conservato nel report, con classe `not_assessed` per recapito e percorso a valle.
+
+## Rete regionale orientata: validazione privata iniziale
+
+Il WFS del Geoportale regionale espone ora il layer `dbu:elemento_idrico_strahler` del DBGT10K v05, interrogabile all'indirizzo:
+
+```text
+https://webgis.regione.sardegna.it/geoserver/dbu/wfs
+```
+
+La descrizione ufficiale definisce il reticolo naturale come connesso, orientato e ordinato. Il layer Strahler scaricato il 2026-07-18 contiene 229.290 segmenti, 7 sottobacini e geometrie con ordine dei vertici. Un controllo locale delle estremità, arrotondate a 7 decimali, ha collegato 224.878 segmenti al successivo (98,1%); 4.412 estremità restano terminali e devono essere interpretate come possibili foci, discontinuità o limiti di copertura, non come mare o recapito certo.
+
+Il verso è stato confrontato con il DTM regionale 10 m su 12 segmenti casuali: 7 mostrano una discesa superiore a 1 m dal primo all'ultimo vertice, 5 risultano piatti entro la risoluzione e nessuno risulta chiaramente in salita. È un controllo di coerenza, non una validazione assoluta del verso di ogni tratto.
+
+`scripts/fetch_regional_hydrograph.py` salva il WFS esclusivamente in `private/hydrology/`. `scripts/build_hydrograph_candidate.py` crea, sempre in area privata, un campione di 20 impianti con segmento più vicino, eventuale cammino candidato, diramazioni ambigue e terminali non classificati. L'associazione iniziale resta di prossimità: non identifica il punto di scarico, il recapito autorizzato né un corpo idrico finale da rendere pubblico.
