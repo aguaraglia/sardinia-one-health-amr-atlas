@@ -22,6 +22,7 @@ NEAREST = ROOT / "public" / "data" / "sira_depuratori_nearest_river.csv"
 DEFAULT_NETWORK = ROOT / "private" / "hydrology" / "elemento_idrico_strahler_2026-07-18.geojson"
 DEFAULT_OUTPUT = ROOT / "private" / "hydrology" / "hydrograph_candidate_prototype_20.tsv"
 DEFAULT_SUMMARY = ROOT / "private" / "hydrology" / "hydrograph_candidate_summary.json"
+GRID_SIZE_DEGREES = 0.025
 
 
 def key(point: list[float], precision: int = 7) -> tuple[float, float]:
@@ -47,7 +48,7 @@ def distance_to_line_km(point: list[float], line: list[list[float]]) -> float:
     return min(point_segment_km(point, start, end) for start, end in zip(line, line[1:]))
 
 
-def active_urban_screening() -> list[dict[str, str]]:
+def active_urban_screening(limit: int) -> list[dict[str, str]]:
     with POINTS.open(encoding="utf-8") as handle:
         features = json.load(handle)["features"]
     with NEAREST.open(encoding="utf-8", newline="") as handle:
@@ -67,7 +68,8 @@ def active_urban_screening() -> list[dict[str, str]]:
             "point": feature["geometry"]["coordinates"],
             "proximity_km": float(reference["distanza_approssimata_km"]),
         })
-    return sorted(rows, key=lambda row: (row["proximity_km"], row["municipality"], row["sira_id"]))[:20]
+    rows = sorted(rows, key=lambda row: (row["proximity_km"], row["municipality"], row["sira_id"]))
+    return rows if limit == 0 else rows[:limit]
 
 
 def load_segments(network: Path) -> list[dict]:
@@ -79,8 +81,11 @@ def load_segments(network: Path) -> list[dict]:
         for line in feature["geometry"]["coordinates"]:
             if len(line) < 2:
                 continue
+            xs = [point[0] for point in line]
+            ys = [point[1] for point in line]
             segments.append({
                 "start": line[0], "end": line[-1], "line": line,
+                "bbox": (min(xs), min(ys), max(xs), max(ys)),
                 "segment_id": props.get("segmentid", ""),
                 "name": props.get("nome", ""), "basin": props.get("sub_bacino", ""),
                 "strahler": props.get("n_strahler"),
@@ -88,12 +93,45 @@ def load_segments(network: Path) -> list[dict]:
     return segments
 
 
-def nearest_segment(point: list[float], segments: list[dict]) -> tuple[int, float]:
+def grid_cell(x: float, y: float, size: float = GRID_SIZE_DEGREES) -> tuple[int, int]:
+    return math.floor(x / size), math.floor(y / size)
+
+
+def build_spatial_index(segments: list[dict], size: float = GRID_SIZE_DEGREES) -> dict[tuple[int, int], list[int]]:
+    """Index segment bounding boxes in a coarse geographic grid for private screening."""
+    index: dict[tuple[int, int], list[int]] = defaultdict(list)
+    for segment_index, segment in enumerate(segments):
+        xmin, ymin, xmax, ymax = segment["bbox"]
+        ix0, iy0 = grid_cell(xmin, ymin, size)
+        ix1, iy1 = grid_cell(xmax, ymax, size)
+        for ix in range(ix0, ix1 + 1):
+            for iy in range(iy0, iy1 + 1):
+                index[ix, iy].append(segment_index)
+    return index
+
+
+def nearest_segment(point: list[float], segments: list[dict], spatial_index: dict[tuple[int, int], list[int]], size: float = GRID_SIZE_DEGREES) -> tuple[int, float]:
+    """Find a nearest line while expanding the grid only as far as required."""
+    ix, iy = grid_cell(point[0], point[1], size)
+    candidates: set[int] = set()
     best_index, best_distance = -1, float("inf")
-    for index, segment in enumerate(segments):
-        distance = distance_to_line_km(point, segment["line"])
-        if distance < best_distance:
-            best_index, best_distance = index, distance
+    for radius in range(0, 81):
+        for gx in range(ix - radius, ix + radius + 1):
+            for gy in range(iy - radius, iy + radius + 1):
+                if radius and max(abs(gx - ix), abs(gy - iy)) != radius:
+                    continue
+                for segment_index in spatial_index.get((gx, gy), []):
+                    if segment_index in candidates:
+                        continue
+                    candidates.add(segment_index)
+                    distance = distance_to_line_km(point, segments[segment_index]["line"])
+                    if distance < best_distance:
+                        best_index, best_distance = segment_index, distance
+        # The next unsearched ring begins at least roughly radius grid cells away.
+        if radius >= 1 and best_index >= 0 and best_distance <= radius * size * 70:
+            return best_index, best_distance
+    if best_index < 0:
+        raise RuntimeError("No network segment found within grid search extent")
     return best_index, best_distance
 
 
@@ -123,18 +161,22 @@ def main() -> None:
     parser.add_argument("--network", type=Path, default=DEFAULT_NETWORK)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY)
+    parser.add_argument("--limit", type=int, default=20, help="Plants to screen; use 0 for all active urban plants.")
     args = parser.parse_args()
+    if args.limit < 0:
+        raise SystemExit("--limit must be zero or positive")
     if not args.network.exists():
         raise SystemExit(f"Private WFS snapshot not found: {args.network}")
 
     segments = load_segments(args.network)
+    spatial_index = build_spatial_index(segments)
     starts: dict[tuple[float, float], list[int]] = defaultdict(list)
     for index, segment in enumerate(segments):
         starts[key(segment["start"])].append(index)
 
     output_rows = []
-    for plant in active_urban_screening():
-        index, distance = nearest_segment(plant["point"], segments)
+    for plant in active_urban_screening(args.limit):
+        index, distance = nearest_segment(plant["point"], segments, spatial_index)
         route = route_from(index, segments, starts)
         source = segments[index]
         last = segments[route["path"][-1]]
@@ -168,7 +210,8 @@ def main() -> None:
         "segments": len(segments),
         "connected_endpoints": len(segments) - terminals,
         "terminal_edges": terminals,
-        "prototype_plants": len(output_rows),
+        "screened_plants": len(output_rows),
+        "screening_limit": args.limit,
         "route_statuses": dict(Counter(row["network_route_status"] for row in output_rows)),
         "safety_note": "No authorised receiver, discharge point or public downstream destination is inferred.",
     }

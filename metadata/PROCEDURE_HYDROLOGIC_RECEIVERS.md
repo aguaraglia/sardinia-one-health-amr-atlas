@@ -67,3 +67,12 @@ Nessun corpo recettore storico o collegamento verso un consortile viene visualiz
 Per acquisire un recapito corrente senza deduzioni, usare `metadata/REQUEST_CURRENT_DISCHARGE_AUTHORIZATIONS.md` e importare gli estratti ricevuti in `private/hydrology/receiver_authorizations.tsv`, basato su `metadata/HYDROLOGIC_RECEIVER_AUTHORIZATION_TEMPLATE.tsv`. Il validatore `scripts/validate_receiver_authorizations.py` ammette come potenzialmente `documented_current` soltanto atti autorizzativi, estratti SIRA ufficiali o conferme tecniche del gestore con stato `valid`; non pubblica nomi dei recettori, riferimenti privati o coordinate.
 
 La sequenza operativa preferita è: estratto SIRA/DeSAC regionale, validazione degli ID e della validità, quindi richiesta agli enti territorialmente competenti soltanto per le lacune. ARPAS è una fonte di controllo e informazione ambientale, non una sostituzione dell'atto autorizzativo. Il percorso dettagliato e i riferimenti istituzionali sono mantenuti in metadata/REQUEST_CURRENT_DISCHARGE_AUTHORIZATIONS.md.
+## Screening regionale privato (560 impianti urbani attivi)
+
+Dal 2026-07-18 lo script accetta `--limit`: il valore `0` elabora tutti gli impianti urbani attivi, mantenendo il risultato esclusivamente in `private/hydrology/`. Il comando riproducibile è:
+
+```text
+python scripts/build_hydrograph_candidate.py --limit 0 --output private/hydrology/hydrograph_candidate_active_urban_560.tsv --summary private/hydrology/hydrograph_candidate_active_urban_560_summary.json
+```
+
+Lo screening ha elaborato 560 impianti: 316 percorsi hanno una `branch_ambiguous`, 244 raggiungono un `network_terminal_unclassified`. Tali stati descrivono il comportamento della rete e le sue ambiguità, **non** un fiume recettore, il mare, un punto di scarico o un destino finale. Ogni riga conserva `authorised_receiver = not_assessed`; i file non sono pubblicati né indicizzati dal sito.
