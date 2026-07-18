@@ -55,3 +55,10 @@ La descrizione ufficiale definisce il reticolo naturale come connesso, orientato
 Il verso è stato confrontato con il DTM regionale 10 m su 12 segmenti casuali: 7 mostrano una discesa superiore a 1 m dal primo all'ultimo vertice, 5 risultano piatti entro la risoluzione e nessuno risulta chiaramente in salita. È un controllo di coerenza, non una validazione assoluta del verso di ogni tratto.
 
 `scripts/fetch_regional_hydrograph.py` salva il WFS esclusivamente in `private/hydrology/`. `scripts/build_hydrograph_candidate.py` crea, sempre in area privata, un campione di 20 impianti con segmento più vicino, eventuale cammino candidato, diramazioni ambigue e terminali non classificati. L'associazione iniziale resta di prossimità: non identifica il punto di scarico, il recapito autorizzato né un corpo idrico finale da rendere pubblico.
+## Evidenza storica ARPAS su corpi recettori
+
+Il rapporto ARPAS *Rapporto sulle attività espletate e sullo stato dei depuratori fognari controllati - Anno 2015* documenta, per Cagliari e Medio Campidano, una matrice Comune/impianto, bacino e corpo recettore (pagine 22-26). Sono stati trascritti 32 record in `metadata/HYDROLOGIC_RECEIVER_EVIDENCE.tsv`; il catalogo fonte è `arpas_depuratori_controllati_2015`.
+
+Questi record sono etichettati `historical_2015_matrix` e `source_extracted_needs_sira_match`: attestano ciò che ARPAS riportava e controllava nel 2015, non una autorizzazione vigente né la configurazione attuale dell'impianto. `scripts/match_hydrologic_receiver_evidence.py` crea solo nell'area privata una lista di candidati SIRA per Comune. Un singolo candidato comunale richiede comunque controllo di denominazione, stato operativo, atto autorizzativo e, se necessario, del gestore.
+
+Nessun corpo recettore storico o collegamento verso un consortile viene visualizzato automaticamente nella mappa pubblica. Le coordinate dei punti di scarico e le reti fognarie restano private.
