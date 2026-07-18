@@ -65,3 +65,5 @@ Nessun corpo recettore storico o collegamento verso un consortile viene visualiz
 ## Acquisizione di autorizzazioni correnti
 
 Per acquisire un recapito corrente senza deduzioni, usare `metadata/REQUEST_CURRENT_DISCHARGE_AUTHORIZATIONS.md` e importare gli estratti ricevuti in `private/hydrology/receiver_authorizations.tsv`, basato su `metadata/HYDROLOGIC_RECEIVER_AUTHORIZATION_TEMPLATE.tsv`. Il validatore `scripts/validate_receiver_authorizations.py` ammette come potenzialmente `documented_current` soltanto atti autorizzativi, estratti SIRA ufficiali o conferme tecniche del gestore con stato `valid`; non pubblica nomi dei recettori, riferimenti privati o coordinate.
+
+La sequenza operativa preferita è: estratto SIRA/DeSAC regionale, validazione degli ID e della validità, quindi richiesta agli enti territorialmente competenti soltanto per le lacune. ARPAS è una fonte di controllo e informazione ambientale, non una sostituzione dell'atto autorizzativo. Il percorso dettagliato e i riferimenti istituzionali sono mantenuti in metadata/REQUEST_CURRENT_DISCHARGE_AUTHORIZATIONS.md.

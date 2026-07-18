@@ -13,8 +13,15 @@ La richiesta non deve includere coordinate di scarico, nominativi di utenze, azi
 ## Destinatari e ordine consigliato
 
 1. Ufficio competente dell'ente che ha rilasciato o detiene l'autorizzazione allo scarico (Provincia/Città Metropolitana/Comune, secondo competenza).
-2. Regione Sardegna - titolare/gestore del dato SIRA, per un eventuale estratto istituzionale.
-3. Gestore del servizio idrico (Abbanoa) o EGAS, solo per confermare configurazione e collettamenti, non per sostituire l'atto autorizzativo.
+2. Regione Sardegna - settore sistemi informativi ambientali/SIRA, chiedendo un estratto istituzionale del sistema **DeSAC** (Depuratori, Scarichi, Autorizzazioni, Controlli). DeSAC è il canale regionale che riunisce i dati tecnico-amministrativi su impianti, scarichi, autorizzazioni e controlli.
+3. ARPAS, per la documentazione di controllo e l'eventuale informazione ambientale detenuta; non sostituisce l'atto autorizzativo ma può rendere verificabile il contesto di controllo.
+4. Gestore del servizio idrico (Abbanoa) o EGAS, solo per confermare configurazione e collettamenti, non per sostituire l'atto autorizzativo.
+
+## Canale di accesso raccomandato
+
+La richiesta deve essere **mirata a un elenco di campi**, non a una copia indiscriminata delle banche dati. Se il dato non è disponibile nell'ordinario canale SIRA/DeSAC, si può usare l'accesso all'informazione ambientale o l'accesso civico generalizzato verso l'ufficio che detiene il dato. La Regione dichiara che l'informazione ambientale detenuta è accessibile a chiunque senza dover dimostrare un interesse; per l'accesso civico generalizzato indica l'URP competente per materia o direttamente l'ufficio detentore. ARPAS pubblica un canale analogo per accesso civico e informazione ambientale.
+
+Non inviare richieste separate a tutti gli enti in parallelo: partire da SIRA/DeSAC per l'elenco regionale e usare Province, Città Metropolitana o Comuni soltanto per i record senza atto o validità verificabile. Questo riduce duplicazioni e permette di registrare un esito per ogni ID SIRA.
 
 ## Dati minimi richiesti per ogni impianto
 
@@ -30,7 +37,14 @@ La richiesta non deve includere coordinate di scarico, nominativi di utenze, azi
 
 > Oggetto: richiesta di evidenza documentale corrente su autorizzazioni allo scarico di impianti di depurazione in Sardegna
 >
-> Nell'ambito del Sardinia One Health AMR Atlas, progetto pubblico che utilizza esclusivamente dati aggregati e non pubblica punti di scarico o reti fognarie riservate, chiediamo la disponibilità di un estratto/documentazione relativa agli impianti di depurazione di competenza. Per ciascun impianto sarebbero utili ID ufficiale, denominazione, Comune, riferimento e validità dell'autorizzazione, tipologia e nome del recapito o della destinazione, data di aggiornamento e fonte. Non sono richieste coordinate di scarico, dati di utenza o informazioni non pubblicabili. I dati saranno conservati e sottoposti a verifica in ambiente privato; qualsiasi eventuale rappresentazione pubblica avverrà solo previo controllo di licenza, validità e livello di dettaglio.
+> Nell'ambito del Sardinia One Health AMR Atlas, progetto pubblico che utilizza esclusivamente dati aggregati e non pubblica punti di scarico o reti fognarie riservate, chiediamo la disponibilità di un estratto/documentazione relativa agli impianti di depurazione di competenza, preferibilmente dal sistema SIRA/DeSAC ove disponibile. Per ciascun impianto sarebbero utili ID ufficiale, denominazione, Comune, riferimento e validità dell'autorizzazione, tipologia e nome del recapito o della destinazione, data di aggiornamento e fonte. Non sono richieste coordinate di scarico, dati di utenza o informazioni non pubblicabili. I dati saranno conservati e sottoposti a verifica in ambiente privato; qualsiasi eventuale rappresentazione pubblica avverrà solo previo controllo di licenza, validità e livello di dettaglio.
+
+## Riferimenti istituzionali verificati
+
+- Regione Sardegna, SIRA II: <https://www.regione.sardegna.it/servizi/accesso-ai-servizi-on-line/indice-dei-servizi/sistema-informativo-regionale-ambientale-della-sardegna-secondo-stralcio-funzionale-sira-ii>
+- Regione Sardegna, diritto di accesso: <https://www.regione.sardegna.it/regione/amministrazione-trasparente/altri-contenuti/diritto-di-accesso>
+- ARPAS, scarichi idrici: <https://www.sardegnaambiente.it/index.php?c=4583&idsito=21&s=335624&v=2&xsl=612>
+- ARPAS, diritto di accesso: <https://www.sardegnaambiente.it/index.php?c=4504&httphst=www.sardegnaambiente.it&idsito=21&s=418800&v=2&xsl=612>
 
 ## Regola di importazione
 
