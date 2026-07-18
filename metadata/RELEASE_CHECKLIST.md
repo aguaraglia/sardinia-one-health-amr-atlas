@@ -8,6 +8,7 @@ Questa checklist prepara una release GitHub e un deposito Zenodo, ma non autoriz
 - [ ] Rigenerare il registro PubMed e registrare le decisioni per i candidati non curati (`.\scripts\discover_pubmed_sardinia_amr.ps1`).
 - [ ] Verificare che `CITATION.cff`, `.zenodo.json`, README e pagina pubblica riportino la stessa versione e data.
 - [ ] Generare e controllare `metadata/RELEASE_MANIFEST.tsv` con `python scripts/build_release_manifest.py --version <versione> --date <YYYY-MM-DD>` dopo il commit dei file sorgente.
+- [ ] Creare un archivio locale controllabile con `python scripts/build_release_archive.py --version <versione>`; verificare ZIP, checksum e assenza di cartelle private prima di un eventuale upload.
 - [ ] Rieseguire gli script che generano i dataset pubblici e controllare il diff.
 - [ ] Testare la home, le pagine delle fonti, i filtri e i link esterni sia su desktop sia su mobile.
 - [ ] Verificare che nessun file privato, coordinata sensibile, nome di azienda o credenziale sia incluso nella release.
