@@ -62,3 +62,6 @@ Il rapporto ARPAS *Rapporto sulle attività espletate e sullo stato dei depurato
 Questi record sono etichettati `historical_2015_matrix` e `source_extracted_needs_sira_match`: attestano ciò che ARPAS riportava e controllava nel 2015, non una autorizzazione vigente né la configurazione attuale dell'impianto. `scripts/match_hydrologic_receiver_evidence.py` crea solo nell'area privata una lista di candidati SIRA per Comune. Un singolo candidato comunale richiede comunque controllo di denominazione, stato operativo, atto autorizzativo e, se necessario, del gestore.
 
 Nessun corpo recettore storico o collegamento verso un consortile viene visualizzato automaticamente nella mappa pubblica. Le coordinate dei punti di scarico e le reti fognarie restano private.
+## Acquisizione di autorizzazioni correnti
+
+Per acquisire un recapito corrente senza deduzioni, usare `metadata/REQUEST_CURRENT_DISCHARGE_AUTHORIZATIONS.md` e importare gli estratti ricevuti in `private/hydrology/receiver_authorizations.tsv`, basato su `metadata/HYDROLOGIC_RECEIVER_AUTHORIZATION_TEMPLATE.tsv`. Il validatore `scripts/validate_receiver_authorizations.py` ammette come potenzialmente `documented_current` soltanto atti autorizzativi, estratti SIRA ufficiali o conferme tecniche del gestore con stato `valid`; non pubblica nomi dei recettori, riferimenti privati o coordinate.
