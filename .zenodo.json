@@ -1,5 +1,7 @@
 {
   "title": "Sardinia One Health AMR Atlas",
+  "version": "0.2.0",
+  "publication_date": "2026-07-18",
   "description": "A privacy-aware public atlas that documents curated evidence on antimicrobial resistance in Sardinia across human, animal, food-chain and environmental One Health domains. The release records sources, geographic scale and interpretation limits; it does not publish restricted point-level data.",
   "creators": [
     {

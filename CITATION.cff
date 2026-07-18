@@ -2,8 +2,8 @@ cff-version: 1.2.0
 title: "Sardinia One Health AMR Atlas"
 message: "If you use this atlas, please cite this release."
 type: dataset
-version: 0.1.0
-date-released: 2026-07-15
+version: 0.2.0
+date-released: 2026-07-18
 repository-code: "https://github.com/aguaraglia/sardinia-one-health-amr-atlas"
 url: "https://aguaraglia.github.io/sardinia-one-health-amr-atlas/"
 license: CC-BY-4.0
