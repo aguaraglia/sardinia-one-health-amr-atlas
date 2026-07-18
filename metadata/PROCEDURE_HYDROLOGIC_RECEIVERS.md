@@ -4,7 +4,7 @@
 
 Il layer DBGT dei corsi d'acqua disponibile nel repository contiene geometrie e nomi, ma non una rete topologica completa, una direzione di deflusso o un recapito autorizzato. Per questo motivo la distanza geometrica da un corso d'acqua **non prova** che un impianto scarichi in quel corso, né consente di affermare dove l'effluente finisca.
 
-`scripts/build_hydrologic_receiver_prototype.py` crea un campione iniziale di 20 impianti urbani attivi, ordinati prima per abitanti serviti e poi per distanza dal corso nominato più vicino. L'output `reports/hydrologic_receiver_prototype_20.tsv` usa volutamente i campi `authorised_receiver = not_assessed` e `downstream_path = not_assessed`.
+`scripts/build_hydrologic_receiver_prototype.py` crea un campione iniziale di 20 impianti urbani attivi, ordinati per distanza dal corso nominato più vicino. Il campo sorgente `ABITANTI_SERVITI` non viene usato per la priorità: nel GeoJSON SIRA contiene in molti record valori binari non interpretabili (ad esempio numeri dell'ordine di `1e-320`) e non può sostenere un'inferenza pubblica. L'output `reports/hydrologic_receiver_prototype_20.tsv` usa volutamente i campi `authorised_receiver = not_assessed` e `downstream_path = not_assessed`.
 
 ## Validazione richiesta prima di qualunque pubblicazione interpretativa
 
@@ -33,3 +33,8 @@ Nel documento GetCapabilities è presente il layer `raster:DTM_10M_ALTIMETRIA_RE
 `scripts/enrich_hydrologic_prototype_with_dtm.py` abbina ciascuno dei 20 impianti del campione al segmento DBGT geometricamente più vicino e usa il coverage WCS `raster__DTM_10M_ALTIMETRIA_REV01` per campionare quota agli estremi del segmento. L’output può indicare soltanto un orientamento locale del segmento (`nearest_segment_start_to_end`, `nearest_segment_end_to_start` o `uncertain_flat_or_below_dtm_resolution`).
 
 Questo passaggio **non** stabilisce un recapito autorizzato, una connessione idrologica tra segmenti o il corpo idrico finale. Per una traccia a valle restano indispensabili topologia, snapping controllato, gestione di confluenze e validazione amministrativa.
+## Disponibilità WCS e limite operativo verificato il 2026-07-18
+
+Il coverage WCS ufficiale è stato interrogato con successo su piccoli riquadri (campionamento agli estremi dei segmenti del prototipo). I tentativi di ottenere l'intera Sardegna, anche a risoluzione degradata, non sono invece riproducibili: il server ha restituito timeout e, per una richiesta parziale, `java.io.IOException: No space left on device`. È un limite del servizio remoto, non un risultato idrologico.
+
+Finché non sarà disponibile un download regionale stabile o una rete idrografica topologica ufficiale, l'atlante non deve mostrare predizioni di recapito a valle. Il prototipo rimane un controllo tecnico locale, conservato nel report, con classe `not_assessed` per recapito e percorso a valle.
