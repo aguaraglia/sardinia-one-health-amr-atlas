@@ -1,5 +1,30 @@
 const assetRoot = document.documentElement.lang === 'en' ? '../' : '';
 const root = document.getElementById('evidence-root');
+const isEnglish = document.documentElement.lang === 'en';
+if (isEnglish) {
+  const evidenceTranslations = new Map([
+    ['← Torna all’elenco delle evidenze', '← Back to evidence directory'], ['SCHEDA PUBBLICA', 'PUBLIC RECORD'],
+    ['In sintesi', 'Summary'], ['Ambito e rappresentatività', 'Scope and representativeness'], ['Periodo', 'Period'],
+    ['Geografia pubblica', 'Public geography'], ['Organismi', 'Organisms'], ['Interpretazione e limiti', 'Interpretation and limits'],
+    ['Fonte bibliografica', 'Bibliographic source'], ['Uso nell’atlante', 'Use in the atlas'], ['Apri la mappa', 'Open map'],
+    ['Descrizione', 'Description'], ['Risultati fenotipici', 'Phenotypic results'], ['Risultati fenotipici e genomici', 'Phenotypic and genomic results'],
+    ['Risultati genomici', 'Genomic results'], ['Indicatori pubblicati', 'Published indicators'], ['Regola di pubblicazione', 'Publication rule'],
+    ['Metadati', 'Metadata'], ['Esplora', 'Explore'], ['Torna alla mappa', 'Back to map'], ['Apri scheda →', 'Open record →'],
+    ['Evidenze e fonti', 'Evidence and sources'], ['Registro pubblico curato · Sardinia One Health AMR Atlas', 'Curated public register · Sardinia One Health AMR Atlas'],
+    ['fonti verificate', 'verified sources'], ['Dataset e indicatori', 'Datasets and indicators'], ['Letteratura AMR curata', 'Curated AMR literature'],
+    ['Scheda non trovata', 'Record not found'], ['Seleziona una fonte dall’elenco pubblico.', 'Select a source from the public directory.'],
+    ['Vai alle evidenze', 'Go to evidence'], ['Impossibile caricare la scheda', 'Unable to load the record'], ['Riprova dall’elenco delle evidenze.', 'Try again from the evidence directory.']
+  ]);
+  const localizeEvidence = () => {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      const translation = evidenceTranslations.get(node.nodeValue.trim());
+      if (translation) node.nodeValue = node.nodeValue.replace(node.nodeValue.trim(), translation);
+    }
+  };
+  new MutationObserver(localizeEvidence).observe(root, { childList: true, subtree: true });
+}
 const id = new URLSearchParams(location.search).get('id');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const list = values => (values || []).map(esc).join(', ') || 'non specificato';
