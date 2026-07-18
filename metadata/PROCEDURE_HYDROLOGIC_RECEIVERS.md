@@ -28,3 +28,8 @@ https://webgis.regione.sardegna.it/geoserverraster/wms?service=WMS&request=GetCa
 ```
 
 Nel documento GetCapabilities è presente il layer `raster:DTM_10M_ALTIMETRIA_REV01`. Prima di usare valori di quota in un modello, il team deve scaricare o ottenere un raster analizzabile con licenza e sistema di riferimento documentati: un WMS di visualizzazione non sostituisce un DTM locale per calcoli riproducibili. La Regione indica che il DTM 10 m copre l'intero territorio regionale; i DTM 1 m sono invece disponibili soltanto in aree specifiche.
+## Orientamento locale del prototipo
+
+`scripts/enrich_hydrologic_prototype_with_dtm.py` abbina ciascuno dei 20 impianti del campione al segmento DBGT geometricamente più vicino e usa il coverage WCS `raster__DTM_10M_ALTIMETRIA_REV01` per campionare quota agli estremi del segmento. L’output può indicare soltanto un orientamento locale del segmento (`nearest_segment_start_to_end`, `nearest_segment_end_to_start` o `uncertain_flat_or_below_dtm_resolution`).
+
+Questo passaggio **non** stabilisce un recapito autorizzato, una connessione idrologica tra segmenti o il corpo idrico finale. Per una traccia a valle restano indispensabili topologia, snapping controllato, gestione di confluenze e validazione amministrativa.
