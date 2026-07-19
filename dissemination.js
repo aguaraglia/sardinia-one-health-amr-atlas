@@ -29,6 +29,7 @@ const outreachModules = {
   ]
 };
 const outreachDeckSlugs = ['antibiotici-antimicrobici','batteri-virus-uso-appropriato','come-nasce-amr','brotzu-cefalosporine','one-health','amr-strutture-sanitarie','filiera-alimentare-animali','acque-reflue-resistoma','depuratori-corsi-acqua','ar-iss-ears-net-glass','leggere-atlante','azioni-possibili'];
+const assetRoot = document.documentElement.lang === 'en' ? '../' : '';
 
 function renderOutreach() {
   const lang = document.documentElement.lang === 'en' ? 'en' : 'it';
