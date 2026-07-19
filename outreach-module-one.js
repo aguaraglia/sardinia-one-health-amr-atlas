@@ -43,31 +43,41 @@ const embeddedModuleOne = [
   }
 ];
 
-function renderEmbeddedModuleOne(detail, deckUrl) {
+function renderEmbeddedDeck(detail, deckUrl, config) {
+  const { slides, moduleTitle, moduleLabel, completionText } = config;
   let slideIndex = 0;
   detail.classList.add('has-embedded-deck');
-  detail.innerHTML = `<section class="embedded-deck" tabindex="0" aria-label="Presentazione incorporata: Antibiotici e antimicrobici"><header class="embedded-deck-head"><div><span class="embedded-book" aria-hidden="true">▤</span><strong>Antibiotici e antimicrobici</strong></div><span id="embedded-counter">1 / ${embeddedModuleOne.length}</span></header><div id="embedded-slide-stage" class="embedded-slide-stage" aria-live="polite"></div><footer class="embedded-deck-controls"><button type="button" id="embedded-prev" class="deck-control" aria-label="Scheda precedente"><span aria-hidden="true">←</span> Precedente</button><div id="embedded-dots" class="embedded-dots" aria-label="Seleziona una scheda"></div><button type="button" id="embedded-next" class="deck-control primary">Successiva <span aria-hidden="true">→</span></button></footer></section><div class="embedded-after"><p><strong>Modulo completo.</strong> Sei schede consultabili online, con fonti istituzionali e distinzione tra evidenza, esempio e indicazione sanitaria.</p><a class="inline-action" href="${deckUrl}" download>Scarica anche la versione PowerPoint <span aria-hidden="true">↓</span></a></div>`;
+  detail.innerHTML = `<section class="embedded-deck" tabindex="0" aria-label="Presentazione incorporata: ${moduleTitle}"><header class="embedded-deck-head"><div><span class="embedded-book" aria-hidden="true">▤</span><strong>${moduleTitle}</strong></div><span id="embedded-counter">1 / ${slides.length}</span></header><div id="embedded-slide-stage" class="embedded-slide-stage" aria-live="polite"></div><footer class="embedded-deck-controls"><button type="button" id="embedded-prev" class="deck-control" aria-label="Scheda precedente"><span aria-hidden="true">←</span> Precedente</button><div id="embedded-dots" class="embedded-dots" aria-label="Seleziona una scheda"></div><button type="button" id="embedded-next" class="deck-control primary">Successiva <span aria-hidden="true">→</span></button></footer></section><div class="embedded-after"><p><strong>${moduleLabel}</strong> ${completionText}</p><a class="inline-action" href="${deckUrl}" download>Scarica anche la versione PowerPoint <span aria-hidden="true">↓</span></a></div>`;
   const stage = detail.querySelector('#embedded-slide-stage');
   const counter = detail.querySelector('#embedded-counter');
   const dots = detail.querySelector('#embedded-dots');
   const prev = detail.querySelector('#embedded-prev');
   const next = detail.querySelector('#embedded-next');
-  dots.innerHTML = embeddedModuleOne.map((_, i) => `<button type="button" data-slide="${i}" aria-label="Vai alla scheda ${i + 1}"></button>`).join('');
+  dots.innerHTML = slides.map((_, i) => `<button type="button" data-slide="${i}" aria-label="Vai alla scheda ${i + 1}"></button>`).join('');
   function paintSlide() {
-    const slide = embeddedModuleOne[slideIndex];
+    const slide = slides[slideIndex];
     stage.innerHTML = `<article class="embedded-slide"><p class="embedded-slide-label">${slide.label}</p><h2>${slide.title}</h2><p class="embedded-slide-intro">${slide.intro}</p><div class="embedded-visual">${slide.visual}</div><p class="embedded-takeaway"><span aria-hidden="true">i</span>${slide.takeaway}</p><div class="embedded-sources"><strong>Fonti della scheda</strong>${slide.sources.map(([name,url]) => `<a href="${url}" target="_blank" rel="noreferrer">${name} <span aria-hidden="true">↗</span></a>`).join('')}</div></article>`;
-    counter.textContent = `${slideIndex + 1} / ${embeddedModuleOne.length}`;
+    counter.textContent = `${slideIndex + 1} / ${slides.length}`;
     prev.disabled = slideIndex === 0;
-    next.disabled = slideIndex === embeddedModuleOne.length - 1;
-    next.innerHTML = slideIndex === embeddedModuleOne.length - 1 ? 'Fine del modulo <span aria-hidden="true">✓</span>' : 'Successiva <span aria-hidden="true">→</span>';
+    next.disabled = slideIndex === slides.length - 1;
+    next.innerHTML = slideIndex === slides.length - 1 ? 'Fine del modulo <span aria-hidden="true">✓</span>' : 'Successiva <span aria-hidden="true">→</span>';
     dots.querySelectorAll('button').forEach((dot, i) => { dot.classList.toggle('is-active', i === slideIndex); dot.setAttribute('aria-current', i === slideIndex ? 'step' : 'false'); });
   }
   prev.addEventListener('click', () => { if (slideIndex > 0) { slideIndex -= 1; paintSlide(); } });
-  next.addEventListener('click', () => { if (slideIndex < embeddedModuleOne.length - 1) { slideIndex += 1; paintSlide(); } });
+  next.addEventListener('click', () => { if (slideIndex < slides.length - 1) { slideIndex += 1; paintSlide(); } });
   dots.querySelectorAll('button').forEach(button => button.addEventListener('click', () => { slideIndex = Number(button.dataset.slide); paintSlide(); }));
   detail.querySelector('.embedded-deck').addEventListener('keydown', event => {
-    if (event.key === 'ArrowRight' && slideIndex < embeddedModuleOne.length - 1) { slideIndex += 1; paintSlide(); }
+    if (event.key === 'ArrowRight' && slideIndex < slides.length - 1) { slideIndex += 1; paintSlide(); }
     if (event.key === 'ArrowLeft' && slideIndex > 0) { slideIndex -= 1; paintSlide(); }
   });
   paintSlide();
+}
+
+function renderEmbeddedModuleOne(detail, deckUrl) {
+  renderEmbeddedDeck(detail, deckUrl, {
+    slides: embeddedModuleOne,
+    moduleTitle: 'Antibiotici e antimicrobici',
+    moduleLabel: 'Modulo completo.',
+    completionText: 'Sei schede consultabili online, con fonti istituzionali e distinzione tra evidenza, esempio e indicazione sanitaria.'
+  });
 }
