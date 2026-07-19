@@ -46,9 +46,11 @@ function renderOutreach() {
     detail.classList.remove('has-embedded-deck');
     if (lang === 'it' && i === 0) renderEmbeddedModuleOne(detail, deckUrl);
     else if (lang === 'it' && i === 1) renderEmbeddedModuleTwo(detail, deckUrl);
+    else if (lang === 'it' && i >= 2 && typeof renderEmbeddedAdditional === 'function') renderEmbeddedAdditional(detail, deckUrl, i);
     else detail.innerHTML = `<div class="outreach-progress"><span>${current+1} ${labels.progress}</span><i><b style="width:${((current+1)/12)*100}%"></b></i></div><p class="outreach-number">${lang==='en'?'MODULE':'MODULO'} ${String(current+1).padStart(2,'0')}</p><h2>${title}</h2><p class="outreach-summary">${summary}</p><div class="outreach-detail-grid"><section><h3>${labels.objective}</h3><p>${objective}</p></section><section><h3>${labels.scenes}</h3><ol>${scenes.map(s=>`<li>${s}</li>`).join('')}</ol></section><section><h3>${labels.sources}</h3><ul>${sources.map(([name,url])=>`<li><a href="${url}" ${url.startsWith('http')?'target="_blank" rel="noreferrer"':''}>${name} <span aria-hidden="true">↗</span></a></li>`).join('')}</ul></section></div><p class="outreach-format">${labels.duration}</p><p><a class="inline-action" href="${deckUrl}" download>${labels.deck} <span aria-hidden="true">↓</span></a></p><p class="outreach-note">${labels.note}</p>`;
     index.querySelectorAll('[data-module]').forEach(button => button.addEventListener('click', () => show(Number(button.dataset.module))));
   }
   show(0);
 }
 document.addEventListener('DOMContentLoaded', renderOutreach);
+

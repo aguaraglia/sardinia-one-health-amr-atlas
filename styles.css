@@ -926,3 +926,66 @@ textarea { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
   .viral-example-grid { grid-template-columns:1fr; }
   .viral-example-grid .viral-caveat { grid-column:auto; }
 }
+
+/* Concept alignment: Sardinia dotted mark, sans-serif masthead, one-line dashboard title */
+.global-brand .brand-mark { width:34px; height:46px; flex-basis:34px; display:inline-flex; align-items:center; justify-content:center; }
+.global-brand .brand-mark svg { width:34px; height:46px; overflow:visible; }
+.global-brand .brand-island { fill:#2b918e; stroke:#1558b0; stroke-width:1.15; stroke-linejoin:round; }
+.global-brand .brand-mark circle { fill:#102f55; }
+.global-brand-name,.global-brand-atlas { font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; font-size:.88rem; line-height:1.02; letter-spacing:.01em; }
+.global-brand-name { font-weight:750; }
+.global-brand-atlas { font-weight:500; }
+.atlas-dashboard .intro h1 { font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; font-size:clamp(1.75rem,3.15vw,3.05rem); font-weight:760; letter-spacing:-.045em; line-height:1.05; white-space:nowrap; }
+.atlas-dashboard .intro > p:last-child { max-width:360px; font-size:.78rem; line-height:1.48; }
+.atlas-dashboard .results-rail { padding-inline:1.05rem; }
+.atlas-dashboard .atlas-grid { grid-template-columns:minmax(0,1fr) 276px; }
+.outreach-detail .embedded-slide h2,.outreach-detail .embedded-slide h3 { font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+.selection-flow,.surveillance-flow,.transmission-chain,.receiver-chain,.evidence-ladder,.atlas-howto { display:flex; align-items:center; justify-content:center; gap:.65rem; flex-wrap:wrap; min-height:150px; }
+.selection-flow > span,.surveillance-flow > span,.transmission-chain > span,.receiver-chain > span,.evidence-ladder > span,.atlas-howto > span { padding:.6rem .75rem; border:1px solid #cbd8e2; background:#f6fafb; color:#102f55; font-size:.74rem; font-weight:750; letter-spacing:.06em; text-transform:uppercase; text-align:center; }
+.selection-flow > i,.surveillance-flow > i,.transmission-chain > i,.receiver-chain > i,.evidence-ladder > i,.atlas-howto > i { color:#2b918e; font-style:normal; font-size:1.15rem; }
+.cell-row { display:flex; gap:.35rem; justify-content:center; margin:.8rem 0 .35rem; }
+.cell-row i { width:20px; height:20px; display:block; border-radius:50%; background:#8fbfc0; box-shadow:inset 0 0 0 3px #edf6f6; }
+.cell-row i.resistant { background:#b4772d; }
+.selection-flow article { min-width:145px; padding:.8rem; border:1px solid #d6dee7; background:#fff; text-align:center; }
+.selection-flow article b { color:#102f55; font-size:.72rem; letter-spacing:.08em; }
+.selection-flow article small { display:block; color:#66798d; }
+.pill { display:inline-block; margin:.8rem 0 .35rem; padding:.38rem .55rem; border-radius:999px; background:#eaf4f5; color:#1558b0; font-size:.72rem; }
+.mechanism-grid,.action-grid,.four-domain-grid,.benefit-grid,.system-compare { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.75rem; width:100%; }
+.mechanism-grid article,.action-grid article,.four-domain-grid article,.benefit-grid article,.system-compare article { padding:1rem; border:1px solid #d6dee7; background:#fff; }
+.mechanism-grid strong,.action-grid strong,.four-domain-grid b,.benefit-grid b,.system-compare b { color:#102f55; display:block; }
+.mechanism-grid p,.action-grid p,.four-domain-grid p,.benefit-grid p,.system-compare small { color:#66798d; margin:.45rem 0 0; font-size:.82rem; }
+.mechanism-symbol { display:block; width:32px; height:32px; margin-bottom:.65rem; border-radius:50%; background:#dceeed; border:7px solid #2b918e; }
+.gene-transfer,.compare-pair,.privacy-split,.communication-pair,.map-meaning,.role-orbit,.service-network,.proximity-visual,.flow-direction { display:flex; align-items:center; justify-content:center; gap:1rem; min-height:150px; }
+.gene-transfer article,.compare-pair article,.privacy-split article,.communication-pair article { padding:1rem; border:1px solid #d6dee7; background:#fff; text-align:center; }
+.gene-transfer article strong,.compare-pair article strong,.privacy-split article b,.communication-pair article b { display:block; color:#102f55; }
+.gene-transfer article small,.compare-pair article p,.privacy-split article span,.communication-pair article p { display:block; color:#66798d; margin:.4rem 0 0; font-size:.8rem; }
+.bacterium { display:block; width:58px; height:34px; margin:0 auto .5rem; border-radius:45% 55% 50% 40%; background:#2b918e; box-shadow:inset 12px 7px 0 #8fc3c1; }
+.bacterium.recipient { background:#1558b0; }
+.plasmid { padding:.45rem .7rem; border-radius:50%; color:#fff; background:#b4772d; font-size:.72rem; font-weight:750; }
+.quote-panel,.denominator-card,.sample-card,.cohort-visual,.source-card-visual,.filter-visual,.layer-stack,.time-strip,.checklist-visual,.conclusion-board,.risk-chain { display:grid; gap:.55rem; align-content:center; justify-items:center; min-height:160px; padding:1.2rem; border-left:4px solid #2b918e; background:#eef6f7; text-align:center; }
+.quote-panel p { margin:0; color:#102f55; font-size:1.35rem; font-weight:760; }
+.quote-panel span,.quote-panel small,.denominator-card span,.sample-card span,.cohort-visual span,.source-card-visual span { color:#53697f; font-size:.82rem; }
+.quote-panel hr { width:65%; border:0; border-top:1px solid #c5d7de; margin:.35rem 0; }
+.one-health-ring,.role-orbit { position:relative; min-height:190px; border-radius:50%; background:radial-gradient(circle,#fff 0 24%,#eaf4f5 25% 48%,transparent 49%), conic-gradient(from 20deg,#2b918e,#1558b0,#b4772d,#2b918e); }
+.one-health-ring span,.role-orbit span { position:absolute; padding:.35rem .55rem; border:1px solid #cbd8e2; background:#fff; color:#102f55; font-size:.68rem; font-weight:750; text-transform:uppercase; }
+.one-health-ring span:nth-child(1),.role-orbit span:nth-child(1){top:8%;left:40%}.one-health-ring span:nth-child(2),.role-orbit span:nth-child(2){right:8%;top:42%}.one-health-ring span:nth-child(3),.role-orbit span:nth-child(3){bottom:10%;left:39%}.one-health-ring span:nth-child(4),.role-orbit span:nth-child(4){left:8%;top:42%}.one-health-ring b,.role-orbit b { z-index:1; color:#102f55; background:#fff; padding:.85rem; border-radius:50%; text-align:center; }
+.four-domain-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.question-grid,.matrix-grid,.coverage-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.65rem; width:100%; }
+.question-grid span,.matrix-grid span,.coverage-grid span { padding:.75rem; border:1px solid #cbd8e2; background:#fff; color:#102f55; font-size:.78rem; text-align:center; }
+.question-grid span:last-child,.coverage-grid strong,.matrix-grid b { grid-column:1/-1; color:#1558b0; text-align:center; }
+.denominator-card strong,.cohort-visual strong { color:#102f55; font-size:2rem; line-height:1; }
+.denominator-card b,.cohort-visual em { color:#b4772d; font-style:normal; font-weight:750; }
+.ast-strip { display:grid; grid-template-columns:auto 1fr; align-items:center; gap:.55rem .8rem; width:100%; }
+.ast-strip p { margin:0; color:#53697f; }.ast-strip small { display:block; color:#66798d; }
+.ast-strip span { display:grid; place-items:center; width:38px; height:38px; border-radius:50%; color:#fff; font-weight:800; }.ast-s{background:#2b918e}.ast-i{background:#b4772d}.ast-r{background:#102f55}
+.map-meaning { justify-content:space-evenly; text-align:center; }.map-meaning div { display:grid; gap:.25rem; }.map-meaning small { color:#66798d; }.map-pin,.plant-pin,.receiver-pin { width:22px; height:22px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:#2b918e; }.map-arrow { color:#b4772d; font-size:1.4rem; }
+.privacy-split i { color:#2b918e; font-size:1.3rem; }.privacy-split article:first-child { background:#f5f6f8; }.privacy-split article:last-child { background:#eef6f7; }
+.receiver-chain { justify-content:space-between; }.proximity-visual { position:relative; overflow:hidden; background:#eef6f7; }.river-line { width:45%; height:4px; background:#1558b0; transform:rotate(-12deg); }.distance-label { color:#b4772d; font-size:.75rem; }
+.service-network { flex-wrap:wrap; }.service-network span { padding:.5rem .7rem; background:#fff; border:1px solid #cbd8e2; }.service-network b { width:100%; text-align:center; color:#102f55; }.service-network small { width:100%; color:#66798d; text-align:center; }
+.system-compare { grid-template-columns:repeat(3,1fr); }.system-compare article span { display:block; color:#1558b0; font-size:.8rem; margin:.45rem 0; }
+.filter-visual,.layer-stack,.time-strip,.checklist-visual,.conclusion-board,.source-card-visual { grid-template-columns:repeat(3,minmax(0,1fr)); }.filter-visual span,.layer-stack span,.time-strip span,.checklist-visual span,.conclusion-board span,.source-card-visual b,.source-card-visual span { padding:.55rem; border:1px solid #cbd8e2; background:#fff; color:#102f55; font-size:.76rem; text-align:center; }.filter-visual strong,.layer-stack b,.time-strip b,.checklist-visual strong { grid-column:1/-1; color:#1558b0; text-align:center; }.conclusion-board .yes { color:#2b918e; }.conclusion-board .no { color:#b4772d; }
+@media (max-width:760px){.atlas-dashboard .intro h1{white-space:normal;font-size:clamp(1.75rem,8vw,2.35rem)}.atlas-dashboard .intro > p:last-child{max-width:none}.atlas-dashboard .atlas-grid{grid-template-columns:1fr}.atlas-dashboard .map-stage{border-right:0;border-bottom:1px solid var(--atlas-line-strong)}.mechanism-grid,.action-grid,.benefit-grid,.system-compare,.four-domain-grid{grid-template-columns:1fr}.question-grid,.matrix-grid,.coverage-grid,.filter-visual,.layer-stack,.time-strip,.checklist-visual,.conclusion-board,.source-card-visual{grid-template-columns:1fr 1fr}.selection-flow,.surveillance-flow,.transmission-chain,.receiver-chain,.evidence-ladder,.atlas-howto,.gene-transfer,.compare-pair,.privacy-split,.communication-pair,.map-meaning,.flow-direction{gap:.45rem}.role-orbit,.one-health-ring{min-height:165px;width:165px;margin:auto}.embedded-slide .gene-transfer article,.embedded-slide .compare-pair article{min-width:0}.embedded-slide .question-grid span:last-child,.embedded-slide .coverage-grid strong,.embedded-slide .matrix-grid b{grid-column:1/-1}}
+
+
+.embedded-deck,.embedded-slide-stage { overflow-x:hidden; }
+
