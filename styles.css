@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap');
 :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
 * { box-sizing: border-box; }
 body { margin: 0; color: #18302b; background: #f4f7f5; }
@@ -719,4 +720,128 @@ body.atlas-dashboard { background:var(--atlas-canvas); color:var(--atlas-copy); 
   .method-grid article { border-right:0; }
   .metric-grid { grid-template-columns:1fr; }
   .metric-grid div { border-right:0; }
+}
+/* Concept fidelity correction · typography and umbrella */
+:root { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+body,
+button,
+select,
+input,
+textarea { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+.global-brand-name,
+.global-brand-atlas,
+.atlas-dashboard .sidebar-kicker,
+.atlas-dashboard .intro h1,
+.atlas-dashboard .results-rail h2,
+.atlas-dashboard .temporal-strip h2,
+.atlas-dashboard .data-digest-heading h2,
+.atlas-dashboard .literature-section h2,
+.evidence-page .site-header h1,
+.outreach-page .site-header h1,
+.evidence-heading h2,
+.evidence-article h3,
+.directory-layout h3,
+.method-grid h3,
+.method-section h3,
+.method-section-heading h3,
+.outreach-intro h2,
+.outreach-detail h2,
+.outreach-detail.has-embedded-deck .embedded-slide h2 {
+  font-family: 'Lora', Georgia, Cambria, serif;
+}
+.global-brand-name,
+.global-brand-atlas { line-height: 1; }
+
+.antimicrobial-umbrella {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.umbrella-drawing {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1000 / 260;
+}
+.umbrella-drawing svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.umbrella-canopy,
+.umbrella-shaft,
+.umbrella-branch {
+  fill: none;
+  stroke: #123f78;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.umbrella-canopy { stroke-width: 4; }
+.umbrella-shaft { stroke-width: 6; }
+.umbrella-branch {
+  stroke-width: 2.4;
+  stroke-dasharray: 4 7;
+}
+.umbrella-drawing > span {
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: .1rem .55rem;
+  color: #123f78;
+  background: #fff;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .055em;
+}
+.family-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  gap: .6rem;
+}
+.family-grid > div {
+  padding: 0 .45rem;
+  border-top: 0;
+}
+.microbe-art {
+  display: block;
+  width: min(112px, 100%);
+  height: 82px;
+  margin: 0 auto .2rem;
+  object-fit: contain;
+}
+.family-grid strong {
+  color: #123f78;
+  font-size: .79rem;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+}
+.family-grid > div:nth-child(2) strong,
+.family-grid > div:nth-child(2) small { color: #2c8178; }
+.family-grid > div:nth-child(3) strong,
+.family-grid > div:nth-child(3) small { color: #66558a; }
+.family-grid > div:nth-child(4) strong,
+.family-grid > div:nth-child(4) small { color: #a26720; }
+.family-grid small {
+  color: #405f86;
+  font-size: .66rem;
+  text-transform: none;
+}
+.family-grid p {
+  margin-top: .28rem;
+  color: #5d6e80;
+  font-size: .65rem;
+  line-height: 1.35;
+}
+@media (max-width: 760px) {
+  .umbrella-canopy { stroke-width: 5; }
+  .umbrella-shaft { stroke-width: 7; }
+  .umbrella-branch { stroke-width: 3; stroke-dasharray: 5 8; }
+  .umbrella-drawing > span { top: 30%; font-size: .58rem; }
+  .microbe-art { height: 58px; }
+  .family-grid { gap: .22rem; }
+  .family-grid > div { padding-inline: .12rem; }
+  .family-grid strong { font-size: .6rem; letter-spacing: 0; }
+  .family-grid small { font-size: .54rem; }
+  .family-grid p { font-size: .52rem; }
 }
