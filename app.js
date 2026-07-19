@@ -50,17 +50,19 @@ const targetAliases = {
   sul1: 'AMR_MDR',
   qnr: 'AMR_FLUOROQUINOLONE'
 };
-const filterableKeys = new Set(['veterinaryMunicipal','humanFacilityEvidence','foodChainMunicipal','arissSites']);
+const filterableKeys = new Set(['veterinaryMunicipal','humanFacilityEvidence','foodChainMunicipal','environmentalWaterEvidence','arissSites']);
 const filterLabels = {
   veterinaryMunicipal: ['AMR veterinaria comunale', 'veterinary_amr_municipal_evidence'],
   humanFacilityEvidence: ['AMR umana di struttura', 'human_amr_facility_sassari_studies'],
   foodChainMunicipal: ['AMR filiera alimentare', 'food_chain_amr_berchidda'],
+  environmentalWaterEvidence: ['AMR ambientale di corpo idrico', 'ena_prjna1411669_environmental_resistome'],
   arissSites: ['Laboratorio AR-ISS', 'ar_iss_2024_sardinia_resistance']
 };
 const filterLayerControlLabels = {
   veterinaryMunicipal: 'AMR veterinaria',
   humanFacilityEvidence: 'AMR umana di struttura',
   foodChainMunicipal: 'AMR filiera alimentare',
+  environmentalWaterEvidence: 'AMR ambientale',
   arissSites: 'Laboratori AR-ISS'
 };
 function featureMatchesAmr(feature, value) {
@@ -176,7 +178,9 @@ function applyDashboardFilters() {
 function updateOverviewMetrics() {
   if (!layers.veterinaryMunicipal) return;
   const count = key => layers[key]?.getLayers().length || 0;
-  const totalMapped = count('veterinaryMunicipal') + count('humanFacilityEvidence') + count('foodChainMunicipal') + count('arissSites');
+  // AR-ISS sites are surveillance laboratories, not additional AMR observations.
+  // Keep that coverage visible in its own counter rather than inflating evidence.
+  const totalMapped = count('veterinaryMunicipal') + count('humanFacilityEvidence') + count('foodChainMunicipal') + count('environmentalWaterEvidence');
   document.getElementById('overview-localized').textContent = totalMapped.toLocaleString('it-IT');
   document.getElementById('overview-veterinary').textContent = count('veterinaryMunicipal').toLocaleString('it-IT');
   document.getElementById('overview-human').textContent = count('humanFacilityEvidence').toLocaleString('it-IT');
@@ -375,6 +379,7 @@ const configs = [
   { key: 'veterinaryMunicipal', label: 'Evidenze AMR veterinarie comunali', file: 'public/data/veterinary_amr_municipal_evidence.geojson', color: '#c16f24', weight: 1.4, fill: true, prop: 'municipality' },
   { key: 'humanFacilityEvidence', label: 'Evidenze AMR umane di struttura', file: 'public/data/human_amr_facility_evidence.geojson', color: '#9e2744', weight: 1.2, fill: true, prop: 'facility' },
   { key: 'foodChainMunicipal', label: 'AMR filiera alimentare · Berchidda', file: 'public/data/food_chain_amr_berchidda.geojson', color: '#6f8428', weight: 2, fill: true, prop: 'municipality' },
+  { key: 'environmentalWaterEvidence', label: 'Evidenze AMR ambientali per corpi idrici', file: 'public/data/environmental_amr_water_bodies.geojson', color: '#176e8b', weight: 1.2, fill: true, prop: 'name' },
   { key: 'hydro', label: 'Corsi d’acqua principali', file: 'public/data/dbgt_corsi_principali.geojson', color: '#2f78b7', weight: 1.2, fill: false, prop: 'Nome' },
   { key: 'arissSites', label: 'Laboratori partecipanti AR-ISS 2024', file: 'public/data/ar_iss_2024_sardinia_sites.geojson', color: '#c73e55', weight: 1, fill: true, prop: 'site_name' },
   { key: 'depuratori', label: 'Depuratori SIRA', file: 'public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
@@ -421,6 +426,11 @@ function popup(feature, cfg) {
     return `<strong>Berchidda · AMR nella filiera alimentare</strong><br>${cultures}<br>` +
       `<small>${escapeHtml(props.period)}. ${escapeHtml(props.interpretation_note)} I caseifici A e B non sono localizzati.</small>`;
   }
+  if (cfg.key === 'environmentalWaterEvidence') {
+    return `<strong>${escapeHtml(props.name)} · evidenza AMR ambientale</strong><br>` +
+      `${escapeHtml(props.headline)}<br>${escapeHtml(props.detail)}<br>` +
+      `<small>${escapeHtml(props.period)} · ${escapeHtml(props.coordinate_role)}. ${escapeHtml(props.source_title)}</small>`;
+  }
   if (cfg.key === 'arissSites') {
     const note = props.location_note ? `<br><small>${props.location_note}</small>` : '';
     return `<strong>${props.site_name}</strong><br>${props.municipality} (${props.province})<br><small>Laboratorio partecipante alla rete AR-ISS 2024. Il punto indica la sede del laboratorio. Copertura regionale ${props.coverage_percent_region}%; non e' prevalenza comunale o provinciale.</small>${note}`;
@@ -443,6 +453,7 @@ Promise.all(configs.map(async cfg => {
       if (cfg.key === 'depuratori') return L.circleMarker(latlng, { radius: 3.5, color: '#555', fillColor: '#555', fillOpacity: 0.7, weight: 1 });
       if (cfg.key === 'arissSites') return L.circleMarker(latlng, { radius: 6, color: '#8e2237', fillColor: '#c73e55', fillOpacity: 0.82, weight: 1.2 });
       if (cfg.key === 'humanFacilityEvidence') return L.circleMarker(latlng, { radius: 6, color: '#762034', fillColor: '#9e2744', fillOpacity: 0.88, weight: 1.2 });
+      if (cfg.key === 'environmentalWaterEvidence') return L.circleMarker(latlng, { radius: 6, color: '#0f5369', fillColor: '#176e8b', fillOpacity: 0.88, weight: 1.2 });
       return undefined;
     },
     onEachFeature: (feature, item) => {
@@ -483,6 +494,7 @@ Promise.all(configs.map(async cfg => {
     '<span class="layer-swatch" style="background:#c16f24"></span>AMR veterinaria · evidenze comunali': layers.veterinaryMunicipal,
     '<span class="layer-swatch" style="background:#9e2744"></span>AMR umana · evidenze di struttura': layers.humanFacilityEvidence,
     '<span class="layer-swatch" style="background:#6f8428"></span>AMR filiera alimentare · Berchidda': layers.foodChainMunicipal,
+    '<span class="layer-swatch" style="background:#176e8b"></span>AMR ambientale · corpi idrici': layers.environmentalWaterEvidence,
     ...waterAndPlantLayers,
     '<span class="layer-swatch" style="background:#c73e55"></span>AMR umana · laboratori AR-ISS 2024': layers.arissSites
   }, { collapsed: true }).addTo(map);

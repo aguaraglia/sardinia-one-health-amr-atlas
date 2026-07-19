@@ -1,0 +1,11 @@
+{
+  "type": "FeatureCollection",
+  "name": "Evidenze AMR ambientali per corpi idrici nominati",
+  "source_id": "ena_prjna1411669_environmental_resistome",
+  "privacy": "public_aggregate",
+  "interpretation_note": "I punti sono riferimenti cartografici del corpo idrico nominato. Non sono coordinate di campionamento, che restano escluse dall'artefatto pubblico.",
+  "features": [
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[8.6704445,40.5506242]},"properties":{"name":"Lago Bidighinzu","municipality_context":"Bessude–Thiesi","period":"2024-02/2024-11","study_count":1,"source_title":"Lakes and lagoons used for drinking water supply and fisheries as sources of potentially pathogenic bacteria and antimicrobial resistance","source_url":"https://pubmed.ncbi.nlm.nih.gov/42019335/","headline":"Resistoma ambientale: evidenza pubblicata sul corpo idrico","detail":"176 contig ARG-positivi; 32 con co-occorrenza ARG/MGE. Risultato aggregato della pubblicazione, non una misura di rischio individuale.","amr_keywords":["multidrug resistance","fluoroquinolones","beta-lactams","emrB","aac(6')-Ib-cr6"],"coordinate_role":"Riferimento cartografico del Lago Bidighinzu, non punto di campionamento"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[8.485,39.95]},"properties":{"name":"Laguna di Cabras","municipality_context":"Cabras–Nurachi–Riola Sardo","period":"2024-02/2024-11","study_count":1,"source_title":"Lakes and lagoons used for drinking water supply and fisheries as sources of potentially pathogenic bacteria and antimicrobial resistance","source_url":"https://pubmed.ncbi.nlm.nih.gov/42019335/","headline":"Resistoma ambientale: evidenza pubblicata sul corpo idrico","detail":"246 contig ARG-positivi; 11 con co-occorrenza ARG/MGE. Risultato aggregato della pubblicazione, non una misura di rischio individuale.","amr_keywords":["multidrug resistance","fluoroquinolones","beta-lactams","emrB","aac(6')-Ib-cr6"],"coordinate_role":"Riferimento cartografico della Laguna di Cabras, non punto di campionamento"}}
+  ]
+}
