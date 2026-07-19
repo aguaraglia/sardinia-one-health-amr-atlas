@@ -930,8 +930,9 @@ textarea { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
 /* Concept alignment: Sardinia dotted mark, sans-serif masthead, one-line dashboard title */
 .global-brand .brand-mark { width:34px; height:46px; flex-basis:34px; display:inline-flex; align-items:center; justify-content:center; }
 .global-brand .brand-mark svg { width:34px; height:46px; overflow:visible; }
-.global-brand .brand-island { fill:#2b918e; stroke:#1558b0; stroke-width:1.15; stroke-linejoin:round; }
-.global-brand .brand-mark circle { fill:#102f55; }
+.global-brand .brand-island { fill:#edf3f7; stroke:#1558b0; stroke-width:1.15; stroke-linejoin:round; }
+.global-brand .brand-mark circle { fill:#2b918e; }
+.global-brand .brand-mark circle:nth-of-type(even) { fill:#1558b0; }
 .global-brand-name,.global-brand-atlas { font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; font-size:.88rem; line-height:1.02; letter-spacing:.01em; }
 .global-brand-name { font-weight:750; }
 .global-brand-atlas { font-weight:500; }
@@ -988,4 +989,7 @@ textarea { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
 
 
 .embedded-deck,.embedded-slide-stage { overflow-x:hidden; }
+
+
+
 
