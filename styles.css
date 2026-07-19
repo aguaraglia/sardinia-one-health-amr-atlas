@@ -999,7 +999,7 @@ textarea { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
 .atlas-dashboard .intro h1,
 .evidence-page .site-header h1,
 .outreach-page .site-header h1,
-.methodology-page .site-header h1 { font-family:'Lora',Georgia,Cambria,serif; font-weight:500; letter-spacing:-.045em; }
+.methodology-page .site-header h1 { font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif; font-weight:760; letter-spacing:-.045em; }
 .brotzu-discovery { display:grid; gap:1rem; }
 .discovery-place { display:grid; grid-template-columns:auto 1fr; align-items:center; column-gap:.7rem; padding:1rem; background:#eef6f7; border-left:4px solid #2b918e; }
 .discovery-place strong { display:block; color:#102f55; font-size:1.35rem; }
@@ -1011,4 +1011,18 @@ textarea { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
 .discovery-note { margin:0; padding:.85rem 1rem; border-top:1px solid #d6dee7; color:#53697f; font-size:.82rem; line-height:1.5; }
 .discovery-note b { color:#102f55; }
 @media (max-width:760px) { .discovery-route { display:grid; grid-template-columns:1fr; }.discovery-route i { transform:rotate(90deg); text-align:center; } }
+
+
+.brotzu-discovery { grid-template-columns:minmax(130px,.38fr) minmax(0,1fr); align-items:start; }
+.brotzu-portrait { margin:0; padding:.55rem; background:#fff; border:1px solid #cbd8e2; transform:rotate(-1.2deg); box-shadow:0 10px 20px #102f5514; }
+.brotzu-portrait img { display:block; width:100%; aspect-ratio:181/250; object-fit:cover; filter:grayscale(1) contrast(.94); }
+.brotzu-portrait figcaption { margin-top:.45rem; color:#66798d; font-size:.66rem; line-height:1.25; }
+.brotzu-discovery .discovery-place,.brotzu-discovery .discovery-route,.brotzu-discovery .discovery-note { grid-column:2; }
+.timeline-visual { display:flex; align-items:center; justify-content:space-between; gap:.55rem; min-height:150px; padding:1rem; background:linear-gradient(90deg,#eef6f7 0 20%,#fff 20% 80%,#eef6f7 80%); border-top:2px solid #2b918e; border-bottom:1px solid #cbd8e2; }
+.timeline-visual span,.timeline-visual strong { max-width:145px; color:#102f55; text-align:center; font-size:.8rem; }
+.timeline-visual span { color:#1558b0; font-weight:800; letter-spacing:.08em; }
+.timeline-visual i { width:34px; height:2px; background:#b4772d; position:relative; }
+.timeline-visual i::after { content:'›'; position:absolute; right:-2px; top:-10px; color:#b4772d; font-size:1.2rem; }
+@media (max-width:760px) { .brotzu-discovery { grid-template-columns:1fr; }.brotzu-discovery .discovery-place,.brotzu-discovery .discovery-route,.brotzu-discovery .discovery-note { grid-column:1; }.brotzu-portrait { max-width:150px; }.timeline-visual { flex-direction:column; background:linear-gradient(180deg,#eef6f7 0 25%,#fff 25% 75%,#eef6f7 75%); }.timeline-visual i { transform:rotate(90deg); } }
+
 
