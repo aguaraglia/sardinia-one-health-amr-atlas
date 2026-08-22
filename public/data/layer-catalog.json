@@ -56,7 +56,7 @@
     },
     {
       "id": "sardinia_veterinary_amr_municipal",
-      "label": "AMR veterinaria - evidenze comunali",
+      "label": "AMR veterinaria",
       "file": "public/data/veterinary_amr_municipal_evidence.geojson",
       "publication_status": "public_approved",
       "publisher": "IZS Sardegna / studi pubblicati",
@@ -87,7 +87,7 @@
     },
     {
       "id": "sardinia_human_facility_amr",
-      "label": "AMR umana - evidenze di struttura",
+      "label": "AMR umana",
       "file": "public/data/human_amr_facility_evidence.geojson",
       "publication_status": "public_approved",
       "publisher": "Studi pubblicati (AOU Sassari e coorti locali)",
@@ -149,7 +149,7 @@
     },
     {
       "id": "sardinia_environmental_water_amr",
-      "label": "AMR ambientale - corpi idrici",
+      "label": "AMR ambientale",
       "file": "public/data/environmental_amr_water_bodies.geojson",
       "publication_status": "public_approved",
       "publisher": "Studio pubblicato (ENA PRJNA1411669)",
@@ -183,7 +183,7 @@
     },
     {
       "id": "sardinia_ariss_2024_sites",
-      "label": "Laboratori partecipanti AR-ISS 2024",
+      "label": "Laboratori AR-ISS",
       "file": "public/data/ar_iss_2024_sardinia_sites.geojson",
       "publication_status": "public_approved",
       "publisher": "Istituto Superiore di Sanita",
@@ -212,6 +212,33 @@
         "province": "Provincia",
         "coverage_percent_region": "Copertura regionale %",
         "source_role": "Ruolo"
+      }
+    },
+    {
+      "id": "sardinia_hydro_graph",
+      "label": "Corsi d'acqua",
+      "file": "public/data/dbgt_corsi_grafo.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Regione Autonoma della Sardegna",
+      "source_url": "https://www.sardegnageoportale.it/areetematiche/databasegeotopografico/",
+      "license_status": "Base DBGT regionale; pubblicazione con attribuzione",
+      "validation_status": "passed",
+      "feature_count": 181,
+      "source_date": "DBGT_10K_22_V05",
+      "defaultVisible": false,
+      "color": "#2f78b7",
+      "weight": 1.2,
+      "fillOpacity": 0,
+      "labelProperty": "Nome",
+      "popupFields": [
+        "Nome",
+        "Apposizion",
+        "NOrdine"
+      ],
+      "popupLabels": {
+        "Nome": "Nome",
+        "Apposizion": "Tipo",
+        "NOrdine": "Ordine"
       }
     },
     {
@@ -247,7 +274,24 @@
         "categoria": "Categoria",
         "TIPOLOGIA": "Tipologia",
         "STATO_OPERATIVO": "Stato"
-      }
+      },
+      "explodeBy": "categoria",
+      "explodeColors": {
+        "Acque reflue urbane": "#2878b5",
+        "Fosse Imhoff": "#d98c22",
+        "Industriale": "#b83b5e",
+        "Acque oleose": "#6a4c93",
+        "Fanghi/reflui speciali": "#555555"
+      },
+      "explodeCounts": {
+        "Acque reflue urbane": 560,
+        "Fosse Imhoff": 156,
+        "Industriale": 69,
+        "Acque oleose": 2,
+        "Fanghi/reflui speciali": 1
+      },
+      "explodeLabelPrefix": "Depuratori SIRA · ",
+      "groupTotalLabel": "Depuratori SIRA"
     }
   ]
 }
