@@ -341,7 +341,7 @@ fetch(`${assetRoot}public/data/literature_curated_sardinia.json`).then(r => r.js
     body.innerHTML = d.records
       .slice()
       .sort((a, b) => b.year - a.year)
-      .map(record => `<tr><td>${record.year}</td><td><a href="${record.source_url}" target="_blank" rel="noreferrer">${record.pmid}</a></td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${escapeHtml(record.title)}</td><td><a class="table-action" href="evidence.html?id=${encodeURIComponent(record.study_id)}">Apri scheda</a></td></tr>`)
+      .map(record => `<tr><td>${record.year}</td><td><a href="${record.source_url}" target="_blank" rel="noreferrer">${record.pmid}</a></td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${record.source_url ? `<a href="${escapeHtml(record.source_url)}" target="_blank" rel="noreferrer">${escapeHtml(record.title)}</a>` : escapeHtml(record.title)}</td><td><a class="table-action" href="evidence.html?id=${encodeURIComponent(record.study_id)}">Apri scheda</a></td></tr>`)
       .join('');
   }
   return fetch(`${assetRoot}public/data/literature_curated_summary.json`).then(r => r.json()).then(summary => {
