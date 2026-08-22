@@ -6,7 +6,7 @@
   <title>Sardinia One Health AMR Atlas</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="styles.css?v=20260719e">
+  <link rel="stylesheet" href="styles.css?v=20260822a">
 </head>
 <body class="atlas-dashboard">
   <header class="global-site-header">
@@ -15,7 +15,7 @@
         <span class="brand-mark brand-mark-sardinia" aria-hidden="true"><img src="public/outreach/assets/sardinia-island-icon.png" alt="" decoding="async"></span>
         <span class="global-brand-name">Sardinia<br>One Health</span><span class="global-brand-divider" aria-hidden="true"></span><span class="global-brand-atlas">AMR<br>Atlas</span>
       </a>
-      <nav class="global-nav" aria-label="Navigazione principale"><a class="active" href="index.html">Atlante</a><a href="evidence.html">Evidenze e fonti</a><a href="methodology.html">Metodo</a><a href="about.html">Chi siamo</a><a href="dissemination.html">Divulgazione</a></nav>
+      <nav class="global-nav" aria-label="Navigazione principale"><a class="active" href="index.html">Atlante</a><a href="evidence.html">Evidenze</a><a href="publications.html">Pubblicazioni</a><a href="methodology.html">Metodo</a><a href="about.html">Progetto</a><a href="dissemination.html">Divulgazione</a></nav>
       <div class="language-nav" aria-label="Language"><a href="#" lang="it" class="active">IT</a><a href="en/index.html" lang="en">EN</a></div>
     </div>
   </header>
@@ -37,6 +37,12 @@
           <option value="2010_2019">2010–2019</option>
           <option value="2020_2026">2020–2026</option>
         </select>
+                <label for="evidence-domain">Ambito One Health</label>
+        <select id="evidence-domain"><option value="ALL">Tutti gli ambiti</option></select>
+        <label for="amr-organism">Microrganismo</label>
+        <select id="amr-organism"><option value="ORG_ANY">Tutti i microrganismi</option></select>
+        <label for="amr-matrix">Matrice</label>
+        <select id="amr-matrix"><option value="MATRIX_ANY">Tutte le matrici</option></select>
         <div id="amr-state" class="amr-state">Seleziona un target per filtrare le evidenze pubbliche disponibili.</div>
         <div class="dashboard-tools">
           <button id="reset-amr-filter" type="button">Azzera filtro</button>
@@ -61,11 +67,10 @@
         <nav class="workspace-nav" aria-label="Navigazione principale">
           <a class="active" href="index.html">Panoramica</a>
           <a href="evidence.html">Evidenze</a>
-          <a href="#literature-title">Letteratura</a>
+          <a href="publications.html">Pubblicazioni</a>
           <a href="methodology.html">Metodo</a>
-          <a href="about.html">Chi siamo</a>
+          <a href="about.html">Progetto</a>
           <a href="dissemination.html">Divulgazione</a>
-          <a href="en/index.html" lang="en">EN</a>
         </nav>
         <span class="status" id="status">Caricamento layer…</span>
       </header>
@@ -87,7 +92,7 @@
             <p class="rail-kicker">DETTAGLIO</p>
             <h2 id="selected-evidence-title">Evidenza selezionata</h2>
             <div id="selected-evidence" class="selected-evidence"><p>Seleziona un elemento dalla mappa o dall’elenco dei risultati per leggerne contesto, periodo e limiti di interpretazione.</p></div>
-            <a class="rail-link" href="evidence.html">Apri evidenze e fonti <span aria-hidden="true">→</span></a>
+            <a class="rail-link" href="evidence.html">Apri evidenze <span aria-hidden="true">→</span></a>
           </aside>
         </div>
         <section class="temporal-strip" aria-labelledby="temporal-strip-title">
@@ -160,27 +165,11 @@
             </div>
           </details>
         </section>
-        <section class="literature-section" aria-labelledby="literature-title">
+                <section class="literature-section" aria-labelledby="literature-title">
       <div>
         <h2 id="literature-title">Letteratura AMR curata</h2>
         <p>Studi riferiti alla Sardegna. Ogni riga è evidenza bibliografica eterogenea: non viene sommata come prevalenza regionale.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="literature-table">
-          <thead>
-            <tr>
-              <th>Anno</th>
-              <th>PMID</th>
-              <th>Host</th>
-              <th>Organismo</th>
-              <th>Titolo</th>
-              <th>Scheda</th>
-            </tr>
-          </thead>
-          <tbody id="literature-table-body">
-            <tr><td colspan="6">Caricamento letteratura…</td></tr>
-          </tbody>
-        </table>
+        <p id="literature-digest"><span id="literature-digest-count">—</span> studi curati. <a href="publications.html">Apri tutte le pubblicazioni</a></p>
       </div>
         </section>
         <footer>

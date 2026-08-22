@@ -54,6 +54,7 @@ main { max-width: 1500px; margin: 0 auto; padding: 0 1rem 1rem; }
 .literature-section { margin-top: 1rem; padding: 1.05rem; border: 1px solid #d7e3dd; border-radius: 14px; background: #fff; box-shadow: 0 12px 32px #17352c12; }
 .literature-section h2 { margin: 0; font-size: 1.05rem; color: #123b35; letter-spacing: -.01em; }
 .literature-section p { margin: .35rem 0 .9rem; max-width: 880px; color: #60776e; font-size: .87rem; line-height: 1.45; }
+.publications-page .table-wrap { max-height: none; overflow: visible; }
 .table-wrap { max-height: 360px; overflow: auto; border: 1px solid #dbe7df; border-radius: 10px; background: #fff; scrollbar-gutter: stable; scrollbar-width: auto; scrollbar-color: #3d6f8c #e4edf3; }
 .table-wrap::-webkit-scrollbar { width: 14px; height: 14px; }
 .table-wrap::-webkit-scrollbar-track { background: #e4edf3; }
@@ -479,10 +480,10 @@ body.atlas-dashboard { background:var(--atlas-canvas); color:var(--atlas-copy); 
 .atlas-dashboard .source-links a { color:var(--atlas-blue); }
 .atlas-dashboard .dashboard-workspace { background:var(--atlas-canvas); }
 .atlas-dashboard .workspace-topbar {
-  height:38px; justify-content:flex-end; padding:0 2rem;
+  height:48px; justify-content:space-between; padding:0 2rem;
   background:var(--atlas-paper); border-bottom-color:var(--atlas-line);
 }
-.atlas-dashboard .workspace-nav { display:none; }
+.atlas-dashboard .workspace-nav { display:flex; gap:1.25rem; align-items:center; height:100%; }
 .atlas-dashboard .status {
   padding:0; border:0; border-radius:0; color:#63788c;
   background:transparent; font-size:.68rem;
@@ -1039,3 +1040,17 @@ textarea { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
 .evidence-page .site-header h1,.outreach-page .site-header h1 { font-size:clamp(1.6rem,2.3vw,2.2rem)!important; line-height:1.08; }
 @media (max-width:760px) { .evidence-page .site-header h1,.outreach-page .site-header h1 { font-size:clamp(1.55rem,6.5vw,1.95rem)!important; } }
 
+
+.evidence-page > .workspace-nav,.outreach-page > .workspace-nav {
+  display:flex; flex-wrap:wrap; gap:1.35rem; align-items:center;
+  padding:.65rem clamp(1rem,5vw,5rem); background:var(--atlas-paper);
+  border-bottom:1px solid var(--atlas-line);
+}
+.evidence-page > .workspace-nav a,.outreach-page > .workspace-nav a {
+  color:#5a7189; text-decoration:none; font-size:.78rem; font-weight:750;
+  padding:.25rem 0; border-bottom:2px solid transparent;
+}
+.evidence-page > .workspace-nav a:hover,.evidence-page > .workspace-nav a.active,
+.outreach-page > .workspace-nav a:hover,.outreach-page > .workspace-nav a.active {
+  color:var(--atlas-blue); border-bottom-color:var(--atlas-teal, #46bfd0);
+}

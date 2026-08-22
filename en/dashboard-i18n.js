@@ -14,7 +14,10 @@ const replacements = [
   ['Comuni', 'Municipalities'], ['Province', 'Provinces'], ['Corsi d’acqua principali', 'Main watercourses'],
   ['Depuratori SIRA', 'SIRA treatment plants'], ['Laboratori partecipanti AR-ISS 2024', 'AR-ISS participating laboratories 2024'],
   ['AMR veterinaria', 'Veterinary AMR'], ['AMR umana di struttura', 'Human facility AMR'], ['AMR filiera alimentare', 'Food-chain AMR'],
-  ['Laboratori AR-ISS', 'AR-ISS laboratories'], ['Satellite Esri', 'Esri satellite'], ['OpenStreetMap', 'OpenStreetMap']
+  ['Laboratori AR-ISS', 'AR-ISS laboratories'], ['Satellite Esri', 'Esri satellite'], ['OpenStreetMap', 'OpenStreetMap'],
+  ['Tutti i microrganismi', 'All organisms'], ['Tutte le matrici', 'All matrices'], ['Tutti gli ambiti', 'All domains'],
+  ['Microrganismo', 'Organism'], ['Matrice', 'Matrix'], ['Ambito One Health', 'One Health domain'],
+  ['Apri tutte le pubblicazioni', 'Open all publications']
 ];
 
 const localizeDashboard = () => {

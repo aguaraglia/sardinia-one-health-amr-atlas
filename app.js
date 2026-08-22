@@ -1,4 +1,5 @@
 const assetRoot = document.documentElement.lang === 'en' ? '../' : '';
+const isEn = document.documentElement.lang === 'en';
 const map = L.map('map', { zoomControl: true }).setView([40.12, 9.05], 8);
 const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 18,
@@ -25,6 +26,119 @@ const periodSelect = document.getElementById('amr-period');
 amrTargets.slice(1).forEach(([value, label]) => targetSelect.add(new Option(label, value)));
 targetSelect.addEventListener('change', () => applyDashboardFilters());
 periodSelect.addEventListener('change', () => applyDashboardFilters());
+const organismSelect = document.getElementById('amr-organism');
+const matrixSelect = document.getElementById('amr-matrix');
+const domainSelect = document.getElementById('evidence-domain');
+const organismCatalog = [
+  ['ORG_ECOLI', 'Escherichia coli'],
+  ['ORG_KLEBSIELLA', 'Klebsiella pneumoniae'],
+  ['ORG_SALMONELLA', 'Salmonella spp.'],
+  ['ORG_CAMPYLOBACTER', 'Campylobacter spp.'],
+  ['ORG_SAUREUS', 'Staphylococcus aureus / MRSA'],
+  ['ORG_ENTEROCOCCUS', 'Enterococcus spp.'],
+  ['ORG_PSEUDOMONAS', 'Pseudomonas aeruginosa'],
+  ['ORG_ACINETOBACTER', 'Acinetobacter spp.'],
+  ['ORG_ENTEROBACTERALES', isEn ? 'Other Enterobacterales' : 'Enterobacterales (altri)']
+];
+const organismKeywords = {
+  ORG_ECOLI: ['e. coli', 'escherichia', 'crec', 'st131', 'e coli'],
+  ORG_KLEBSIELLA: ['klebsiella', 'crkp', 'k. pneumoniae', 'k pneumoniae'],
+  ORG_SALMONELLA: ['salmonella'],
+  ORG_CAMPYLOBACTER: ['campylobacter', 'c. jejuni', 'c jejuni'],
+  ORG_SAUREUS: ['staphylococcus aureus', 's. aureus', 'mrsa', 'meticillin', 'methicillin', 'oxacillin', 'meca'],
+  ORG_ENTEROCOCCUS: ['enterococcus', 'vre', 'faecium', 'faecalis'],
+  ORG_PSEUDOMONAS: ['pseudomonas', 'crpa'],
+  ORG_ACINETOBACTER: ['acinetobacter', 'cras'],
+  ORG_ENTEROBACTERALES: ['enterobacterales', 'enterobacteriaceae', 'enterobacter', 'citrobacter', 'serratia', 'proteus', 'morganella']
+};
+const matrixCatalog = [
+  ['MATRIX_BLOOD_CSF', isEn ? 'Blood / CSF (invasive isolates)' : 'Sangue / liquor (isolati invasivi)'],
+  ['MATRIX_FAECES', isEn ? 'Faeces / farm' : 'Feci / allevamento'],
+  ['MATRIX_MILK', isEn ? 'Milk / bulk tank' : 'Latte / bulk tank'],
+  ['MATRIX_MEAT', isEn ? 'Meat / carcass / slaughter' : 'Carne / carcassa / macello'],
+  ['MATRIX_WATER', isEn ? 'Environmental water' : 'Acque ambientali'],
+  ['MATRIX_WASTEWATER', isEn ? 'Wastewater / plants' : 'Acque reflue / impianti'],
+  ['MATRIX_WILDLIFE', isEn ? 'Wildlife' : 'Fauna selvatica'],
+  ['MATRIX_LIVESTOCK', isEn ? 'Livestock counts' : 'Consistenze zootecniche']
+];
+const domainCatalog = [
+  ['human', isEn ? 'Human' : 'Umano'],
+  ['animal', isEn ? 'Animal' : 'Animale'],
+  ['food', isEn ? 'Food' : 'Alimenti'],
+  ['environment', isEn ? 'Environment' : 'Ambiente'],
+  ['wildlife', isEn ? 'Wildlife' : 'Fauna selvatica']
+];
+function addSelectOptions(select, rows) {
+  if (!select) return;
+  rows.forEach(([value, label]) => select.add(new Option(label, value)));
+}
+addSelectOptions(organismSelect, organismCatalog);
+addSelectOptions(matrixSelect, matrixCatalog);
+addSelectOptions(domainSelect, domainCatalog);
+if (organismSelect) organismSelect.addEventListener('change', () => applyDashboardFilters());
+if (matrixSelect) matrixSelect.addEventListener('change', () => applyDashboardFilters());
+if (domainSelect) domainSelect.addEventListener('change', () => applyDashboardFilters());
+function featureHaystack(feature) {
+  const props = feature?.properties || {};
+  return [
+    JSON.stringify(props),
+    props.organism, props.host, props.domain, props.evidence_type, props.title,
+    Array.isArray(props.organisms) ? props.organisms.join(' ') : '',
+    Array.isArray(props.hosts) ? props.hosts.join(' ') : '',
+    Array.isArray(props.keywords) ? props.keywords.join(' ') : '',
+    Array.isArray(props.amr_keywords) ? props.amr_keywords.join(' ') : '',
+    Array.isArray(props.matrix) ? props.matrix.join(' ') : props.matrix
+  ].filter(Boolean).join(' ').toLowerCase();
+}
+function isConsumptionEvidence(haystack) {
+  return /osmed|\baifa\b|aware|ddd|consumo|consumption|convenzionat|antimicrobial use|uso antimicrob/.test(haystack);
+}
+function featureMatchesOrganism(feature, value) {
+  if (!value || value === 'ORG_ANY') return true;
+  const hay = featureHaystack(feature);
+  if (isConsumptionEvidence(hay)) return false;
+  return (organismKeywords[value] || []).some(keyword => hay.includes(keyword));
+}
+function featureMatrixTags(feature, layerKey) {
+  const hay = featureHaystack(feature);
+  const tags = [];
+  if (layerKey === 'arissSites' || /blood|emocoltur|liquor|\bcsf\b|sangue|invasiv|bloodstream/.test(hay)) tags.push('MATRIX_BLOOD_CSF');
+  if (/feci|faeces|stool|fecal/.test(hay)) tags.push('MATRIX_FAECES');
+  if (/latte|milk|mastit|bulk tank|uberis/.test(hay)) tags.push('MATRIX_MILK');
+  if (layerKey === 'foodChainMunicipal' || /carne|meat|macello|carcass|filiera/.test(hay)) tags.push('MATRIX_MEAT');
+  if (layerKey === 'environmentalWaterEvidence' || (/acqua|water|lagoon|lago|resistom/.test(hay) && !/reflu|wastewater|depurat/.test(hay))) tags.push('MATRIX_WATER');
+  if (/wastewater|reflu|depurat|sewage/.test(hay)) tags.push('MATRIX_WASTEWATER');
+  if (/wildlife|cinghial|wild ?boar|fauna selvatic|wild bird/.test(hay)) tags.push('MATRIX_WILDLIFE');
+  if (/livestock|zootecn|\bbdn\b|consisten|\bcapi\b|ovicapr|bovini|suini/.test(hay)) tags.push('MATRIX_LIVESTOCK');
+  return tags;
+}
+function featureMatchesMatrix(feature, value, layerKey) {
+  if (!value || value === 'MATRIX_ANY') return true;
+  return featureMatrixTags(feature, layerKey).includes(value);
+}
+function featureDomain(feature, layerKey) {
+  const hay = featureHaystack(feature);
+  const props = feature?.properties || {};
+  const explicit = String(props.domain || props.evidence_type || props.host || '').toLowerCase();
+  if (/wildlife|cinghial|wild ?boar|fauna selvatic/.test(hay) || /wildlife/.test(explicit)) return 'wildlife';
+  if (layerKey === 'foodChainMunicipal' || /food|filiera|aliment/.test(hay) || /food/.test(explicit)) return 'food';
+  if (layerKey === 'environmentalWaterEvidence' || /environment|resistom/.test(hay) || /environment/.test(explicit)) return 'environment';
+  if (layerKey === 'veterinaryMunicipal' || /veterinary|izs|ovin|livestock|animal|mastit/.test(hay) || /animal|veterinary/.test(explicit)) return 'animal';
+  if (layerKey === 'humanFacilityEvidence' || layerKey === 'arissSites' || /human|ospedal|facility|ar-iss|ariss/.test(hay) || /human/.test(explicit)) return 'human';
+  return layerKey === 'veterinaryMunicipal' ? 'animal' : 'human';
+}
+function featureMatchesDomain(feature, value, layerKey) {
+  if (!value || value === 'ALL') return true;
+  return featureDomain(feature, layerKey) === value;
+}
+function featureMatchesAll(feature, layerKey) {
+  return featureMatchesAmr(feature, targetSelect.value)
+    && featureMatchesPeriod(feature, periodSelect.value)
+    && featureMatchesOrganism(feature, organismSelect ? organismSelect.value : 'ORG_ANY')
+    && featureMatchesMatrix(feature, matrixSelect ? matrixSelect.value : 'MATRIX_ANY', layerKey)
+    && featureMatchesDomain(feature, domainSelect ? domainSelect.value : 'ALL', layerKey);
+}
+
 
 const amrKeywords = {
   AMR_BETA_LACTAM: ['penicillin','penicillina','ampicillin','ampicillina','amoxicillin','amoxicillina','beta-lactam','bla','kpc','oxa','ndm','carbapenem','cephalosporin','cefazolin','cefotaxime','ceftazidime','ceftriaxone'],
@@ -115,7 +229,7 @@ function applyDashboardFilters() {
     if (!layer) return;
     const layerIsActive = map.hasLayer(layer);
     layer.eachLayer(item => {
-      const show = featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue);
+      const show = featureMatchesAll(item.feature, key);
       if (show && layerIsActive) {
         visible += 1;
         matches.push({ key, feature: item.feature });
@@ -126,12 +240,12 @@ function applyDashboardFilters() {
       if (item._path) item._path.style.pointerEvents = show ? 'auto' : 'none';
       if (item._icon) item._icon.style.display = show ? '' : 'none';
     });
-    if (layerIsActive && layer.getLayers().some(item => featureMatchesAmr(item.feature, value) && featureMatchesPeriod(item.feature, periodValue))) compatibleLayers += 1;
+    if (layerIsActive && layer.getLayers().some(item => featureMatchesAll(item.feature, key))) compatibleLayers += 1;
   });
   const inactiveTotal = [...inactiveMatches.values()].reduce((sum, count) => sum + count, 0);
   const inactiveSummary = inactiveTotal ? ` ${inactiveTotal} ${inactiveTotal === 1 ? 'evidenza compatibile è' : 'evidenze compatibili sono'} in layer non attivi.` : '';
   document.getElementById('amr-state').textContent = `${label} · ${periodLabel}: ${visible} elementi compatibili visibili sulla mappa.${inactiveSummary}`;
-  document.getElementById('filter-status').textContent = `${label} · ${periodLabel}`;
+  document.getElementById('filter-status').textContent = [label, periodLabel, organismSelect?.selectedOptions[0]?.textContent, matrixSelect?.selectedOptions[0]?.textContent, domainSelect?.selectedOptions[0]?.textContent].filter(Boolean).join(' · ');
   document.getElementById('metric-visible').textContent = visible.toLocaleString('it-IT');
   document.getElementById('metric-sources').textContent = compatibleLayers.toLocaleString('it-IT');
   document.getElementById('filtered-count').textContent = `${visible} risultati`;
@@ -197,6 +311,9 @@ function showSelectedEvidence(feature, key) {
 document.getElementById('reset-amr-filter').addEventListener('click', () => {
   targetSelect.value = 'AMR_ANY';
   periodSelect.value = 'ALL_PERIODS';
+  if (organismSelect) organismSelect.value = 'ORG_ANY';
+  if (matrixSelect) matrixSelect.value = 'MATRIX_ANY';
+  if (domainSelect) domainSelect.value = 'ALL';
   applyDashboardFilters();
 });
 fetch(`${assetRoot}public/data/pncar_env_panel.json`).then(r => r.json()).then(d => {
@@ -337,17 +454,25 @@ fetch(`${assetRoot}public/data/literature_curated_sardinia.json`).then(r => r.js
   const body = document.getElementById('literature-table-body');
   const overviewLiterature = document.getElementById('overview-literature');
   if (overviewLiterature) overviewLiterature.textContent = d.records.length.toLocaleString('it-IT');
+  const digestCount = document.getElementById('literature-digest-count');
+  if (digestCount) digestCount.textContent = d.records.length.toLocaleString(isEn ? 'en-GB' : 'it-IT');
   if (body) {
+    const sheetLabel = isEn ? 'Open record' : 'Apri scheda';
     body.innerHTML = d.records
       .slice()
       .sort((a, b) => b.year - a.year)
-      .map(record => `<tr><td>${record.year}</td><td><a href="${record.source_url}" target="_blank" rel="noreferrer">${record.pmid}</a></td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${record.source_url ? `<a href="${escapeHtml(record.source_url)}" target="_blank" rel="noreferrer">${escapeHtml(record.title)}</a>` : escapeHtml(record.title)}</td><td><a class="table-action" href="evidence.html?id=${encodeURIComponent(record.study_id)}">Apri scheda</a></td></tr>`)
+      .map(record => {
+        const title = escapeHtml(record.title || '');
+        const href = record.source_url ? escapeHtml(record.source_url) : '';
+        const titleCell = href ? `<a href="${href}" target="_blank" rel="noreferrer">${title}</a>` : title;
+        return `<tr><td>${record.year}</td><td>${escapeHtml(String(record.pmid || ''))}</td><td>${escapeHtml((record.hosts || []).join(', '))}</td><td>${escapeHtml((record.organisms || []).join(', '))}</td><td>${titleCell}</td><td><a class="table-action" href="${assetRoot}evidence.html?id=${encodeURIComponent(record.study_id)}">${sheetLabel}</a></td></tr>`;
+      })
       .join('');
   }
   return fetch(`${assetRoot}public/data/literature_curated_summary.json`).then(r => r.json()).then(summary => {
     const hosts = summary.hosts.slice(0, 4).map(x => `${x.host} (${x.study_count})`).join(', ');
     card.hidden = false;
-    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}). Host principali: ${hosts}.<br><a class="inline-action" href="evidence.html">Apri l’elenco completo delle evidenze →</a>`;
+    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}). Host principali: ${hosts}.<br><a class="inline-action" href="publications.html">${isEn ? 'Open all publications' : 'Apri tutte le pubblicazioni'}</a>`;
   });
 }).catch(() => {});
 fetch(`${assetRoot}public/data/aifa_osmed_2024_antibiotics.json`).then(r => r.json()).then(d => {

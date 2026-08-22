@@ -6,7 +6,7 @@
   <title>Sardinia One Health AMR Atlas</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="../styles.css?v=20260719e">
+  <link rel="stylesheet" href="../styles.css?v=20260822a">
 </head>
 <body class="atlas-dashboard">
   <header class="global-site-header">
@@ -15,7 +15,7 @@
         <span class="brand-mark brand-mark-sardinia" aria-hidden="true"><img src="../public/outreach/assets/sardinia-island-icon.png" alt="" decoding="async"></span>
         <span class="global-brand-name">Sardinia<br>One Health</span><span class="global-brand-divider" aria-hidden="true"></span><span class="global-brand-atlas">AMR<br>Atlas</span>
       </a>
-      <nav class="global-nav" aria-label="Main navigation"><a class="active" href="index.html">Atlas</a><a href="evidence.html">Evidence and sources</a><a href="methodology.html">Method</a><a href="about.html">About</a><a href="dissemination.html">Outreach</a></nav>
+      <nav class="global-nav" aria-label="Main navigation"><a class="active" href="index.html">Atlas</a><a href="evidence.html">Evidence</a><a href="publications.html">Publications</a><a href="methodology.html">Method</a><a href="about.html">Project</a><a href="dissemination.html">Dissemination</a></nav>
       <div class="language-nav" aria-label="Language"><a href="../index.html" lang="it">IT</a><a href="#" lang="en" class="active">EN</a></div>
     </div>
   </header>
@@ -37,6 +37,12 @@
           <option value="2010_2019">2010–2019</option>
           <option value="2020_2026">2020–2026</option>
         </select>
+                <label for="evidence-domain">One Health domain</label>
+        <select id="evidence-domain"><option value="ALL">All domains</option></select>
+        <label for="amr-organism">Organism</label>
+        <select id="amr-organism"><option value="ORG_ANY">All organisms</option></select>
+        <label for="amr-matrix">Matrix</label>
+        <select id="amr-matrix"><option value="MATRIX_ANY">All matrices</option></select>
         <div id="amr-state" class="amr-state">Seleziona un target per filtrare le evidenze pubbliche disponibili.</div>
         <div class="dashboard-tools">
           <button id="reset-amr-filter" type="button">Reset filters</button>
@@ -61,11 +67,11 @@
         <nav class="workspace-nav" aria-label="Navigazione principale">
           <a class="active" href="index.html">Overview</a>
           <a href="evidence.html">Evidence</a>
-          <a href="#literature-title">Literature</a>
+          <a href="publications.html">Publications</a>
           <a href="methodology.html">Method</a>
-          <a href="about.html">About</a>
-          <a href="dissemination.html">Outreach</a>
-          <a href="../index.html" lang="it">IT</a>
+          <a href="about.html">Project</a>
+          <a href="dissemination.html">Dissemination</a>
+          
         </nav>
         <span class="status" id="status">Caricamento layer…</span>
       </header>
@@ -160,27 +166,11 @@
             </div>
           </details>
         </section>
-        <section class="literature-section" aria-labelledby="literature-title">
+                <section class="literature-section" aria-labelledby="literature-title">
       <div>
-        <h2 id="literature-title">Literature AMR curata</h2>
-        <p>Studi riferiti alla Sardegna. Ogni riga è evidenza bibliografica eterogenea: non viene sommata come prevalenza regionale.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="literature-table">
-          <thead>
-            <tr>
-              <th>Anno</th>
-              <th>PMID</th>
-              <th>Host</th>
-              <th>Organismo</th>
-              <th>Titolo</th>
-              <th>Scheda</th>
-            </tr>
-          </thead>
-          <tbody id="literature-table-body">
-            <tr><td colspan="6">Loading literature…</td></tr>
-          </tbody>
-        </table>
+        <h2 id="literature-title">Curated AMR literature</h2>
+        <p>Studies referring to Sardinia. Each row is heterogeneous bibliographic evidence: rows are not summed as a regional prevalence.</p>
+        <p id="literature-digest"><span id="literature-digest-count">—</span> curated studies. <a href="publications.html">Open all publications</a></p>
       </div>
         </section>
         <footer>
