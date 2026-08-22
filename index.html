@@ -6,184 +6,65 @@
   <title>Sardinia One Health AMR Atlas</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="styles.css?v=20260822a">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/regional-base.css">
 </head>
 <body class="atlas-dashboard">
   <header class="global-site-header">
     <div class="global-header-inner">
-      <a class="global-brand" href="index.html" aria-label="Sardinia One Health AMR Atlas">
-        <span class="brand-mark brand-mark-sardinia" aria-hidden="true"><img src="public/outreach/assets/sardinia-island-icon.png" alt="" decoding="async"></span>
-        <span class="global-brand-name">Sardinia<br>One Health</span><span class="global-brand-divider" aria-hidden="true"></span><span class="global-brand-atlas">AMR<br>Atlas</span>
-      </a>
+      <a class="global-brand" href="index.html" aria-label="Sardinia One Health AMR Atlas"><span class="brand-code brand-code-icon" style="--brand-icon:url('public/outreach/assets/sardinia-island-icon.png')" aria-hidden="true">SRD</span><span class="global-brand-name">Sardinia<br>One Health</span><span class="global-brand-divider" aria-hidden="true"></span><span class="global-brand-atlas">AMR<br>Atlas</span></a>
       <nav class="global-nav" aria-label="Navigazione principale"><a class="active" href="index.html">Atlante</a><a href="evidence.html">Evidenze</a><a href="publications.html">Pubblicazioni</a><a href="methodology.html">Metodo</a><a href="about.html">Progetto</a><a href="dissemination.html">Divulgazione</a></nav>
-      <div class="language-nav" aria-label="Language"><a href="#" lang="it" class="active">IT</a><a href="en/index.html" lang="en">EN</a></div>
+      <div class="language-nav" aria-label="Language"><a href="index.html" lang="it" class="active">IT</a><a href="en/index.html" lang="en">EN</a></div>
+
     </div>
   </header>
   <div class="dashboard-shell">
     <aside class="dashboard-sidebar" aria-label="Filtri dell'atlante">
-      <a class="atlas-brand" href="index.html" aria-label="Sardinia One Health AMR Atlas">
-        <span class="brand-mark brand-mark-sardinia" aria-hidden="true"><img src="public/outreach/assets/sardinia-island-icon.png" alt="" decoding="async"></span>
-        <span><strong>Sardinia<br>One Health</strong><small>AMR Atlas</small></span>
-      </a>
+      <a class="atlas-brand" href="index.html"><span class="brand-code brand-code-icon" style="--brand-icon:url('public/outreach/assets/sardinia-island-icon.png')" aria-hidden="true">SRD</span><span><strong id="atlas-short-name">Sardinia One Health</strong><small>AMR Atlas</small></span></a>
       <div class="sidebar-scroll">
-        <p class="sidebar-kicker">Esplora l’atlante</p>
-        <p class="panel-note">Evidenze pubbliche aggregate: i target, i periodi e i layer di contesto restano distinti.</p>
+        <p class="sidebar-kicker">Esplora l'atlante</p>
+        <p class="panel-note">Filtra classe antimicrobica, microrganismo, matrice e periodo. Vocabolario allineato a EARS-Net / EFSA SSD2. I layer geografici si attivano separatamente nella mappa.</p>
         <label for="amr-target">Classe o target AMR</label>
         <select id="amr-target"><option value="AMR_ANY">Tutte le classi</option></select>
-        <label for="amr-period">Periodo dell'evidenza</label>
-        <select id="amr-period">
-          <option value="ALL_PERIODS">Tutti i periodi pubblicati</option>
-          <option value="1995_2009">1995–2009</option>
-          <option value="2010_2019">2010–2019</option>
-          <option value="2020_2026">2020–2026</option>
-        </select>
-                <label for="evidence-domain">Ambito One Health</label>
+        <label for="evidence-period">Periodo dell'evidenza</label>
+        <select id="evidence-period"><option value="ALL">Tutti i periodi pubblicati</option></select>
+        <label for="evidence-domain">Ambito One Health</label>
         <select id="evidence-domain"><option value="ALL">Tutti gli ambiti</option></select>
         <label for="amr-organism">Microrganismo</label>
         <select id="amr-organism"><option value="ORG_ANY">Tutti i microrganismi</option></select>
         <label for="amr-matrix">Matrice</label>
         <select id="amr-matrix"><option value="MATRIX_ANY">Tutte le matrici</option></select>
-        <div id="amr-state" class="amr-state">Seleziona un target per filtrare le evidenze pubbliche disponibili.</div>
+        <div class="amr-state" id="evidence-filter-state">Seleziona una classe per filtrare le evidenze pubbliche disponibili.</div>
         <div class="dashboard-tools">
-          <button id="reset-amr-filter" type="button">Azzera filtro</button>
-          <span id="filter-status" aria-live="polite">Filtro: tutte le evidenze</span>
+          <button id="reset-evidence-filter" type="button">Azzera filtri</button>
+          <span id="filter-status" aria-live="polite">Tutte le evidenze</span>
         </div>
-        <div class="dashboard-metrics" aria-label="Riepilogo dinamico">
-          <div><strong id="metric-visible">—</strong><span>elementi visibili</span></div>
-          <div><strong id="metric-sources">—</strong><span>layer compatibili</span></div>
+        <div class="dashboard-metrics" aria-label="Riepilogo dei filtri">
+          <div><strong id="filter-metric-visible">0</strong><span>evidenze filtrate</span></div>
+          <div><strong id="filter-metric-sources">0</strong><span>fonti compatibili</span></div>
         </div>
         <section class="time-profile" aria-labelledby="time-profile-title">
-          <div class="filtered-heading"><h3 id="time-profile-title">Profilo temporale</h3><span>elementi</span></div>
+          <div class="filtered-heading"><h3 id="time-profile-title">Profilo temporale</h3><span>evidenze</span></div>
           <div id="time-distribution" class="time-distribution" aria-live="polite"></div>
         </section>
         <section class="filtered-evidence" aria-labelledby="filtered-evidence-title">
-          <div class="filtered-heading"><h3 id="filtered-evidence-title">Risultati del filtro</h3><span id="filtered-count">—</span></div>
-          <div id="filtered-evidence-list"><p class="empty-filter">Caricamento dati…</p></div>
+          <div class="filtered-heading"><h3 id="filtered-evidence-title">Risultati del filtro</h3><span id="filtered-count">0</span></div>
+          <div id="filtered-evidence-list"><p class="empty-filter">Caricamento dati...</p></div>
         </section>
       </div>
     </aside>
     <div class="dashboard-workspace">
-      <header class="workspace-topbar">
-        <nav class="workspace-nav" aria-label="Navigazione principale">
-          <a class="active" href="index.html">Panoramica</a>
-          <a href="evidence.html">Evidenze</a>
-          <a href="publications.html">Pubblicazioni</a>
-          <a href="methodology.html">Metodo</a>
-          <a href="about.html">Progetto</a>
-          <a href="dissemination.html">Divulgazione</a>
-        </nav>
-        <span class="status" id="status">Caricamento layer…</span>
-      </header>
+      <header class="workspace-topbar"><nav class="workspace-nav"><a class="active" href="index.html">Panoramica</a><a href="evidence.html">Evidenze</a><a href="publications.html">Pubblicazioni</a><a href="dissemination.html">Divulgazione</a></nav><span class="status" id="status">Caricamento configurazione...</span></header>
       <main class="workspace-main">
-        <section class="intro">
-          <div><p class="section-kicker">CRUSCOTTO PUBBLICO</p><h1>Atlante AMR della Sardegna</h1></div>
-          <p>Filtra insieme classe antimicrobica e periodo. La mappa mostra evidenze localizzate; i conteggi sono elementi documentati, non una prevalenza regionale.</p>
-        </section>
-        <section class="overview-strip" aria-label="Copertura pubblica dell'atlante">
-          <div><strong id="overview-localized">—</strong><span>evidenze AMR localizzate</span></div>
-          <div><strong id="overview-veterinary">—</strong><span>comuni veterinari</span></div>
-          <div><strong id="overview-human">—</strong><span>strutture umane</span></div>
-          <div><strong id="overview-ariss">—</strong><span>laboratori AR-ISS</span></div>
-          <div><strong id="overview-literature">—</strong><span>studi curati</span></div>
-        </section>
-        <div class="atlas-grid">
-          <section class="map-stage" aria-label="Mappa amministrativa della Sardegna"><div id="map"></div></section>
-          <aside class="results-rail" aria-labelledby="selected-evidence-title">
-            <p class="rail-kicker">DETTAGLIO</p>
-            <h2 id="selected-evidence-title">Evidenza selezionata</h2>
-            <div id="selected-evidence" class="selected-evidence"><p>Seleziona un elemento dalla mappa o dall’elenco dei risultati per leggerne contesto, periodo e limiti di interpretazione.</p></div>
-            <a class="rail-link" href="evidence.html">Apri evidenze <span aria-hidden="true">→</span></a>
-          </aside>
-        </div>
-        <section class="temporal-strip" aria-labelledby="temporal-strip-title">
-          <div><p class="section-kicker">LETTURA NEL TEMPO</p><h2 id="temporal-strip-title">Distribuzione delle evidenze per periodo</h2></div>
-          <p>Il profilo riassume solo gli elementi con periodo pubblicato e si aggiorna con entrambi i filtri.</p>
-        </section>
-        <section class="data-digest" aria-labelledby="data-digest-title">
-          <div class="data-digest-heading">
-            <div>
-              <p class="section-kicker">QUADRO DATI</p>
-              <h2 id="data-digest-title">Fonti e indicatori pubblici</h2>
-            </div>
-            <a href="evidence.html">Apri tutte le schede</a>
-          </div>
-          <div class="digest-grid">
-            <section class="digest-group" aria-labelledby="digest-observed-title">
-              <h3 id="digest-observed-title">Dati osservati</h3>
-              <div id="ariss-resistance-card" class="evidence-card"><strong>AR-ISS Sardegna 2024 - resistenza</strong><br><small>Copertura 75,4%</small><table class="evidence-table"><tr><th>Fenotipo</th><th>%</th><th>R/n</th></tr><tr><td>MRSA</td><td>18,8%</td><td>63/335</td></tr><tr><td>VRE-faecium</td><td>9,6%</td><td>16/167</td></tr><tr><td>CREC</td><td>16,4%</td><td>114/697</td></tr><tr><td>CRKP</td><td>18,3%</td><td>78/427</td></tr><tr><td>CRPA</td><td>10,4%</td><td>21/201</td></tr><tr><td>CRAS</td><td>61,1%</td><td>22/36</td></tr></table></div>
-              <div id="human-facility-amr-card" class="evidence-card" hidden></div>
-              <div id="human-local-amr-card" class="evidence-card" hidden></div>
-              <div id="izs-municipal-amr-card" class="evidence-card" hidden></div>
-              <div id="izs-area-amr-card" class="evidence-card" hidden></div>
-              <div id="pig-amr-card" class="evidence-card" hidden></div>
-              <div id="wild-boar-amr-card" class="evidence-card" hidden></div>
-              <div id="food-chain-amr-card" class="evidence-card" hidden></div>
-              <div id="environmental-amr-card" class="evidence-card" hidden></div>
-              <div id="literature-card" class="evidence-card" hidden></div>
-            </section>
-            <section class="digest-group" aria-labelledby="digest-context-title">
-              <h3 id="digest-context-title">Target, metodi e contesto</h3>
-              <div id="pncar-panel-card" class="evidence-card" hidden></div>
-              <div id="ariss-card" class="evidence-card" hidden></div>
-              <div id="aifa-card" class="evidence-card" hidden></div>
-              <div id="bdn-card" class="evidence-card" hidden></div>
-              <div id="bdn-bov-card" class="evidence-card" hidden></div>
-              <div id="bdn-suini-card" class="evidence-card" hidden></div>
-            </section>
-          </div>
-          <details class="source-panel">
-            <summary>Fonti regionali</summary>
-            <ul class="source-links">
-              <li><a href="https://www.epicentro.iss.it/antibiotico-resistenza/ar-iss-rapporto" target="_blank" rel="noreferrer">AR-ISS</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/29621600/" target="_blank" rel="noreferrer">AOU Sassari · KPC-Kp 2015-2017</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/37764198/" target="_blank" rel="noreferrer">AOU Sassari · KPC/OXA-48-like WGS</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/37761789/" target="_blank" rel="noreferrer">AOU Sassari · NDM-Kp</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/36978343/" target="_blank" rel="noreferrer">AOU Sassari · VRE <i>E. faecium</i></a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/20853674/" target="_blank" rel="noreferrer">Ospedale Binaghi Cagliari · <i>E. faecalis</i></a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/42019335/" target="_blank" rel="noreferrer">Resistoma Bidighinzu e Cabras</a></li>
-              <li><a href="https://www.ebi.ac.uk/ena/browser/view/PRJNA1411669" target="_blank" rel="noreferrer">Sequenze ENA PRJNA1411669</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/33509310/" target="_blank" rel="noreferrer">Rete Sassari-Nuoro-Ozieri · NAS</a></li>
-              <li><a href="https://www.izs-sardegna.it/oldsite/cpt_index.cfm" target="_blank" rel="noreferrer">IZS Sardegna · Bioresource con antibiogrammi</a></li>
-              <li><a href="https://www.izs-sardegna.it/ricerche/izssa07-02.pdf" target="_blank" rel="noreferrer">IZS SA 07/02 · coorte storica latte mastitico</a></li>
-              <li><a href="https://www.preprints.org/manuscript/202410.1339" target="_blank" rel="noreferrer">E. coli suini · filiera sarda e PRJNA1171362</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/38878707/" target="_blank" rel="noreferrer">E. coli nei cinghiali · PMID 38878707</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/35799261/" target="_blank" rel="noreferrer"><i>Streptococcus uberis</i> · metadati e profili AMR comunali</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/34201694/" target="_blank" rel="noreferrer">Berchidda · colture casearie e AMR</a></li>
-              <li><a href="https://www.aifa.gov.it/documents/20142/3610201/Sardegna_Osmed_2024.pdf" target="_blank" rel="noreferrer">AIFA/OsMed Sardegna</a></li>
-              <li><a href="https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/89" target="_blank" rel="noreferrer">BDN - ovicaprini</a></li>
-              <li><a href="https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/11" target="_blank" rel="noreferrer">BDN - bovini e bufalini</a></li>
-              <li><a href="https://www.vetinfo.it/j6_statistiche/index.html#/report-pbi/31" target="_blank" rel="noreferrer">BDN - suini</a></li>
-            </ul>
-            <div class="benchmark-links">
-              <strong>Benchmark interpretativi</strong>
-              <p>EFSA/ECDC: soglie europee, avvertenze su dati non visualizzati e approccio One Health.</p>
-              <a href="https://www.efsa.europa.eu/en/microstrategy/dashboard-antimicrobial-resistance" target="_blank" rel="noreferrer">Dashboard EFSA AMR</a>
-              <a href="https://multimedia.efsa.europa.eu/dataviz-2020/index.htm" target="_blank" rel="noreferrer">Visualizzazione EFSA/ECDC</a>
-              <a href="https://www.who.int/initiatives/glass" target="_blank" rel="noreferrer">WHO GLASS</a>
-              <a href="https://data.who.int/dashboards/amr/overview" target="_blank" rel="noreferrer">WHO AMR data portal</a>
-              <a href="methodology.html">Come usarle nell’atlante</a>
-            </div>
-          </details>
-        </section>
-                <section class="literature-section" aria-labelledby="literature-title">
-      <div>
-        <h2 id="literature-title">Letteratura AMR curata</h2>
-        <p>Studi riferiti alla Sardegna. Ogni riga è evidenza bibliografica eterogenea: non viene sommata come prevalenza regionale.</p>
-        <p id="literature-digest"><span id="literature-digest-count">—</span> studi curati. <a href="publications.html">Apri tutte le pubblicazioni</a></p>
-      </div>
-        </section>
-        <footer>
-      <span>Fonte geografica: Regione Autonoma della Sardegna, DBGT 10K V05.</span>
-      <span>Output WGS84 · Mapshaper</span>
-        </footer>
+        <section class="intro"><div><p class="section-kicker">CRUSCOTTO PUBBLICO</p><h1 id="atlas-title">Sardinia One Health AMR Atlas</h1></div><p>Filtra classe, microrganismo, matrice e periodo. La mappa mostra layer geografici pubblici; i conteggi sono evidenze documentate, non una prevalenza regionale.</p></section>
+        <section class="overview-strip" aria-label="Copertura pubblica"><div><strong id="overview-localized">0</strong><span>elementi localizzati</span></div><div><strong id="overview-layers">0</strong><span>layer approvati</span></div><div><strong id="overview-evidence">0</strong><span>evidenze pubbliche</span></div></section>
+        <div class="atlas-grid"><section class="map-stage" aria-label="Mappa di Sardinia"><div id="map"></div><div class="map-empty-state" id="map-empty-state"><h2>Base cartografica pronta</h2><p>I layer regionali compariranno dopo la verifica di fonte, licenza e geometrie.</p></div></section><aside class="results-rail"><p class="rail-kicker">DETTAGLIO</p><h2 id="selected-evidence-title">Evidenza selezionata</h2><div id="selected-evidence" class="selected-evidence"><p>Seleziona un risultato del filtro per leggerne contesto, periodo e limiti di interpretazione.</p></div><a class="rail-link" href="evidence.html">Apri evidenze e fonti <span aria-hidden="true">→</span></a></aside></div>
+        <section class="data-digest"><div class="data-digest-heading"><div><p class="section-kicker">QUADRO DATI</p><h2>Fonti e indicatori pubblici</h2></div><a href="evidence.html">Apri il registro</a></div><div id="dashboard-evidence" class="digest-grid"></div></section>
+        <section class="literature-section"><h2>Approfondisci</h2><p>Consulta i rapporti ufficiali e il percorso divulgativo comune alle edizioni regionali.</p><div class="digest-grid"><article class="evidence-card"><p class="section-kicker">FONTI</p><h3>Pubblicazioni e risorse</h3><p>Rapporti, sorveglianza, documenti metodologici e materiali ufficiali collegati ai dati.</p><a class="rail-link" href="publications.html">Apri le pubblicazioni →</a></article><article class="evidence-card"><p class="section-kicker">FORMAZIONE</p><h3>Dodici moduli divulgativi</h3><p>Un percorso su antibiotici, resistenza antimicrobica, One Health e lettura responsabile dell'Atlante.</p><a class="rail-link" href="dissemination.html">Apri la divulgazione →</a></article></div></section>
       </main>
     </div>
   </div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="app.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="atlas-config.js"></script><script src="assets/atlas-core.js"></script><script src="assets/sidebar-filters.js"></script>
 </body>
 </html>
-
-
-
 

@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.1",
+  "edition": "srd_amr_atlas",
+  "layers": [
+    {
+      "id": "sardinia_municipalities_dbgt",
+      "label": "Comuni",
+      "file": "public/geography/atlas_municipalities.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Regione Autonoma della Sardegna",
+      "source_url": "https://www.sardegnageoportale.it/areetematiche/databasegeotopografico/",
+      "license_status": "Base DBGT regionale; pubblicazione con attribuzione",
+      "validation_status": "passed",
+      "feature_count": 377,
+      "source_date": "DBGT_10K_22_V05",
+      "defaultVisible": true,
+      "color": "#2d7d61",
+      "weight": 0.65,
+      "fillOpacity": 0,
+      "labelProperty": "Nome",
+      "popupFields": [
+        "Nome",
+        "CIstat",
+        "CBelfiore"
+      ],
+      "popupLabels": {
+        "Nome": "Comune",
+        "CIstat": "Codice ISTAT",
+        "CBelfiore": "Codice Belfiore"
+      }
+    },
+    {
+      "id": "sardinia_provinces_dbgt",
+      "label": "Province",
+      "file": "public/geography/atlas_provinces.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Regione Autonoma della Sardegna",
+      "source_url": "https://www.sardegnageoportale.it/areetematiche/databasegeotopografico/",
+      "license_status": "Base DBGT regionale; pubblicazione con attribuzione",
+      "validation_status": "passed",
+      "feature_count": 6,
+      "source_date": "DBGT_10K_22_V05",
+      "defaultVisible": true,
+      "color": "#d2763b",
+      "weight": 2,
+      "fillOpacity": 0,
+      "labelProperty": "NOME",
+      "popupFields": [
+        "NOME",
+        "CIstat"
+      ],
+      "popupLabels": {
+        "NOME": "Provincia",
+        "CIstat": "Codice ISTAT"
+      }
+    },
+    {
+      "id": "sardinia_veterinary_amr_municipal",
+      "label": "AMR veterinaria - evidenze comunali",
+      "file": "public/data/veterinary_amr_municipal_evidence.geojson",
+      "publication_status": "public_approved",
+      "publisher": "IZS Sardegna / studi pubblicati",
+      "source_url": "https://www.izs-sardegna.it/oldsite/cpt_index.cfm",
+      "license_status": "Aggregati comunali pubblicabili con citazione; nessun identificativo aziendale",
+      "validation_status": "passed",
+      "feature_count": 40,
+      "defaultVisible": true,
+      "color": "#c16f24",
+      "weight": 1.4,
+      "fillColor": "#c16f24",
+      "fillOpacity": 0.26,
+      "labelProperty": "municipality",
+      "popupFields": [
+        "municipality",
+        "province",
+        "uberis_period",
+        "uberis_study_isolates",
+        "interpretation_note"
+      ],
+      "popupLabels": {
+        "municipality": "Comune",
+        "province": "Provincia",
+        "uberis_period": "Periodo S. uberis",
+        "uberis_study_isolates": "Isolati S. uberis",
+        "interpretation_note": "Nota"
+      }
+    },
+    {
+      "id": "sardinia_human_facility_amr",
+      "label": "AMR umana - evidenze di struttura",
+      "file": "public/data/human_amr_facility_evidence.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Studi pubblicati (AOU Sassari e coorti locali)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "license_status": "Sintesi da letteratura aperta; non prevalenza ospedaliera corrente",
+      "validation_status": "passed",
+      "feature_count": 3,
+      "defaultVisible": false,
+      "color": "#9e2744",
+      "fillColor": "#9e2744",
+      "radius": 6,
+      "weight": 1.2,
+      "fillOpacity": 0.12,
+      "labelProperty": "facility",
+      "popupFields": [
+        "facility",
+        "municipality",
+        "period",
+        "headline",
+        "detail",
+        "geography_note"
+      ],
+      "popupLabels": {
+        "facility": "Struttura",
+        "municipality": "Comune",
+        "period": "Periodo",
+        "headline": "Sintesi",
+        "detail": "Dettaglio",
+        "geography_note": "Nota geografica"
+      }
+    },
+    {
+      "id": "sardinia_food_chain_berchidda",
+      "label": "AMR filiera alimentare - Berchidda",
+      "file": "public/data/food_chain_amr_berchidda.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Agris Sardegna",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34201694/",
+      "license_status": "CC BY 4.0; comune di origine, caseifici non localizzati",
+      "validation_status": "passed",
+      "feature_count": 1,
+      "defaultVisible": false,
+      "color": "#6f8428",
+      "weight": 2,
+      "fillOpacity": 0.12,
+      "labelProperty": "municipality",
+      "popupFields": [
+        "municipality",
+        "period",
+        "matrix",
+        "interpretation_note"
+      ],
+      "popupLabels": {
+        "municipality": "Comune",
+        "period": "Periodo",
+        "matrix": "Matrice",
+        "interpretation_note": "Nota"
+      }
+    },
+    {
+      "id": "sardinia_environmental_water_amr",
+      "label": "AMR ambientale - corpi idrici",
+      "file": "public/data/environmental_amr_water_bodies.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Studio pubblicato (ENA PRJNA1411669)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42019335/",
+      "license_status": "CC BY 4.0; coordinate di campo escluse dal pubblico",
+      "validation_status": "passed",
+      "feature_count": 2,
+      "defaultVisible": false,
+      "color": "#176e8b",
+      "fillColor": "#176e8b",
+      "radius": 6,
+      "weight": 1.2,
+      "fillOpacity": 0.12,
+      "labelProperty": "name",
+      "popupFields": [
+        "name",
+        "period",
+        "headline",
+        "detail",
+        "coordinate_role",
+        "source_title"
+      ],
+      "popupLabels": {
+        "name": "Corpo idrico",
+        "period": "Periodo",
+        "headline": "Sintesi",
+        "detail": "Dettaglio",
+        "coordinate_role": "Ruolo del punto",
+        "source_title": "Fonte"
+      }
+    },
+    {
+      "id": "sardinia_hydrography_dbgt_principal",
+      "label": "Corsi d'acqua principali",
+      "file": "public/data/dbgt_corsi_principali.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Regione Autonoma della Sardegna",
+      "source_url": "https://www.sardegnageoportale.it/areetematiche/databasegeotopografico/",
+      "license_status": "DBGT 1:10.000; reticolo cartografico, non rete idrologica validata",
+      "validation_status": "passed",
+      "feature_count": 16269,
+      "source_date": "DBGT_10K_22_V05",
+      "defaultVisible": false,
+      "color": "#2f78b7",
+      "weight": 1.2,
+      "fillOpacity": 0,
+      "labelProperty": "Nome",
+      "popupFields": [
+        "Nome",
+        "NOrdine",
+        "ID"
+      ],
+      "popupLabels": {
+        "Nome": "Corso d'acqua",
+        "NOrdine": "Ordine",
+        "ID": "ID"
+      }
+    },
+    {
+      "id": "sardinia_ariss_2024_sites",
+      "label": "Laboratori partecipanti AR-ISS 2024",
+      "file": "public/data/ar_iss_2024_sardinia_sites.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Istituto Superiore di Sanita",
+      "source_url": "https://www.epicentro.iss.it/antibiotico-resistenza/ar-iss/RIS-5_2025.pdf",
+      "license_status": "Rapporto ufficiale AR-ISS; punti di sede laboratorio, non prevalenza comunale",
+      "validation_status": "passed",
+      "feature_count": 8,
+      "source_date": "2024",
+      "defaultVisible": false,
+      "color": "#c73e55",
+      "fillColor": "#c73e55",
+      "radius": 6,
+      "weight": 1,
+      "fillOpacity": 0.12,
+      "labelProperty": "site_name",
+      "popupFields": [
+        "site_name",
+        "municipality",
+        "province",
+        "coverage_percent_region",
+        "source_role"
+      ],
+      "popupLabels": {
+        "site_name": "Laboratorio",
+        "municipality": "Comune",
+        "province": "Provincia",
+        "coverage_percent_region": "Copertura regionale %",
+        "source_role": "Ruolo"
+      }
+    },
+    {
+      "id": "sardinia_sira_wastewater_plants",
+      "label": "Depuratori SIRA",
+      "file": "public/data/sira_depuratori_points.geojson",
+      "publication_status": "public_approved",
+      "publisher": "Regione Autonoma della Sardegna / SIRA",
+      "source_url": "https://www.sardegnasira.it/arcgiswa/rest/services/metadati/Metadati/MapServer/67",
+      "license_status": "CC BY 4.0 per dati geografici RAS, con attribuzione; punti derivati dai poligoni",
+      "validation_status": "passed",
+      "feature_count": 788,
+      "source_date": "snapshot servizio 2026-07-16",
+      "defaultVisible": false,
+      "color": "#7b3f98",
+      "fillColor": "#7b3f98",
+      "radius": 3.5,
+      "weight": 1,
+      "fillOpacity": 0.12,
+      "labelProperty": "DENOMINAZIONE",
+      "popupFields": [
+        "DENOMINAZIONE",
+        "COMUNE",
+        "PROVINCIA",
+        "categoria",
+        "TIPOLOGIA",
+        "STATO_OPERATIVO"
+      ],
+      "popupLabels": {
+        "DENOMINAZIONE": "Impianto",
+        "COMUNE": "Comune",
+        "PROVINCIA": "Provincia",
+        "categoria": "Categoria",
+        "TIPOLOGIA": "Tipologia",
+        "STATO_OPERATIVO": "Stato"
+      }
+    }
+  ]
+}
