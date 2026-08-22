@@ -13,7 +13,7 @@
       "validation_status": "passed",
       "feature_count": 377,
       "source_date": "DBGT_10K_22_V05",
-      "defaultVisible": false,
+      "defaultVisible": true,
       "color": "#2d7d61",
       "weight": 0.65,
       "fillOpacity": 0,
@@ -27,31 +27,6 @@
         "Nome": "Comune",
         "CIstat": "Codice ISTAT",
         "CBelfiore": "Codice Belfiore"
-      }
-    },
-    {
-      "id": "sardinia_provinces_dbgt",
-      "label": "Province",
-      "file": "public/geography/atlas_provinces.geojson",
-      "publication_status": "public_approved",
-      "publisher": "Regione Autonoma della Sardegna",
-      "source_url": "https://www.sardegnageoportale.it/areetematiche/databasegeotopografico/",
-      "license_status": "Base DBGT regionale; pubblicazione con attribuzione",
-      "validation_status": "passed",
-      "feature_count": 6,
-      "source_date": "DBGT_10K_22_V05",
-      "defaultVisible": true,
-      "color": "#d2763b",
-      "weight": 2,
-      "fillOpacity": 0,
-      "labelProperty": "NOME",
-      "popupFields": [
-        "NOME",
-        "CIstat"
-      ],
-      "popupLabels": {
-        "NOME": "Provincia",
-        "CIstat": "Codice ISTAT"
       }
     },
     {
