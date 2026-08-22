@@ -121,7 +121,7 @@
     },
     {
       "id": "sardinia_food_chain_berchidda",
-      "label": "AMR filiera alimentare - Berchidda",
+      "label": "AMR alimentare",
       "file": "public/data/food_chain_amr_berchidda.geojson",
       "publication_status": "public_approved",
       "publisher": "Agris Sardegna",
