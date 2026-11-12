@@ -74,8 +74,13 @@
       const fields = layerConfig.popupFields || [];
       const rows = fields.filter(field => props[field] !== undefined && props[field] !== null && props[field] !== '')
         .map(field => {
-          if (field === 'doi_url') {
-            return `<div><strong>${escapeHtml(popupLabel(field, layerConfig))}</strong><br><a href="${escapeHtml(props[field])}" target="_blank" rel="noreferrer">${escapeHtml(props.doi || props[field])}</a></div>`;
+          if (field === 'doi_url' || field === 'doi') {
+            const links = String(props[field]).split(' | ').filter(Boolean).map(value => {
+              const href = value.startsWith('http') ? value : `https://doi.org/${value}`;
+              const label = value.replace(/^https:\/\/doi\.org\//, '');
+              return `<a href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
+            }).join('<br>');
+            return `<div><strong>${escapeHtml(popupLabel(field, layerConfig))}</strong><br>${links}</div>`;
           }
           return `<div><strong>${escapeHtml(popupLabel(field, layerConfig))}</strong><br>${escapeHtml(props[field])}</div>`;
         })
