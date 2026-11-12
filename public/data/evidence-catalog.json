@@ -28,7 +28,7 @@
     },
     {
       "id": "aifa_osmed_2024_antibiotics",
-      "title": "AIFA OsMed 2024 - antibiotici, Sardegna",
+      "title": "AIFA OsMed 2024 - antibiotici per principio attivo, Sardegna",
       "publisher": "Agenzia Italiana del Farmaco",
       "evidence_type": "human_antimicrobial_use",
       "geography": "Sardegna",
@@ -36,7 +36,18 @@
       "source_url": "https://www.aifa.gov.it/documents/20142/3610201/Sardegna_Osmed_2024.pdf",
       "data_file": "public/data/aifa_osmed_2024_antibiotics.json",
       "publication_status": "public_approved",
-      "note": "Consumo di antibiotici (DDD); non misura resistenza, prevalenza o denominatori microbiologici."
+      "note": "Consumo di antibiotici (DDD) del rapporto regionale OsMed 2024, Tabella 8, assistenza convenzionata. Non misura resistenza. Il riferimento corrente è il Rapporto OsMed 2025; questa serie per principio attivo non è ripubblicata nel volume nazionale e resta etichettata 2024."
+    },
+    {
+      "id": "aifa_osmed_2025_national",
+      "title": "AIFA Rapporto OsMed 2025 - uso dei farmaci in Italia",
+      "publisher": "Agenzia Italiana del Farmaco",
+      "evidence_type": "human_antimicrobial_use",
+      "geography": "Italia; confronti regionali",
+      "period": "2025",
+      "source_url": "https://www.aifa.gov.it/documents/20142/3941839/AIFA_Rapporto_OsMed_2025.pdf",
+      "publication_status": "context",
+      "note": "Letteratura grigia. Prima edizione luglio 2026, dati 2025. Citazione: Osservatorio Nazionale sull'impiego dei Medicinali. L'uso dei farmaci in Italia. Rapporto Nazionale Anno 2025. Roma: Agenzia Italiana del Farmaco, 2026. È il riferimento corrente di consumo. Il volume riporta confronti regionali per il I livello ATC (Tabella 3.6, assistenza convenzionata; Tabella 3.9, acquisti delle strutture pubbliche) ma non la serie per principio attivo della Sardegna della Tabella 8 del rapporto regionale 2024. I valori mostrati nell'atlante restano quelli del 2024."
     },
     {
       "id": "human_amr_facility_sassari_studies",

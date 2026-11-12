@@ -1,7 +1,10 @@
 {
   "source_id": "letteratura_curata",
-  "dataset_version": "atlas-curated-v0.7",
-  "record_count": 36,
+  "dataset_version": "atlas-curated-v0.8",
+  "literature_search_date": "2026-11-11",
+  "updated": "2026-11-11",
+  "record_count": 37,
+  "preprint_count": 1,
   "year_min": 2000,
   "year_max": 2026,
   "public_geography": "Sardegna",
@@ -24,6 +27,10 @@
       "study_count": 3
     },
     {
+      "host": "cattle",
+      "study_count": 2
+    },
+    {
       "host": "hospital environment",
       "study_count": 2
     },
@@ -37,10 +44,6 @@
     },
     {
       "host": "animal",
-      "study_count": 1
-    },
-    {
-      "host": "cattle",
       "study_count": 1
     },
     {
@@ -74,6 +77,10 @@
       "study_count": 3
     },
     {
+      "organism": "Escherichia coli",
+      "study_count": 3
+    },
+    {
       "organism": "Salmonella spp.",
       "study_count": 3
     },
@@ -87,10 +94,6 @@
     },
     {
       "organism": "Enterococcus faecalis",
-      "study_count": 2
-    },
-    {
-      "organism": "Escherichia coli",
       "study_count": 2
     },
     {

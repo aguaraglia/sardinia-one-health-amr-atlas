@@ -26,8 +26,18 @@ ids = [row["study_id"] for row in rows]
 if len(ids) != len(set(ids)):
     raise ValueError("Duplicate study_id in literature registry")
 
-records = [
-    {
+def source_url(row: dict) -> str:
+    pmid = (row.get("pmid") or "").strip()
+    doi = (row.get("doi") or "").strip()
+    if pmid and pmid.lower() != "unknown":
+        return f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+    if doi and doi.lower() != "unknown":
+        return f"https://doi.org/{doi}"
+    return ""
+
+
+def record_from_row(row: dict) -> dict:
+    record = {
         "study_id": row["study_id"],
         "pmid": row["pmid"],
         "doi": row["doi"],
@@ -38,19 +48,26 @@ records = [
         "organisms": split(row["organisms"]),
         "amr_evidence": split(row["amr_evidence"]),
         "public_geography": row["public_geography"],
-        "source_url": f"https://pubmed.ncbi.nlm.nih.gov/{row['pmid']}/",
+        "source_url": source_url(row),
         "notes": row["notes"],
     }
-    for row in rows
-]
+    review_status = (row.get("review_status") or "").strip()
+    if review_status:
+        record["review_status"] = review_status
+    return record
+
+
+records = [record_from_row(row) for row in rows]
 
 payload = {
     "source_id": "letteratura_curata",
-    "dataset_version": "atlas-curated-v0.7",
+    "dataset_version": "atlas-curated-v0.8",
+    "literature_search_date": "2026-11-11",
+    "updated": "2026-11-11",
     "geography_level": "REGIONE",
     "geography_id": "SARDEGNA",
     "privacy": "public",
-    "notes": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Gli studi sono eterogenei e non sono sommati come prevalenza regionale.",
+    "notes": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Ultima ricerca bibliografica: 2026-11-11. Gli studi sono eterogenei e non sono sommati come prevalenza regionale. I preprint sono inclusi solo se approvati e restano segnalati come non sottoposti a peer review.",
     "records": records,
 }
 
@@ -60,8 +77,11 @@ def tally(field: str, key: str):
 
 summary = {
     "source_id": "letteratura_curata",
-    "dataset_version": "atlas-curated-v0.7",
+    "dataset_version": "atlas-curated-v0.8",
+    "literature_search_date": "2026-11-11",
+    "updated": "2026-11-11",
     "record_count": len(records),
+    "preprint_count": sum(1 for record in records if record.get("review_status") == "preprint_not_peer_reviewed"),
     "year_min": min(record["year"] for record in records),
     "year_max": max(record["year"] for record in records),
     "public_geography": "Sardegna",

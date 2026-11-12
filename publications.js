@@ -18,10 +18,12 @@ function renderLiteratureTable(records) {
     .map(record => {
       const title = escapeHtml(record.title || '');
       const href = record.source_url ? escapeHtml(record.source_url) : '';
-      const titleCell = href
+      const preprint = record.review_status === 'preprint_not_peer_reviewed';
+      const flag = preprint ? `<br><small>${isEn ? 'Preprint, not peer-reviewed' : 'Preprint, non sottoposto a peer review'}</small>` : '';
+      const titleCell = (href
         ? `<a href="${href}" target="_blank" rel="noreferrer">${title}</a>`
-        : title;
-      const pmid = record.pmid ? escapeHtml(String(record.pmid)) : '—';
+        : title) + flag;
+      const pmid = record.pmid ? escapeHtml(String(record.pmid)) : (preprint ? 'preprint' : '—');
       const hosts = escapeHtml((record.hosts || []).join(', '));
       const organisms = escapeHtml((record.organisms || []).join(', '));
       const sheet = record.study_id

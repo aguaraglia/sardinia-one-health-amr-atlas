@@ -41,7 +41,14 @@
       return (!query || haystack.includes(query)) && (scope === 'ALL' || item.scope === scope);
     });
     literatureSummary.textContent = `${filtered.length} di ${literatureRecords.length} articoli con collegamento territoriale esplicito a ${cfg.regionName || 'questa regione'}.`;
-    literatureRows.innerHTML = filtered.map(item => `<tr><td>${esc(item.year)}</td><td>${item.source_url ? `<strong><a href="${esc(item.source_url)}" target="_blank" rel="noreferrer">${esc(item.title)}</a></strong>` : `<strong>${esc(item.title)}</strong>`}<br><small>${esc(item.authors || '')}${item.doi ? ` · DOI ${esc(item.doi)}` : ''}</small></td><td>${esc(item.journal)}</td><td>${esc(labels[item.scope] || item.scope || 'Studio')}</td><td>${esc(item.geographic_link || '')}</td><td><a href="${esc(item.source_url)}" target="_blank" rel="noreferrer">PubMed ↗</a></td></tr>`).join('') || '<tr><td colspan="6">Nessun articolo corrisponde ai filtri.</td></tr>';
+    literatureRows.innerHTML = filtered.map(item => {
+      const preprint = item.review_status === 'preprint_not_peer_reviewed';
+      const sourceLabel = preprint ? 'Preprint ↗' : (String(item.source_url || '').includes('pubmed.ncbi.nlm.nih.gov') ? 'PubMed ↗' : 'Fonte ↗');
+      const flag = preprint ? '<br><small>Preprint, non sottoposto a peer review</small>' : '';
+      const title = item.source_url ? `<strong><a href="${esc(item.source_url)}" target="_blank" rel="noreferrer">${esc(item.title)}</a></strong>` : `<strong>${esc(item.title)}</strong>`;
+      const source = item.source_url ? `<a href="${esc(item.source_url)}" target="_blank" rel="noreferrer">${sourceLabel}</a>` : '—';
+      return `<tr><td>${esc(item.year)}</td><td>${title}<br><small>${esc(item.authors || '')}${item.doi ? ` · DOI ${esc(item.doi)}` : ''}</small>${flag}</td><td>${esc(item.journal)}</td><td>${esc(labels[item.scope] || item.scope || 'Studio')}</td><td>${esc(item.geographic_link || '')}</td><td>${source}</td></tr>`;
+    }).join('') || '<tr><td colspan="6">Nessun articolo corrisponde ai filtri.</td></tr>';
   };
 
   fetchCatalog(literatureUrl).then(catalog => {
