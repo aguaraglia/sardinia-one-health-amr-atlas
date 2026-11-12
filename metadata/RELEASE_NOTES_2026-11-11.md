@@ -6,7 +6,7 @@ Ultima ricerca bibliografica e aggiornamento del registro: 2026-11-11. Non è un
 
 - Il registro curato contiene 37 studi (2000–2026), versione `atlas-curated-v0.8`.
 - È stato aggiunto il preprint Addis MF, Azara E, Guaraglia A, Cauli F, Firinu MP, Longheu C, Bua S, Caddia M, Cazzola A, Stevanato L, Ruiu A, Tola S. Genomic Characterization of Mastitis-Associated Escherichia coli from Sardinia and Comparative Analysis with Isolates from Mainland Italy. Preprints.org, 7 agosto 2026. DOI: 10.20944/preprints202608.0475.v1.
-- Lo stato è esplicito: preprint, non sottoposto a peer review. Non è posizionato in mappa.
+- Lo stato è esplicito: preprint, non sottoposto a peer review. Sul layer AMR veterinaria il distretto di Arborea è il confine comunale, non la sede delle aziende.
 
 ## Consumo di antimicrobici
 

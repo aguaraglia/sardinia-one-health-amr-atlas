@@ -46,12 +46,17 @@
   };
 
   const geoJsonOptions = layerConfig => ({
-    style: feature => ({
-      color: layerConfig.color || '#2d7d61',
-      weight: Number(layerConfig.weight || 1.2),
-      fillColor: featureColor(feature, layerConfig),
-      fillOpacity: Number(layerConfig.fillOpacity ?? 0.12)
-    }),
+    style: feature => {
+      const level = String((feature.properties || {}).geography_level || '');
+      const district = level === 'DISTRETTO';
+      return {
+        color: layerConfig.color || '#2d7d61',
+        weight: district ? 2.4 : Number(layerConfig.weight || 1.2),
+        dashArray: district ? '7 5' : null,
+        fillColor: featureColor(feature, layerConfig),
+        fillOpacity: district ? 0.08 : Number(layerConfig.fillOpacity ?? 0.12)
+      };
+    },
     pointToLayer: (feature, latlng) => {
       const colors = layerConfig.explodeColors || {};
       const key = layerConfig.explodeBy ? String((feature.properties || {})[layerConfig.explodeBy] ?? '') : '';
@@ -67,10 +72,18 @@
     onEachFeature: (feature, featureLayer) => {
       const props = feature.properties || {};
       const fields = layerConfig.popupFields || [];
-      const rows = fields.filter(field => props[field] !== undefined && props[field] !== null)
-        .map(field => `<div><strong>${escapeHtml(popupLabel(field, layerConfig))}</strong><br>${escapeHtml(props[field])}</div>`)
+      const rows = fields.filter(field => props[field] !== undefined && props[field] !== null && props[field] !== '')
+        .map(field => {
+          if (field === 'doi_url') {
+            return `<div><strong>${escapeHtml(popupLabel(field, layerConfig))}</strong><br><a href="${escapeHtml(props[field])}" target="_blank" rel="noreferrer">${escapeHtml(props.doi || props[field])}</a></div>`;
+          }
+          return `<div><strong>${escapeHtml(popupLabel(field, layerConfig))}</strong><br>${escapeHtml(props[field])}</div>`;
+        })
         .join('');
-      featureLayer.bindPopup(`<div class="map-popup"><h3>${escapeHtml(props[layerConfig.labelProperty] || layerConfig.label)}</h3>${rows || '<p>Nessun dettaglio pubblico aggiuntivo.</p>'}</div>`);
+      const caveat = props.study_id
+        ? '<p><small>Il simbolo indica dove è stato condotto lo studio, non una prevalenza.</small></p>'
+        : '';
+      featureLayer.bindPopup(`<div class="map-popup"><h3>${escapeHtml(props[layerConfig.labelProperty] || layerConfig.label)}</h3>${rows || '<p>Nessun dettaglio pubblico aggiuntivo.</p>'}${caveat}</div>`);
     }
   });
 
