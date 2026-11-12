@@ -175,7 +175,9 @@ const configs = [
   { key: 'veterinaryMunicipal', label: 'Evidenze AMR veterinarie comunali', file: '../public/data/veterinary_amr_municipal_evidence.geojson', color: '#c16f24', weight: 1.4, fill: true, prop: 'municipality' },
   { key: 'hydro', label: 'Corsi d’acqua principali', file: '../public/data/dbgt_corsi_principali.geojson', color: '#2f78b7', weight: 1.2, fill: false, prop: 'Nome' },
   { key: 'arissSites', label: 'Laboratori partecipanti AR-ISS 2024', file: '../public/data/ar_iss_2024_sardinia_sites.geojson', color: '#c73e55', weight: 1, fill: true, prop: 'site_name' },
-  { key: 'depuratori', label: 'Depuratori SIRA', file: '../public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
+  { key: 'depuratori', label: 'Depuratori SIRA', file: '../public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' },
+  { key: 'regionalStudies', label: 'Studi a scala regionale', file: '../public/data/regional_study_outline.geojson', color: '#163c52', weight: 2.8, fill: false, prop: 'place' },
+  { key: 'northStudies', label: 'Studi del Nord Sardegna', file: '../public/data/north_sardinia_study_outline.geojson', color: '#1a5276', weight: 2.4, fill: false, prop: 'place' }
 ];
 
 function style(cfg, feature) {
@@ -189,6 +191,20 @@ function style(cfg, feature) {
     fillOpacity: district ? 0.08 : (cfg.key === 'veterinaryMunicipal' ? 0.26 : (cfg.fill ? 0.12 : 0))
   };
 }
+function declaredAreaPopup(props) {
+  const links = String(props.doi || '').split(' | ').filter(Boolean).map(value => {
+    const href = value.startsWith('http') ? value : `https://doi.org/${value}`;
+    const label = value.replace(/^https:\/\/doi\.org\//, '');
+    return `<a href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
+  }).join('<br>');
+  return `<strong>${escapeHtml(props.place || '')}</strong><br>` +
+    `<small>Scala: ${escapeHtml(props.geography_level || '')}</small><br>` +
+    `${escapeHtml(props.authors || '')}<br>${escapeHtml(props.year || '')}<br>` +
+    `${escapeHtml(props.title || '')}<br>` +
+    `${escapeHtml(props.sector || '')} · ${escapeHtml(props.organism || '')}<br>` +
+    `${links}<br><small>${escapeHtml(props.geography_basis || '')}</small><br>` +
+    `<small>${escapeHtml(props.geography_note || 'Il segnaposto indica dove è stato condotto lo studio, non una prevalenza.')}</small>`;
+}
 function literatureStudyPopup(props) {
   const preprint = props.preprint_flag ? `<br><strong>${escapeHtml(props.preprint_flag)}</strong>` : '';
   const doi = props.doi_url ? `<br><a href="${escapeHtml(props.doi_url)}" target="_blank" rel="noreferrer">DOI ${escapeHtml(props.doi || '')}</a>` : '';
@@ -200,6 +216,7 @@ function literatureStudyPopup(props) {
 }
 function popup(feature, cfg) {
   const props = feature.properties || {};
+  if (cfg.key === 'regionalStudies' || cfg.key === 'northStudies') return declaredAreaPopup(props);
   if (cfg.key === 'veterinaryMunicipal' && props.study_id) return literatureStudyPopup(props);
   if (cfg.key === 'veterinaryMunicipal') {
     const blocks = [];
@@ -254,6 +271,7 @@ Promise.all(configs.map(async cfg => {
   layers.provinces.addTo(map);
   layers.municipalities.addTo(map);
   layers.veterinaryMunicipal.addTo(map);
+  layers.regionalStudies.addTo(map);
   layers.arissSites.addTo(map);
   const categories = [...new Set((layers.depuratori._sourceData.features || []).map(f => f.properties?.categoria).filter(Boolean))];
   const categoryLayers = {};
@@ -280,6 +298,8 @@ Promise.all(configs.map(async cfg => {
     'Province': layers.provinces,
     'Regione': layers.regions,
     '<span class="layer-swatch" style="background:#c16f24"></span>AMR veterinaria · evidenze comunali': layers.veterinaryMunicipal,
+    '<span class="layer-swatch" style="background:#163c52"></span>Studi a scala regionale': layers.regionalStudies,
+    '<span class="layer-swatch" style="background:#1a5276"></span>Studi del Nord Sardegna': layers.northStudies,
     ...waterAndPlantLayers,
     '<span class="layer-swatch" style="background:#c73e55"></span>AMR umana · laboratori AR-ISS 2024': layers.arissSites
   }, { collapsed: false }).addTo(map);
