@@ -8,7 +8,7 @@ repository-code: "https://github.com/aguaraglia/sardinia-one-health-amr-atlas"
 url: "https://aguaraglia.github.io/sardinia-one-health-amr-atlas/"
 license: CC-BY-4.0
 authors:
-  - name: "Codex Vitae ETS"
+  - name: "CodexVitae ETS"
     affiliation: "Sardinia One Health AMR Atlas"
 keywords:
   - antimicrobial resistance

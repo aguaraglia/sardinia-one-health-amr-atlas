@@ -34,3 +34,11 @@ I casi fuori ambito, solo metodologici, non localizzabili o privi di un risultat
 ## Frequenza e tracciabilità
 
 Eseguire la ricerca almeno prima di ogni release pubblica e annotare data, query, revisore e decisione nel registro di letteratura. Le fonti curate pubbliche restano versionate in `public/data/literature_curated_sardinia.json`; il conteggio della mappa non deve essere presentato come numero di fonti indipendenti quando aggrega unità territoriali o siti.
+
+## Aggiornamento del 2026-11-11
+
+Ultima ricerca bibliografica del registro curato: **2026-11-11**. Il registro passa da 36 a 37 studi (`atlas-curated-v0.8`).
+
+- Incluso, su approvazione, il preprint Addis MF, Azara E, Guaraglia A et al., Preprints.org, 7 agosto 2026, DOI `10.20944/preprints202608.0475.v1`. È segnalato come non sottoposto a peer review. L'abstract è stato verificato sul record DOI (Crossref) e su Europe PMC; la pagina HTML di Preprints.org ha risposto 403. I numeri in scheda sono solo quelli dell'abstract. Lo studio nomina il distretto di Arborea e sei aziende: non è mappato, perché le aziende non sono pubblicabili e il distretto non è trattato come prevalenza comunale.
+- La ricerca PubMed del 18 luglio 2026 resta l'ultimo scarico automatico in `reports/pubmed_sardinia_amr_candidates.tsv`. Il preprint non ha PMID e non entra in quell'elenco.
+- Il riferimento corrente di consumo è il Rapporto OsMed 2025 (prima edizione luglio 2026, dati 2025). I valori per principio attivo mostrati per la Sardegna restano la Tabella 8 del rapporto regionale OsMed 2024.

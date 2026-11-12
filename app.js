@@ -464,22 +464,30 @@ fetch(`${assetRoot}public/data/literature_curated_sardinia.json`).then(r => r.js
       .map(record => {
         const title = escapeHtml(record.title || '');
         const href = record.source_url ? escapeHtml(record.source_url) : '';
-        const titleCell = href ? `<a href="${href}" target="_blank" rel="noreferrer">${title}</a>` : title;
-        return `<tr><td>${record.year}</td><td>${escapeHtml(String(record.pmid || ''))}</td><td>${escapeHtml((record.hosts || []).join(', '))}</td><td>${escapeHtml((record.organisms || []).join(', '))}</td><td>${titleCell}</td><td><a class="table-action" href="${assetRoot}evidence.html?id=${encodeURIComponent(record.study_id)}">${sheetLabel}</a></td></tr>`;
+        const preprint = record.review_status === 'preprint_not_peer_reviewed';
+        const flag = preprint ? `<br><small>${isEn ? 'Preprint, not peer-reviewed' : 'Preprint, non sottoposto a peer review'}</small>` : '';
+        const titleCell = (href ? `<a href="${href}" target="_blank" rel="noreferrer">${title}</a>` : title) + flag;
+        const pmid = record.pmid ? escapeHtml(String(record.pmid)) : (preprint ? 'preprint' : '—');
+        return `<tr><td>${record.year}</td><td>${pmid}</td><td>${escapeHtml((record.hosts || []).join(', '))}</td><td>${escapeHtml((record.organisms || []).join(', '))}</td><td>${titleCell}</td><td><a class="table-action" href="${assetRoot}evidence.html?id=${encodeURIComponent(record.study_id)}">${sheetLabel}</a></td></tr>`;
       })
       .join('');
   }
   return fetch(`${assetRoot}public/data/literature_curated_summary.json`).then(r => r.json()).then(summary => {
     const hosts = summary.hosts.slice(0, 4).map(x => `${x.host} (${x.study_count})`).join(', ');
+    const updated = summary.literature_search_date ? ` ${isEn ? 'Literature search' : 'Ultima ricerca bibliografica'}: ${escapeHtml(summary.literature_search_date)}.` : '';
+    const preprints = summary.preprint_count ? ` ${isEn ? 'Includes' : 'Comprende'} ${summary.preprint_count} preprint ${isEn ? 'that is not peer-reviewed' : 'non sottoposto a peer review'}.` : '';
     card.hidden = false;
-    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}). Host principali: ${hosts}.<br><a class="inline-action" href="publications.html">${isEn ? 'Open all publications' : 'Apri tutte le pubblicazioni'}</a>`;
+    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}). Host principali: ${hosts}.${updated}${preprints}<br><a class="inline-action" href="publications.html">${isEn ? 'Open all publications' : 'Apri tutte le pubblicazioni'}</a>`;
   });
 }).catch(() => {});
 fetch(`${assetRoot}public/data/aifa_osmed_2024_antibiotics.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('aifa-card');
   const top = d.records.slice(0, 3).map(x => `${x.active_ingredient} (${x.ddd_1000_ab_die} DDD/1000 ab die)`).join('; ');
+  const current = d.current_report_url
+    ? `<br><small>${isEn ? 'Figures from the 2024 regional report' : 'Valori del rapporto regionale 2024'}, ${escapeHtml(d.source_table || 'Tabella 8')}. ${isEn ? 'Current edition' : 'Edizione corrente'}: <a href="${escapeHtml(d.current_report_url)}" target="_blank" rel="noreferrer">${escapeHtml(d.current_report_label || 'Rapporto OsMed 2025')}</a>. ${isEn ? 'This active-ingredient series was not replaced.' : 'Questa serie per principio attivo non è stata sostituita.'}</small>`
+    : '';
   card.hidden = false;
-  card.innerHTML = `<strong>AIFA/OsMed Sardegna 2024</strong><br>Principali antibiotici convenzionati: ${top}<br><small>Consumo, non resistenza.</small>`;
+  card.innerHTML = `<strong>AIFA/OsMed Sardegna 2024</strong><br>Principali antibiotici convenzionati: ${top}<br><small>Consumo, non resistenza.</small>${current}`;
 }).catch(() => {});
 fetch(`${assetRoot}public/data/bdn_ovicaprini_sardegna_2025.json`).then(r => r.json()).then(d => {
   const card = document.getElementById('bdn-card');

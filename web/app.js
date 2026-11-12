@@ -125,20 +125,31 @@ fetch('../public/data/literature_curated_sardinia.json').then(r => r.json()).the
     body.innerHTML = d.records
       .slice()
       .sort((a, b) => b.year - a.year)
-      .map(record => `<tr><td>${record.year}</td><td><a href="${record.source_url}" target="_blank" rel="noreferrer">${record.pmid}</a></td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${escapeHtml(record.title)}</td></tr>`)
+      .map(record => {
+        const preprint = record.review_status === 'preprint_not_peer_reviewed';
+        const label = record.pmid || (preprint ? 'preprint' : '—');
+        const flag = preprint ? '<br><small>Preprint, non sottoposto a peer review</small>' : '';
+        const idCell = record.source_url ? `<a href="${escapeHtml(record.source_url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>` : escapeHtml(label);
+        return `<tr><td>${record.year}</td><td>${idCell}</td><td>${escapeHtml(record.hosts.join(', '))}</td><td>${escapeHtml(record.organisms.join(', '))}</td><td>${escapeHtml(record.title)}${flag}</td></tr>`;
+      })
       .join('');
   }
   return fetch('../public/data/literature_curated_summary.json').then(r => r.json()).then(summary => {
     const hosts = summary.hosts.slice(0, 4).map(x => `${x.host} (${x.study_count})`).join(', ');
+    const updated = summary.literature_search_date ? ` Ultima ricerca bibliografica: ${escapeHtml(summary.literature_search_date)}.` : '';
+    const preprints = summary.preprint_count ? ` Comprende ${summary.preprint_count} preprint non sottoposto a peer review.` : '';
     card.hidden = false;
-    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}).<br>Host principali: ${hosts}.<br><small>Registro di evidenze eterogenee: non prevalenza regionale unica.</small>`;
+    card.innerHTML = `<strong>Letteratura AMR Sardegna</strong><br>${d.records.length} studi curati (${summary.year_min}-${summary.year_max}).<br>Host principali: ${hosts}.${updated}${preprints}<br><small>Registro di evidenze eterogenee: non prevalenza regionale unica.</small>`;
   });
 }).catch(() => {});
 fetch('../public/data/aifa_osmed_2024_antibiotics.json').then(r => r.json()).then(d => {
   const card = document.getElementById('aifa-card');
   const top = d.records.slice(0, 3).map(x => `${x.active_ingredient} (${x.ddd_1000_ab_die} DDD/1000 ab die)`).join('; ');
+  const current = d.current_report_url
+    ? `<br><small>Valori del rapporto regionale 2024, ${escapeHtml(d.source_table || 'Tabella 8')}. Edizione corrente: <a href="${escapeHtml(d.current_report_url)}" target="_blank" rel="noreferrer">${escapeHtml(d.current_report_label || 'Rapporto OsMed 2025')}</a>. Questa serie per principio attivo non è stata sostituita.</small>`
+    : '';
   card.hidden = false;
-  card.innerHTML = `<strong>AIFA/OsMed Sardegna 2024</strong><br>Principali antibiotici convenzionati: ${top}<br><small>Consumo, non resistenza.</small>`;
+  card.innerHTML = `<strong>AIFA/OsMed Sardegna 2024</strong><br>Principali antibiotici convenzionati: ${top}<br><small>Consumo, non resistenza.</small>${current}`;
 }).catch(() => {});
 fetch('../public/data/bdn_ovicaprini_sardegna_2025.json').then(r => r.json()).then(d => {
   const card = document.getElementById('bdn-card');

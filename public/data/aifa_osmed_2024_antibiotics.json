@@ -9,7 +9,9 @@
   "source_table": "Tabella 8",
   "privacy": "public",
   "source_url": "https://www.aifa.gov.it/documents/20142/3610201/Sardegna_Osmed_2024.pdf",
-  "notes": "Consumo di antibiotici; non misura resistenza, prevalenza o denominatori microbiologici.",
+  "current_report_url": "https://www.aifa.gov.it/documents/20142/3941839/AIFA_Rapporto_OsMed_2025.pdf",
+  "current_report_label": "AIFA Rapporto OsMed 2025",
+  "notes": "Consumo di antibiotici del rapporto regionale OsMed 2024, Tabella 8; non misura resistenza, prevalenza o denominatori microbiologici. Il riferimento corrente è il Rapporto nazionale OsMed 2025 (prima edizione luglio 2026, dati 2025). Quel volume non ripubblica questa serie per principio attivo: i valori restano etichettati 2024.",
   "records": [
     {"atc":"J01CR02","active_ingredient":"Amoxicillina/acido clavulanico","spesa_lorda_pro_capite":2.7,"ddd_1000_ab_die":5.6},
     {"atc":"J01DD08","active_ingredient":"Cefixima","spesa_lorda_pro_capite":1.3,"ddd_1000_ab_die":1.5},

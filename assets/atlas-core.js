@@ -86,14 +86,21 @@
     try {
       const catalog = await fetchJson(config.catalogs.evidence);
       const approved = publicRecords(catalog);
-      const candidates = (catalog.records || []).filter(item => item.publication_status !== 'public_approved');
+      const context = (catalog.records || []).filter(item => item.publication_status === 'context');
+      const candidates = (catalog.records || []).filter(item => item.publication_status !== 'public_approved' && item.publication_status !== 'context');
       const approvedHtml = approved.length
         ? approved.map(record => `<article class="directory-row"><span><strong>${escapeHtml(record.title)}</strong><small>${escapeHtml(record.period || 'Periodo non indicato')} - ${escapeHtml(record.geography || config.regionName)}</small></span><span>${escapeHtml(record.evidence_type || 'evidenza')}</span></article>`).join('')
         : '<p class="empty-filter">Nessun dataset AMR regionale e\' ancora approvato per la pubblicazione.</p>';
+      const contextHtml = context.length
+        ? context.map(record => `<article class="directory-row"><span><strong>${record.source_url ? `<a href="${escapeHtml(record.source_url)}" target="_blank" rel="noreferrer">${escapeHtml(record.title)}</a>` : escapeHtml(record.title)}</strong><small>${escapeHtml(record.publisher || '')}</small><small>${escapeHtml(record.note || '')}</small></span><span>fonte di contesto</span></article>`).join('')
+        : '';
       const candidateHtml = candidates.length
         ? candidates.map(record => `<article class="directory-row"><span><strong>${escapeHtml(record.title)}</strong><small>${escapeHtml(record.publisher || '')}</small></span><span>non pubblicato - ${escapeHtml(record.publication_status)}</span></article>`).join('')
         : '<p class="empty-filter">Nessuna fonte candidata registrata.</p>';
-      root.innerHTML = `<div class="directory-layout"><section><h2>Evidenze pubbliche</h2><div class="directory-list">${approvedHtml}</div></section><section><h2>Registro di preparazione</h2><p>Le voci seguenti sono piste di lavoro e non dati dell\'atlante.</p><div class="directory-list">${candidateHtml}</div></section></div>`;
+      const contextSection = contextHtml
+        ? `<section><h2>Riferimenti di contesto</h2><p>Fonti citate come riferimento corrente. Non sostituiscono i dataset approvati quando la serie numerica non è stata ripubblicata.</p><div class="directory-list">${contextHtml}</div></section>`
+        : '';
+      root.innerHTML = `<div class="directory-layout"><section><h2>Evidenze pubbliche</h2><div class="directory-list">${approvedHtml}</div></section>${contextSection}<section><h2>Registro di preparazione</h2><p>Le voci seguenti sono piste di lavoro e non dati dell\'atlante.</p><div class="directory-list">${candidateHtml}</div></section></div>`;
     } catch (error) {
       root.innerHTML = `<p class="empty-filter">Catalogo non disponibile: ${escapeHtml(error.message)}</p>`;
     }

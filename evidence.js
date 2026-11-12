@@ -13,7 +13,10 @@ if (isEnglish) {
     ['Evidenze e fonti', 'Evidence and sources'], ['Registro pubblico curato · Sardinia One Health AMR Atlas', 'Curated public register · Sardinia One Health AMR Atlas'],
     ['fonti verificate', 'verified sources'], ['Dataset e indicatori', 'Datasets and indicators'], ['Letteratura AMR curata', 'Curated AMR literature'],
     ['Scheda non trovata', 'Record not found'], ['Seleziona una fonte dall’elenco pubblico.', 'Select a source from the public directory.'],
-    ['Vai alle evidenze', 'Go to evidence'], ['Impossibile caricare la scheda', 'Unable to load the record'], ['Riprova dall’elenco delle evidenze.', 'Try again from the evidence directory.']
+    ['Vai alle evidenze', 'Go to evidence'], ['Impossibile caricare la scheda', 'Unable to load the record'], ['Riprova dall’elenco delle evidenze.', 'Try again from the evidence directory.'],
+    ['Preprint, non peer-reviewed', 'Preprint, not peer-reviewed'],
+    ['Preprint, non sottoposto a peer review. I numeri riportati sono quelli dell\'abstract verificato sul record DOI; non sono una prevalenza regionale.', 'Preprint, not peer-reviewed. Figures are those in the abstract verified on the DOI record; they are not a regional prevalence.'],
+    ['Preprint', 'Preprint']
   ]);
   const localizeEvidence = () => {
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
@@ -54,12 +57,16 @@ function header(title, subtitle, tags = []) {
 function literaturePage(record) {
   const title = record.title;
   const subtitle = `${record.year} · ${record.public_geography || 'Sardegna'}`;
-  return header(title, subtitle, [...(record.hosts || []), ...(record.amr_evidence || [])]) +
+  const preprint = record.review_status === 'preprint_not_peer_reviewed';
+  const tags = [...(record.hosts || []), ...(record.amr_evidence || [])];
+  if (preprint) tags.unshift('Preprint, non peer-reviewed');
+  return header(title, subtitle, tags) +
+    (preprint ? '<p class="callout">Preprint, non sottoposto a peer review. I numeri riportati sono quelli dell\'abstract verificato sul record DOI; non sono una prevalenza regionale.</p>' : '') +
     `<div class="evidence-layout"><article class="evidence-article">
       <section><h3>In sintesi</h3><p>Studio su ${list(record.organisms)} in ${list(record.matrix)}. La fonte documenta evidenze ${list(record.amr_evidence)} per ${list(record.hosts)}.</p></section>
       <section><h3>Ambito e rappresentatività</h3><dl class="fact-list"><div><dt>Periodo</dt><dd>${esc(record.period || 'non riportato')}</dd></div><div><dt>Geografia pubblica</dt><dd>${esc(record.public_geography || 'Sardegna')}</dd></div><div><dt>Host</dt><dd>${list(record.hosts)}</dd></div><div><dt>Organismi</dt><dd>${list(record.organisms)}</dd></div></dl></section>
       <section><h3>Interpretazione e limiti</h3><p>${esc(record.notes || 'I dati sono riferiti al disegno dello studio e non costituiscono automaticamente una prevalenza regionale o comunale.')}</p></section>
-    </article><aside class="evidence-rail"><div class="source-box"><h3>Fonte bibliografica</h3><p><strong>${esc(record.pmid || 'Record bibliografico')}</strong></p><p>${esc(record.doi || '')}</p>${link(record.source_url)}</div><div class="source-box"><h3>Uso nell’atlante</h3><p>La fonte è mostrata come evidenza curata. Non vengono inferiti dati per comuni o popolazioni non presenti nella pubblicazione.</p><a class="button-link" href="index.html">Apri la mappa</a></div></aside></div>`;
+    </article><aside class="evidence-rail"><div class="source-box"><h3>Fonte bibliografica</h3><p><strong>${esc(record.pmid || (preprint ? 'Preprint' : 'Record bibliografico'))}</strong></p><p>${esc(record.doi || '')}</p>${link(record.source_url)}</div><div class="source-box"><h3>Uso nell’atlante</h3><p>La fonte è mostrata come evidenza curata. Non vengono inferiti dati per comuni o popolazioni non presenti nella pubblicazione.</p><a class="button-link" href="index.html">Apri la mappa</a></div></aside></div>`;
 }
 
 function datasetPage(data) {
@@ -85,7 +92,10 @@ Promise.all([fetch(`${assetRoot}public/data/literature_curated_sardinia.json`).t
     const literature = all[0].records || [];
     if (!id) {
       const datasetList = all.slice(1).map(x => `<a class="directory-row" href="evidence.html?id=${encodeURIComponent(x.source_id)}"><span><strong>${esc(x.source_title || x.title || x.source_id)}</strong><small>${esc(x.geography || x.geography_level || '')} · ${esc(x.period || '')}</small></span><span>Apri scheda →</span></a>`).join('');
-      const literatureList = literature.slice().sort((a,b) => b.year - a.year).map(x => `<a class="directory-row" href="evidence.html?id=${encodeURIComponent(x.study_id)}"><span><strong>${esc(x.title)}</strong><small>${x.year} · ${esc((x.public_geography || 'Sardegna'))}</small></span><span>Apri scheda →</span></a>`).join('');
+      const literatureList = literature.slice().sort((a,b) => b.year - a.year).map(x => {
+        const preprint = x.review_status === 'preprint_not_peer_reviewed' ? ' · preprint, non peer-reviewed' : '';
+        return `<a class="directory-row" href="evidence.html?id=${encodeURIComponent(x.study_id)}"><span><strong>${esc(x.title)}</strong><small>${x.year} · ${esc((x.public_geography || 'Sardegna'))}${preprint}</small></span><span>Apri scheda →</span></a>`;
+      }).join('');
       root.innerHTML = header('Evidenze e fonti', 'Registro pubblico curato · Sardinia One Health AMR Atlas', ['fonti verificate']) + `<div class="directory-layout"><section><h3>Dataset e indicatori</h3><div class="directory-list">${datasetList}</div></section><section><h3>Letteratura AMR curata</h3><div class="directory-list">${literatureList}</div></section></div>`;
       return;
     }

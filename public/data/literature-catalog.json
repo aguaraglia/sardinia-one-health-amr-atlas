@@ -1,7 +1,9 @@
 {
   "schema_version": "1.0",
   "edition": "srd_amr_atlas",
-  "selection_note": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Gli studi sono eterogenei e non sono sommati come prevalenza regionale.",
+  "literature_search_date": "2026-11-11",
+  "updated": "2026-11-11",
+  "selection_note": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Ultima ricerca bibliografica: 2026-11-11. Gli studi sono eterogenei e non sono sommati come prevalenza regionale. I preprint approvati restano segnalati come non sottoposti a peer review e non sono localizzati oltre la scala dichiarata.",
   "records": [
     {
       "id": "lit_nas_sardinia_2021",
@@ -434,6 +436,19 @@
       "pmid": "10722125",
       "doi": "10.1017/S0950268899003301",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/10722125/"
+    },
+    {
+      "id": "lit_ecoli_mastitis_arborea_2026",
+      "year": 2026,
+      "title": "Genomic Characterization of Mastitis-Associated Escherichia coli from Sardinia and Comparative Analysis with Isolates from Mainland Italy",
+      "authors": "Addis MF, Azara E, Guaraglia A, Cauli F, Firinu MP, Longheu C, Bua S, Caddia M, Cazzola A, Stevanato L, Ruiu A, Tola S",
+      "journal": "Preprints.org (preprint, non peer-reviewed)",
+      "scope": "veterinary_amr",
+      "geographic_link": "Distretto di Arborea; confronto con isolati della Lombardia. Non mappato: sei aziende, nessuna coordinata pubblicabile",
+      "pmid": "",
+      "doi": "10.20944/preprints202608.0475.v1",
+      "source_url": "https://doi.org/10.20944/preprints202608.0475.v1",
+      "review_status": "preprint_not_peer_reviewed"
     }
   ]
 }

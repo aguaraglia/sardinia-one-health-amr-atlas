@@ -1,10 +1,12 @@
 {
   "source_id": "letteratura_curata",
-  "dataset_version": "atlas-curated-v0.7",
+  "dataset_version": "atlas-curated-v0.8",
+  "literature_search_date": "2026-11-11",
+  "updated": "2026-11-11",
   "geography_level": "REGIONE",
   "geography_id": "SARDEGNA",
   "privacy": "public",
-  "notes": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Gli studi sono eterogenei e non sono sommati come prevalenza regionale.",
+  "notes": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Ultima ricerca bibliografica: 2026-11-11. Gli studi sono eterogenei e non sono sommati come prevalenza regionale. I preprint sono inclusi solo se approvati e restano segnalati come non sottoposti a peer review.",
   "records": [
     {
       "study_id": "lit_nas_sardinia_2021",
@@ -861,6 +863,30 @@
       "public_geography": "Sardegna; un isolato di sorveglianza nazionale",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/10722125/",
       "notes": "National surveillance reported one Sardinian isolate with intermediate chloramphenicol resistance. This is a historical, single-isolate regional stratum and not a Sardinian prevalence estimate."
+    },
+    {
+      "study_id": "lit_ecoli_mastitis_arborea_2026",
+      "pmid": "",
+      "doi": "10.20944/preprints202608.0475.v1",
+      "year": 2026,
+      "title": "Genomic Characterization of Mastitis-Associated Escherichia coli from Sardinia and Comparative Analysis with Isolates from Mainland Italy",
+      "hosts": [
+        "cattle"
+      ],
+      "matrix": [
+        "bovine mastitis milk"
+      ],
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "amr_evidence": [
+        "phenotype",
+        "genotype"
+      ],
+      "public_geography": "Distretto di Arborea; confronto con isolati della Lombardia",
+      "source_url": "https://doi.org/10.20944/preprints202608.0475.v1",
+      "notes": "Preprint, non sottoposto a peer review (Preprints.org, 7 agosto 2026; DOI 10.20944/preprints202608.0475.v1; licenza CC BY 4.0). Abstract verificato sul record DOI: 622 campioni di latte da quarti con mastite clinica e subclinica raccolti nel distretto di Arborea; E. coli è il patogeno più frequente (21,54% dei campioni positivi), seguito da Streptococcus uberis (12,31%) e Staphylococcus chromogenes (8,72%). La resistenza fenotipica riportata nell'abstract è limitata a tetraciclina (21,43%) e ampicillina (14,29%), senza un denominatore ulteriore. 39 E. coli associati a mastite, da sei aziende positive, sequenziati con Nanopore; 7 isolati con geni di resistenza acquisiti (17,95%). Popolazione policlonale, senza raggruppamento per azienda. Confronto con genomi di E. coli da mastite e da bovine sane isolati in Lombardia: intersezione dei lignaggi, non un cluster specifico di malattia. Non è una prevalenza comunale o regionale. Le sei aziende non sono mappate.",
+      "review_status": "preprint_not_peer_reviewed"
     }
   ]
 }
