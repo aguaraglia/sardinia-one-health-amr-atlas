@@ -178,9 +178,29 @@ const configs = [
   { key: 'depuratori', label: 'Depuratori SIRA', file: '../public/data/sira_depuratori_points.geojson', color: '#7b3f98', weight: 1, fill: true, prop: 'DENOMINAZIONE' }
 ];
 
-function style(cfg) { return { color: cfg.color, weight: cfg.key === 'hydro' ? 1.1 : cfg.weight, opacity: cfg.key === 'hydro' ? 0.55 : 1, fillColor: cfg.color, fillOpacity: cfg.key === 'veterinaryMunicipal' ? 0.26 : (cfg.fill ? 0.12 : 0) }; }
+function style(cfg, feature) {
+  const district = feature?.properties?.geography_level === 'DISTRETTO';
+  return {
+    color: cfg.color,
+    weight: district ? 2.4 : (cfg.key === 'hydro' ? 1.1 : cfg.weight),
+    opacity: cfg.key === 'hydro' ? 0.55 : 1,
+    dashArray: district ? '7 5' : null,
+    fillColor: cfg.color,
+    fillOpacity: district ? 0.08 : (cfg.key === 'veterinaryMunicipal' ? 0.26 : (cfg.fill ? 0.12 : 0))
+  };
+}
+function literatureStudyPopup(props) {
+  const preprint = props.preprint_flag ? `<br><strong>${escapeHtml(props.preprint_flag)}</strong>` : '';
+  const doi = props.doi_url ? `<br><a href="${escapeHtml(props.doi_url)}" target="_blank" rel="noreferrer">DOI ${escapeHtml(props.doi || '')}</a>` : '';
+  return `<strong>${escapeHtml(props.title || props.municipality)}</strong>${preprint}<br>` +
+    `${escapeHtml(props.authors || '')} · ${escapeHtml(props.year || '')}<br>` +
+    `${escapeHtml(props.sector || '')} · ${escapeHtml(props.organism || '')}<br>` +
+    `<small>Scala: ${escapeHtml(props.geography_level || '')}. ${escapeHtml(props.geography_source || '')}</small>${doi}<br>` +
+    `<small>${escapeHtml(props.interpretation_note || 'Il simbolo indica dove è stato condotto lo studio, non una prevalenza.')}</small>`;
+}
 function popup(feature, cfg) {
   const props = feature.properties || {};
+  if (cfg.key === 'veterinaryMunicipal' && props.study_id) return literatureStudyPopup(props);
   if (cfg.key === 'veterinaryMunicipal') {
     const blocks = [];
     if (props.has_uberis_wgs) {
@@ -218,7 +238,7 @@ Promise.all(configs.map(async cfg => {
   if (!response.ok) throw new Error(`${cfg.label}: HTTP ${response.status}`);
   const data = await response.json();
   const layer = L.geoJSON(data, {
-    style: () => style(cfg),
+    style: feature => style(cfg, feature),
     pointToLayer: (feature, latlng) => {
       if (cfg.key === 'depuratori') return L.circleMarker(latlng, { radius: 3.5, color: '#555', fillColor: '#555', fillOpacity: 0.7, weight: 1 });
       if (cfg.key === 'arissSites') return L.circleMarker(latlng, { radius: 6, color: '#8e2237', fillColor: '#c73e55', fillOpacity: 0.82, weight: 1.2 });
