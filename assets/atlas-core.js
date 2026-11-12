@@ -173,9 +173,18 @@
 
     let syncingOverlays = false;
 
+    const explicitEvidence = () => entries.some(item => item.config.overviewCount === 'evidence');
+    const countsInOverview = layerConfig => {
+      if (layerConfig.overviewCount === 'evidence') return true;
+      if (explicitEvidence() || layerConfig.overviewCount === 'context') return false;
+      const id = String(layerConfig.id || '').toLowerCase();
+      return !/municipalit|provinces|region_istat|hydro|wastewater|sira_|sire_/.test(id);
+    };
     const refreshMetrics = () => {
       const onMap = entries.filter(item => item.state === 'loaded' && item.draws !== false && map.hasLayer(item.group));
-      const total = onMap.reduce((sum, item) => sum + ((item.visibleCount ?? item.count) || 0), 0);
+      const total = onMap.reduce((sum, item) => (
+        countsInOverview(item.config) ? sum + ((item.visibleCount ?? item.count) || 0) : sum
+      ), 0);
       const loadedCount = entries.filter(item => item.state === 'loaded' && item.draws !== false).length;
       setText('metric-visible', total.toLocaleString('it-IT'));
       setText('metric-sources', onMap.length.toLocaleString('it-IT'));

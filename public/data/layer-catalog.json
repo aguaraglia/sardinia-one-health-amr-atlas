@@ -27,7 +27,8 @@
         "Nome": "Comune",
         "CIstat": "Codice ISTAT",
         "CBelfiore": "Codice Belfiore"
-      }
+      },
+      "overviewCount": "context"
     },
     {
       "id": "sardinia_veterinary_amr_municipal",
@@ -76,7 +77,8 @@
         "uberis_study_isolates": "Isolati S. uberis",
         "geography_source": "Fonte della geografia",
         "interpretation_note": "Nota"
-      }
+      },
+      "overviewCount": "evidence"
     },
     {
       "id": "sardinia_regional_study_outline",
@@ -95,7 +97,17 @@
       "fillColor": "#163c52",
       "weight": 2.8,
       "fillOpacity": 0,
-      "popupFields": ["geography_level", "geography_basis", "authors", "year", "title", "sector", "organism", "doi", "geography_note"],
+      "popupFields": [
+        "geography_level",
+        "geography_basis",
+        "authors",
+        "year",
+        "title",
+        "sector",
+        "organism",
+        "doi",
+        "geography_note"
+      ],
       "popupLabels": {
         "geography_level": "Scala",
         "geography_basis": "Base geografica",
@@ -106,7 +118,8 @@
         "organism": "Organismo o ARG",
         "doi": "DOI",
         "geography_note": "Avvertenza"
-      }
+      },
+      "overviewCount": "evidence"
     },
     {
       "id": "sardinia_north_study_outline",
@@ -125,7 +138,17 @@
       "fillColor": "#1a5276",
       "weight": 2.4,
       "fillOpacity": 0,
-      "popupFields": ["geography_level", "geography_basis", "authors", "year", "title", "sector", "organism", "doi", "geography_note"],
+      "popupFields": [
+        "geography_level",
+        "geography_basis",
+        "authors",
+        "year",
+        "title",
+        "sector",
+        "organism",
+        "doi",
+        "geography_note"
+      ],
       "popupLabels": {
         "geography_level": "Scala",
         "geography_basis": "Base geografica",
@@ -136,7 +159,8 @@
         "organism": "Organismo o ARG",
         "doi": "DOI",
         "geography_note": "Avvertenza"
-      }
+      },
+      "overviewCount": "evidence"
     },
     {
       "id": "sardinia_human_facility_amr",
@@ -186,7 +210,8 @@
         "organism": "Organismo o ARG",
         "doi": "DOI",
         "geography_note": "Avvertenza"
-      }
+      },
+      "overviewCount": "evidence"
     },
     {
       "id": "sardinia_food_chain_berchidda",
@@ -214,7 +239,8 @@
         "period": "Periodo",
         "matrix": "Matrice",
         "interpretation_note": "Nota"
-      }
+      },
+      "overviewCount": "evidence"
     },
     {
       "id": "sardinia_environmental_water_amr",
@@ -248,7 +274,8 @@
         "detail": "Dettaglio",
         "coordinate_role": "Ruolo del punto",
         "source_title": "Fonte"
-      }
+      },
+      "overviewCount": "evidence"
     },
     {
       "id": "sardinia_ariss_2024_sites",
@@ -281,7 +308,8 @@
         "province": "Provincia",
         "coverage_percent_region": "Copertura regionale %",
         "source_role": "Ruolo"
-      }
+      },
+      "overviewCount": "evidence"
     },
     {
       "id": "sardinia_hydro_graph",
@@ -308,7 +336,8 @@
         "Nome": "Nome",
         "Apposizion": "Tipo",
         "NOrdine": "Ordine"
-      }
+      },
+      "overviewCount": "context"
     },
     {
       "id": "sardinia_sira_wastewater_plants",
@@ -360,7 +389,8 @@
         "Fanghi/reflui speciali": 1
       },
       "explodeLabelPrefix": "Depuratori SIRA · ",
-      "groupTotalLabel": "Depuratori SIRA"
+      "groupTotalLabel": "Depuratori SIRA",
+      "overviewCount": "context"
     }
   ]
 }
