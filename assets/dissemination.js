@@ -87,11 +87,25 @@ function renderOutreach() {
     else detail.innerHTML = `<div class="outreach-progress"><span>${current+1} ${labels.progress}</span><i><b style="width:${((current+1)/total)*100}%"></b></i></div><p class="outreach-number">${lang==='en'?'MODULE':'MODULO'} ${String(current+1).padStart(2,'0')}</p><h2>${title}</h2><p class="outreach-summary">${summary}</p><div class="outreach-detail-grid"><section><h3>${labels.objective}</h3><p>${objective}</p></section><section><h3>${labels.scenes}</h3><ol>${scenes.map(s=>`<li>${s}</li>`).join('')}</ol></section><section><h3>${labels.sources}</h3><ul>${sources.map(([name,url])=>`<li><a href="${url}" ${url.startsWith('http')?'target="_blank" rel="noreferrer"':''}>${name} <span aria-hidden="true">↗</span></a></li>`).join('')}</ul></section></div><p class="outreach-format">${labels.duration}</p><p class="outreach-note">${labels.note}</p>`;
     index.querySelectorAll('[data-module]').forEach(button => button.addEventListener('click', () => show(Number(button.dataset.module), true)));
     if (fromUser) {
+      const nextHash = '#modulo-' + String(current + 1).padStart(2, '0');
+      if (location.hash !== nextHash) history.replaceState(history.state, '', nextHash);
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       detail.scrollIntoView({block:'start', behavior: reduce ? 'auto' : 'smooth'});
     }
   }
-  show(0);
+  function moduleIndexFromHash() {
+    const match = /^#modulo-(\d{1,2})$/.exec(location.hash);
+    if (!match) return null;
+    const n = Number(match[1]);
+    if (n < 1 || n > data.length) return null;
+    return n - 1;
+  }
+  function openFromHash() {
+    const index = moduleIndexFromHash();
+    show(index === null ? 0 : index);
+  }
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
 }
 document.addEventListener('DOMContentLoaded', renderOutreach);
 
