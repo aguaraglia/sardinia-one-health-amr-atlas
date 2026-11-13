@@ -1054,3 +1054,34 @@ textarea { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
 .outreach-page > .workspace-nav a:hover,.outreach-page > .workspace-nav a.active {
   color:var(--atlas-blue); border-bottom-color:var(--atlas-teal, #46bfd0);
 }
+
+/* Outreach modules 13–30. Same palette as the earlier diagrams. */
+.ambler-grid,.bppl-cols,.esk-grid { display:grid; gap:.65rem; width:100%; }
+.ambler-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.bppl-cols { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.esk-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.ambler-grid article,.bppl-cols article,.esk-grid article { min-width:0; padding:.8rem .75rem; border:1px solid #d6dee7; background:#fff; }
+.ambler-grid b,.bppl-cols b,.esk-grid b { display:block; color:#1558b0; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; }
+.ambler-grid strong,.bppl-cols strong,.esk-grid strong { display:block; margin:.28rem 0 .35rem; color:#102f55; font-size:.84rem; }
+.ambler-grid p,.bppl-cols p,.esk-grid p { margin:0; color:#66798d; font-size:.72rem; line-height:1.4; }
+.bppl-cols .priority-critical { border-top:3px solid #102f55; }
+.bppl-cols .priority-high { border-top:3px solid #1558b0; }
+.bppl-cols .priority-medium { border-top:3px solid #2b918e; }
+.bppl-names { margin:0; padding:0; list-style:none; display:grid; gap:.4rem; }
+.bppl-names li { padding:.55rem .7rem; border:1px solid #d6dee7; background:#fff; color:#102f55; font-size:.78rem; line-height:1.4; }
+.sci-svg { width:100%; max-width:680px; margin:0 auto; }
+.sci-svg svg { display:block; width:100%; height:auto; }
+.sci-caption { margin:.45rem 0 0; color:#66798d; font-size:.72rem; line-height:1.4; text-align:center; }
+.outreach-shell,.outreach-workspace,.outreach-index,.outreach-detail,.embedded-deck,.embedded-slide { min-width:0; }
+.outreach-index-row span,.embedded-slide-intro { overflow-wrap:anywhere; }
+#outreach-detail { scroll-margin-top:86px; }
+@media (max-width:760px) {
+  .ambler-grid,.bppl-cols,.esk-grid { grid-template-columns:1fr; }
+  .outreach-page .global-header-inner { grid-template-columns:minmax(0,1fr); gap:.25rem .5rem; padding:.55rem .75rem; min-height:0; }
+  .outreach-page .global-nav { flex-wrap:wrap; justify-content:flex-start; gap:.15rem .85rem; }
+  .outreach-page .global-brand { max-width:100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .outreach-progress b { transition:none; }
+  .embedded-slide { animation:none; }
+}
