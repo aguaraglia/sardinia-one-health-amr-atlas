@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "edition": "srd_amr_atlas",
   "literature_search_date": "2026-11-11",
-  "updated": "2026-11-11",
-  "selection_note": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Ultima ricerca bibliografica: 2026-11-11. Gli studi sono eterogenei e non sono sommati come prevalenza regionale. I preprint approvati restano segnalati come non sottoposti a peer review e non sono localizzati oltre la scala dichiarata.",
+  "updated": "2026-11-26",
+  "selection_note": "Registro pubblico di evidenze bibliografiche AMR riferite alla Sardegna. Ultima ricerca bibliografica: 2026-11-11. Gli studi sono eterogenei e non sono sommati come prevalenza regionale. I preprint approvati restano segnalati come non sottoposti a peer review e non sono localizzati oltre la scala dichiarata. Il 2026-11-26 è stato aggiunto PMID 43082613 (controllo settimanale; licenza CC BY 4.0 verificata su Europe PMC, PMC e Crossref).",
   "records": [
     {
       "id": "lit_nas_sardinia_2021",
@@ -449,6 +449,18 @@
       "doi": "10.20944/preprints202608.0475.v1",
       "source_url": "https://doi.org/10.20944/preprints202608.0475.v1",
       "review_status": "preprint_not_peer_reviewed"
+    },
+    {
+      "id": "lit_kpneumoniae_crkp_wgs_sassari_2026",
+      "year": 2026,
+      "title": "Genomic Surveillance of Carbapenem-Resistant Klebsiella pneumoniae in a Tertiary Hospital: A Targeted Snapshot of High-Risk Clones",
+      "authors": "",
+      "journal": "",
+      "scope": "human_amr",
+      "geographic_link": "AOU Sassari (sede della struttura)",
+      "pmid": "43082613",
+      "doi": "10.3390/diseases14110432",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/43082613/"
     }
   ]
 }
